@@ -1,0 +1,58 @@
+# configs/experiment_config.yaml
+
+base_model: "vit_base_patch16_224"  # ViT model from timm
+num_classes: 7  # Adjust based on your datasets
+max_samples_per_class: 5
+num_epochs: 1
+learning_rate: 1e-4
+per_domain_adapter: true  # Set to true to use separate adapters for each domain
+batch_size: 32
+fine_tune_lr: 1e-4
+datasets:
+  PACS: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS"
+  VLCS: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS"
+  DomainNet: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/domain_net"
+  Office-Home: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home"
+
+auxiliary_datasets:
+  - PACS
+  - VLCS
+  - Office-Home
+
+test_dataset: DomainNet
+
+adapter_save_path: "saved_adapters"
+final_model_path: "final_merged_model_new.pth"
+adapter_path : "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/adapters"
+
+
+# Few-shot learning settings
+few_shot: false  # Set to true for few-shot learning
+few_shot_samples: 50  # Number of samples to use for few-shot learning
+
+fine_tune_epochs: 1
+
+lora_config:
+  r: 16
+  lora_alpha: 16
+  target_modules: ["qkv", "proj"]
+  lora_dropout: 0.05
+  bias: "none"
+
+
+auxiliary_model_path: "auxiliary_model.pth"
+final_model_path: "final_model.pth"
+
+
+num_finetune_domains: 4
+
+
+final_model_path: "final_finetuned_model.pth"
+
+# Hyperparameter search space
+learning_rates: [1e-3, 1e-4, 1e-5]
+batch_sizes: [32, 64, 128]
+num_epochs_list: [5, 10, 20]
+
+
+best_model_path: "best_model.pth"

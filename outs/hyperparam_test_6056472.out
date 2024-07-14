@@ -1,0 +1,9 @@
+Using device: cuda
+Total number of unique classes: 411
+
+Trying: lr=1e-3, batch_size=32, num_epochs=5
+Epoch 1/5, Train Loss: 4.8646, Train Acc: 1.10%, Test Loss: 9.7732, Test Acc: 0.14%
+Epoch 2/5, Train Loss: 4.4991, Train Acc: 1.69%, Test Loss: 10.6852, Test Acc: 0.00%
+Epoch 3/5, Train Loss: 4.4445, Train Acc: 2.47%, Test Loss: 10.8189, Test Acc: 0.00%
+Epoch 4/5, Train Loss: 4.3686, Train Acc: 2.21%, Test Loss: 10.8713, Test Acc: 0.00%
+Epoch 5/5, Train Loss: 4.3539, Train Acc: 2.86%, Test Loss: 11.0558, Test Acc: 0.14%

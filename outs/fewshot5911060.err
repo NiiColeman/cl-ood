@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/main.py", line 26, in <module>
+    run_experiment(args.config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/main.py", line 12, in run_experiment
+    with open(config_path, 'r') as file:
+FileNotFoundError: [Errno 2] No such file or directory: 'configs/experiment_config.yaml'
