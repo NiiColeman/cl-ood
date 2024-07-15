@@ -3,12 +3,13 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader, ConcatDataset
+from torch.utils.data import DataLoader, random_split
 from data.cl_benchmark_generator import CLBenchmarkGenerator
 import timm
 from tqdm import tqdm
 import itertools
 import yaml
+import os
 
 def train(model, train_loader, criterion, optimizer, device):
     model.train()
@@ -28,13 +29,13 @@ def train(model, train_loader, criterion, optimizer, device):
         correct += predicted.eq(targets).sum().item()
     return total_loss / len(train_loader), 100. * correct / total
 
-def evaluate(model, test_loader, criterion, device):
+def evaluate(model, val_loader, criterion, device):
     model.eval()
     total_loss = 0
     correct = 0
     total = 0
     with torch.no_grad():
-        for inputs, targets, _ in tqdm(test_loader, desc="Evaluating", leave=False):
+        for inputs, targets, _ in tqdm(val_loader, desc="Evaluating", leave=False):
             inputs, targets = inputs.to(device), targets.to(device)
             outputs = model(inputs)
             loss = criterion(outputs, targets)
@@ -42,7 +43,55 @@ def evaluate(model, test_loader, criterion, device):
             _, predicted = outputs.max(1)
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
-    return total_loss / len(test_loader), 100. * correct / total
+    return total_loss / len(val_loader), 100. * correct / total
+
+def hyperparameter_search(dataset, config, device, dataset_name):
+    num_classes = dataset.num_classes
+    print(f"\nDataset: {dataset_name}")
+    print(f"Number of classes: {num_classes}")
+    print(f"Number of domains: {dataset.num_domains}")
+    print(f"Total number of samples: {len(dataset)}")
+
+    # Create train/val split
+    train_size = int(0.8 * len(dataset))
+    val_size = len(dataset) - train_size
+    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+
+    print(f"Number of training samples: {len(train_dataset)}")
+    print(f"Number of validation samples: {len(val_dataset)}")
+
+    learning_rates = config['learning_rates']
+    batch_sizes = config['batch_sizes']
+    num_epochs_list = config['num_epochs_list']
+
+    best_accuracy = 0
+    best_params = None
+    best_model = None
+
+    for lr, batch_size, num_epochs in itertools.product(learning_rates, batch_sizes, num_epochs_list):
+        print(f"\nTrying: lr={lr}, batch_size={batch_size}, num_epochs={num_epochs}")
+
+        train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+        val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+        model = timm.create_model(config['base_model'], pretrained=True, num_classes=num_classes)
+        model = model.to(device)
+
+        criterion = nn.CrossEntropyLoss()
+        optimizer = optim.AdamW(model.parameters(), lr=float(lr))
+
+        for epoch in range(num_epochs):
+            train_loss, train_acc = train(model, train_loader, criterion, optimizer, device)
+            val_loss, val_acc = evaluate(model, val_loader, criterion, device)
+            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.2f}%, "
+                  f"Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.2f}%")
+
+        if val_acc > best_accuracy:
+            best_accuracy = val_acc
+            best_params = {'lr': lr, 'batch_size': batch_size, 'num_epochs': num_epochs}
+            best_model = model.state_dict()
+
+    return best_params, best_accuracy, best_model
 
 def main(config):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -54,58 +103,25 @@ def main(config):
         for name, path in config['datasets'].items()
     }
 
-    # Combine auxiliary datasets for training
-    train_datasets = [datasets[name] for name in config['auxiliary_datasets']]
-    train_dataset = ConcatDataset(train_datasets)
-    test_dataset = datasets[config['test_dataset']]
+    # Ensure the output directory exists
+    os.makedirs(config['output_dir'], exist_ok=True)
 
-    # Determine the total number of unique classes across all datasets
-    all_classes = set()
-    for dataset in datasets.values():
-        all_classes.update(dataset.class_to_idx.keys())
-    num_classes = len(all_classes)
-    print(f"Total number of unique classes: {num_classes}")
+    # Perform hyperparameter search for each auxiliary dataset
+    for dataset_name in config['auxiliary_datasets']:
+        dataset = datasets[dataset_name]
 
-    # Create a global class mapping
-    global_class_to_idx = {cls: idx for idx, cls in enumerate(sorted(all_classes))}
+        best_params, best_accuracy, best_model = hyperparameter_search(
+            dataset, config, device, dataset_name
+        )
 
-    # Update the class indices in all datasets
-    for dataset in datasets.values():
-        dataset.update_class_indices(global_class_to_idx)
+        print(f"\nBest hyperparameters for {dataset_name}:")
+        print(f"Best params: {best_params}")
+        print(f"Best validation accuracy: {best_accuracy:.2f}%")
 
-    # Hyperparameters to search
-    learning_rates = config['learning_rates']
-    batch_sizes = config['batch_sizes']
-    num_epochs_list = config['num_epochs_list']
-
-    best_accuracy = 0
-    best_params = None
-
-    for lr, batch_size, num_epochs in itertools.product(learning_rates, batch_sizes, num_epochs_list):
-        print(f"\nTrying: lr={lr}, batch_size={batch_size}, num_epochs={num_epochs}")
-
-        train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-        test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
-
-        model = timm.create_model(config['base_model'], pretrained=True, num_classes=num_classes)
-        model = model.to(device)
-
-        criterion = nn.CrossEntropyLoss()
-        optimizer = optim.AdamW(model.parameters(), lr=float(lr))
-
-        for epoch in range(num_epochs):
-            train_loss, train_acc = train(model, train_loader, criterion, optimizer, device)
-            test_loss, test_acc = evaluate(model, test_loader, criterion, device)
-            print(f"Epoch {epoch+1}/{num_epochs}, Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.2f}%, "
-                  f"Test Loss: {test_loss:.4f}, Test Acc: {test_acc:.2f}%")
-
-        if test_acc > best_accuracy:
-            best_accuracy = test_acc
-            best_params = {'lr': lr, 'batch_size': batch_size, 'num_epochs': num_epochs}
-            torch.save(model.state_dict(), config['best_model_path'])
-
-    print(f"\nBest hyperparameters: {best_params}")
-    print(f"Best test accuracy: {best_accuracy:.2f}%")
+        # Save the best model
+        model_path = os.path.join(config['output_dir'], f"best_model_{dataset_name}.pth")
+        torch.save(best_model, model_path)
+        print(f"Best model saved to {model_path}")
 
 if __name__ == "__main__":
     with open('/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/configs/custom_config.yaml', 'r') as file:
