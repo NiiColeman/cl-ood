@@ -7,6 +7,8 @@ from torchvision import transforms
 from PIL import Image
 from typing import List, Tuple, Dict
 from collections import defaultdict
+# import logging
+# logging.basicConfig(level=print, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class CLBenchmarkGenerator(Dataset):
     def __init__(self, dataset_path: str, max_samples_per_class: int = None):
@@ -14,8 +16,8 @@ class CLBenchmarkGenerator(Dataset):
         self.max_samples_per_class = max_samples_per_class
         self.image_paths, self.targets, self.domains = self._load_data()
         self.num_samples = len(self.image_paths)
+        self.num_domains = len(set(self.domains))
         
-        # Create a mapping from original class labels to consecutive integers
         unique_classes = sorted(set(self.targets))
         self.class_to_idx = {cls: idx for idx, cls in enumerate(unique_classes)}
         self.num_classes = len(self.class_to_idx)
@@ -26,17 +28,9 @@ class CLBenchmarkGenerator(Dataset):
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         ])
 
-    def __getitem__(self, idx):
-        
-        image_path = self.image_paths[idx]
-        image = Image.open(image_path).convert('RGB')
-        image = self.transform(image)
-        target = self.class_to_idx[self.targets[idx]]
-        domain = self.domains[idx]
-        return image, torch.tensor(target, dtype=torch.long), domain
-
-    def _load_data(self) -> Tuple[List[str], List[str], List[str]]:
+    def _load_data(self):
         image_paths, targets, domains = [], [], []
+        corrupted_images = []
         for domain in os.listdir(self.dataset_path):
             domain_path = os.path.join(self.dataset_path, domain)
             if not os.path.isdir(domain_path):
@@ -49,10 +43,42 @@ class CLBenchmarkGenerator(Dataset):
                 if self.max_samples_per_class:
                     class_images = class_images[:self.max_samples_per_class]
                 for image_name in class_images:
-                    image_paths.append(os.path.join(class_path, image_name))
-                    targets.append(class_name)
-                    domains.append(domain)
+                    image_path = os.path.join(class_path, image_name)
+                    try:
+                        with Image.open(image_path) as img:
+                            img.verify()  # Verify that it's a valid image
+                        image_paths.append(image_path)
+                        targets.append(class_name)
+                        domains.append(domain)
+                    except (IOError, SyntaxError) as e:
+                        corrupted_images.append(image_path)
+                        print(f"Corrupted image found and skipped: {image_path}")
+        
+        if corrupted_images:
+            print(f"Total corrupted images found and skipped: {len(corrupted_images)}")
+        
         return image_paths, targets, domains
+
+    def __getitem__(self, idx):
+        image_path = self.image_paths[idx]
+        try:
+            image = Image.open(image_path).convert('RGB')
+            image = self.transform(image)
+        except (IOError, OSError) as e:
+            print(f"Error loading image {image_path}: {str(e)}")
+            # Return a blank image and the correct label if we can't load the image
+            image = torch.zeros((3, 224, 224))
+        
+        target = self.class_to_idx[self.targets[idx]]
+        domain = self.domains[idx]
+        return image, torch.tensor(target, dtype=torch.long), domain
+
+    def __len__(self):
+        return self.num_samples
+
+    def update_class_indices(self, global_class_to_idx):
+        self.class_to_idx = global_class_to_idx
+        self.num_classes = len(self.class_to_idx)
 
     def create_incremental_split(self, n_domains: int) -> List[Tuple[Subset, Subset]]:
         tasks = []
@@ -71,12 +97,6 @@ class CLBenchmarkGenerator(Dataset):
             for train_subset, test_subset in tasks
         ]
 
-    def __len__(self):
-        return self.num_samples
-
-    def update_class_indices(self, global_class_to_idx):
-        self.class_to_idx = global_class_to_idx
-        self.num_classes = len(self.class_to_idx)
 
     def print_samples_per_class_per_domain(self):
         domain_class_counts = defaultdict(lambda: defaultdict(int))

@@ -2,7 +2,7 @@
 
 base_model: "vit_base_patch16_224"  # ViT model from timm
 num_classes: 7  # Adjust based on your datasets
-max_samples_per_class: 5
+max_samples_per_class: 200
 num_epochs: 1
 learning_rate: 1e-4
 per_domain_adapter: true  # Set to true to use separate adapters for each domain
@@ -15,8 +15,8 @@ datasets:
   Office-Home: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home"
 
 auxiliary_datasets:
-  - PACS
-  - VLCS
+  # - PACS
+  # - VLCS
   - Office-Home
 
 test_dataset: DomainNet
@@ -50,9 +50,15 @@ num_finetune_domains: 4
 final_model_path: "final_finetuned_model.pth"
 
 # Hyperparameter search space
-learning_rates: [1e-3, 1e-4, 1e-5]
-batch_sizes: [32, 64, 128]
-num_epochs_list: [5, 10, 20]
+learning_rates: [1e-5]
+batch_sizes: [32]
+num_epochs_list: [5]
 
 
 best_model_path: "best_model.pth"
+output_dir: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp_outs"
+
+
+lora_rs: [16,32]
+lora_alphas: [16, 32]
+lora_dropouts: [0.05,0.1]

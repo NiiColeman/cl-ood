@@ -1,0 +1,158 @@
+Running baseline experiments for dataset: PACS
+Using device: cuda
+Total number of domains: 4
+Test domain: art_painting
+Train domains: ['sketch', 'cartoon', 'photo']
+Baseline 1: Training and testing on test domain only
+Epoch 1/10, Loss: 1.2498, Accuracy: 56.05%
+Epoch 2/10, Loss: 0.1625, Accuracy: 95.51%
+Epoch 3/10, Loss: 0.0236, Accuracy: 99.71%
+Epoch 4/10, Loss: 0.0044, Accuracy: 100.00%
+Epoch 5/10, Loss: 0.0021, Accuracy: 100.00%
+Epoch 6/10, Loss: 0.0012, Accuracy: 100.00%
+Epoch 7/10, Loss: 0.0009, Accuracy: 100.00%
+Epoch 8/10, Loss: 0.0006, Accuracy: 100.00%
+Epoch 9/10, Loss: 0.0005, Accuracy: 100.00%
+Epoch 10/10, Loss: 0.0004, Accuracy: 100.00%
+Baseline 1 - Test Loss: 0.0003, Test Accuracy: 100.00%
+Baseline 2: Training on other domains with LoRA, then testing on test domain
+Training on domain: sketch
+Epoch 1/10, Loss: 1.0362, Accuracy: 57.27%
+Epoch 2/10, Loss: 0.5276, Accuracy: 79.54%
+Epoch 3/10, Loss: 0.3151, Accuracy: 88.62%
+Epoch 4/10, Loss: 0.1865, Accuracy: 93.61%
+Epoch 5/10, Loss: 0.0890, Accuracy: 97.38%
+Epoch 6/10, Loss: 0.0338, Accuracy: 99.41%
+Epoch 7/10, Loss: 0.0095, Accuracy: 100.00%
+Epoch 8/10, Loss: 0.0038, Accuracy: 100.00%
+Epoch 9/10, Loss: 0.0022, Accuracy: 100.00%
+Epoch 10/10, Loss: 0.0015, Accuracy: 100.00%
+Training on domain: cartoon
+Epoch 1/10, Loss: 0.8308, Accuracy: 72.14%
+Epoch 2/10, Loss: 0.1868, Accuracy: 94.41%
+Epoch 3/10, Loss: 0.0567, Accuracy: 98.51%
+Epoch 4/10, Loss: 0.0175, Accuracy: 99.70%
+Epoch 5/10, Loss: 0.0064, Accuracy: 100.00%
+Epoch 6/10, Loss: 0.0030, Accuracy: 100.00%
+Epoch 7/10, Loss: 0.0019, Accuracy: 100.00%
+Epoch 8/10, Loss: 0.0013, Accuracy: 100.00%
+Epoch 9/10, Loss: 0.0010, Accuracy: 100.00%
+Epoch 10/10, Loss: 0.0008, Accuracy: 100.00%
+Training on domain: photo
+Epoch 1/10, Loss: 0.0721, Accuracy: 98.32%
+Epoch 2/10, Loss: 0.0051, Accuracy: 99.94%
+Epoch 3/10, Loss: 0.0010, Accuracy: 100.00%
+Epoch 4/10, Loss: 0.0006, Accuracy: 100.00%
+Epoch 5/10, Loss: 0.0004, Accuracy: 100.00%
+Epoch 6/10, Loss: 0.0003, Accuracy: 100.00%
+Epoch 7/10, Loss: 0.0002, Accuracy: 100.00%
+Epoch 8/10, Loss: 0.0002, Accuracy: 100.00%
+Epoch 9/10, Loss: 0.0002, Accuracy: 100.00%
+Epoch 10/10, Loss: 0.0001, Accuracy: 100.00%
+Evaluating final model on test domain
+Baseline 2 - Test Loss: 0.7106, Test Accuracy: 85.55%
+Final model for PACS saved to /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp_outs/PACS_final_model_with_lora.pth
+Running baseline experiments for dataset: VLCS
+Using device: cuda
+Total number of domains: 4
+Test domain: VOC2007
+Train domains: ['Caltech101', 'LabelMe', 'SUN09']
+Baseline 1: Training and testing on test domain only
+Epoch 1/10, Loss: 0.9035, Accuracy: 66.80%
+Epoch 2/10, Loss: 0.2817, Accuracy: 90.31%
+Epoch 3/10, Loss: 0.1274, Accuracy: 96.33%
+Epoch 4/10, Loss: 0.0498, Accuracy: 98.55%
+Epoch 5/10, Loss: 0.0174, Accuracy: 99.56%
+Epoch 6/10, Loss: 0.0119, Accuracy: 99.79%
+Epoch 7/10, Loss: 0.0042, Accuracy: 99.97%
+Epoch 8/10, Loss: 0.0020, Accuracy: 100.00%
+Epoch 9/10, Loss: 0.0012, Accuracy: 100.00%
+Epoch 10/10, Loss: 0.0008, Accuracy: 100.00%
+Baseline 1 - Test Loss: 0.0006, Test Accuracy: 100.00%
+Baseline 2: Training on other domains with LoRA, then testing on test domain
+Training on domain: Caltech101
+Epoch 1/10, Loss: 0.5557, Accuracy: 78.30%
+Epoch 2/10, Loss: 0.0198, Accuracy: 99.93%
+Epoch 3/10, Loss: 0.0019, Accuracy: 100.00%
+Epoch 4/10, Loss: 0.0008, Accuracy: 100.00%
+Epoch 5/10, Loss: 0.0005, Accuracy: 100.00%
+Epoch 6/10, Loss: 0.0003, Accuracy: 100.00%
+Epoch 7/10, Loss: 0.0003, Accuracy: 100.00%
+Epoch 8/10, Loss: 0.0002, Accuracy: 100.00%
+Epoch 9/10, Loss: 0.0002, Accuracy: 100.00%
+Epoch 10/10, Loss: 0.0001, Accuracy: 100.00%
+Training on domain: LabelMe
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 1/10, Loss: 0.8031, Accuracy: 70.41%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 2/10, Loss: 0.5540, Accuracy: 79.14%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 3/10, Loss: 0.4562, Accuracy: 82.83%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 4/10, Loss: 0.3499, Accuracy: 87.35%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 5/10, Loss: 0.2366, Accuracy: 92.39%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 6/10, Loss: 0.1349, Accuracy: 95.90%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 7/10, Loss: 0.0630, Accuracy: 98.42%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 8/10, Loss: 0.0277, Accuracy: 99.59%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 9/10, Loss: 0.0104, Accuracy: 99.89%
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 10/10, Loss: 0.0052, Accuracy: 99.92%
+Training on domain: SUN09
+Epoch 1/10, Loss: 0.6896, Accuracy: 77.39%
+Epoch 2/10, Loss: 0.4080, Accuracy: 85.68%
+Epoch 3/10, Loss: 0.2862, Accuracy: 90.43%
+Epoch 4/10, Loss: 0.1724, Accuracy: 94.79%
+Epoch 5/10, Loss: 0.0720, Accuracy: 98.39%
+Epoch 6/10, Loss: 0.0222, Accuracy: 99.66%
+Epoch 7/10, Loss: 0.0076, Accuracy: 99.94%
+Epoch 8/10, Loss: 0.0032, Accuracy: 100.00%
+Epoch 9/10, Loss: 0.0018, Accuracy: 100.00%
+Epoch 10/10, Loss: 0.0012, Accuracy: 100.00%
+Evaluating final model on test domain
+Baseline 2 - Test Loss: 1.0778, Test Accuracy: 76.57%
+Final model for VLCS saved to /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp_outs/VLCS_final_model_with_lora.pth
+
+Summary of Results:
+Dataset: PACS
+  Baseline 1 Accuracy: 100%
+  Baseline 2 Accuracy: 85.55%
+---
+Dataset: VLCS
+  Baseline 1 Accuracy: 100%
+  Baseline 2 Accuracy: 76.57%
+---

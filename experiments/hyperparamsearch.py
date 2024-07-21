@@ -10,6 +10,30 @@ from tqdm import tqdm
 import itertools
 import yaml
 import os
+# import logging
+
+import os
+import sys
+import io
+
+# Force flushing of stdout and stderr
+sys.stdout = io.TextIOWrapper(open(sys.stdout.fileno(), 'wb', 0), write_through=True)
+sys.stderr = io.TextIOWrapper(open(sys.stderr.fileno(), 'wb', 0), write_through=True)
+
+# Ensure the logs directory exists
+# os.makedirs('logs', exist_ok=True)
+
+# # Configure logging
+# logging.basicConfig(
+#     level=logging.INFO,
+#     format='%(asctime)s - %(levelname)s - %(message)s',
+#     handlers=[
+#         logging.FileHandler('logs/lora_hyperparameter_search.log'),
+#         logging.StreamHandler()  # This will also print logs to console
+#     ]
+# )
+
+# logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def train(model, train_loader, criterion, optimizer, device):
     model.train()
@@ -17,16 +41,20 @@ def train(model, train_loader, criterion, optimizer, device):
     correct = 0
     total = 0
     for inputs, targets, _ in tqdm(train_loader, desc="Training", leave=False):
-        inputs, targets = inputs.to(device), targets.to(device)
-        optimizer.zero_grad()
-        outputs = model(inputs)
-        loss = criterion(outputs, targets)
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-        _, predicted = outputs.max(1)
-        total += targets.size(0)
-        correct += predicted.eq(targets).sum().item()
+        try:
+            inputs, targets = inputs.to(device), targets.to(device)
+            optimizer.zero_grad()
+            outputs = model(inputs)
+            loss = criterion(outputs, targets)
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+            _, predicted = outputs.max(1)
+            total += targets.size(0)
+            correct += predicted.eq(targets).sum().item()
+        except RuntimeError as e:
+            print(f"Error during training: {str(e)}")
+            continue
     return total_loss / len(train_loader), 100. * correct / total
 
 def evaluate(model, val_loader, criterion, device):
@@ -36,13 +64,17 @@ def evaluate(model, val_loader, criterion, device):
     total = 0
     with torch.no_grad():
         for inputs, targets, _ in tqdm(val_loader, desc="Evaluating", leave=False):
-            inputs, targets = inputs.to(device), targets.to(device)
-            outputs = model(inputs)
-            loss = criterion(outputs, targets)
-            total_loss += loss.item()
-            _, predicted = outputs.max(1)
-            total += targets.size(0)
-            correct += predicted.eq(targets).sum().item()
+            try:
+                inputs, targets = inputs.to(device), targets.to(device)
+                outputs = model(inputs)
+                loss = criterion(outputs, targets)
+                total_loss += loss.item()
+                _, predicted = outputs.max(1)
+                total += targets.size(0)
+                correct += predicted.eq(targets).sum().item()
+            except RuntimeError as e:
+                print(f"Error during evaluation: {str(e)}")
+                continue
     return total_loss / len(val_loader), 100. * correct / total
 
 def hyperparameter_search(dataset, config, device, dataset_name):
