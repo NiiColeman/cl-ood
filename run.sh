@@ -21,7 +21,9 @@ source /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/bin/activate
 # Run the main script
 # python main.py --config configs/custom_config.yaml
 # python experiments/hyperparamsearch.py
-python experiments/lora_hyperparameter_search.py
-# python experiments/baseline_experiments.py 
+# python experiments/lora_hyperparameter_search.py
+# python experiments/baseline_experiments.py
+python experiments/base_line_3.py
 # Deactivate the virtual environment
+
 deactivate

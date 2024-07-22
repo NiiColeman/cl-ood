@@ -69,26 +69,25 @@ def evaluate(model, test_loader, criterion, device):
     correct = 0
     total = 0
     with torch.no_grad():
-        for inputs, targets, _ in tqdm(test_loader, desc="Evaluating"):
-            inputs, targets = inputs.to(device), targets.to(device)
+        for inputs, labels, _ in tqdm(test_loader, desc="Evaluating"):
+            inputs, labels = inputs.to(device), labels.to(device)
             outputs = model(inputs)
-            loss = criterion(outputs, targets)
+            loss = criterion(outputs, labels)
             total_loss += loss.item()
             _, predicted = outputs.max(1)
-            total += targets.size(0)
+            total += labels.size(0)
             correct += predicted.eq(targets).sum().item()
-    
-    avg_loss = total_loss / len(test_loader)
-    accuracy = 100. * correct / total
-    return avg_loss, accuracy
+    return total_loss / len(test_loader), 100. * correct / total
 
 
 def run_baseline_experiments(config):
     """
-    Run all three baseline experiments.
+    Run all three baseline experiments using domain-incremental learning.
 
-    This function orchestrates the execution of Baseline 1 (Single Domain),
-    Baseline 2 (Multi-Domain with LoRA), and Baseline 3 (Weighted LoRA Adapters).
+    This function orchestrates the execution of:
+    Baseline 1: Train and test on a single domain of the test dataset.
+    Baseline 2: Train on domains from auxiliary datasets, test on a held-out domain.
+    Baseline 3: Weighted average of LoRA adapters, tested on a held-out domain.
 
     Args:
         config (dict): Configuration parameters for the experiments.
@@ -99,117 +98,107 @@ def run_baseline_experiments(config):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
 
-    # Debug: Print out the config
-    print("Configuration:")
-    print(json.dumps(config, indent=2))
-
     # Initialize datasets
     datasets = {}
     for name, dataset_config in config['datasets'].items():
         print(f"Loading dataset: {name}")
-        print(f"Dataset config: {dataset_config}")
-        
-        # Check if the path exists
-        path = dataset_config['path']
-        if not os.path.exists(path):
-            print(f"Warning: Path does not exist: {path}")
-        
         datasets[name] = CLBenchmarkGenerator(
-            path,
+            dataset_config['path'],
             max_samples_per_class=config.get('max_samples_per_class')
         )
 
-    # If test_dataset is not specified, use the last dataset in the list
-    if 'test_dataset' not in config:
-        config['test_dataset'] = list(datasets.keys())[-1]
-        print(f"No test_dataset specified. Using {config['test_dataset']} as the test dataset.")
-
-    test_dataset = datasets[config['test_dataset']]
-    num_classes = test_dataset.num_classes
+    # Select test dataset and domain
+    test_dataset_name = config['test_dataset']
+    test_dataset = datasets[test_dataset_name]
+    test_domain = random.choice(range(test_dataset.num_domains))
+    print(f"Selected test dataset: {test_dataset_name}, test domain: {test_domain}")
 
     # Create model
+    num_classes = test_dataset.num_classes
     base_model = timm.create_model(config['base_model'], pretrained=True, num_classes=num_classes)
     base_model = base_model.to(device)
 
     criterion = nn.CrossEntropyLoss()
-    
-    # Baseline 1: Train and test on test domain only
-    print("Baseline 1: Training and testing on test domain only")
-    test_loader = DataLoader(test_dataset, batch_size=config['batch_size'], shuffle=True)
+
+    # Baseline 1: Train and test on single domain of test dataset
+    print("Baseline 1: Training and testing on single domain of test dataset")
+    test_domain_data = test_dataset.get_domain_data(test_domain)
+    train_size = int(0.8 * len(test_domain_data))
+    train_subset, test_subset = random_split(test_domain_data, [train_size, len(test_domain_data) - train_size])
+    train_loader = DataLoader(train_subset, batch_size=config['batch_size'], shuffle=True)
+    test_loader = DataLoader(test_subset, batch_size=config['batch_size'], shuffle=False)
+
     optimizer = optim.AdamW(base_model.parameters(), lr=float(config['learning_rate']))
     
     for epoch in range(config['num_epochs']):
-        train_loss, train_acc = train(base_model, test_loader, criterion, optimizer, device)
+        train_loss, train_acc = train(base_model, train_loader, criterion, optimizer, device)
         print(f"Epoch {epoch+1}/{config['num_epochs']}, Loss: {train_loss:.4f}, Accuracy: {train_acc:.2f}%")
     
-    test_loss, test_accuracy = evaluate(base_model, test_loader, criterion, device)
-    print(f"Baseline 1 - Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
+    baseline_1_loss, baseline_1_accuracy = evaluate(base_model, test_loader, criterion, device)
+    print(f"Baseline 1 - Test Loss: {baseline_1_loss:.4f}, Test Accuracy: {baseline_1_accuracy:.2f}%")
 
     # Reset model for Baseline 2 and 3
     base_model = timm.create_model(config['base_model'], pretrained=True, num_classes=num_classes)
     base_model = base_model.to(device)
 
-    # Baseline 2: Train on other domains with LoRA, then test on test domain
-    print("Baseline 2: Training on other domains with LoRA, then testing on test domain")
+    # Baseline 2: Train on domains from auxiliary datasets, test on held-out domain
+    print("Baseline 2: Training on domains from auxiliary datasets, testing on held-out domain")
     lora_config = LoraConfig(
         r=config['lora_r'],
         lora_alpha=config['lora_alpha'],
-        target_modules=["qkv"],
+        target_modules=["query", "value"],
         lora_dropout=config['lora_dropout'],
         bias="none",
-        # task_type=TaskType.IMAGE_CLASSIFICATION
+        task_type=TaskType.IMAGE_CLASSIFICATION
     )
 
     adapters = []
     for dataset_name in config['auxiliary_datasets']:
-        print(f"Training on dataset: {dataset_name}")
         dataset = datasets[dataset_name]
-        lora_model = get_peft_model(base_model, lora_config)
-        lora_model = lora_model.to(device)
-        train_loader = DataLoader(dataset, batch_size=config['batch_size'], shuffle=True)
-        optimizer = optim.AdamW(lora_model.parameters(), lr=float(config['learning_rate']))
-        
-        for epoch in range(config['num_epochs']):
-            train_loss, train_acc = train(lora_model, train_loader, criterion, optimizer, device)
-            print(f"Epoch {epoch+1}/{config['num_epochs']}, Loss: {train_loss:.4f}, Accuracy: {train_acc:.2f}%")
-        
-        adapters.append(lora_model)
-        base_model = lora_model.merge_and_unload()
+        for domain in range(dataset.num_domains):
+            print(f"Training on dataset: {dataset_name}, domain: {domain}")
+            domain_data = dataset.get_domain_data(domain)
+            train_loader = DataLoader(domain_data, batch_size=config['batch_size'], shuffle=True)
+
+            lora_model = get_peft_model(base_model, lora_config)
+            lora_model = lora_model.to(device)
+            optimizer = optim.AdamW(lora_model.parameters(), lr=float(config['learning_rate']))
+            
+            for epoch in range(config['num_epochs']):
+                train_loss, train_acc = train(lora_model, train_loader, criterion, optimizer, device)
+                print(f"Epoch {epoch+1}/{config['num_epochs']}, Loss: {train_loss:.4f}, Accuracy: {train_acc:.2f}%")
+            
+            adapters.append(lora_model)
+            base_model = lora_model.merge_and_unload()
 
     # Evaluate Baseline 2
-    test_loss, test_accuracy = evaluate(base_model, test_loader, criterion, device)
-    print(f"Baseline 2 - Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
+    baseline_2_loss, baseline_2_accuracy = evaluate(base_model, test_loader, criterion, device)
+    print(f"Baseline 2 - Test Loss: {baseline_2_loss:.4f}, Test Accuracy: {baseline_2_accuracy:.2f}%")
 
     # Baseline 3: Weighted Average of LoRA Adapters
     print("Baseline 3: Weighted Average of LoRA Adapters")
-    
-    # Split test dataset for Baseline 3
-    train_size = int(0.1 * len(test_dataset))
-    b3_train_dataset, b3_test_dataset = random_split(test_dataset, [train_size, len(test_dataset) - train_size])
-    b3_train_loader = DataLoader(b3_train_dataset, batch_size=config['batch_size'], shuffle=True)
-    b3_test_loader = DataLoader(b3_test_dataset, batch_size=config['batch_size'], shuffle=False)
-
     weighted_adapter = WeightedLoRAAdapter(base_model, adapters)
     weighted_adapter = weighted_adapter.to(device)
     optimizer = optim.Adam([weighted_adapter.weights], lr=float(config['weighted_adapter_lr']))
 
     for epoch in range(config['weighted_adapter_epochs']):
-        train_loss, train_acc = train(weighted_adapter, b3_train_loader, criterion, optimizer, device, desc=f"Baseline 3 Epoch {epoch+1}")
+        train_loss, train_acc = train(weighted_adapter, train_loader, criterion, optimizer, device, desc=f"Baseline 3 Epoch {epoch+1}")
         print(f"Baseline 3 Epoch {epoch+1}/{config['weighted_adapter_epochs']}, Loss: {train_loss:.4f}, Accuracy: {train_acc:.2f}%")
 
     # Evaluate Baseline 3
-    test_loss, test_accuracy = evaluate(weighted_adapter, b3_test_loader, criterion, device)
-    print(f"Baseline 3 - Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
+    baseline_3_loss, baseline_3_accuracy = evaluate(weighted_adapter, test_loader, criterion, device)
+    print(f"Baseline 3 - Test Loss: {baseline_3_loss:.4f}, Test Accuracy: {baseline_3_accuracy:.2f}%")
 
     # Save final models
     torch.save(base_model.state_dict(), os.path.join(config['output_dir'], 'baseline_2_final_model.pth'))
     torch.save(weighted_adapter.state_dict(), os.path.join(config['output_dir'], 'baseline_3_final_model.pth'))
 
     return {
-        "baseline_1_accuracy": test_accuracy,
-        "baseline_2_accuracy": test_accuracy,
-        "baseline_3_accuracy": test_accuracy
+        "baseline_1_accuracy": baseline_1_accuracy,
+        "baseline_2_accuracy": baseline_2_accuracy,
+        "baseline_3_accuracy": baseline_3_accuracy
     }
+
 
 
 

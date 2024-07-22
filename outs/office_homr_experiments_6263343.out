@@ -1,0 +1,79 @@
+No auxiliary_datasets specified. Using ['PACS', 'VLCS'] as auxiliary datasets.
+Using device: cuda
+Configuration:
+{
+  "datasets": {
+    "PACS": {
+      "path": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS",
+      "num_classes": 7
+    },
+    "VLCS": {
+      "path": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS",
+      "num_classes": 5
+    },
+    "OfficeHome": {
+      "path": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home",
+      "num_classes": 65
+    }
+  },
+  "base_model": "vit_base_patch16_224",
+  "max_samples_per_class": 20,
+  "batch_size": 32,
+  "num_epochs": 10,
+  "learning_rate": "1e-4",
+  "lora_r": 8,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "output_dir": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp_outs",
+  "test_dataset": "OfficeHome",
+  "weighted_adapter_lr": "1e-4",
+  "auxiliary_datasets": [
+    "PACS",
+    "VLCS"
+  ]
+}
+Loading dataset: PACS
+Dataset config: {'path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'num_classes': 7}
+Loading dataset: VLCS
+Dataset config: {'path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'num_classes': 5}
+Loading dataset: OfficeHome
+Dataset config: {'path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'num_classes': 65}
+Baseline 1: Training and testing on test domain only
+Epoch 1/10, Loss: 1.6568, Accuracy: 59.16%
+Epoch 2/10, Loss: 0.4312, Accuracy: 88.11%
+Epoch 3/10, Loss: 0.2387, Accuracy: 92.69%
+Epoch 4/10, Loss: 0.1562, Accuracy: 95.75%
+Epoch 5/10, Loss: 0.1602, Accuracy: 95.47%
+Epoch 6/10, Loss: 0.1400, Accuracy: 95.94%
+Epoch 7/10, Loss: 0.1246, Accuracy: 96.48%
+Epoch 8/10, Loss: 0.1377, Accuracy: 95.94%
+Epoch 9/10, Loss: 0.1232, Accuracy: 96.46%
+Epoch 10/10, Loss: 0.0856, Accuracy: 97.80%
+Baseline 1 - Test Loss: 0.0719, Test Accuracy: 98.05%
+Baseline 2: Training on other domains with LoRA, then testing on test domain
+Training on dataset: PACS
+Epoch 1/10, Loss: 4.1354, Accuracy: 3.04%
+Epoch 2/10, Loss: 3.0089, Accuracy: 16.43%
+Epoch 3/10, Loss: 1.9710, Accuracy: 31.96%
+Epoch 4/10, Loss: 1.5232, Accuracy: 43.21%
+Epoch 5/10, Loss: 1.1818, Accuracy: 61.96%
+Epoch 6/10, Loss: 0.9204, Accuracy: 71.61%
+Epoch 7/10, Loss: 0.6950, Accuracy: 81.96%
+Epoch 8/10, Loss: 0.5309, Accuracy: 86.96%
+Epoch 9/10, Loss: 0.3875, Accuracy: 91.61%
+Epoch 10/10, Loss: 0.2913, Accuracy: 93.39%
+Training on dataset: VLCS
+Epoch 1/10, Loss: 3.0271, Accuracy: 9.25%
+Epoch 2/10, Loss: 2.0643, Accuracy: 27.75%
+Epoch 3/10, Loss: 1.4751, Accuracy: 45.75%
+Epoch 4/10, Loss: 1.1336, Accuracy: 57.50%
+Epoch 5/10, Loss: 0.8871, Accuracy: 67.75%
+Epoch 6/10, Loss: 0.7301, Accuracy: 78.50%
+Epoch 7/10, Loss: 0.6001, Accuracy: 82.50%
+Epoch 8/10, Loss: 0.5084, Accuracy: 86.25%
+Epoch 9/10, Loss: 0.4262, Accuracy: 89.50%
+Epoch 10/10, Loss: 0.3512, Accuracy: 93.00%
+Baseline 2 - Test Loss: 9.7221, Test Accuracy: 0.81%
+Baseline 3: Weighted Average of LoRA Adapters
+An error occurred: 'weighted_adapter_epochs'
+Traceback:

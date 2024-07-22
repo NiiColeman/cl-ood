@@ -21,7 +21,7 @@ class CLBenchmarkGenerator(Dataset):
         unique_classes = sorted(set(self.targets))
         self.class_to_idx = {cls: idx for idx, cls in enumerate(unique_classes)}
         self.num_classes = len(self.class_to_idx)
-
+        self.domain_to_indices = self._create_domain_indices()
         self.transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
@@ -89,6 +89,10 @@ class CLBenchmarkGenerator(Dataset):
             test_subset = Subset(self, test_indices)
             tasks.append((train_subset, test_subset))
         return tasks
+    
+    def get_domain_data(self, domain_id):
+        domain_indices = [i for i, d in enumerate(self.domains) if d == domain_id]
+        return Subset(self, domain_indices)
 
     def create_data_loaders(self, tasks: List[Tuple[Subset, Subset]], batch_size: int = 32) -> List[Tuple[DataLoader, DataLoader]]:
         return [

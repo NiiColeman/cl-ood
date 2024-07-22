@@ -1,0 +1,55 @@
+No auxiliary_datasets specified. Using ['PACS', 'VLCS'] as auxiliary datasets.
+Using device: cuda
+Configuration:
+{
+  "datasets": {
+    "PACS": {
+      "path": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS",
+      "num_classes": 7
+    },
+    "VLCS": {
+      "path": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS",
+      "num_classes": 5
+    },
+    "OfficeHome": {
+      "path": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home",
+      "num_classes": 65
+    }
+  },
+  "base_model": "vit_base_patch16_224",
+  "max_samples_per_class": 20,
+  "batch_size": 32,
+  "num_epochs": 10,
+  "learning_rate": "1e-4",
+  "lora_r": 8,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "output_dir": "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp_outs",
+  "test_dataset": "OfficeHome",
+  "auxiliary_datasets": [
+    "PACS",
+    "VLCS"
+  ]
+}
+Loading dataset: PACS
+Dataset config: {'path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'num_classes': 7}
+Loading dataset: VLCS
+Dataset config: {'path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'num_classes': 5}
+Loading dataset: OfficeHome
+Dataset config: {'path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'num_classes': 65}
+Baseline 1: Training and testing on test domain only
+Epoch 1/10, Loss: 1.8427, Accuracy: 54.42%
+Epoch 2/10, Loss: 0.4971, Accuracy: 86.13%
+Epoch 3/10, Loss: 0.2241, Accuracy: 93.60%
+Epoch 4/10, Loss: 0.1910, Accuracy: 94.53%
+Epoch 5/10, Loss: 0.1689, Accuracy: 95.07%
+Epoch 6/10, Loss: 0.1775, Accuracy: 94.82%
+Epoch 7/10, Loss: 0.0937, Accuracy: 97.16%
+Epoch 8/10, Loss: 0.0816, Accuracy: 97.66%
+Epoch 9/10, Loss: 0.0892, Accuracy: 97.78%
+Epoch 10/10, Loss: 0.0839, Accuracy: 97.37%
+Baseline 1 - Test Loss: 0.0543, Test Accuracy: 98.55%
+Baseline 2: Training on other domains with LoRA, then testing on test domain
+Training on dataset: PACS
+An error occurred: Target modules {'value', 'query'} not found in the base model. Please check the target modules and try again.
+Traceback:

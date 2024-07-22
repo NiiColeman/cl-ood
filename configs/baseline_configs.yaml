@@ -7,19 +7,20 @@ datasets:
   VLCS:
     path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS"
     num_classes: 5
-  # OfficeHome:
-  #   path: "/path/to/OfficeHome"
-  #   num_classes: 65
+  OfficeHome:
+    path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home"
+
+    num_classes: 65
   # DomainNet:
   #   path: "/path/to/DomainNet"
   #   num_classes: 345
 
 base_model: "vit_base_patch16_224"  # or any other model from timm
-# max_samples_per_class: 20  # Set to null or remove this line to use all samples
+max_samples_per_class: 20  # Set to null or remove this line to use all samples
 
 # Training parameters
 batch_size: 32
-num_epochs: 10
+num_epochs: 5
 learning_rate: 1e-4
 
 # LoRA parameters
@@ -28,3 +29,8 @@ lora_alpha: 32
 lora_dropout: 0.05
 
 output_dir: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp_outs"  # Replace with desired output directory
+
+
+test_dataset: OfficeHome
+weighted_adapter_lr: 1e-4
+weighted_adapter_epochs: 5
