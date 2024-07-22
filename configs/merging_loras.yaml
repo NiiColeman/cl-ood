@@ -1,0 +1,36 @@
+# configs/baseline_config.yaml
+
+datasets:
+  PACS:
+    path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS"
+    num_classes: 7
+    test_domain: "art_painting"
+    # VLCS:
+    # path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS"
+    # num_classes: 5
+    # test_domain: "Caltech101"
+  # OfficeHome:
+  #   path: "/path/to/OfficeHome"
+  #   num_classes: 65
+  # DomainNet:
+  #   path: "/path/to/DomainNet"
+  #   num_classes: 345
+
+base_model: "vit_base_patch16_224"  # or any other model from timm
+# max_samples_per_class: 10  # Set to null or remove this line to use all samples
+
+# Training parameters
+batch_size: 32
+num_epochs: 10
+learning_rate: 1e-4
+
+# LoRA parameters
+lora_r: 8
+lora_alpha: 32
+lora_dropout: 0.05
+
+# merging parameters
+combination_type: "linear"
+
+device: "cuda"
+output_dir: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp_outs"  # Replace with desired output directory

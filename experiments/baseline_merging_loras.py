@@ -161,7 +161,7 @@ def main(config):
         print("---")
 
 if __name__ == "__main__":
-    with open('/leonardo_scratch/fast/IscrC_FoundCL/projects/cl-collab/ModelRatatouille/lquarant/cl-ood/configs/baseline_configs.yaml', 'r') as file:
+    with open('/leonardo_scratch/fast/IscrC_FoundCL/projects/cl-collab/ModelRatatouille/lquarant/cl-ood/configs/merging_loras.yaml', 'r') as file:
         config = yaml.safe_load(file)
     main(config)
 
