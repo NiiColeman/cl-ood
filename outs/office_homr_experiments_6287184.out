@@ -1,0 +1,54 @@
+Running baseline experiments for dataset: PACS
+Using device: cuda
+Total number of domains: 4
+Test domain: cartoon
+Train domains: ['sketch', 'photo', 'art_painting']
+Baseline 1: Training and testing on test domain only
+Epoch 1/5, Loss: 3.4827, Accuracy: 11.43%
+Epoch 2/5, Loss: 1.1608, Accuracy: 34.29%
+Epoch 3/5, Loss: 0.9346, Accuracy: 22.86%
+Epoch 4/5, Loss: 0.4218, Accuracy: 85.71%
+Epoch 5/5, Loss: 0.1222, Accuracy: 97.14%
+Baseline 1 - Test Loss: 0.0322, Test Accuracy: 100.00%
+Baseline 2: Training on other domains with LoRA, then testing on test domain
+Training on domain: sketch
+Epoch 1/5, Loss: 2.1381, Accuracy: 17.14%
+Epoch 2/5, Loss: 2.0887, Accuracy: 22.86%
+Epoch 3/5, Loss: 2.0107, Accuracy: 28.57%
+Epoch 4/5, Loss: 1.9621, Accuracy: 31.43%
+Epoch 5/5, Loss: 2.0690, Accuracy: 37.14%
+Training on domain: photo
+Epoch 1/5, Loss: 1.2681, Accuracy: 37.14%
+Epoch 2/5, Loss: 1.0314, Accuracy: 45.71%
+Epoch 3/5, Loss: 1.5646, Accuracy: 60.00%
+Epoch 4/5, Loss: 0.9396, Accuracy: 62.86%
+Epoch 5/5, Loss: 0.7177, Accuracy: 68.57%
+Training on domain: art_painting
+Epoch 1/5, Loss: 1.8851, Accuracy: 42.86%
+Epoch 2/5, Loss: 1.4146, Accuracy: 42.86%
+Epoch 3/5, Loss: 1.1253, Accuracy: 42.86%
+Epoch 4/5, Loss: 1.7170, Accuracy: 54.29%
+Epoch 5/5, Loss: 1.1057, Accuracy: 62.86%
+Baseline 2 - Test Loss: 0.0454, Test Accuracy: 100.00%
+Baseline 3: Sequential LoRA training with weight merging
+Training on domain: sketch
+Epoch 1/5, Loss: 1.5389, Accuracy: 48.57%
+Epoch 2/5, Loss: 1.3872, Accuracy: 54.29%
+Epoch 3/5, Loss: 1.3144, Accuracy: 57.14%
+Epoch 4/5, Loss: 1.4919, Accuracy: 57.14%
+Epoch 5/5, Loss: 1.3570, Accuracy: 57.14%
+Training on domain: photo
+Epoch 1/5, Loss: 0.5560, Accuracy: 77.14%
+Epoch 2/5, Loss: 0.8622, Accuracy: 77.14%
+Epoch 3/5, Loss: 0.6007, Accuracy: 82.86%
+Epoch 4/5, Loss: 0.4079, Accuracy: 91.43%
+Epoch 5/5, Loss: 0.3818, Accuracy: 94.29%
+Training on domain: art_painting
+Epoch 1/5, Loss: 1.1235, Accuracy: 65.71%
+Epoch 2/5, Loss: 0.8455, Accuracy: 68.57%
+Epoch 3/5, Loss: 0.7212, Accuracy: 80.00%
+Epoch 4/5, Loss: 0.5371, Accuracy: 91.43%
+Epoch 5/5, Loss: 0.5401, Accuracy: 88.57%
+Baseline 3 - Test Loss: 0.0399, Test Accuracy: 100.00%
+Baseline 4: Weighted average of LoRA adapters
+Training coefficients for weighted average of LoRA adapters

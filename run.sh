@@ -23,7 +23,8 @@ source /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/bin/activate
 # python experiments/hyperparamsearch.py
 # python experiments/lora_hyperparameter_search.py
 # python experiments/baseline_experiments.py
-python experiments/base_line_3.py
+# python experiments/base_line_3.py
+python experiments/weighted_avg.py
 # Deactivate the virtual environment
 
 deactivate

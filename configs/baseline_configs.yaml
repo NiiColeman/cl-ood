@@ -16,7 +16,7 @@ datasets:
   #   num_classes: 345
 
 base_model: "vit_base_patch16_224"  # or any other model from timm
-max_samples_per_class: 20  # Set to null or remove this line to use all samples
+max_samples_per_class: 5  # Set to null or remove this line to use all samples
 
 # Training parameters
 batch_size: 32
