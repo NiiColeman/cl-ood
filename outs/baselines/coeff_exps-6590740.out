@@ -1,0 +1,57 @@
+
+--- Run 1/3 ---
+
+Running LoRA with Separate Classifiers experiment
+Test domain: photo
+Train domains: ['art_painting', 'sketch', 'cartoon']
+
+Training LoRA adapter for domain: art_painting
+Epoch 1/5, Train Loss: 2.9703, Train Accuracy: 17.14%
+Val Loss: 2.1869, Val Accuracy: 2.86%
+Epoch 2/5, Train Loss: 3.2346, Train Accuracy: 15.00%
+Val Loss: 2.6006, Val Accuracy: 14.29%
+Epoch 3/5, Train Loss: 2.3954, Train Accuracy: 14.29%
+Val Loss: 2.1116, Val Accuracy: 17.14%
+Epoch 4/5, Train Loss: 2.0715, Train Accuracy: 13.57%
+Val Loss: 1.9383, Val Accuracy: 14.29%
+Epoch 5/5, Train Loss: 1.9723, Train Accuracy: 15.00%
+Val Loss: 2.0383, Val Accuracy: 14.29%
+art_painting adapter trained. Validation Accuracy: 17.14%
+
+Training LoRA adapter for domain: sketch
+Epoch 1/5, Train Loss: 2.5896, Train Accuracy: 13.57%
+Val Loss: 2.7642, Val Accuracy: 11.43%
+Epoch 2/5, Train Loss: 2.1386, Train Accuracy: 17.14%
+Val Loss: 2.0676, Val Accuracy: 14.29%
+Epoch 3/5, Train Loss: 1.9746, Train Accuracy: 14.29%
+Val Loss: 1.7043, Val Accuracy: 28.57%
+Epoch 4/5, Train Loss: 1.6370, Train Accuracy: 28.57%
+Val Loss: 2.0830, Val Accuracy: 25.71%
+Epoch 5/5, Train Loss: 2.1127, Train Accuracy: 25.00%
+Val Loss: 1.5626, Val Accuracy: 28.57%
+sketch adapter trained. Validation Accuracy: 28.57%
+
+Training LoRA adapter for domain: cartoon
+Epoch 1/5, Train Loss: 2.2370, Train Accuracy: 15.00%
+Val Loss: 1.9569, Val Accuracy: 17.14%
+Epoch 2/5, Train Loss: 2.0503, Train Accuracy: 16.43%
+Val Loss: 1.9971, Val Accuracy: 8.57%
+Epoch 3/5, Train Loss: 1.8658, Train Accuracy: 22.86%
+Val Loss: 1.8986, Val Accuracy: 8.57%
+Epoch 4/5, Train Loss: 1.5071, Train Accuracy: 44.29%
+Val Loss: 3.5974, Val Accuracy: 25.71%
+Epoch 5/5, Train Loss: 1.9467, Train Accuracy: 37.14%
+Val Loss: 1.6261, Val Accuracy: 34.29%
+cartoon adapter trained. Validation Accuracy: 34.29%
+
+Training coefficients for adapter merging
+Epoch 1, Loss: 2.7858, Accuracy: 0.00%
+Coefficients: [0.32867283 0.32441399 0.34691316]
+Epoch 2, Loss: 2.7860, Accuracy: 0.00%
+Coefficients: [0.32816517 0.324246   0.34758887]
+Epoch 3, Loss: 2.7847, Accuracy: 0.00%
+Coefficients: [0.32821563 0.3240478  0.34773657]
+Epoch 4, Loss: 2.7852, Accuracy: 0.00%
+Coefficients: [0.32825798 0.32397798 0.34776407]
+Epoch 5, Loss: 2.7854, Accuracy: 0.00%
+Coefficients: [0.3282045  0.32395384 0.34784165]

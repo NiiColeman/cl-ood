@@ -1,0 +1,27 @@
+Epoch 1/10:   0%|          | 0/18 [00:00<?, ?it/s]Epoch 1/10:   0%|          | 0/18 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 154, in <module>
+    lora_adapters = run_baseline_experiment(config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 128, in run_baseline_experiment
+    lora_adapter = train_lora_adapter(base_model, train_loader, val_loader, config, device, domain)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 79, in train_lora_adapter
+    outputs = model(inputs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 48, in forward
+    features = self.base_model(x, output_hidden_states=True).hidden_states[-1]
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/peft/peft_model.py", line 1946, in forward
+    return self.base_model(
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 161, in forward
+    return self.model.forward(*args, **kwargs)
+TypeError: VisionTransformer.forward() got an unexpected keyword argument 'input_ids'

@@ -1,245 +1,309 @@
-
-"""
-Baseline Experiments for Out-of-Distribution Generalization
-
-This script implements three baseline experiments to evaluate out-of-distribution
-generalization in image classification tasks using the PACS, VLCS, DomainNet, 
-and Office-Home datasets.
-
-Baselines:
-1. Single Domain: Train and test on the target domain only.
-2. Multi-Domain with LoRA: Train on source domains using LoRA adapters, then test on target domain.
-3. Weighted LoRA Adapters: Combine LoRA adapters from source domains using learned weights.
-
-Usage:
-    python src/experiments/baseline_experiments.py
-
-Configuration:
-    The experiment parameters are specified in 'configs/baseline_config.yaml'.
-"""
-
-
+import yaml
 import torch
+import random
+import timm
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader, Subset, random_split
-from data.cl_benchmark_generator import CLBenchmarkGenerator
-import timm
-from peft import get_peft_model, LoraConfig, TaskType
+import torch.nn.functional as F
+from torch.utils.data import DataLoader
 from tqdm import tqdm
-import random
-import os
-import json 
+from peft import get_peft_model, LoraConfig, get_peft_model_state_dict
+from data.cl_benchmark_generator import CLBenchmarkGenerator
+import numpy as np
+from collections import defaultdict
 
+def set_seed(seed):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
 
-class WeightedLoRAAdapter(nn.Module):
-    def __init__(self, base_model, adapters):
-        super().__init__()
-        self.base_model = base_model
-        self.adapters = nn.ModuleList(adapters)
-        self.weights = nn.Parameter(torch.ones(len(adapters)) / len(adapters))
+def train_and_evaluate(model, train_loader, test_loader, config, device):
+    optimizer = optim.AdamW(model.parameters(), lr=float(config['learning_rate']))
+    criterion = nn.CrossEntropyLoss()
 
-    def forward(self, x):
-        base_output = self.base_model(x)
-        adapter_outputs = [adapter(x) for adapter in self.adapters]
-        weighted_output = sum(w * out for w, out in zip(self.weights, adapter_outputs))
-        return base_output + weighted_output
+    for epoch in range(config['num_epochs']):
+        model.train()
+        total_loss = 0
+        correct = 0
+        total = 0
+        for inputs, targets, _ in tqdm(train_loader, desc=f"Epoch {epoch+1}/{config['num_epochs']}"):
+            inputs, targets = inputs.to(device), targets.to(device)
+            optimizer.zero_grad()
+            outputs = model(inputs)
+            loss = criterion(outputs, targets)
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+            _, predicted = outputs.max(1)
+            total += targets.size(0)
+            correct += predicted.eq(targets).sum().item()
+        
+        epoch_loss = total_loss / len(train_loader)
+        epoch_accuracy = 100. * correct / total
+        print(f"Epoch {epoch+1}/{config['num_epochs']}, Loss: {epoch_loss:.4f}, Accuracy: {epoch_accuracy:.2f}%")
 
-def train(model, train_loader, criterion, optimizer, device, desc="Training"):
-    model.train()
-    total_loss = 0
-    correct = 0
-    total = 0
-    for inputs, labels, _ in tqdm(train_loader, desc=desc):
-        inputs, labels = inputs.to(device), labels.to(device)
-        optimizer.zero_grad()
-        outputs = model(inputs)
-        loss = criterion(outputs, labels)
-        loss.backward()
-        optimizer.step()
-        total_loss += loss.item()
-        _, predicted = outputs.max(1)
-        total += labels.size(0)
-        correct += predicted.eq(labels).sum().item()
-    return total_loss / len(train_loader), 100. * correct / total
-
-def evaluate(model, test_loader, criterion, device):
+    # Evaluation
     model.eval()
-    total_loss = 0
     correct = 0
     total = 0
     with torch.no_grad():
         for inputs, targets, _ in tqdm(test_loader, desc="Evaluating"):
             inputs, targets = inputs.to(device), targets.to(device)
             outputs = model(inputs)
-            loss = criterion(outputs, targets)
-            total_loss += loss.item()
             _, predicted = outputs.max(1)
             total += targets.size(0)
             correct += predicted.eq(targets).sum().item()
     
-    avg_loss = total_loss / len(test_loader)
     accuracy = 100. * correct / total
-    return avg_loss, accuracy
+    return accuracy
 
-
-def run_baseline_experiments(config):
-    """
-    Run all three baseline experiments.
-
-    This function orchestrates the execution of Baseline 1 (Single Domain),
-    Baseline 2 (Multi-Domain with LoRA), and Baseline 3 (Weighted LoRA Adapters).
-
-    Args:
-        config (dict): Configuration parameters for the experiments.
-
-    Returns:
-        dict: Accuracy results for all three baselines.
-    """
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"Using device: {device}")
-
-    # Debug: Print out the config
-    print("Configuration:")
-    print(json.dumps(config, indent=2))
-
-    # Initialize datasets
-    datasets = {}
-    for name, dataset_config in config['datasets'].items():
-        print(f"Loading dataset: {name}")
-        print(f"Dataset config: {dataset_config}")
-        
-        # Check if the path exists
-        path = dataset_config['path']
-        if not os.path.exists(path):
-            print(f"Warning: Path does not exist: {path}")
-        
-        datasets[name] = CLBenchmarkGenerator(
-            path,
-            max_samples_per_class=config.get('max_samples_per_class')
-        )
-
-    # If test_dataset is not specified, use the last dataset in the list
-    if 'test_dataset' not in config:
-        config['test_dataset'] = list(datasets.keys())[-1]
-        print(f"No test_dataset specified. Using {config['test_dataset']} as the test dataset.")
-
-    test_dataset = datasets[config['test_dataset']]
-    num_classes = test_dataset.num_classes
-
-    # Create model
-    base_model = timm.create_model(config['base_model'], pretrained=True, num_classes=num_classes)
-    base_model = base_model.to(device)
-
-    criterion = nn.CrossEntropyLoss()
-    
-    # Baseline 1: Train and test on test domain only
-    print("Baseline 1: Training and testing on test domain only")
-    test_loader = DataLoader(test_dataset, batch_size=config['batch_size'], shuffle=True)
-    optimizer = optim.AdamW(base_model.parameters(), lr=float(config['learning_rate']))
-    
-    for epoch in range(config['num_epochs']):
-        train_loss, train_acc = train(base_model, test_loader, criterion, optimizer, device)
-        print(f"Epoch {epoch+1}/{config['num_epochs']}, Loss: {train_loss:.4f}, Accuracy: {train_acc:.2f}%")
-    
-    test_loss, test_accuracy = evaluate(base_model, test_loader, criterion, device)
-    print(f"Baseline 1 - Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
-
-    # Reset model for Baseline 2 and 3
-    base_model = timm.create_model(config['base_model'], pretrained=True, num_classes=num_classes)
-    base_model = base_model.to(device)
-
-    # Baseline 2: Train on other domains with LoRA, then test on test domain
-    print("Baseline 2: Training on other domains with LoRA, then testing on test domain")
+def train_lora_adapter(base_model, train_loader, config, device, domain):
+    print(f"\nTraining LoRA adapter for domain: {domain}")
     lora_config = LoraConfig(
         r=config['lora_r'],
         lora_alpha=config['lora_alpha'],
-        target_modules=["qkv"],
+        target_modules=["qkv", "fc1", "fc2"],
         lora_dropout=config['lora_dropout'],
-        bias="none",
-        # task_type=TaskType.IMAGE_CLASSIFICATION
+        bias="none"
     )
-
-    adapters = []
-    for dataset_name in config['auxiliary_datasets']:
-        print(f"Training on dataset: {dataset_name}")
-        dataset = datasets[dataset_name]
-        lora_model = get_peft_model(base_model, lora_config)
-        lora_model = lora_model.to(device)
-        train_loader = DataLoader(dataset, batch_size=config['batch_size'], shuffle=True)
-        optimizer = optim.AdamW(lora_model.parameters(), lr=float(config['learning_rate']))
-        
-        for epoch in range(config['num_epochs']):
-            train_loss, train_acc = train(lora_model, train_loader, criterion, optimizer, device)
-            print(f"Epoch {epoch+1}/{config['num_epochs']}, Loss: {train_loss:.4f}, Accuracy: {train_acc:.2f}%")
-        
-        adapters.append(lora_model)
-        base_model = lora_model.merge_and_unload()
-
-    # Evaluate Baseline 2
-    test_loss, test_accuracy = evaluate(base_model, test_loader, criterion, device)
-    print(f"Baseline 2 - Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
-
-    # Baseline 3: Weighted Average of LoRA Adapters
-    print("Baseline 3: Weighted Average of LoRA Adapters")
+    model = get_peft_model(base_model, lora_config)
     
-    # Split test dataset for Baseline 3
-    train_size = int(0.1 * len(test_dataset))
-    b3_train_dataset, b3_test_dataset = random_split(test_dataset, [train_size, len(test_dataset) - train_size])
-    b3_train_loader = DataLoader(b3_train_dataset, batch_size=config['batch_size'], shuffle=True)
-    b3_test_loader = DataLoader(b3_test_dataset, batch_size=config['batch_size'], shuffle=False)
+    # Replace the head instead of adding a classifier
+    num_features = base_model.num_features
+    num_classes = base_model.num_classes
+    model.head = nn.Linear(num_features, num_classes).to(device)
+    
+    model = model.to(device)
+    optimizer = optim.AdamW(model.parameters(), lr=float(config['lora_learning_rate']))
+    criterion = nn.CrossEntropyLoss()
 
-    weighted_adapter = WeightedLoRAAdapter(base_model, adapters)
-    weighted_adapter = weighted_adapter.to(device)
-    optimizer = optim.Adam([weighted_adapter.weights], lr=float(config['weighted_adapter_lr']))
+    for epoch in range(config['lora_epochs']):
+        model.train()
+        total_loss = 0
+        correct = 0
+        total = 0
+        for inputs, targets, _ in tqdm(train_loader, desc=f"Epoch {epoch+1}/{config['lora_epochs']}"):
+            inputs, targets = inputs.to(device), targets.to(device)
+            optimizer.zero_grad()
+            outputs = model(inputs)  # Use the full model forward pass
+            loss = criterion(outputs, targets)
+            loss.backward()
+            optimizer.step()
+            total_loss += loss.item()
+            _, predicted = outputs.max(1)
+            total += targets.size(0)
+            correct += predicted.eq(targets).sum().item()
+        
+        epoch_loss = total_loss / len(train_loader)
+        epoch_accuracy = 100. * correct / total
+        print(f"Epoch {epoch+1}/{config['lora_epochs']}, Loss: {epoch_loss:.4f}, Accuracy: {epoch_accuracy:.2f}%")
 
-    for epoch in range(config['weighted_adapter_epochs']):
-        train_loss, train_acc = train(weighted_adapter, b3_train_loader, criterion, optimizer, device, desc=f"Baseline 3 Epoch {epoch+1}")
-        print(f"Baseline 3 Epoch {epoch+1}/{config['weighted_adapter_epochs']}, Loss: {train_loss:.4f}, Accuracy: {train_acc:.2f}%")
+    return get_peft_model_state_dict(model), model.head.state_dict()
 
-    # Evaluate Baseline 3
-    test_loss, test_accuracy = evaluate(weighted_adapter, b3_test_loader, criterion, device)
-    print(f"Baseline 3 - Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
+def evaluate_lora_model(base_model, adapter_state_dict, classifier_state_dict, test_loader, config, device):
+    lora_config = LoraConfig(
+        r=config['lora_r'],
+        lora_alpha=config['lora_alpha'],
+        target_modules=["qkv", "fc1", "fc2"],
+        lora_dropout=config['lora_dropout'],
+        bias="none"
+    )
+    model = get_peft_model(base_model, lora_config).to(device)
+    model.load_state_dict(adapter_state_dict, strict=False)
+    model.classifier = nn.Linear(base_model.num_features, base_model.num_classes).to(device)
+    model.classifier.load_state_dict(classifier_state_dict)
+    
+    model.eval()
+    correct = 0
+    total = 0
+    with torch.no_grad():
+        for inputs, targets, _ in tqdm(test_loader, desc="Evaluating"):
+            inputs, targets = inputs.to(device), targets.to(device)
+            features = model.base_model.forward_features(inputs)
+            outputs = model.classifier(features)
+            _, predicted = outputs.max(1)
+            total += targets.size(0)
+            correct += predicted.eq(targets).sum().item()
+    
+    accuracy = 100. * correct / total
+    return accuracy
 
-    # Save final models
-    torch.save(base_model.state_dict(), os.path.join(config['output_dir'], 'baseline_2_final_model.pth'))
-    torch.save(weighted_adapter.state_dict(), os.path.join(config['output_dir'], 'baseline_3_final_model.pth'))
+def train_coefficients(base_model, lora_adapters, train_loader, config, device):
+    print("\nTraining coefficients for weighted average of LoRA adapters and heads")
+    coefficients = nn.Parameter(torch.ones(len(lora_adapters), device=device) / len(lora_adapters))
+    coefficients.data += torch.randn_like(coefficients) * 0.02  # Slight asymmetry in initialization
+    optimizer = optim.Adam([coefficients], lr=float(config['coefficient_lr']))
+    criterion = nn.CrossEntropyLoss()
 
+    lora_models = {}
+    for name, (adapter_state_dict, head_state_dict) in lora_adapters.items():
+        lora_model = get_peft_model(base_model, LoraConfig(
+            r=config['lora_r'],
+            lora_alpha=config['lora_alpha'],
+            target_modules=["qkv", "fc1", "fc2"],
+            lora_dropout=config['lora_dropout'],
+            bias="none"
+        )).to(device)
+        lora_model.load_state_dict(adapter_state_dict, strict=False)
+        lora_model.head = nn.Linear(base_model.num_features, base_model.num_classes).to(device)
+        lora_model.head.load_state_dict(head_state_dict)
+        lora_models[name] = lora_model
+
+    print("Initial coefficients:", coefficients.detach().cpu().numpy())
+
+    for epoch in range(config['coefficient_epochs']):
+        epoch_loss = 0.0
+        for inputs, targets, _ in tqdm(train_loader, desc=f"Coefficient Epoch {epoch+1}/{config['coefficient_epochs']}"):
+            inputs, targets = inputs.to(device), targets.to(device)
+            optimizer.zero_grad()
+            
+            outputs = sum(F.softmax(coefficients, dim=0)[i] * model(inputs)
+                          for i, (_, model) in enumerate(lora_models.items()))
+            
+            loss = criterion(outputs, targets)
+            loss.backward()
+            optimizer.step()
+            
+            epoch_loss += loss.item()
+        
+        print(f"Epoch {epoch+1} loss: {epoch_loss:.4f}")
+        print(f"Coefficients after epoch {epoch+1}:", coefficients.detach().cpu().numpy())
+
+    final_coefficients = coefficients.detach().cpu().numpy()
+    print("Final coefficients:")
+    for name, coeff in zip(lora_adapters.keys(), final_coefficients):
+        print(f"  {name}: {coeff:.4f}")
+
+    return dict(zip(lora_adapters.keys(), final_coefficients))
+    
+def create_merged_model(base_model, lora_adapters, coefficients, config):
+    class MergedModel(nn.Module):
+        def __init__(self):
+            super().__init__()
+            self.base_model = base_model
+            self.adapters = nn.ModuleDict()
+            self.heads = nn.ModuleDict()
+            for name, (adapter_state_dict, head_state_dict) in lora_adapters.items():
+                adapter = get_peft_model(base_model, LoraConfig(
+                    r=config['lora_r'],
+                    lora_alpha=config['lora_alpha'],
+                    target_modules=["qkv", "fc1", "fc2"],
+                    lora_dropout=config['lora_dropout'],
+                    bias="none"
+                ))
+                adapter.load_state_dict(adapter_state_dict, strict=False)
+                self.adapters[name] = adapter
+                
+                head = nn.Linear(base_model.num_features, base_model.num_classes)
+                head.load_state_dict(head_state_dict)
+                self.heads[name] = head
+            
+            self.coefficients = nn.Parameter(torch.tensor(list(coefficients.values())))
+
+        def forward(self, x):
+            base_features = self.base_model.forward_features(x)
+            adapted_features = sum(
+                F.softmax(self.coefficients, dim=0)[i] * adapter.forward_features(x)
+                for i, adapter in enumerate(self.adapters.values())
+            )
+            combined_features = base_features + adapted_features
+            
+            outputs = sum(
+                F.softmax(self.coefficients, dim=0)[i] * head(combined_features)
+                for i, head in enumerate(self.heads.values())
+            )
+            
+            return outputs
+
+    return MergedModel()
+
+def evaluate(model, test_loader, device):
+    model.eval()
+    correct = 0
+    total = 0
+    with torch.no_grad():
+        for inputs, targets, _ in tqdm(test_loader, desc="Evaluating"):
+            inputs, targets = inputs.to(device), targets.to(device)
+            outputs = model(inputs)
+            _, predicted = outputs.max(1)
+            total += targets.size(0)
+            correct += predicted.eq(targets).sum().item()
+    
+    accuracy = 100. * correct / total
+    return accuracy
+
+def run_baseline_4_experiment(dataset_name, dataset_config, global_config, seed):
+    set_seed(seed)
+    print(f"\nRunning Baseline 4 experiment for dataset: {dataset_name}, Seed: {seed}")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using device: {device}")
+
+    dataset = CLBenchmarkGenerator(dataset_config['path'], max_samples_per_class=global_config.get('max_samples_per_class'))
+    domains = list(set(dataset.domains))
+    test_domain = random.choice(domains)
+    train_domains = [d for d in domains if d != test_domain]
+    
+    print(f"Test domain: {test_domain}")
+    print(f"Train domains: {train_domains}")
+
+    test_subset = dataset.get_domain_data(test_domain)
+    test_loader = DataLoader(test_subset, batch_size=global_config['batch_size'], shuffle=False)
+    
+    # Baseline experiment: train and test on test domain
+    print("\nRunning Baseline experiment (train and test on test domain)")
+    base_model = timm.create_model(global_config['base_model'], pretrained=True, num_classes=dataset_config['num_classes']).to(device)
+    train_loader = DataLoader(test_subset, batch_size=global_config['batch_size'], shuffle=True)
+    baseline_accuracy = train_and_evaluate(base_model, train_loader, test_loader, global_config, device)
+    print(f"Baseline Accuracy: {baseline_accuracy:.2f}%")
+
+    # Reset model for Baseline 4
+    base_model = timm.create_model(global_config['base_model'], pretrained=True, num_classes=dataset_config['num_classes']).to(device)
+    
+    lora_adapters = {}
+    for domain in train_domains:
+        train_subset = dataset.get_domain_data(domain)
+        train_loader = DataLoader(train_subset, batch_size=global_config['batch_size'], shuffle=True)
+        adapter_state_dict, classifier_state_dict = train_lora_adapter(base_model, train_loader, global_config, device, domain)
+        lora_adapters[domain] = (adapter_state_dict, classifier_state_dict)
+        
+        # Evaluate base model with this domain's adapter and classifier
+        accuracy = evaluate_lora_model(base_model, adapter_state_dict, classifier_state_dict, test_loader, global_config, device)
+        print(f"Accuracy after training on {domain}: {accuracy:.2f}%")
+
+    coefficients = train_coefficients(base_model, lora_adapters, DataLoader(test_subset, batch_size=global_config['batch_size'], shuffle=True), global_config, device)
+    
+    print("\nFinal trained coefficients:")
+    for name, coeff in coefficients.items():
+        print(f"  {name}: {coeff:.4f}")
+
+    final_model = create_merged_model(base_model, lora_adapters, coefficients, global_config).to(device)
+    accuracy = evaluate(final_model, test_loader, device)
+    print(f"Baseline 4 - Final Test Accuracy: {accuracy:.2f}%")
+    
     return {
-        "baseline_1_accuracy": test_accuracy,
-        "baseline_2_accuracy": test_accuracy,
-        "baseline_3_accuracy": test_accuracy
+        'dataset': dataset_name,
+        'test_domain': test_domain,
+        'train_domains': train_domains,
+        'baseline_accuracy': baseline_accuracy,
+        'final_accuracy': accuracy,
+        'coefficients': coefficients
     }
 
+def main(config):
+    num_runs = config.get('num_runs', 5)  # Default to 5 runs if not specified
+    all_results = []
 
-
-if __name__ == "__main__":
-    import yaml
-    import json
-    import traceback
-
-    try:
-        # Load configuration
-        with open('/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/configs/baseline_configs.yaml', 'r') as file:
-            config = yaml.safe_load(file)
-        
-        # If auxiliary_datasets is not specified, use all datasets except the test dataset
-        if 'auxiliary_datasets' not in config:
-            config['auxiliary_datasets'] = list(config['datasets'].keys())
-            if 'test_dataset' in config:
-                config['auxiliary_datasets'].remove(config['test_dataset'])
-            print(f"No auxiliary_datasets specified. Using {config['auxiliary_datasets']} as auxiliary datasets.")
-
-        # Run experiments
-        results = run_baseline_experiments(config)
-        
-        # Print final results
-        print("\nFinal Results:")
-        print(f"Baseline 1 Accuracy: {results['baseline_1_accuracy']:.2f}%")
-        print(f"Baseline 2 Accuracy: {results['baseline_2_accuracy']:.2f}%")
-        print(f"Baseline 3 Accuracy: {results['baseline_3_accuracy']:.2f}%")
+    for run in range(num_runs):
+        print(f"\n--- Run {run + 1}/{num_runs} ---")
+        run_results = []
+        for dataset_name, dataset_config in config['datasets'].items():
+            result = run_baseline_4_experiment(dataset_name, dataset_config, config, seed=run)
+            run_results.append(result)
+        all_results.append(run_results)
     
-    except Exception as e:
-        print(f"An error occurred: {str(e)}")
-        print("Traceback:")
-        traceback.print_exc()
+    print("\nSummary of All Runs:")
+    for dataset_idx, dataset_name in enumerate(config['datasets'].keys()):
+        baseline_accuracies = [

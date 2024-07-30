@@ -1,0 +1,289 @@
+
+Running Baseline 4 experiment for dataset: PACS
+Using device: cuda
+Test domain: cartoon
+Train domains: ['photo', 'art_painting', 'sketch']
+
+Training LoRA adapter for domain: photo
+Epoch 1/5, Loss: 2.0106, Accuracy: 20.00%
+Epoch 2/5, Loss: 1.9327, Accuracy: 20.00%
+Epoch 3/5, Loss: 1.9568, Accuracy: 20.00%
+Epoch 4/5, Loss: 2.0337, Accuracy: 21.43%
+Epoch 5/5, Loss: 2.1019, Accuracy: 21.43%
+Accuracy after training on photo: 17.14%
+
+Training LoRA adapter for domain: art_painting
+Epoch 1/5, Loss: 1.9216, Accuracy: 30.00%
+Epoch 2/5, Loss: 1.8517, Accuracy: 30.00%
+Epoch 3/5, Loss: 1.9981, Accuracy: 30.00%
+Epoch 4/5, Loss: 1.7793, Accuracy: 30.00%
+Epoch 5/5, Loss: 1.9503, Accuracy: 31.43%
+Accuracy after training on art_painting: 17.14%
+
+Training LoRA adapter for domain: sketch
+Epoch 1/5, Loss: 2.2361, Accuracy: 12.86%
+Epoch 2/5, Loss: 2.3683, Accuracy: 14.29%
+Epoch 3/5, Loss: 2.3613, Accuracy: 14.29%
+Epoch 4/5, Loss: 2.1799, Accuracy: 14.29%
+Epoch 5/5, Loss: 2.4765, Accuracy: 15.71%
+Accuracy after training on sketch: 17.14%
+
+Training coefficients for weighted average of LoRA adapters
+Initial coefficients: [0.34457088 0.34260112 0.3387839 ]
+Gradients: tensor([1.4901e-08, 0.0000e+00, 1.4901e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -3.7253e-09,  3.7253e-09], device='cuda:0')
+Epoch 1 loss: 6.6542
+Coefficients after epoch 1: [0.33363768 0.3331443  0.33321804]
+Gradients: tensor([ 7.4506e-09, -3.7253e-09, -1.1176e-08], device='cuda:0')
+Gradients: tensor([2.9802e-08, 1.4901e-08, 0.0000e+00], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -3.7253e-09,  0.0000e+00], device='cuda:0')
+Epoch 2 loss: 6.7310
+Coefficients after epoch 2: [0.3325358  0.33323961 0.33422464]
+Gradients: tensor([-1.4901e-08,  0.0000e+00,  7.4506e-09], device='cuda:0')
+Gradients: tensor([2.9802e-08, 0.0000e+00, 2.2352e-08], device='cuda:0')
+Gradients: tensor([-2.9802e-08, -1.4901e-08,  0.0000e+00], device='cuda:0')
+Epoch 3 loss: 7.5094
+Coefficients after epoch 3: [0.3331792  0.33383322 0.33298758]
+Gradients: tensor([0.0000e+00, 1.4901e-08, 7.4506e-09], device='cuda:0')
+Gradients: tensor([0.0000e+00, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([0., 0., 0.], device='cuda:0')
+Epoch 4 loss: 6.8293
+Coefficients after epoch 4: [0.33361906 0.33356783 0.33281308]
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  2.2352e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  0.0000e+00, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -3.7253e-09, -5.5879e-09], device='cuda:0')
+Epoch 5 loss: 6.4827
+Coefficients after epoch 5: [0.33371195 0.33366826 0.3326198 ]
+Final coefficients:
+  photo: 0.3337
+  art_painting: 0.3337
+  sketch: 0.3326
+
+Final trained coefficients:
+  photo: 0.3337
+  art_painting: 0.3337
+  sketch: 0.3326
+Baseline 4 - Final Test Accuracy: 17.14%
+
+Running Baseline 4 experiment for dataset: VLCS
+Using device: cuda
+Test domain: Caltech101
+Train domains: ['LabelMe', 'VOC2007', 'SUN09']
+
+Training LoRA adapter for domain: LabelMe
+Epoch 1/5, Loss: 1.9488, Accuracy: 24.00%
+Epoch 2/5, Loss: 1.9468, Accuracy: 24.00%
+Epoch 3/5, Loss: 1.9544, Accuracy: 24.00%
+Epoch 4/5, Loss: 1.9001, Accuracy: 24.00%
+Epoch 5/5, Loss: 1.9489, Accuracy: 24.00%
+Accuracy after training on LabelMe: 24.00%
+
+Training LoRA adapter for domain: VOC2007
+Epoch 1/5, Loss: 2.1806, Accuracy: 26.00%
+Epoch 2/5, Loss: 2.1125, Accuracy: 26.00%
+Epoch 3/5, Loss: 2.0495, Accuracy: 26.00%
+Epoch 4/5, Loss: 2.1217, Accuracy: 26.00%
+Epoch 5/5, Loss: 2.1274, Accuracy: 26.00%
+Accuracy after training on VOC2007: 24.00%
+
+Training LoRA adapter for domain: SUN09
+Epoch 1/5, Loss: 1.9082, Accuracy: 14.00%
+Epoch 2/5, Loss: 1.8756, Accuracy: 14.00%
+Epoch 3/5, Loss: 1.8909, Accuracy: 14.00%
+Epoch 4/5, Loss: 1.8799, Accuracy: 14.00%
+Epoch 5/5, Loss: 1.9218, Accuracy: 14.00%
+Accuracy after training on SUN09: 24.00%
+
+Training coefficients for weighted average of LoRA adapters
+Initial coefficients: [0.3488029  0.3443512  0.33195987]
+Gradients: tensor([ 0.0000e+00, -3.7253e-09,  3.7253e-09], device='cuda:0')
+Gradients: tensor([ 3.7253e-09,  5.5879e-09, -1.8626e-09], device='cuda:0')
+Epoch 1 loss: 3.3932
+Coefficients after epoch 1: [0.3339309 0.3339882 0.3320809]
+Gradients: tensor([0.0000e+00, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 7.4506e-09], device='cuda:0')
+Epoch 2 loss: 3.4008
+Coefficients after epoch 2: [0.3337762  0.33348486 0.3327389 ]
+Gradients: tensor([ 0.0000e+00,  0.0000e+00, -3.7253e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -1.8626e-09, -9.3132e-10], device='cuda:0')
+Epoch 3 loss: 3.3317
+Coefficients after epoch 3: [0.33357587 0.33331814 0.33310598]
+Gradients: tensor([ 7.4506e-09,  0.0000e+00, -3.7253e-09], device='cuda:0')
+Gradients: tensor([0.0000e+00, 1.8626e-09, 0.0000e+00], device='cuda:0')
+Epoch 4 loss: 3.3726
+Coefficients after epoch 4: [0.33317366 0.33334044 0.3334859 ]
+Gradients: tensor([0.0000e+00, 0.0000e+00, 1.4901e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -1.8626e-09, -1.8626e-09], device='cuda:0')
+Epoch 5 loss: 3.3646
+Coefficients after epoch 5: [0.33333528 0.3335433  0.33312142]
+Final coefficients:
+  LabelMe: 0.3333
+  VOC2007: 0.3335
+  SUN09: 0.3331
+
+Final trained coefficients:
+  LabelMe: 0.3333
+  VOC2007: 0.3335
+  SUN09: 0.3331
+Baseline 4 - Final Test Accuracy: 24.00%
+
+Running Baseline 4 experiment for dataset: OfficeHome
+Using device: cuda
+Test domain: Art
+Train domains: ['Clipart', 'Product', 'Real World']
+
+Training LoRA adapter for domain: Clipart
+Epoch 1/5, Loss: 4.7639, Accuracy: 1.23%
+Epoch 2/5, Loss: 4.6980, Accuracy: 1.23%
+Epoch 3/5, Loss: 4.6518, Accuracy: 1.23%
+Epoch 4/5, Loss: 4.6199, Accuracy: 1.69%
+Epoch 5/5, Loss: 4.5843, Accuracy: 1.85%
+Accuracy after training on Clipart: 2.31%
+
+Training LoRA adapter for domain: Product
+Epoch 1/5, Loss: 4.5458, Accuracy: 2.15%
+Epoch 2/5, Loss: 4.5181, Accuracy: 2.15%
+Epoch 3/5, Loss: 4.4685, Accuracy: 2.46%
+Epoch 4/5, Loss: 4.4360, Accuracy: 2.15%
+Epoch 5/5, Loss: 4.4114, Accuracy: 2.15%
+Accuracy after training on Product: 2.31%
+
+Training LoRA adapter for domain: Real World
+Epoch 1/5, Loss: 4.5734, Accuracy: 3.08%
+Epoch 2/5, Loss: 4.5613, Accuracy: 2.92%
+Epoch 3/5, Loss: 4.5108, Accuracy: 2.77%
+Epoch 4/5, Loss: 4.5080, Accuracy: 2.77%
+Epoch 5/5, Loss: 4.4780, Accuracy: 2.77%
+Accuracy after training on Real World: 2.31%
+
+Training coefficients for weighted average of LoRA adapters
+Initial coefficients: [0.322643   0.3237359  0.32813153]
+Gradients: tensor([1.4901e-08, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([-2.9802e-08, -7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 2.9802e-08,  0.0000e+00, -2.2352e-08], device='cuda:0')
+Gradients: tensor([ 1.4901e-08,  0.0000e+00, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  0.0000e+00], device='cuda:0')
+Gradients: tensor([-2.9802e-08, -2.2352e-08, -1.4901e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -7.4506e-09,  0.0000e+00], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([1.4901e-08, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([0., 0., 0.], device='cuda:0')
+Gradients: tensor([0., 0., 0.], device='cuda:0')
+Gradients: tensor([ 1.4901e-08,  1.4901e-08, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  1.4901e-08, -7.4506e-09], device='cuda:0')
+Gradients: tensor([0.0000e+00, 1.4901e-08, 1.4901e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -2.9802e-08, -1.4901e-08], device='cuda:0')
+Epoch 1 loss: 97.1999
+Coefficients after epoch 1: [0.3330296  0.33305264 0.33391777]
+Gradients: tensor([2.9802e-08, 2.9802e-08, 1.4901e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  0.0000e+00, -7.4506e-09], device='cuda:0')
+Gradients: tensor([0., 0., 0.], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  0.0000e+00, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  0.0000e+00, -7.4506e-09], device='cuda:0')
+Gradients: tensor([0., 0., 0.], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -1.4901e-08,  0.0000e+00], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  0.0000e+00,  7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -1.4901e-08,  7.4506e-09], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -1.4901e-08, -7.4506e-09], device='cuda:0')
+Gradients: tensor([2.9802e-08, 0.0000e+00, 1.4901e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 1.4901e-08, 7.4506e-09], device='cuda:0')
+Gradients: tensor([ 1.4901e-08, -7.4506e-09, -2.9802e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  0.0000e+00, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 1.4901e-08, -7.4506e-09,  0.0000e+00], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -1.4901e-08, -2.2352e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 0.0000e+00], device='cuda:0')
+Gradients: tensor([0.0000e+00, 1.4901e-08, 7.4506e-09], device='cuda:0')
+Gradients: tensor([ 1.4901e-08,  7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([1.4901e-08, 0.0000e+00, 1.4901e-08], device='cuda:0')
+Epoch 2 loss: 97.0891
+Coefficients after epoch 2: [0.33251712 0.33337465 0.3341082 ]
+Gradients: tensor([ 0.0000e+00, -7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 7.4506e-09], device='cuda:0')
+Gradients: tensor([1.4901e-08, 0.0000e+00, 2.9802e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 0.0000e+00], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09, -2.9802e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 2.2352e-08, 7.4506e-09], device='cuda:0')
+Gradients: tensor([0., 0., 0.], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  7.4506e-09,  7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  7.4506e-09], device='cuda:0')
+Gradients: tensor([1.4901e-08, 1.4901e-08, 1.4901e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  0.0000e+00, -7.4506e-09], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  0.0000e+00, -1.4901e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 2.2352e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([0.0000e+00, 1.4901e-08, 1.4901e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 1.4901e-08, 1.4901e-08], device='cuda:0')
+Gradients: tensor([ 2.9802e-08, -7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  1.4901e-08,  0.0000e+00], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -7.4506e-09, -1.4901e-08], device='cuda:0')
+Epoch 3 loss: 96.8899
+Coefficients after epoch 3: [0.33368358 0.3328927  0.33342373]
+Gradients: tensor([ 1.4901e-08,  0.0000e+00, -1.4901e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([-2.9802e-08, -4.4703e-08, -1.4901e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([2.9802e-08, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09, -1.4901e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  0.0000e+00,  7.4506e-09], device='cuda:0')
+Gradients: tensor([2.9802e-08, 1.4901e-08, 0.0000e+00], device='cuda:0')
+Gradients: tensor([1.4901e-08, 7.4506e-09, 0.0000e+00], device='cuda:0')
+Gradients: tensor([1.4901e-08, 1.4901e-08, 7.4506e-09], device='cuda:0')
+Gradients: tensor([1.4901e-08, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([1.4901e-08, 2.2352e-08, 1.4901e-08], device='cuda:0')
+Gradients: tensor([ 7.4506e-09, -3.7253e-09,  3.7253e-09], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -1.4901e-08, -7.4506e-09], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  7.4506e-09, -2.2352e-08], device='cuda:0')
+Gradients: tensor([0., 0., 0.], device='cuda:0')
+Gradients: tensor([0.0000e+00, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([1.4901e-08, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Gradients: tensor([-2.9802e-08, -7.4506e-09, -2.2352e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 0.0000e+00], device='cuda:0')
+Epoch 4 loss: 96.8658
+Coefficients after epoch 4: [0.33318648 0.3329453  0.3338683 ]
+Gradients: tensor([ 0.0000e+00, -1.4901e-08, -1.4901e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 0.0000e+00, 7.4506e-09], device='cuda:0')
+Gradients: tensor([1.4901e-08, 0.0000e+00, 0.0000e+00], device='cuda:0')
+Gradients: tensor([ 1.4901e-08,  1.4901e-08, -7.4506e-09], device='cuda:0')
+Gradients: tensor([2.9802e-08, 2.2352e-08, 7.4506e-09], device='cuda:0')
+Gradients: tensor([2.9802e-08, 7.4506e-09, 2.9802e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  0.0000e+00], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  1.4901e-08], device='cuda:0')
+Gradients: tensor([1.4901e-08, 0.0000e+00, 2.2352e-08], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 0.0000e+00], device='cuda:0')
+Gradients: tensor([0.0000e+00, 1.4901e-08, 0.0000e+00], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 0.0000e+00], device='cuda:0')
+Gradients: tensor([0.0000e+00, 7.4506e-09, 1.4901e-08], device='cuda:0')
+Gradients: tensor([ 1.4901e-08, -7.4506e-09,  7.4506e-09], device='cuda:0')
+Gradients: tensor([ 0.0000e+00,  7.4506e-09, -7.4506e-09], device='cuda:0')
+Gradients: tensor([-1.4901e-08,  0.0000e+00, -1.4901e-08], device='cuda:0')
+Gradients: tensor([2.9802e-08, 7.4506e-09, 2.9802e-08], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -1.4901e-08, -1.4901e-08], device='cuda:0')
+Gradients: tensor([1.4901e-08, 7.4506e-09, 0.0000e+00], device='cuda:0')
+Gradients: tensor([-1.4901e-08, -1.4901e-08, -3.7253e-08], device='cuda:0')
+Gradients: tensor([ 0.0000e+00, -7.4506e-09,  7.4506e-09], device='cuda:0')
+Epoch 5 loss: 96.8466
+Coefficients after epoch 5: [0.33290073 0.33345857 0.33364072]
+Final coefficients:
+  Clipart: 0.3329
+  Product: 0.3335
+  Real World: 0.3336
+
+Final trained coefficients:
+  Clipart: 0.3329
+  Product: 0.3335
+  Real World: 0.3336
+Baseline 4 - Final Test Accuracy: 2.31%
+
+Running Baseline 4 experiment for dataset: DomainNet
+Using device: cuda

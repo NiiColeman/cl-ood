@@ -1,0 +1,17 @@
+Epoch 1/10:   0%|          | 0/26 [00:00<?, ?it/s]Epoch 1/10:   0%|          | 0/26 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 233, in <module>
+    lora_adapters, classifiers, adapter_coeffs, classifier_coeffs = run_experiment(config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 143, in run_experiment
+    lora_weights = train_lora_adapter(base_model, train_loader, val_loader, config, device, domain)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 80, in train_lora_adapter
+    loss = criterion(outputs, targets)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/loss.py", line 1185, in forward
+    return F.cross_entropy(input, target, weight=self.weight,
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/functional.py", line 3086, in cross_entropy
+    return torch._C._nn.cross_entropy_loss(input, target, weight, _Reduction.get_enum(reduction), ignore_index, label_smoothing)
+RuntimeError: Expected target size [32, 7], got [32]

@@ -1,0 +1,11 @@
+Test domain: photo
+Train domains: ['sketch', 'cartoon', 'art_painting']
+Training LoRA adapter for domain: sketch
+Training LoRA adapter for domain: cartoon
+Training LoRA adapter for domain: art_painting
+Trained coefficients:
+sketch: 0.3333
+cartoon: 0.3333
+art_painting: 0.3333
+Final test accuracy: 27.19%
+Base model test accuracy: 27.19%

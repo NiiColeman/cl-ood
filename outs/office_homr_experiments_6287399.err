@@ -1,52 +1,0 @@
-Epoch 1/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/5:  50%|█████     | 1/2 [00:05<00:05,  5.23s/it]Epoch 1/5: 100%|██████████| 2/2 [00:05<00:00,  2.64s/it]
-Epoch 2/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 2/5:  50%|█████     | 1/2 [00:00<00:00,  3.89it/s]Epoch 2/5: 100%|██████████| 2/2 [00:00<00:00,  6.82it/s]
-Epoch 3/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 3/5:  50%|█████     | 1/2 [00:00<00:00,  3.82it/s]Epoch 3/5: 100%|██████████| 2/2 [00:00<00:00,  6.72it/s]
-Epoch 4/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 4/5:  50%|█████     | 1/2 [00:00<00:00,  3.85it/s]Epoch 4/5: 100%|██████████| 2/2 [00:00<00:00,  6.77it/s]
-Epoch 5/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 5/5:  50%|█████     | 1/2 [00:00<00:00,  3.87it/s]Epoch 5/5: 100%|██████████| 2/2 [00:00<00:00,  6.79it/s]
-Evaluating:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating:  50%|█████     | 1/2 [00:00<00:00,  7.87it/s]Evaluating: 100%|██████████| 2/2 [00:00<00:00, 14.16it/s]
-Epoch 1/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/5:  50%|█████     | 1/2 [00:00<00:00,  4.68it/s]Epoch 1/5: 100%|██████████| 2/2 [00:00<00:00,  8.39it/s]
-Epoch 2/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 2/5:  50%|█████     | 1/2 [00:00<00:00,  4.87it/s]Epoch 2/5: 100%|██████████| 2/2 [00:00<00:00,  8.70it/s]
-Epoch 3/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 3/5:  50%|█████     | 1/2 [00:00<00:00,  4.88it/s]Epoch 3/5: 100%|██████████| 2/2 [00:00<00:00,  8.70it/s]
-Epoch 4/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 4/5:  50%|█████     | 1/2 [00:00<00:00,  4.88it/s]Epoch 4/5: 100%|██████████| 2/2 [00:00<00:00,  8.71it/s]
-Epoch 5/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 5/5:  50%|█████     | 1/2 [00:00<00:00,  4.88it/s]Epoch 5/5: 100%|██████████| 2/2 [00:00<00:00,  8.70it/s]
-Epoch 1/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/5:  50%|█████     | 1/2 [00:00<00:00,  4.99it/s]Epoch 1/5: 100%|██████████| 2/2 [00:00<00:00,  8.89it/s]
-Epoch 2/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 2/5:  50%|█████     | 1/2 [00:00<00:00,  4.99it/s]Epoch 2/5: 100%|██████████| 2/2 [00:00<00:00,  8.90it/s]
-Epoch 3/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 3/5:  50%|█████     | 1/2 [00:00<00:00,  4.99it/s]Epoch 3/5: 100%|██████████| 2/2 [00:00<00:00,  8.87it/s]
-Epoch 4/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 4/5:  50%|█████     | 1/2 [00:00<00:00,  4.99it/s]Epoch 4/5: 100%|██████████| 2/2 [00:00<00:00,  8.90it/s]
-Epoch 5/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 5/5:  50%|█████     | 1/2 [00:00<00:00,  5.00it/s]Epoch 5/5: 100%|██████████| 2/2 [00:00<00:00,  8.90it/s]
-Epoch 1/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/5:  50%|█████     | 1/2 [00:00<00:00,  4.88it/s]Epoch 1/5: 100%|██████████| 2/2 [00:00<00:00,  8.72it/s]
-Epoch 2/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 2/5:  50%|█████     | 1/2 [00:00<00:00,  4.88it/s]Epoch 2/5: 100%|██████████| 2/2 [00:00<00:00,  8.69it/s]
-Epoch 3/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 3/5:  50%|█████     | 1/2 [00:00<00:00,  4.89it/s]Epoch 3/5: 100%|██████████| 2/2 [00:00<00:00,  8.71it/s]
-Epoch 4/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 4/5:  50%|█████     | 1/2 [00:00<00:00,  4.87it/s]Epoch 4/5: 100%|██████████| 2/2 [00:00<00:00,  8.68it/s]
-Epoch 5/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 5/5:  50%|█████     | 1/2 [00:00<00:00,  4.88it/s]Epoch 5/5: 100%|██████████| 2/2 [00:00<00:00,  8.70it/s]
-Evaluating:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating:  50%|█████     | 1/2 [00:00<00:00,  7.89it/s]Evaluating: 100%|██████████| 2/2 [00:00<00:00, 14.17it/s]
-Epoch 1/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/5:  50%|█████     | 1/2 [00:00<00:00,  4.42it/s]Epoch 1/5: 100%|██████████| 2/2 [00:00<00:00,  7.77it/s]
-Epoch 2/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 2/5:  50%|█████     | 1/2 [00:00<00:00,  4.43it/s]Epoch 2/5: 100%|██████████| 2/2 [00:00<00:00,  7.87it/s]
-Epoch 3/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 3/5:  50%|█████     | 1/2 [00:00<00:00,  4.50it/s]Epoch 3/5: 100%|██████████| 2/2 [00:00<00:00,  7.97it/s]
-Epoch 4/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 4/5:  50%|█████     | 1/2 [00:00<00:00,  4.50it/s]Epoch 4/5: 100%|██████████| 2/2 [00:00<00:00,  7.97it/s]
-Epoch 5/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 5/5:  50%|█████     | 1/2 [00:00<00:00,  4.43it/s]Epoch 5/5: 100%|██████████| 2/2 [00:00<00:00,  7.86it/s]
-Epoch 1/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/5:  50%|█████     | 1/2 [00:00<00:00,  4.51it/s]Epoch 1/5: 100%|██████████| 2/2 [00:00<00:00,  8.00it/s]
-Epoch 2/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 2/5:  50%|█████     | 1/2 [00:00<00:00,  4.53it/s]Epoch 2/5: 100%|██████████| 2/2 [00:00<00:00,  8.03it/s]
-Epoch 3/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 3/5:  50%|█████     | 1/2 [00:00<00:00,  4.53it/s]Epoch 3/5: 100%|██████████| 2/2 [00:00<00:00,  8.03it/s]
-Epoch 4/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 4/5:  50%|█████     | 1/2 [00:00<00:00,  4.53it/s]Epoch 4/5: 100%|██████████| 2/2 [00:00<00:00,  8.04it/s]
-Epoch 5/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 5/5:  50%|█████     | 1/2 [00:00<00:00,  4.59it/s]Epoch 5/5: 100%|██████████| 2/2 [00:00<00:00,  8.12it/s]
-Epoch 1/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 1/5:  50%|█████     | 1/2 [00:00<00:00,  4.44it/s]Epoch 1/5: 100%|██████████| 2/2 [00:00<00:00,  7.88it/s]
-Epoch 2/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 2/5:  50%|█████     | 1/2 [00:00<00:00,  4.44it/s]Epoch 2/5: 100%|██████████| 2/2 [00:00<00:00,  7.88it/s]
-Epoch 3/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 3/5:  50%|█████     | 1/2 [00:00<00:00,  4.44it/s]Epoch 3/5: 100%|██████████| 2/2 [00:00<00:00,  7.87it/s]
-Epoch 4/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 4/5:  50%|█████     | 1/2 [00:00<00:00,  4.45it/s]Epoch 4/5: 100%|██████████| 2/2 [00:00<00:00,  7.89it/s]
-Epoch 5/5:   0%|          | 0/2 [00:00<?, ?it/s]Epoch 5/5:  50%|█████     | 1/2 [00:00<00:00,  4.43it/s]Epoch 5/5: 100%|██████████| 2/2 [00:00<00:00,  7.85it/s]
-Evaluating:   0%|          | 0/2 [00:00<?, ?it/s]Evaluating:  50%|█████     | 1/2 [00:00<00:00,  7.86it/s]Evaluating: 100%|██████████| 2/2 [00:00<00:00, 13.91it/s]
-Traceback (most recent call last):
-  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/weighted_avg.py", line 308, in <module>
-    main(config)
-  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/weighted_avg.py", line 290, in main
-    result = run_baseline_experiments_for_dataset(dataset_name, dataset_config, config)
-  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/weighted_avg.py", line 244, in run_baseline_experiments_for_dataset
-    coefficients = train_adapter_coefficients(
-  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/weighted_avg.py", line 101, in train_adapter_coefficients
-    model.load_state_dict(merged_state_dict)
-  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 2189, in load_state_dict
-    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
-RuntimeError: Error(s) in loading state_dict for VisionTransformer:
-	Missing key(s) in state_dict: "fc_norm.weight", "fc_norm.bias". 
-	Unexpected key(s) in state_dict: "norm.weight", "norm.bias". 

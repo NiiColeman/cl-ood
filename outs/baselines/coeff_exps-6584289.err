@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 337, in <module>
+    main(config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 319, in main
+    result = run_baseline_4_experiment(dataset_name, dataset_config, config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 276, in run_baseline_4_experiment
+    lora_adapters[domain] = train_lora_adapter(base_model, train_loader, global_config, device, domain)
+TypeError: train_lora_adapter() missing 1 required positional argument: 'domain'

@@ -1,0 +1,3 @@
+Test domain: sketch
+Train domains: ['cartoon', 'photo', 'art_painting']
+Training LoRA adapter for domain: cartoon

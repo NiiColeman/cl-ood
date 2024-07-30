@@ -1,0 +1,36 @@
+Test domain: art_painting
+Train domains: ['cartoon', 'sketch', 'photo']
+Base model test accuracy: 16.85%
+Training LoRA adapter for domain: cartoon
+Epoch 1, Test Accuracy: 41.55%
+Epoch 2, Test Accuracy: 62.89%
+Epoch 3, Test Accuracy: 69.24%
+Epoch 4, Test Accuracy: 71.04%
+Epoch 5, Test Accuracy: 72.51%
+Best Test Accuracy for cartoon: 72.51%
+Training LoRA adapter for domain: sketch
+Epoch 1, Test Accuracy: 25.39%
+Epoch 2, Test Accuracy: 31.10%
+Epoch 3, Test Accuracy: 34.08%
+Epoch 4, Test Accuracy: 37.94%
+Epoch 5, Test Accuracy: 40.23%
+Best Test Accuracy for sketch: 40.23%
+Training LoRA adapter for domain: photo
+Epoch 1, Test Accuracy: 43.31%
+Epoch 2, Test Accuracy: 49.61%
+Epoch 3, Test Accuracy: 61.47%
+Epoch 4, Test Accuracy: 63.09%
+Epoch 5, Test Accuracy: 63.72%
+Best Test Accuracy for photo: 63.72%
+Trained coefficients:
+cartoon: 0.3333
+sketch: 0.3333
+photo: 0.3333
+Final test accuracy: 16.85%
+
+Summary:
+Base model accuracy: 16.85%
+cartoon adapter accuracy: 72.51%
+sketch adapter accuracy: 40.23%
+photo adapter accuracy: 63.72%
+Final model accuracy: 16.85%

@@ -1,0 +1,11 @@
+Evaluating:   0%|          | 0/3 [00:00<?, ?it/s]Evaluating:  33%|███▎      | 1/3 [00:00<00:00,  6.96it/s]Evaluating:  67%|██████▋   | 2/3 [00:00<00:00,  7.17it/s]Evaluating: 100%|██████████| 3/3 [00:00<00:00,  9.67it/s]
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 351, in <module>
+    main(config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 333, in main
+    result = run_baseline_4_experiment(dataset_name, dataset_config, config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 288, in run_baseline_4_experiment
+    lora_adapters[domain] = train_lora_adapter(base_model, train_loader, val_loader, global_config, device, domain)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 103, in train_lora_adapter
+    return best_state_dict
+UnboundLocalError: local variable 'best_state_dict' referenced before assignment

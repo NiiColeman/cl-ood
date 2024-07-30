@@ -1,0 +1,32 @@
+
+Running Baseline 4 experiment for dataset: PACS
+Using device: cuda
+Test domain: photo
+Train domains: ['sketch', 'cartoon', 'art_painting']
+
+Training LoRA adapter for domain: sketch
+Epoch 1/5, Loss: 2.4855, Accuracy: 4.29%
+Epoch 2/5, Loss: 2.5396, Accuracy: 4.29%
+Epoch 3/5, Loss: 2.4449, Accuracy: 4.29%
+Epoch 4/5, Loss: 2.4430, Accuracy: 4.29%
+Epoch 5/5, Loss: 2.6550, Accuracy: 4.29%
+Accuracy after training on sketch: 20.00%
+
+Training LoRA adapter for domain: cartoon
+Epoch 1/5, Loss: 2.3229, Accuracy: 12.86%
+Epoch 2/5, Loss: 2.2371, Accuracy: 14.29%
+Epoch 3/5, Loss: 2.0892, Accuracy: 14.29%
+Epoch 4/5, Loss: 2.2130, Accuracy: 14.29%
+Epoch 5/5, Loss: 2.1549, Accuracy: 14.29%
+Accuracy after training on cartoon: 20.00%
+
+Training LoRA adapter for domain: art_painting
+Epoch 1/5, Loss: 2.3377, Accuracy: 8.57%
+Epoch 2/5, Loss: 2.3118, Accuracy: 10.00%
+Epoch 3/5, Loss: 2.3109, Accuracy: 10.00%
+Epoch 4/5, Loss: 2.1975, Accuracy: 10.00%
+Epoch 5/5, Loss: 2.2766, Accuracy: 10.00%
+Accuracy after training on art_painting: 20.00%
+
+Training coefficients for weighted average of LoRA adapters
+Initial coefficients: [0.33925006 0.3456365  0.32824165]

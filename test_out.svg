@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <style>
+    text { font-family: Arial, sans-serif; }
+    .title { font-size: 20px; font-weight: bold; }
+    .subtitle { font-size: 16px; font-weight: bold; }
+    .label { font-size: 14px; }
+    .note { font-size: 12px; font-style: italic; }
+  </style>
+  
+  <!-- Title -->
+  <text x="400" y="30" class="title" text-anchor="middle">Correct Merging vs Current Behavior</text>
+
+  <!-- Correct Merging -->
+  <text x="200" y="70" class="subtitle" text-anchor="middle">Correct Merging</text>
+  <rect x="50" y="90" width="300" height="180" fill="#e6ffe6" stroke="#000"/>
+  <rect x="70" y="110" width="80" height="100" fill="#b3d9ff" stroke="#000"/>
+  <text x="110" y="165" class="label" text-anchor="middle">Adapter 1</text>
+  <rect x="160" y="110" width="80" height="100" fill="#99ccff" stroke="#000"/>
+  <text x="200" y="165" class="label" text-anchor="middle">Adapter 2</text>
+  <rect x="250" y="110" width="80" height="100" fill="#80bfff" stroke="#000"/>
+  <text x="290" y="165" class="label" text-anchor="middle">Adapter 3</text>
+  <rect x="70" y="220" width="260" height="40" fill="#ffcccc" stroke="#000"/>
+  <text x="200" y="245" class="label" text-anchor="middle">Combined Classifier</text>
+  <text x="200" y="285" class="note" text-anchor="middle">All adapters and classifiers contribute</text>
+
+  <!-- Current Behavior -->
+  <text x="600" y="70" class="subtitle" text-anchor="middle">Current Behavior</text>
+  <rect x="450" y="90" width="300" height="180" fill="#ffe6e6" stroke="#000"/>
+  <rect x="470" y="110" width="80" height="100" fill="#d9d9d9" stroke="#000"/>
+  <text x="510" y="165" class="label" text-anchor="middle">Adapter 1</text>
+  <rect x="560" y="110" width="80" height="100" fill="#d9d9d9" stroke="#000"/>
+  <text x="600" y="165" class="label" text-anchor="middle">Adapter 2</text>
+  <rect x="650" y="110" width="80" height="100" fill="#80bfff" stroke="#000"/>
+  <text x="690" y="165" class="label" text-anchor="middle">Adapter 3</text>
+  <rect x="470" y="220" width="260" height="40" fill="#ff9999" stroke="#000"/>
+  <text x="600" y="245" class="label" text-anchor="middle">Last Adapter's Classifier</text>
+  <text x="600" y="285" class="note" text-anchor="middle">Only last adapter effectively contributes</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" />
+    </marker>
+  </defs>
+  <line x1="200" y1="300" x2="200" y2="350" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="300" x2="600" y2="350" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Results -->
+  <rect x="100" y="350" width="200" height="60" fill="#b3ffb3" stroke="#000"/>
+  <text x="200" y="385" class="label" text-anchor="middle">Effective Combination</text>
+  <text x="200" y="405" class="note" text-anchor="middle">Improved generalization</text>
+
+  <rect x="500" y="350" width="200" height="60" fill="#ffb3b3" stroke="#000"/>
+  <text x="600" y="385" class="label" text-anchor="middle">Last Adapter Dominates</text>
+  <text x="600" y="405" class="note" text-anchor="middle">Limited to last domain's performance</text>
+</svg>

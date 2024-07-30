@@ -1,0 +1,24 @@
+Using device: cuda
+
+Training LoRA adapter for domain: art_painting
+Epoch 1, Train Loss: 1.3869, Train Accuracy: 50.06%
+Validation Accuracy: 88.05%
+Epoch 2, Train Loss: 0.2061, Train Accuracy: 94.63%
+Validation Accuracy: 95.61%
+Epoch 3, Train Loss: 0.0321, Train Accuracy: 99.21%
+Validation Accuracy: 95.12%
+Epoch 4, Train Loss: 0.0095, Train Accuracy: 100.00%
+Validation Accuracy: 96.34%
+Epoch 5, Train Loss: 0.0030, Train Accuracy: 100.00%
+Validation Accuracy: 97.07%
+Epoch 6, Train Loss: 0.0015, Train Accuracy: 100.00%
+Validation Accuracy: 97.07%
+Epoch 7, Train Loss: 0.0010, Train Accuracy: 100.00%
+Validation Accuracy: 97.07%
+Epoch 8, Train Loss: 0.0007, Train Accuracy: 100.00%
+Validation Accuracy: 97.32%
+Epoch 9, Train Loss: 0.0006, Train Accuracy: 100.00%
+Validation Accuracy: 97.07%
+Epoch 10, Train Loss: 0.0005, Train Accuracy: 100.00%
+Validation Accuracy: 96.83%
+Best Validation Accuracy: 97.32%

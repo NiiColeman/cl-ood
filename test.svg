@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Title -->
+  <text x="400" y="30" font-size="20" text-anchor="middle" font-weight="bold">Comparison of Baseline 2 and Baseline 3</text>
+  
+  <!-- Baseline 3 -->
+  <text x="200" y="70" font-size="16" text-anchor="middle" font-weight="bold">Baseline 2</text>
+  <rect x="50" y="90" width="300" height="450" fill="none" stroke="#000" stroke-dasharray="5,5"/>
+  
+  <!-- Baseline 3 Steps -->
+  <rect x="70" y="110" width="260" height="40" fill="#f0f0f0" stroke="#000"/>
+  <text x="200" y="135" font-size="12" text-anchor="middle">1. Pre-trained Base Model</text>
+  
+  <rect x="70" y="170" width="260" height="60" fill="#b3d9ff" stroke="#000"/>
+  <text x="200" y="195" font-size="12" text-anchor="middle">2. Train LoRA on Domain 1</text>
+  <text x="200" y="215" font-size="12" text-anchor="middle">Merge weights</text>
+  
+  <rect x="70" y="250" width="260" height="60" fill="#b3ffb3" stroke="#000"/>
+  <text x="200" y="275" font-size="12" text-anchor="middle">3. Train LoRA on Domain 2</text>
+  <text x="200" y="295" font-size="12" text-anchor="middle">Merge weights</text>
+  
+  <rect x="70" y="330" width="260" height="60" fill="#ffd9b3" stroke="#000"/>
+  <text x="200" y="355" font-size="12" text-anchor="middle">4. Train LoRA on Domain 3</text>
+  <text x="200" y="375" font-size="12" text-anchor="middle">Merge weights</text>
+  
+  <rect x="70" y="410" width="260" height="40" fill="#d4a2f9" stroke="#000"/>
+  <text x="200" y="435" font-size="12" text-anchor="middle">5. Final Merged Model</text>
+  
+  <rect x="70" y="470" width="260" height="40" fill="#ff9999" stroke="#000"/>
+  <text x="200" y="495" font-size="12" text-anchor="middle">6. Evaluate on Test Domain</text>
+  
+  <!-- Baseline 4 -->
+  <text x="600" y="70" font-size="16" text-anchor="middle" font-weight="bold">Baseline 3</text>
+  <rect x="450" y="90" width="300" height="450" fill="none" stroke="#000" stroke-dasharray="5,5"/>
+  
+  <!-- Baseline 4 Steps -->
+  <rect x="470" y="110" width="260" height="40" fill="#f0f0f0" stroke="#000"/>
+  <text x="600" y="135" font-size="12" text-anchor="middle">1. Pre-trained Base Model</text>
+  
+  <rect x="470" y="170" width="260" height="40" fill="#b3d9ff" stroke="#000"/>
+  <text x="600" y="195" font-size="12" text-anchor="middle">2. Train LoRA on Domain 1</text>
+  
+  <rect x="470" y="230" width="260" height="40" fill="#b3ffb3" stroke="#000"/>
+  <text x="600" y="255" font-size="12" text-anchor="middle">3. Train LoRA on Domain 2</text>
+  
+  <rect x="470" y="290" width="260" height="40" fill="#ffd9b3" stroke="#000"/>
+  <text x="600" y="315" font-size="12" text-anchor="middle">4. Train LoRA on Domain 3</text>
+  
+  <rect x="470" y="350" width="260" height="60" fill="#d4a2f9" stroke="#000"/>
+  <text x="600" y="375" font-size="12" text-anchor="middle">5. Learn Coefficients (α_i)</text>
+  <text x="600" y="395" font-size="12" text-anchor="middle">using Test Domain Subset</text>
+  
+  <rect x="470" y="430" width="260" height="40" fill="#ff9999" stroke="#000"/>
+  <text x="600" y="455" font-size="12" text-anchor="middle">6. Weighted Combination</text>
+  
+  <rect x="470" y="490" width="260" height="40" fill="#ffcccc" stroke="#000"/>
+  <text x="600" y="515" font-size="12" text-anchor="middle">7. Evaluate on Remaining Test Domain Data</text>
+  
+  <!-- Arrows -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <!-- Baseline 3 Arrows -->
+    <path d="M200 150 L200 170"/>
+    <path d="M200 230 L200 250"/>
+    <path d="M200 310 L200 330"/>
+    <path d="M200 390 L200 410"/>
+    <path d="M200 450 L200 470"/>
+    
+    <!-- Baseline 4 Arrows -->
+    <path d="M600 150 L600 170"/>
+    <path d="M600 210 L600 230"/>
+    <path d="M600 270 L600 290"/>
+    <path d="M600 330 L600 350"/>
+    <path d="M600 410 L600 430"/>
+    <path d="M600 470 L600 490"/>
+  </g>
+</svg>

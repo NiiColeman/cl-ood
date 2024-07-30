@@ -1,0 +1,13 @@
+Evaluating:   0%|          | 0/5 [00:00<?, ?it/s]Evaluating:   0%|          | 0/5 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 225, in <module>
+    run_experiment(config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 176, in run_experiment
+    base_accuracy = evaluate_model_with_head(base_model, base_model.head, dataset, test_domain, config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/test.py", line 153, in evaluate_model_with_head
+    features = model(inputs, output_hidden_states=True).hidden_states[-1]
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+TypeError: VisionTransformer.forward() got an unexpected keyword argument 'output_hidden_states'

@@ -1,0 +1,32 @@
+
+Running Baseline 4 experiment for dataset: PACS
+Using device: cuda
+Test domain: photo
+Train domains: ['sketch', 'cartoon', 'art_painting']
+
+Training LoRA adapter for domain: sketch
+Epoch 1, Batch 0, Loss: 2.2001, Accuracy: 12.50%
+Epoch 1/5, Train Loss: 2.2587, Train Accuracy: 7.14%, Val Loss: 2.1350, Val Accuracy: 7.14%
+Epoch 2, Batch 0, Loss: 2.2695, Accuracy: 9.38%
+Epoch 2/5, Train Loss: 2.2093, Train Accuracy: 8.93%, Val Loss: 2.1197, Val Accuracy: 7.14%
+Epoch 3, Batch 0, Loss: 2.2097, Accuracy: 9.38%
+Epoch 3/5, Train Loss: 2.1848, Train Accuracy: 10.71%, Val Loss: 2.1034, Val Accuracy: 7.14%
+Epoch 4, Batch 0, Loss: 2.2864, Accuracy: 6.25%
+Epoch 4/5, Train Loss: 2.1419, Train Accuracy: 8.93%, Val Loss: 2.0854, Val Accuracy: 7.14%
+Epoch 5, Batch 0, Loss: 1.9811, Accuracy: 15.62%
+Epoch 5/5, Train Loss: 2.1598, Train Accuracy: 8.93%, Val Loss: 2.0681, Val Accuracy: 7.14%
+Best Validation Accuracy: 7.14%
+Accuracy after training on sketch: 25.71%
+
+Training LoRA adapter for domain: cartoon
+Epoch 1, Batch 0, Loss: 2.3311, Accuracy: 12.50%
+Epoch 1/5, Train Loss: 2.4196, Train Accuracy: 10.71%, Val Loss: 2.6406, Val Accuracy: 0.00%
+Epoch 2, Batch 0, Loss: 2.4377, Accuracy: 9.38%
+Epoch 2/5, Train Loss: 2.3540, Train Accuracy: 10.71%, Val Loss: 2.6039, Val Accuracy: 0.00%
+Epoch 3, Batch 0, Loss: 2.4223, Accuracy: 6.25%
+Epoch 3/5, Train Loss: 2.3153, Train Accuracy: 10.71%, Val Loss: 2.5613, Val Accuracy: 0.00%
+Epoch 4, Batch 0, Loss: 2.3050, Accuracy: 6.25%
+Epoch 4/5, Train Loss: 2.2895, Train Accuracy: 10.71%, Val Loss: 2.5256, Val Accuracy: 0.00%
+Epoch 5, Batch 0, Loss: 2.2685, Accuracy: 18.75%
+Epoch 5/5, Train Loss: 2.2533, Train Accuracy: 12.50%, Val Loss: 2.4978, Val Accuracy: 0.00%
+Best Validation Accuracy: 0.00%

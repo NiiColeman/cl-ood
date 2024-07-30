@@ -1,0 +1,159 @@
+
+Running Baseline 4 experiment for dataset: PACS
+Using device: cuda
+Test domain: sketch
+Train domains: ['art_painting', 'cartoon', 'photo']
+
+Training LoRA adapter for domain: art_painting
+Epoch 1/5, Loss: 2.3156, Accuracy: 12.86%
+Epoch 2/5, Loss: 2.2836, Accuracy: 12.86%
+Epoch 3/5, Loss: 2.3834, Accuracy: 12.86%
+Epoch 4/5, Loss: 2.3696, Accuracy: 12.86%
+Epoch 5/5, Loss: 2.2213, Accuracy: 12.86%
+Accuracy after training on art_painting: 14.29%
+
+Training LoRA adapter for domain: cartoon
+Epoch 1/5, Loss: 2.0404, Accuracy: 15.71%
+Epoch 2/5, Loss: 2.2754, Accuracy: 17.14%
+Epoch 3/5, Loss: 2.0816, Accuracy: 17.14%
+Epoch 4/5, Loss: 2.2520, Accuracy: 17.14%
+Epoch 5/5, Loss: 2.0335, Accuracy: 17.14%
+Accuracy after training on cartoon: 14.29%
+
+Training LoRA adapter for domain: photo
+Epoch 1/5, Loss: 2.1791, Accuracy: 8.57%
+Epoch 2/5, Loss: 2.0774, Accuracy: 10.00%
+Epoch 3/5, Loss: 2.0796, Accuracy: 10.00%
+Epoch 4/5, Loss: 2.0089, Accuracy: 11.43%
+Epoch 5/5, Loss: 2.0723, Accuracy: 11.43%
+Accuracy after training on photo: 14.29%
+
+Training coefficients for weighted average of LoRA adapters
+Initial coefficients: [0.3468639  0.33869973 0.33229047]
+Epoch 1 loss: 6.8011
+Coefficients after epoch 1: [0.33245724 0.33400038 0.33354238]
+Epoch 2 loss: 6.7040
+Coefficients after epoch 2: [0.3320202  0.3339346  0.33404517]
+Epoch 3 loss: 7.0346
+Coefficients after epoch 3: [0.33311504 0.3333405  0.33354443]
+Epoch 4 loss: 6.7151
+Coefficients after epoch 4: [0.3338131  0.33296123 0.33322567]
+Epoch 5 loss: 6.9539
+Coefficients after epoch 5: [0.3337037  0.33282512 0.33347124]
+Final coefficients:
+  art_painting: 0.3337
+  cartoon: 0.3328
+  photo: 0.3335
+
+Final trained coefficients:
+  art_painting: 0.3337
+  cartoon: 0.3328
+  photo: 0.3335
+Baseline 4 - Final Test Accuracy: 14.29%
+
+Running Baseline 4 experiment for dataset: VLCS
+Using device: cuda
+Test domain: VOC2007
+Train domains: ['LabelMe', 'Caltech101', 'SUN09']
+
+Training LoRA adapter for domain: LabelMe
+Epoch 1/5, Loss: 1.6961, Accuracy: 22.00%
+Epoch 2/5, Loss: 1.7306, Accuracy: 22.00%
+Epoch 3/5, Loss: 1.6835, Accuracy: 22.00%
+Epoch 4/5, Loss: 1.6938, Accuracy: 24.00%
+Epoch 5/5, Loss: 1.6851, Accuracy: 28.00%
+Accuracy after training on LabelMe: 24.00%
+
+Training LoRA adapter for domain: Caltech101
+Epoch 1/5, Loss: 1.8142, Accuracy: 16.00%
+Epoch 2/5, Loss: 1.8836, Accuracy: 18.00%
+Epoch 3/5, Loss: 1.8981, Accuracy: 20.00%
+Epoch 4/5, Loss: 1.7838, Accuracy: 20.00%
+Epoch 5/5, Loss: 1.8060, Accuracy: 22.00%
+Accuracy after training on Caltech101: 24.00%
+
+Training LoRA adapter for domain: SUN09
+Epoch 1/5, Loss: 1.8400, Accuracy: 14.00%
+Epoch 2/5, Loss: 1.7909, Accuracy: 14.00%
+Epoch 3/5, Loss: 1.8352, Accuracy: 14.00%
+Epoch 4/5, Loss: 1.8047, Accuracy: 14.00%
+Epoch 5/5, Loss: 1.7939, Accuracy: 14.00%
+Accuracy after training on SUN09: 24.00%
+
+Training coefficients for weighted average of LoRA adapters
+Initial coefficients: [0.34801668 0.31987378 0.33323985]
+Epoch 1 loss: 3.4098
+Coefficients after epoch 1: [0.33409435 0.331927   0.3339787 ]
+Epoch 2 loss: 3.5456
+Coefficients after epoch 2: [0.33342823 0.3330366  0.33353513]
+Epoch 3 loss: 3.4375
+Coefficients after epoch 3: [0.33346796 0.33301848 0.33351353]
+Epoch 4 loss: 3.5839
+Coefficients after epoch 4: [0.33344913 0.33290502 0.3336458 ]
+Epoch 5 loss: 3.6678
+Coefficients after epoch 5: [0.33354294 0.33337265 0.33308434]
+Final coefficients:
+  LabelMe: 0.3335
+  Caltech101: 0.3334
+  SUN09: 0.3331
+
+Final trained coefficients:
+  LabelMe: 0.3335
+  Caltech101: 0.3334
+  SUN09: 0.3331
+Baseline 4 - Final Test Accuracy: 24.00%
+
+Running Baseline 4 experiment for dataset: OfficeHome
+Using device: cuda
+Test domain: Clipart
+Train domains: ['Product', 'Real World', 'Art']
+
+Training LoRA adapter for domain: Product
+Epoch 1/5, Loss: 4.4953, Accuracy: 1.69%
+Epoch 2/5, Loss: 4.4395, Accuracy: 1.38%
+Epoch 3/5, Loss: 4.4207, Accuracy: 1.54%
+Epoch 4/5, Loss: 4.4032, Accuracy: 1.54%
+Epoch 5/5, Loss: 4.3707, Accuracy: 1.38%
+Accuracy after training on Product: 1.38%
+
+Training LoRA adapter for domain: Real World
+Epoch 1/5, Loss: 4.4618, Accuracy: 1.85%
+Epoch 2/5, Loss: 4.4443, Accuracy: 1.85%
+Epoch 3/5, Loss: 4.4184, Accuracy: 1.85%
+Epoch 4/5, Loss: 4.4003, Accuracy: 1.85%
+Epoch 5/5, Loss: 4.3899, Accuracy: 1.85%
+Accuracy after training on Real World: 1.38%
+
+Training LoRA adapter for domain: Art
+Epoch 1/5, Loss: 4.6081, Accuracy: 0.77%
+Epoch 2/5, Loss: 4.5813, Accuracy: 0.77%
+Epoch 3/5, Loss: 4.5609, Accuracy: 0.77%
+Epoch 4/5, Loss: 4.5568, Accuracy: 0.92%
+Epoch 5/5, Loss: 4.5264, Accuracy: 0.92%
+Accuracy after training on Art: 1.38%
+
+Training coefficients for weighted average of LoRA adapters
+Initial coefficients: [0.33081642 0.34516123 0.33362317]
+Epoch 1 loss: 99.4824
+Coefficients after epoch 1: [0.33336055 0.33369696 0.33294252]
+Epoch 2 loss: 98.8531
+Coefficients after epoch 2: [0.3328565  0.33293945 0.33420402]
+Epoch 3 loss: 99.0622
+Coefficients after epoch 3: [0.33427083 0.3325312  0.33319792]
+Epoch 4 loss: 99.2017
+Coefficients after epoch 4: [0.33348152 0.3328738  0.3336447 ]
+Epoch 5 loss: 98.6630
+Coefficients after epoch 5: [0.33342746 0.3331877  0.33338487]
+Final coefficients:
+  Product: 0.3334
+  Real World: 0.3332
+  Art: 0.3334
+
+Final trained coefficients:
+  Product: 0.3334
+  Real World: 0.3332
+  Art: 0.3334
+Baseline 4 - Final Test Accuracy: 1.38%
+
+Running Baseline 4 experiment for dataset: DomainNet
+Using device: cuda

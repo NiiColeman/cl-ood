@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/main.py", line 5, in <module>
-    from src.experiments.train import main as train_main
-ModuleNotFoundError: No module named 'src'

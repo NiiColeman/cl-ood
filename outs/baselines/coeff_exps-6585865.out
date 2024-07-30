@@ -1,0 +1,24 @@
+Using device: cuda
+
+Training LoRA adapter for domain: cartoon
+Epoch 1, Train Loss: 1.8805, Train Accuracy: 23.79%
+Validation Accuracy: 46.86%
+Epoch 2, Train Loss: 1.0024, Train Accuracy: 67.51%
+Validation Accuracy: 78.26%
+Epoch 3, Train Loss: 0.3194, Train Accuracy: 90.34%
+Validation Accuracy: 91.79%
+Epoch 4, Train Loss: 0.1131, Train Accuracy: 96.86%
+Validation Accuracy: 93.72%
+Epoch 5, Train Loss: 0.0356, Train Accuracy: 99.64%
+Validation Accuracy: 94.20%
+Epoch 6, Train Loss: 0.0146, Train Accuracy: 100.00%
+Validation Accuracy: 94.20%
+Epoch 7, Train Loss: 0.0067, Train Accuracy: 100.00%
+Validation Accuracy: 95.17%
+Epoch 8, Train Loss: 0.0042, Train Accuracy: 100.00%
+Validation Accuracy: 95.17%
+Epoch 9, Train Loss: 0.0031, Train Accuracy: 100.00%
+Validation Accuracy: 95.17%
+Epoch 10, Train Loss: 0.0024, Train Accuracy: 100.00%
+Validation Accuracy: 95.17%
+Best Validation Accuracy: 95.17%

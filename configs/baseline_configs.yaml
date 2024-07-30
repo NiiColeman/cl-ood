@@ -11,17 +11,17 @@ datasets:
     path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home"
 
     num_classes: 65
-  # DomainNet:
-  #   path: "/path/to/DomainNet"
-  #   num_classes: 345
+  DomainNet:
+    path: "/path/to/DomainNet"
+    num_classes: 345
 
 base_model: "vit_base_patch16_224"  # or any other model from timm
-max_samples_per_class: 5  # Set to null or remove this line to use all samples
+max_samples_per_class: 10  # Set to null or remove this line to use all samples
 
 # Training parameters
 batch_size: 32
 num_epochs: 5
-learning_rate: 1e-4
+learning_rate: 1e-5
 
 # LoRA parameters
 lora_r: 8
@@ -32,5 +32,14 @@ output_dir: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/exp
 
 
 test_dataset: OfficeHome
-weighted_adapter_lr: 1e-4
+weighted_adapter_lr: 1e-2
 weighted_adapter_epochs: 5
+
+seed: 42
+
+coefficient_lr: 1e-2
+coefficient_epochs: 5
+
+
+lora_epochs: 5
+lora_learning_rate: 1e-4 # Learning rate for LoRA

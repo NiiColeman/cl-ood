@@ -1,0 +1,5 @@
+
+Running Baseline 4 experiment for dataset: PACS
+Using device: cuda
+Test domain: cartoon
+Train domains: ['photo', 'sketch', 'art_painting']

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Title -->
+  <text x="400" y="30" font-size="20" text-anchor="middle" font-weight="bold">Weight Coefficient Training and Final Model Creation</text>
+  
+  <!-- Base Model -->
+  <rect x="50" y="70" width="120" height="60" fill="#f0f0f0" stroke="#000"/>
+  <text x="110" y="105" font-size="14" text-anchor="middle">Base Model</text>
+  <text x="110" y="125" font-size="14" text-anchor="middle">W_base</text>
+  
+  <!-- LoRA Adapters -->
+  <g transform="translate(50,170)">
+    <rect x="0" y="0" width="100" height="50" fill="#b3d9ff" stroke="#000"/>
+    <text x="50" y="30" font-size="12" text-anchor="middle">LoRA 1 (W_1)</text>
+  </g>
+  <g transform="translate(50,230)">
+    <rect x="0" y="0" width="100" height="50" fill="#b3ffb3" stroke="#000"/>
+    <text x="50" y="30" font-size="12" text-anchor="middle">LoRA 2 (W_2)</text>
+  </g>
+  <g transform="translate(50,290)">
+    <rect x="0" y="0" width="100" height="50" fill="#ffd9b3" stroke="#000"/>
+    <text x="50" y="30" font-size="12" text-anchor="middle">LoRA 3 (W_3)</text>
+  </g>
+  
+  <!-- Weight Coefficient Training -->
+  <rect x="220" y="170" width="200" height="170" fill="#ffe6e6" stroke="#000"/>
+  <text x="320" y="190" font-size="16" text-anchor="middle" font-weight="bold">Weight Coefficient Training</text>
+  <text x="320" y="220" font-size="12" text-anchor="middle">1. Initialize α_1, α_2, α_3</text>
+  <text x="320" y="250" font-size="12" text-anchor="middle">2. Create merged model</text>
+  <text x="320" y="280" font-size="12" text-anchor="middle">3. Evaluate on test subset</text>
+  <text x="320" y="310" font-size="12" text-anchor="middle">4. Update α_i using gradient descent</text>
+  
+  <!-- Test Domain Subset -->
+  <rect x="220" y="370" width="200" height="50" fill="#d4a2f9" stroke="#000"/>
+  <text x="320" y="400" font-size="12" text-anchor="middle">10% Test Domain Subset</text>
+  
+  <!-- Final Model Creation -->
+  <rect x="500" y="170" width="250" height="170" fill="#e6f2ff" stroke="#000"/>
+  <text x="625" y="190" font-size="16" text-anchor="middle" font-weight="bold">Final Model Creation</text>
+  <text x="625" y="220" font-size="12" text-anchor="middle">W_final = W_base + Σ(α_i * W_i)</text>
+  <text x="625" y="250" font-size="12" text-anchor="middle">1. Start with base model</text>
+  <text x="625" y="280" font-size="12" text-anchor="middle">2. Add weighted sum of LoRA adapters</text>
+  <text x="625" y="310" font-size="12" text-anchor="middle">3. Combine into final model</text>
+  
+  <!-- Final Model -->
+  <rect x="550" y="370" width="150" height="60" fill="#f0f0f0" stroke="#000"/>
+  <text x="625" y="400" font-size="14" text-anchor="middle">Final Model</text>
+  <text x="625" y="420" font-size="14" text-anchor="middle">W_final</text>
+  
+  <!-- Arrows -->
+  <g stroke="#000" stroke-width="2" fill="none">
+    <!-- From Base Model to Weight Coefficient Training -->
+    <path d="M170 100 Q250 100 250 170"/>
+    <!-- From LoRAs to Weight Coefficient Training -->
+    <path d="M150 195 L220 195"/>
+    <path d="M150 255 L220 255"/>
+    <path d="M150 315 L220 315"/>
+    <!-- From Test Subset to Weight Coefficient Training -->
+    <path d="M320 370 L320 340"/>
+    <!-- From Weight Coefficient Training to Final Model Creation -->
+    <path d="M420 255 L500 255"/>
+    <!-- From Base Model to Final Model Creation -->
+    <path d="M170 100 Q450 100 500 170"/>
+    <!-- From Final Model Creation to Final Model -->
+    <path d="M625 340 L625 370"/>
+  </g>
+</svg>

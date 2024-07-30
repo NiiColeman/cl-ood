@@ -1,0 +1,2 @@
+Test domain: cartoon
+Train domains: ['sketch', 'photo', 'art_painting']

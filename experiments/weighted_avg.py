@@ -11,7 +11,7 @@ from collections import OrderedDict
 from data.cl_benchmark_generator import CLBenchmarkGenerator
 from torch.utils.data import DataLoader, Subset, random_split
 from peft import get_peft_model, LoraConfig, TaskType, get_peft_model_state_dict
-
+import matplotlib.pyplot as plt
 
 def train(model, train_loader, criterion, optimizer, device, epochs):
     model.train()
@@ -113,8 +113,26 @@ def create_and_load_model(base_model, merged_state_dict):
     return new_model
 
 def train_adapter_coefficients(base_model, lora_adapters, train_loader, val_loader, device, learning_rate, num_epochs):
+    """
+    Train coefficients for weighted average of LoRA adapters.
+
+  
+    -This code snippet initializes a dictionary called coefficients using a dictionary comprehension. 
+    The keys of the dictionary are the names of the lora_adapters and the values are PyTorch nn.Parameter objects.
+
+    -The nn.Parameter function is used to create a tensor that can be optimized during training. 
+    In this case, the tensor is initialized with the value 1.0 / len(lora_adapters), which is the reciprocal of the length of the lora_adapters list.
+
+    -By using a dictionary comprehension, the code creates a key-value pair for each name in the lora_adapters list, 
+    the key is the name and the value is the nn.Parameter object.
+
+    -The optimizer is initialized using the Adam optimizer with the coefficients as the parameters to be optimized.
+    
+    """
     coefficients = {name: nn.Parameter(torch.tensor(1.0 / len(lora_adapters))) for name in lora_adapters}
-    optimizer = optim.Adam(coefficients.values(), lr=floats(learning_rate))
+    # coefficients.data += torch.randn_like(coefficients) * 0.01 
+    
+    optimizer = optim.Adam(coefficients.values(), lr=float(learning_rate))
     criterion = nn.CrossEntropyLoss()
 
     for epoch in range(num_epochs):
@@ -149,6 +167,54 @@ def train_adapter_coefficients(base_model, lora_adapters, train_loader, val_load
 
     return coefficients
 
+def analyze_coefficients(coefficients, lora_adapters):
+    print("\nAnalysis of LoRA Adapter Coefficients:")
+    print("---------------------------------------")
+    
+    # Convert coefficients to a normalized form (if not already)
+    coef_values = torch.tensor([coef.item() for coef in coefficients.values()])
+    normalized_coef = torch.nn.functional.softmax(coef_values, dim=0)
+    
+    # Create a dictionary of domain names and their normalized coefficients
+    coef_dict = {name: value.item() for name, value in zip(lora_adapters.keys(), normalized_coef)}
+    
+    # Sort coefficients by value
+    sorted_coef = sorted(coef_dict.items(), key=lambda x: x[1], reverse=True)
+    
+    # Print coefficients
+    for domain, value in sorted_coef:
+        print(f"{domain}: {value:.4f}")
+    
+    # Calculate and print statistics
+    max_domain, max_value = max(coef_dict.items(), key=lambda x: x[1])
+    min_domain, min_value = min(coef_dict.items(), key=lambda x: x[1])
+    avg_value = sum(coef_dict.values()) / len(coef_dict)
+    
+    print(f"\nHighest contribution: {max_domain} ({max_value:.4f})")
+    print(f"Lowest contribution: {min_domain} ({min_value:.4f})")
+    print(f"Average contribution: {avg_value:.4f}")
+    
+    # Calculate the ratio of highest to lowest
+    ratio = max_value / min_value if min_value > 0 else float('inf')
+    print(f"Ratio of highest to lowest: {ratio:.2f}")
+    
+    # Visualize the coefficients
+    plt.figure(figsize=(10, 6))
+    plt.bar(coef_dict.keys(), coef_dict.values())
+    plt.title("LoRA Adapter Coefficients")
+    plt.xlabel("Domain")
+    plt.ylabel("Coefficient Value")
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.savefig('lora_coefficients.png')
+    plt.close()
+    
+    print("\nA bar chart of the coefficients has been saved as 'lora_coefficients.png'")
+
+    return coef_dict
+
+
+
 def run_baseline_experiments_for_dataset(dataset_name, dataset_config, global_config):
     print(f"Running baseline experiments for dataset: {dataset_name}")
     
@@ -181,14 +247,18 @@ def run_baseline_experiments_for_dataset(dataset_name, dataset_config, global_co
 
     # Baseline 1: Train and test on test domain only
     print("Baseline 1: Training and testing on test domain only")
+    base_model = timm.create_model(global_config['base_model'], pretrained=True, num_classes=dataset_config['num_classes'])
+
     model = base_model
     optimizer = optim.AdamW(model.parameters(), lr=float(global_config['learning_rate']))
     model = train(model, test_loader, criterion, optimizer, device, global_config['num_epochs'])
     baseline1_loss, baseline1_accuracy = evaluate(model, test_loader, criterion, device)
     print(f"Baseline 1 - Test Loss: {baseline1_loss:.4f}, Test Accuracy: {baseline1_accuracy:.2f}%")
 
-    # Baseline 2: Train on other domains with LoRA, then test on test domain
+    # # Baseline 2: Train on other domains with LoRA, then test on test domain
     print("Baseline 2: Training on other domains with LoRA, then testing on test domain")
+    base_model = timm.create_model(global_config['base_model'], pretrained=True, num_classes=dataset_config['num_classes'])
+
     model = base_model
     lora_adapters = {}
     for train_domain in train_domains:
@@ -227,7 +297,7 @@ def run_baseline_experiments_for_dataset(dataset_name, dataset_config, global_co
         lora_config = LoraConfig(
             r=global_config['lora_r'],
             lora_alpha=global_config['lora_alpha'],
-            target_modules=["qkv", "fc1", "fc2"],
+            target_modules=["qkv"],
             lora_dropout=global_config['lora_dropout'],
         )
         lora_model = get_peft_model(model, lora_config)
@@ -241,7 +311,7 @@ def run_baseline_experiments_for_dataset(dataset_name, dataset_config, global_co
     baseline3_loss, baseline3_accuracy = evaluate(model, test_loader, criterion, device)
     print(f"Baseline 3 - Test Loss: {baseline3_loss:.4f}, Test Accuracy: {baseline3_accuracy:.2f}%")
 
-    # Baseline 4: Weighted average of LoRA adapters
+    Baseline 4: Weighted average of LoRA adapters
     
     print("Baseline 4: Weighted average of LoRA adapters")
     
@@ -261,6 +331,8 @@ def run_baseline_experiments_for_dataset(dataset_name, dataset_config, global_co
         num_epochs=global_config['weighted_adapter_epochs']
     )
 
+    print("Analyzing learned coefficients")
+    coef_dict = analyze_coefficients(coefficients, lora_adapters)
     # Create final merged model
     merged_state_dict = weighted_adapter_merge(base_model, lora_adapters, coefficients)
     final_model = create_and_load_model(base_model, merged_state_dict)
@@ -277,7 +349,7 @@ def run_baseline_experiments_for_dataset(dataset_name, dataset_config, global_co
         'train_domains': train_domains,
         'baseline1_accuracy': baseline1_accuracy,
         'baseline2_accuracy': baseline2_accuracy,
-        'baseline3_accuracy': baseline3_accuracy,
+        # 'baseline3_accuracy': baseline3_accuracy,
         'baseline4_accuracy': baseline4_accuracy
     }
 
@@ -310,7 +382,7 @@ def main(config):
         print(f"  Train Domains: {result['train_domains']}")
         print(f"  Baseline 1 Accuracy: {result['baseline1_accuracy']:.2f}%")
         print(f"  Baseline 2 Accuracy: {result['baseline2_accuracy']:.2f}%")
-        print(f"  Baseline 3 Accuracy: {result['baseline3_accuracy']:.2f}%")
+        # print(f"  Baseline 3 Accuracy: {result['baseline3_accuracy']:.2f}%")
         print(f"  Baseline 4 Accuracy: {result['baseline4_accuracy']:.2f}%")
         print("---")
 
