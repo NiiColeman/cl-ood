@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>latest.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="experiment-results-by-dataset-10-of-test-data-to-learn-coefficients">Experiment Results by Dataset (10% of test data to learn coefficients)</h1>
+<h2 id="1-pacs-dataset">1. PACS Dataset</h2>
+<table>
+<thead>
+<tr>
+<th>Test Domain</th>
+<th>Final Accuracy</th>
+<th>Domain-Specific Accuracies</th>
+<th>Coefficients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cartoon</td>
+<td>61.04%</td>
+<td>Photo: 40.33%</td>
+<td>0.229</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Sketch: 46.30%</td>
+<td>0.263</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 68.01%</td>
+<td>0.508</td>
+</tr>
+<tr>
+<td>Photo</td>
+<td>92.35%</td>
+<td>Sketch: 35.93%</td>
+<td>0.027</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cartoon: 78.71%</td>
+<td>0.512</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 98.00%</td>
+<td>0.461</td>
+</tr>
+<tr>
+<td>Sketch</td>
+<td>47.38%</td>
+<td>Photo: 32.80%</td>
+<td>0.193</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cartoon: 37.01%</td>
+<td>0.288</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 46.31%</td>
+<td>0.520</td>
+</tr>
+<tr>
+<td>Cartoon</td>
+<td>62.46%</td>
+<td>Photo: 33.32%</td>
+<td>0.231</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Sketch: 45.45%</td>
+<td>0.253</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 71.66%</td>
+<td>0.515</td>
+</tr>
+<tr>
+<td>Photo</td>
+<td>99.20%</td>
+<td>Sketch: 43.71%</td>
+<td>0.038</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Cartoon: 83.37%</td>
+<td>0.097</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 99.00%</td>
+<td>0.865</td>
+</tr>
+</tbody>
+</table>
+<p>Summary for PACS:</p>
+<ol>
+<li>Photo domain shows the best performance, with accuracies up to 99.20%.</li>
+<li>Cartoon domain performances are consistent, around 61-62%.</li>
+<li>Sketch domain is the most challenging, with the lowest accuracy at 47.38%.</li>
+<li>Art domain often receives the highest coefficient, suggesting its importance for generalization.</li>
+<li>When Photo is the test domain, other domains (especially Art) can achieve high accuracies.</li>
+</ol>
+<h2 id="2-vlcs-dataset">2. VLCS Dataset</h2>
+<table>
+<thead>
+<tr>
+<th>Test Domain</th>
+<th>Final Accuracy</th>
+<th>Domain-Specific Accuracies</th>
+<th>Coefficients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VOC2007</td>
+<td>67.13%</td>
+<td>Caltech101: 46.99%</td>
+<td>0.318</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>LabelMe: 56.10%</td>
+<td>0.347</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>SUN09: 64.07%</td>
+<td>0.335</td>
+</tr>
+<tr>
+<td>LabelMe</td>
+<td>66.29%</td>
+<td>VOC2007: 65.70%</td>
+<td>0.388</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Caltech101: 46.84%</td>
+<td>0.304</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>SUN09: 62.69%</td>
+<td>0.309</td>
+</tr>
+<tr>
+<td>VOC2007</td>
+<td>65.81%</td>
+<td>Caltech101: 46.23%</td>
+<td>0.326</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>LabelMe: 56.24%</td>
+<td>0.323</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>SUN09: 64.69%</td>
+<td>0.351</td>
+</tr>
+<tr>
+<td>VOC2007</td>
+<td>68.54%</td>
+<td>Caltech101: 49.29%</td>
+<td>0.352</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>LabelMe: 57.03%</td>
+<td>0.288</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>SUN09: 66.11%</td>
+<td>0.360</td>
+</tr>
+<tr>
+<td>VOC2007</td>
+<td>68.28%</td>
+<td>Caltech101: 49.79%</td>
+<td>0.337</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>LabelMe: 54.10%</td>
+<td>0.323</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>SUN09: 68.41%</td>
+<td>0.339</td>
+</tr>
+</tbody>
+</table>
+<p>Summary for VLCS:</p>
+<ol>
+<li>Performance is consistent across test domains, with accuracies ranging from 65.81% to 68.54%.</li>
+<li>SUN09 generally performs well as a source domain, often achieving the highest domain-specific accuracy.</li>
+<li>Caltech101 is consistently the most challenging source domain, with the lowest accuracies.</li>
+<li>Coefficients are relatively balanced, with slight variations across runs.</li>
+<li>VOC2007 appears most frequently as the test domain, showing stable performance.</li>
+</ol>
+<h2 id="3-officehome-dataset">3. OfficeHome Dataset</h2>
+<table>
+<thead>
+<tr>
+<th>Test Domain</th>
+<th>Final Accuracy</th>
+<th>Domain-Specific Accuracies</th>
+<th>Coefficients</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Real World</td>
+<td>62.29%</td>
+<td>Product: 66.11%</td>
+<td>0.642</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Clipart: 46.99%</td>
+<td>0.225</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 30.90%</td>
+<td>0.133</td>
+</tr>
+<tr>
+<td>Art</td>
+<td>52.08%</td>
+<td>Real World: 56.16%</td>
+<td>0.601</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Product: 40.23%</td>
+<td>0.182</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Clipart: 35.56%</td>
+<td>0.217</td>
+</tr>
+<tr>
+<td>Art</td>
+<td>56.02%</td>
+<td>Real World: 57.89%</td>
+<td>0.609</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Product: 44.62%</td>
+<td>0.187</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Clipart: 39.73%</td>
+<td>0.203</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>66.04%</td>
+<td>Real World: 69.37%</td>
+<td>0.750</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Clipart: 42.79%</td>
+<td>0.183</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 20.17%</td>
+<td>0.066</td>
+</tr>
+<tr>
+<td>Product</td>
+<td>67.64%</td>
+<td>Real World: 71.75%</td>
+<td>0.678</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Clipart: 46.55%</td>
+<td>0.205</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Art: 21.62%</td>
+<td>0.117</td>
+</tr>
+</tbody>
+</table>
+<p>Summary for OfficeHome:</p>
+<ol>
+<li>Product as the test domain yields the best performance, with accuracies up to 67.64%.</li>
+<li>Real World consistently performs well as a source domain, often receiving the highest coefficient.</li>
+<li>Art is the most challenging domain, both as a source and target, with the lowest accuracies.</li>
+<li>There's significant variation in performance depending on which domain is used as the test domain.</li>
+<li>Coefficients heavily favor the Real World domain when it's a source domain, suggesting its importance for generalization.</li>
+</ol>
+<h1 id="%F0%9F%9A%80-scientific-contribution-efficient-domain-generalization-through-lora-adapter-merging">🚀 Scientific Contribution: Efficient Domain Generalization through LoRA Adapter Merging</h1>
+<h2 id="%F0%9F%8C%9F-background-and-motivation">🌟 Background and Motivation</h2>
+<p>🧠 Out-of-distribution (OOD) generalization remains a significant challenge in machine learning, particularly in computer vision tasks. Previous work, such as the &quot;Model Ratatouille&quot; approach, has shown promise in improving generalization by training separate models on auxiliary datasets and merging them. However, this method can be computationally expensive and may not efficiently leverage domain-specific knowledge.</p>
+<h2 id="%F0%9F%92%A1-our-novel-approach">💡 Our Novel Approach</h2>
+<p>We introduce a novel, efficient approach to OOD generalization that builds upon and extends the ideas presented in &quot;Model Ratatouille.&quot; Key innovations:</p>
+<ol>
+<li>
+<p><strong>🔧 Efficient Domain Adaptation</strong></p>
+<ul>
+<li>Use Low-Rank Adaptation (LoRA) adapters instead of full models</li>
+<li>Significantly reduces computational overhead</li>
+<li>Still captures domain-specific knowledge effectively</li>
+</ul>
+</li>
+<li>
+<p><strong>⚖️ Weighted Adapter Merging</strong></p>
+<ul>
+<li>Introduce method to merge LoRA adapters using learned coefficients</li>
+<li>Coefficients determine the influence of each adapter on the final model</li>
+<li>Allows for nuanced combination of domain-specific knowledge</li>
+</ul>
+</li>
+<li>
+<p><strong>🎯 Minimal Data Requirement</strong></p>
+<ul>
+<li>Learn effective merging coefficients using as little as 10% of target domain data</li>
+<li>Applicable in scenarios with limited target domain data availability</li>
+</ul>
+</li>
+<li>
+<p><strong>🔮 Zero-Shot Generalization</strong></p>
+<ul>
+<li>Generalize to remaining 90% of target domain without further training</li>
+<li>Demonstrates strong zero-shot capabilities</li>
+</ul>
+</li>
+</ol>
+<h1 id="%F0%9F%9A%80-scientific-contribution-efficient-domain-generalization-through-lora-adapter-merging">🚀 Scientific Contribution: Efficient Domain Generalization through LoRA Adapter Merging</h1>
+<h2 id="%F0%9F%94%AC-how-our-method-works">🔬 How Our Method Works</h2>
+<p>Our approach combines the efficiency of LoRA adapters with a novel weighted merging strategy. Here's a breakdown of the key steps:</p>
+<ol>
+<li>
+<p><strong>🧠 Base Model Initialization</strong></p>
+<ul>
+<li>Start with a pre-trained Vision Transformer (ViT) model, denoted as W_base</li>
+</ul>
+</li>
+<li>
+<p><strong>🔧 Domain-Specific Adaptation</strong></p>
+<ul>
+<li>For each source domain i, train a LoRA adapter</li>
+<li>Resulting in domain-specific weight updates ΔW_i</li>
+<li>Merge with base model: W_i = W_base + ΔW_i</li>
+</ul>
+</li>
+<li>
+<p><strong>⚖️ Coefficient Learning</strong></p>
+<ul>
+<li>Learn coefficients α = (α_1, α_2, ..., α_n) to optimally combine merged models</li>
+<li>Optimization problem:<pre class="hljs"><code><div>min_α L(Σ α_i f_i(x), y)
+subject to: Σ α_i = 1, α_i ≥ 0
+</div></code></pre>
+where L is the loss function, f_i(x) is the output of the i-th merged model</li>
+</ul>
+</li>
+<li>
+<p><strong>🔗 Final Model Creation</strong></p>
+<ul>
+<li>Weighted average of all domain-specific models:<pre class="hljs"><code><div>W_final = Σ α_i W_i
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>🎯 Zero-Shot Evaluation</strong></p>
+<ul>
+<li>Apply W_final to unseen test domain data</li>
+<li>Performance = Metric(f_final(x_test), y_test)</li>
+</ul>
+</li>
+</ol>
+<p>This method allows us to efficiently capture domain-specific knowledge through LoRA adapters, learn optimal combination weights using limited target domain data, and create a final model that generalizes well to unseen domains.</p>
+<h2 id="%F0%9F%94%8D-key-findings">🔍 Key Findings</h2>
+<ol>
+<li>
+<p><strong>⚡ Efficiency</strong>: LoRA-based approach achieves comparable or better performance than full model training with significantly reduced computational resources.</p>
+</li>
+<li>
+<p><strong>🧩 Adaptive Merging</strong>: Learned coefficients provide insights into the relevance of different source domains to the target domain, offering an interpretable measure of domain similarity.</p>
+</li>
+<li>
+<p><strong>🌐 Domain-Specific Insights</strong>: Experiments reveal how different domains contribute to generalization, with some domains consistently proving more valuable across datasets.</p>
+</li>
+<li>
+<p><strong>📈 Generalization Performance</strong>: Improved generalization to unseen domains compared to baseline methods, particularly in challenging scenarios like &quot;Sketch&quot; in PACS or &quot;Art&quot; in OfficeHome.</p>
+</li>
+</ol>
+<h2 id="%F0%9F%94%AE-implications-and-future-directions">🔮 Implications and Future Directions</h2>
+<ol>
+<li>
+<p><strong>🏗️ Scalable Domain Generalization</strong></p>
+<ul>
+<li>Paves the way for more scalable approaches</li>
+<li>Potential to incorporate larger number of source domains without prohibitive computational costs</li>
+</ul>
+</li>
+<li>
+<p><strong>🔗 Transfer Learning Insights</strong></p>
+<ul>
+<li>Learned coefficients offer new perspective on feature transferability between domains</li>
+<li>Could inform future work in transfer learning and domain adaptation</li>
+</ul>
+</li>
+<li>
+<p><strong>🎯 Few-Shot Domain Adaptation</strong></p>
+<ul>
+<li>Ability to learn effective coefficients from small amount of target data</li>
+<li>Potential applications in few-shot learning scenarios</li>
+</ul>
+</li>
+<li>
+<p><strong>🔍 Interpretable AI</strong></p>
+<ul>
+<li>Offers insights into how the model combines knowledge from different domains</li>
+</ul>
+</li>
+<li>
+<p><strong>🌱 Resource-Efficient AI</strong></p>
+<ul>
+<li>Demonstrates effectiveness of merging lightweight adapters</li>
+<li>Contributes to development of more resource-efficient AI models</li>
+<li>Aligns with growing concerns about environmental impact of AI</li>
+</ul>
+</li>
+</ol>
+<h2 id="%F0%9F%8F%81-conclusion">🏁 Conclusion</h2>
+<p>Our work presents a novel, efficient approach to out-of-distribution generalization that leverages the strengths of LoRA adapters and intelligent merging strategies. By demonstrating improved performance with reduced computational requirements, we contribute to the ongoing effort to create more robust, efficient, and adaptable AI systems. The insights gained from our coefficient learning process open new avenues for understanding domain relationships and transferability in machine learning tasks.</p>
+
+</body>
+</html>

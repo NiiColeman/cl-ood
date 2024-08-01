@@ -1,0 +1,20 @@
+{
+  "PACS": {
+    "naive_accuracies": [],
+    "domain_accuracies": {},
+    "final_accuracies": [],
+    "coefficients": []
+  },
+  "VLCS": {
+    "naive_accuracies": [],
+    "domain_accuracies": {},
+    "final_accuracies": [],
+    "coefficients": []
+  },
+  "OfficeHome": {
+    "naive_accuracies": [],
+    "domain_accuracies": {},
+    "final_accuracies": [],
+    "coefficients": []
+  }
+}
