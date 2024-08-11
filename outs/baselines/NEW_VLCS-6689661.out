@@ -1,0 +1,11 @@
+
+--- Run 1/10 ---
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Product
+Training domains: ['Art', 'Clipart', 'Real World']
+
+Running LoRA with Separate Classifiers experiment
+Test domain: Product
+Train domains: ['Art', 'Clipart', 'Real World']
+
+Running Baseline experiment (train and test on test domain)

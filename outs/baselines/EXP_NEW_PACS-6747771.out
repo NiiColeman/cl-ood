@@ -1,0 +1,15 @@
+
+Run 1/5
+Test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+Training LoRA adapter for domain: art_painting
+Epoch 1, Average Loss: 0.8763
+Epoch 2, Average Loss: 0.0460
+Epoch 3, Average Loss: 0.0295
+Epoch 4, Average Loss: 0.0378
+Epoch 5, Average Loss: 0.0481
+Epoch 6, Average Loss: 0.0597
+Epoch 7, Average Loss: 0.0980
+Epoch 8, Average Loss: 0.0937
+Epoch 9, Average Loss: 0.0277
+Epoch 10, Average Loss: 0.0228

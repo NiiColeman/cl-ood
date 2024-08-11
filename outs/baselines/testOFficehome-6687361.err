@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 466, in <module>
+    all_results = run_experiments_multiple_datasets(datasets_config, num_runs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 373, in run_experiments_multiple_datasets
+    dataset_results = run_multiple_experiments(dataset_config, num_runs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 393, in run_multiple_experiments
+    results = experiment.run_experiment()
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 339, in run_experiment
+    base_accuracy = self.run_baseline_experiment()
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 288, in run_baseline_experiment
+    for epoch in range(self.config['baseline_epochs']):
+KeyError: 'baseline_epochs'

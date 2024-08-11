@@ -1,0 +1,107 @@
+
+--- Run 1/3 ---
+
+Running LoRA with TIES experiment
+Test domain: sketch
+Train domains: ['art_painting', 'photo', 'cartoon']
+Baseline Epoch 1/10, Train Loss: 1.4914, Train Accuracy: 33.33%
+Val Loss: 2.2648, Val Accuracy: 12.50%
+Baseline Epoch 2/10, Train Loss: 0.8927, Train Accuracy: 66.67%
+Val Loss: 2.4858, Val Accuracy: 12.50%
+Baseline Epoch 3/10, Train Loss: 0.4985, Train Accuracy: 100.00%
+Val Loss: 2.7342, Val Accuracy: 18.75%
+Baseline Epoch 4/10, Train Loss: 0.2737, Train Accuracy: 100.00%
+Val Loss: 2.9774, Val Accuracy: 18.75%
+Baseline Epoch 5/10, Train Loss: 0.1469, Train Accuracy: 100.00%
+Val Loss: 3.1821, Val Accuracy: 18.75%
+Baseline Epoch 6/10, Train Loss: 0.0775, Train Accuracy: 100.00%
+Val Loss: 3.3527, Val Accuracy: 18.75%
+Baseline Epoch 7/10, Train Loss: 0.0426, Train Accuracy: 100.00%
+Val Loss: 3.5020, Val Accuracy: 18.75%
+Baseline Epoch 8/10, Train Loss: 0.0237, Train Accuracy: 100.00%
+Val Loss: 3.6350, Val Accuracy: 18.75%
+Baseline Epoch 9/10, Train Loss: 0.0132, Train Accuracy: 100.00%
+Val Loss: 3.7537, Val Accuracy: 18.75%
+Baseline Epoch 10/10, Train Loss: 0.0075, Train Accuracy: 100.00%
+Val Loss: 3.8597, Val Accuracy: 18.75%
+Baseline Model - Final Test Accuracy: 18.75%
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2928, Train Accuracy: 17.86%
+Val Loss: 2.1633, Val Accuracy: 14.29%
+Epoch 2/10, Train Loss: 2.1931, Train Accuracy: 17.86%
+Val Loss: 2.1394, Val Accuracy: 14.29%
+Epoch 3/10, Train Loss: 2.1166, Train Accuracy: 21.43%
+Val Loss: 2.1184, Val Accuracy: 14.29%
+Epoch 4/10, Train Loss: 2.0386, Train Accuracy: 21.43%
+Val Loss: 2.0972, Val Accuracy: 14.29%
+Epoch 5/10, Train Loss: 1.9590, Train Accuracy: 21.43%
+Val Loss: 2.0749, Val Accuracy: 14.29%
+Epoch 6/10, Train Loss: 1.8792, Train Accuracy: 21.43%
+Val Loss: 2.0520, Val Accuracy: 14.29%
+Epoch 7/10, Train Loss: 1.7985, Train Accuracy: 21.43%
+Val Loss: 2.0284, Val Accuracy: 14.29%
+Epoch 8/10, Train Loss: 1.7191, Train Accuracy: 28.57%
+Val Loss: 2.0044, Val Accuracy: 14.29%
+Epoch 9/10, Train Loss: 1.6393, Train Accuracy: 32.14%
+Val Loss: 1.9798, Val Accuracy: 14.29%
+Epoch 10/10, Train Loss: 1.5588, Train Accuracy: 39.29%
+Val Loss: 1.9548, Val Accuracy: 14.29%
+art_painting adapter trained. Validation Accuracy: 14.29%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.0397, Train Accuracy: 21.43%
+Val Loss: 2.1441, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 1.9932, Train Accuracy: 21.43%
+Val Loss: 2.1268, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 1.9456, Train Accuracy: 25.00%
+Val Loss: 2.1093, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.8937, Train Accuracy: 28.57%
+Val Loss: 2.0921, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.8495, Train Accuracy: 32.14%
+Val Loss: 2.0762, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.7988, Train Accuracy: 35.71%
+Val Loss: 2.0611, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7511, Train Accuracy: 35.71%
+Val Loss: 2.0455, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.7042, Train Accuracy: 39.29%
+Val Loss: 2.0295, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6539, Train Accuracy: 39.29%
+Val Loss: 2.0131, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.6026, Train Accuracy: 46.43%
+Val Loss: 1.9962, Val Accuracy: 28.57%
+photo adapter trained. Validation Accuracy: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: cartoon
+
+Training LoRA adapter for domain: cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.6139, Train Accuracy: 10.71%
+Val Loss: 2.2562, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 2.4884, Train Accuracy: 14.29%
+Val Loss: 2.2434, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 2.4203, Train Accuracy: 10.71%
+Val Loss: 2.2349, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 2.3472, Train Accuracy: 10.71%
+Val Loss: 2.2281, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 2.2680, Train Accuracy: 10.71%
+Val Loss: 2.2254, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 2.1841, Train Accuracy: 10.71%
+Val Loss: 2.2257, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 2.1067, Train Accuracy: 10.71%
+Val Loss: 2.2230, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 2.0303, Train Accuracy: 10.71%
+Val Loss: 2.2190, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.9541, Train Accuracy: 17.86%
+Val Loss: 2.2149, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.8802, Train Accuracy: 17.86%
+Val Loss: 2.2129, Val Accuracy: 0.00%
+cartoon adapter trained. Validation Accuracy: 0.00%

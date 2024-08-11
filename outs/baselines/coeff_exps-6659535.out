@@ -1,0 +1,267 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': 500, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': 500, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/1
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.7224
+Epoch 2, Average Loss: 0.1153
+Epoch 3, Average Loss: 0.0804
+Epoch 4, Average Loss: 0.0332
+Epoch 5, Average Loss: 0.0827
+Epoch 6, Average Loss: 0.0878
+Epoch 7, Average Loss: 0.0306
+Epoch 8, Average Loss: 0.0300
+Epoch 9, Average Loss: 0.0327
+Epoch 10, Average Loss: 0.0332
+Accuracy: 90.1024
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.4299
+Epoch 2, Average Loss: 0.2788
+Epoch 3, Average Loss: 0.0783
+Epoch 4, Average Loss: 0.0283
+Epoch 5, Average Loss: 0.0102
+Epoch 6, Average Loss: 0.0050
+Epoch 7, Average Loss: 0.0030
+Epoch 8, Average Loss: 0.0022
+Epoch 9, Average Loss: 0.0016
+Epoch 10, Average Loss: 0.0012
+Merged model device: cuda:0
+Accuracy: 72.0137
+Accuracy of art_painting model on test domain: 72.0137
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.0386
+Epoch 2, Average Loss: 0.0708
+Epoch 3, Average Loss: 0.0095
+Epoch 4, Average Loss: 0.0040
+Epoch 5, Average Loss: 0.0023
+Epoch 6, Average Loss: 0.0016
+Epoch 7, Average Loss: 0.0011
+Epoch 8, Average Loss: 0.0009
+Epoch 9, Average Loss: 0.0007
+Epoch 10, Average Loss: 0.0006
+Merged model device: cuda:0
+Accuracy: 47.7816
+Accuracy of photo model on test domain: 47.7816
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.2248
+Epoch 2, Average Loss: 0.6391
+Epoch 3, Average Loss: 0.4464
+Epoch 4, Average Loss: 0.3264
+Epoch 5, Average Loss: 0.2426
+Epoch 6, Average Loss: 0.1770
+Epoch 7, Average Loss: 0.1248
+Epoch 8, Average Loss: 0.0815
+Epoch 9, Average Loss: 0.0535
+Epoch 10, Average Loss: 0.0300
+Merged model device: cuda:0
+Accuracy: 51.0239
+Accuracy of sketch model on test domain: 51.0239
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.3538
+Coefficient Epoch 2, Average Loss: 0.8085
+Coefficient Epoch 3, Average Loss: 0.7967
+Coefficient Epoch 4, Average Loss: 0.8129
+Coefficient Epoch 5, Average Loss: 0.8057
+Coefficient Epoch 6, Average Loss: 0.8290
+Coefficient Epoch 7, Average Loss: 0.8608
+Coefficient Epoch 8, Average Loss: 1.1078
+Coefficient Epoch 9, Average Loss: 1.0097
+Coefficient Epoch 10, Average Loss: 0.9187
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3930419683456421, 0.2609880268573761, 0.3459700345993042]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 66.4676
+Final model accuracy on test domain: 66.4676
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 72.01365187713311, 'photo': 47.781569965870304, 'sketch': 51.02389078498294}, 'final_accuracy': 66.46757679180887, 'coefficients': [0.3930419683456421, 0.2609880268573761, 0.3459700345993042]}]
+Final Model Accuracy: 66.4676 ± 0.0000
+Domain-specific Accuracies:
+  art_painting: 72.0137 ± 0.0000
+  photo: 47.7816 ± 0.0000
+  sketch: 51.0239 ± 0.0000
+Average Coefficients:
+  Coefficient 1: 0.3930 ± 0.0000
+  Coefficient 2: 0.2610 ± 0.0000
+  Coefficient 3: 0.3460 ± 0.0000
+
+==================================================
+Running experiments for dataset: VLCS
+==================================================
+Dataset config for VLCS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'max_samples_per_class': 500, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'max_samples_per_class': 500, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/1
+Preparing data...
+Domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Selected test domain: VOC2007
+Training domains: ['Caltech101', 'LabelMe', 'SUN09']
+Test domain: VOC2007
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.7818
+Epoch 2, Average Loss: 0.2383
+Epoch 3, Average Loss: 0.0895
+Epoch 4, Average Loss: 0.0423
+Epoch 5, Average Loss: 0.0545
+Epoch 6, Average Loss: 0.0867
+Epoch 7, Average Loss: 0.1182
+Epoch 8, Average Loss: 0.1103
+Epoch 9, Average Loss: 0.0530
+Epoch 10, Average Loss: 0.0229
+Accuracy: 79.9816
+Training domains: ['Caltech101', 'LabelMe', 'SUN09']
+
+Training expert models...
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 0.9952
+Epoch 2, Average Loss: 0.1204
+Epoch 3, Average Loss: 0.0166
+Epoch 4, Average Loss: 0.0061
+Epoch 5, Average Loss: 0.0032
+Epoch 6, Average Loss: 0.0021
+Epoch 7, Average Loss: 0.0014
+Epoch 8, Average Loss: 0.0010
+Epoch 9, Average Loss: 0.0008
+Epoch 10, Average Loss: 0.0006
+Merged model device: cuda:0
+Accuracy: 49.2195
+Accuracy of Caltech101 model on test domain: 49.2195
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 1, Average Loss: 1.2318
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 2, Average Loss: 0.8550
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 3, Average Loss: 0.6976
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 4, Average Loss: 0.5909
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 5, Average Loss: 0.4992
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 6, Average Loss: 0.4157
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 7, Average Loss: 0.3277
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 8, Average Loss: 0.2388
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 9, Average Loss: 0.1607
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 10, Average Loss: 0.0931
+Merged model device: cuda:0
+Accuracy: 54.9128
+Accuracy of LabelMe model on test domain: 54.9128
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.0884
+Epoch 2, Average Loss: 0.5624
+Epoch 3, Average Loss: 0.4379
+Epoch 4, Average Loss: 0.3419
+Epoch 5, Average Loss: 0.2643
+Epoch 6, Average Loss: 0.2002
+Epoch 7, Average Loss: 0.1472
+Epoch 8, Average Loss: 0.0903
+Epoch 9, Average Loss: 0.0580
+Epoch 10, Average Loss: 0.0353
+Merged model device: cuda:0
+Accuracy: 58.6777
+Accuracy of SUN09 model on test domain: 58.6777
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.2342
+Coefficient Epoch 2, Average Loss: 0.8671
+Coefficient Epoch 3, Average Loss: 0.8846
+Coefficient Epoch 4, Average Loss: 0.8874
+Coefficient Epoch 5, Average Loss: 0.9040
+Coefficient Epoch 6, Average Loss: 0.9364
+Coefficient Epoch 7, Average Loss: 1.0043
+Coefficient Epoch 8, Average Loss: 2.4230
+Coefficient Epoch 9, Average Loss: 0.8762
+Coefficient Epoch 10, Average Loss: 0.8229
+Final device check:
+Expert model Caltech101 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.22488251328468323, 0.42669373750686646, 0.34842368960380554]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 58.5859
+Final model accuracy on test domain: 58.5859
+
+Summary for VLCS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'VOC2007', 'domain_accuracies': {'Caltech101': 49.219467401285584, 'LabelMe': 54.9127640036731, 'SUN09': 58.67768595041323}, 'final_accuracy': 58.58585858585859, 'coefficients': [0.22488251328468323, 0.42669373750686646, 0.34842368960380554]}]
+Final Model Accuracy: 58.5859 ± 0.0000
+Domain-specific Accuracies:
+  Caltech101: 49.2195 ± 0.0000
+  LabelMe: 54.9128 ± 0.0000
+  SUN09: 58.6777 ± 0.0000
+Average Coefficients:
+  Coefficient 1: 0.2249 ± 0.0000
+  Coefficient 2: 0.4267 ± 0.0000
+  Coefficient 3: 0.3484 ± 0.0000
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': [{'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 72.01365187713311, 'photo': 47.781569965870304, 'sketch': 51.02389078498294}, 'final_accuracy': 66.46757679180887, 'coefficients': [0.3930419683456421, 0.2609880268573761, 0.3459700345993042]}], 'VLCS': [{'test_domain': 'VOC2007', 'domain_accuracies': {'Caltech101': 49.219467401285584, 'LabelMe': 54.9127640036731, 'SUN09': 58.67768595041323}, 'final_accuracy': 58.58585858585859, 'coefficients': [0.22488251328468323, 0.42669373750686646, 0.34842368960380554]}]}
+No valid results to summarize.

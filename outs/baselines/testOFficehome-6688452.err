@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 420, in <module>
+    main(config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 383, in main
+    experiment = Baseline4Experiment(config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 22, in __init__
+    self.test_domain = self.domains[self.test_domain_index]
+AttributeError: 'Baseline4Experiment' object has no attribute 'test_domain_index'

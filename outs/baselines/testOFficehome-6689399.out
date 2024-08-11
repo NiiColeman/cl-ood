@@ -1,0 +1,18 @@
+
+--- Run 1/10 ---
+
+Running LoRA with Separate Classifiers experiment
+Test domain: Art
+Train domains: ['Product', 'Clipart', 'Real World']
+
+Running Baseline experiment (train and test on test domain)
+Epoch 1/10, Train Loss: 4.4173, Train Accuracy: 1.65%
+Val Loss: 4.2559, Val Accuracy: 3.25%
+Epoch 2/10, Train Loss: 3.3883, Train Accuracy: 25.21%
+Val Loss: 4.1031, Val Accuracy: 6.41%
+Epoch 3/10, Train Loss: 2.5998, Train Accuracy: 50.41%
+Val Loss: 4.0019, Val Accuracy: 9.66%
+Epoch 4/10, Train Loss: 1.7002, Train Accuracy: 78.10%
+Val Loss: 3.9143, Val Accuracy: 13.73%
+Epoch 5/10, Train Loss: 0.8366, Train Accuracy: 91.32%
+Val Loss: 3.8769, Val Accuracy: 16.02%

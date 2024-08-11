@@ -20,6 +20,13 @@ def set_seed(seed):
         torch.cuda.manual_seed(seed)
         torch.cuda.manual_seed_all(seed)
 
+def update_head(model):
+    for name,param in model.named_parameters():
+        if 'head' in name:
+            param.requires_grad = True
+    
+    return model
+
 def train_and_evaluate(model, train_loader, test_loader, config, device):
     optimizer = optim.AdamW(model.parameters(), lr=float(config['learning_rate']))
     criterion = nn.CrossEntropyLoss()
@@ -72,10 +79,7 @@ def train_lora_adapter(base_model, train_loader, config, device, domain):
     model = get_peft_model(base_model, lora_config)
     
     # Replace the head instead of adding a classifier
-    num_features = base_model.num_features
-    num_classes = base_model.num_classes
-    model.head = nn.Linear(num_features, num_classes).to(device)
-    
+    model= update_head(model)
     model = model.to(device)
     optimizer = optim.AdamW(model.parameters(), lr=float(config['lora_learning_rate']))
     criterion = nn.CrossEntropyLoss()
@@ -305,5 +309,5 @@ def main(config):
         all_results.append(run_results)
     
     print("\nSummary of All Runs:")
-    for dataset_idx, dataset_name in enumerate(config['datasets'].keys()):
-        baseline_accuracies = [
+    # for dataset_idx, dataset_name in enumerate(config['datasets'].keys()):
+    #     baseline_accuracies = [

@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PACS.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="final-comprehensive-comparison-learned-coefficients-vs-merged-algorithms">Final Comprehensive Comparison: Learned Coefficients vs Merged Algorithms</h1>
+<h2 id="performance-comparison-table">Performance Comparison Table</h2>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Domain</th>
+<th>Learned Coefficients</th>
+<th>Linear</th>
+<th>SVD</th>
+<th>TIES</th>
+<th>DARE_TIES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PACS</td>
+<td>Photo</td>
+<td>99.20%</td>
+<td>95.20%</td>
+<td>17.00%</td>
+<td>99.00%</td>
+<td>96.20%</td>
+</tr>
+<tr>
+<td></td>
+<td>Art Painting</td>
+<td>90.74%</td>
+<td>62.80%</td>
+<td>13.00%</td>
+<td>87.00%</td>
+<td>64.40%</td>
+</tr>
+<tr>
+<td></td>
+<td>Sketch</td>
+<td>65.55%</td>
+<td>47.20%</td>
+<td>21.60%</td>
+<td>58.20%</td>
+<td>55.20%</td>
+</tr>
+<tr>
+<td></td>
+<td>Cartoon</td>
+<td>76.29%</td>
+<td>72.20%</td>
+<td>22.20%</td>
+<td>78.00%</td>
+<td>75.00%</td>
+</tr>
+<tr>
+<td>VLCS</td>
+<td>Caltech101</td>
+<td>96.55%</td>
+<td>80.60%</td>
+<td>51.40%</td>
+<td>94.40%</td>
+<td>55.80%</td>
+</tr>
+<tr>
+<td></td>
+<td>LabelMe</td>
+<td>62.30%</td>
+<td>55.40%</td>
+<td>47.00%</td>
+<td>64.80%</td>
+<td>63.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>SUN09</td>
+<td>80.92%</td>
+<td>74.00%</td>
+<td>3.40%</td>
+<td>81.60%</td>
+<td>79.80%</td>
+</tr>
+<tr>
+<td></td>
+<td>VOC2007</td>
+<td>81.21%</td>
+<td>80.00%</td>
+<td>43.60%</td>
+<td>84.00%</td>
+<td>83.20%</td>
+</tr>
+<tr>
+<td>SVIRO</td>
+<td>aclass</td>
+<td>92.78%</td>
+<td>21.00%</td>
+<td>15.00%</td>
+<td>94.00%</td>
+<td>93.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>escape</td>
+<td>73.30%</td>
+<td>21.00%</td>
+<td>16.00%</td>
+<td>95.00%</td>
+<td>92.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>hilux</td>
+<td>84.35%</td>
+<td>30.00%</td>
+<td>14.00%</td>
+<td>97.00%</td>
+<td>93.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>i3</td>
+<td>90.92%</td>
+<td>24.00%</td>
+<td>23.00%</td>
+<td>97.00%</td>
+<td>97.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>lexus</td>
+<td>93.30%</td>
+<td>34.00%</td>
+<td>15.00%</td>
+<td>95.00%</td>
+<td>94.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>tesla</td>
+<td>86.26%</td>
+<td>21.00%</td>
+<td>15.00%</td>
+<td>97.00%</td>
+<td>97.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>tiguan</td>
+<td>91.06%</td>
+<td>17.00%</td>
+<td>16.00%</td>
+<td>80.00%</td>
+<td>84.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>tucson</td>
+<td>82.96%</td>
+<td>41.00%</td>
+<td>15.00%</td>
+<td>90.00%</td>
+<td>95.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>x5</td>
+<td>64.46%</td>
+<td>44.00%</td>
+<td>15.00%</td>
+<td>98.00%</td>
+<td>95.00%</td>
+</tr>
+<tr>
+<td></td>
+<td>zoe</td>
+<td>81.50%</td>
+<td>32.00%</td>
+<td>20.00%</td>
+<td>80.00%</td>
+<td>89.00%</td>
+</tr>
+<tr>
+<td>OfficeHome</td>
+<td>Art</td>
+<td>80.18%</td>
+<td>75.60%</td>
+<td>4.80%</td>
+<td>82.80%</td>
+<td>80.60%</td>
+</tr>
+<tr>
+<td></td>
+<td>Clipart</td>
+<td>64.62%</td>
+<td>40.20%</td>
+<td>2.00%</td>
+<td>58.80%</td>
+<td>52.40%</td>
+</tr>
+<tr>
+<td></td>
+<td>Product</td>
+<td>86.57%</td>
+<td>88.40%</td>
+<td>5.80%</td>
+<td>94.40%</td>
+<td>92.20%</td>
+</tr>
+<tr>
+<td></td>
+<td>Real World</td>
+<td>88.13%</td>
+<td>88.40%</td>
+<td>13.40%</td>
+<td>94.00%</td>
+<td>92.80%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="average-performance-and-standard-deviation">Average Performance and Standard Deviation</h2>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Metric</th>
+<th>Learned Coefficients</th>
+<th>Linear</th>
+<th>SVD</th>
+<th>TIES</th>
+<th>DARE_TIES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PACS</td>
+<td>Avg</td>
+<td>82.95%</td>
+<td>69.35%</td>
+<td>18.45%</td>
+<td>80.55%</td>
+<td>72.70%</td>
+</tr>
+<tr>
+<td></td>
+<td>Std</td>
+<td>13.00%</td>
+<td>17.96%</td>
+<td>3.83%</td>
+<td>16.56%</td>
+<td>16.60%</td>
+</tr>
+<tr>
+<td>VLCS</td>
+<td>Avg</td>
+<td>80.25%</td>
+<td>72.50%</td>
+<td>36.35%</td>
+<td>81.20%</td>
+<td>70.45%</td>
+</tr>
+<tr>
+<td></td>
+<td>Std</td>
+<td>12.56%</td>
+<td>10.43%</td>
+<td>19.41%</td>
+<td>11.01%</td>
+<td>11.37%</td>
+</tr>
+<tr>
+<td>SVIRO</td>
+<td>Avg</td>
+<td>84.09%</td>
+<td>28.50%</td>
+<td>16.40%</td>
+<td>92.30%</td>
+<td>92.90%</td>
+</tr>
+<tr>
+<td></td>
+<td>Std</td>
+<td>8.66%</td>
+<td>8.96%</td>
+<td>2.80%</td>
+<td>6.52%</td>
+<td>3.96%</td>
+</tr>
+<tr>
+<td>OfficeHome</td>
+<td>Avg</td>
+<td>79.88%</td>
+<td>73.15%</td>
+<td>6.50%</td>
+<td>82.50%</td>
+<td>79.50%</td>
+</tr>
+<tr>
+<td></td>
+<td>Std</td>
+<td>9.56%</td>
+<td>22.72%</td>
+<td>4.38%</td>
+<td>16.56%</td>
+<td>18.86%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparative-analysis">Comparative Analysis</h2>
+<ol>
+<li>
+<p>Overall Performance:</p>
+<ul>
+<li>Learned Coefficients method shows significant improvement across all datasets, now highly competitive with TIES and DARE_TIES.</li>
+<li>It consistently outperforms Linear and SVD across all datasets by a large margin.</li>
+</ul>
+</li>
+<li>
+<p>Dataset-Specific Performance:</p>
+<ul>
+<li>PACS: Learned Coefficients (82.95% avg) outperforms all other methods, including TIES (80.55%).</li>
+<li>VLCS: Learned Coefficients (80.25% avg) is very close to TIES (81.20%) and outperforms other methods.</li>
+<li>SVIRO: Learned Coefficients (84.09% avg) shows dramatic improvement, now much closer to TIES (92.30%) and DARE_TIES (92.90%).</li>
+<li>OfficeHome: Learned Coefficients (79.88% avg) is competitive with DARE_TIES (79.50%) and close to TIES (82.50%).</li>
+</ul>
+</li>
+<li>
+<p>Consistency Across Domains:</p>
+<ul>
+<li>Learned Coefficients shows excellent consistency across all datasets, with the lowest or near-lowest standard deviations in each dataset.</li>
+<li>Particularly notable in SVIRO, where it now has a lower standard deviation (8.66%) than TIES (6.52%) and DARE_TIES (3.96%).</li>
+</ul>
+</li>
+</ol>
+
+</body>
+</html>

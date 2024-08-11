@@ -1,0 +1,55 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/1
+Preparing data...
+Domains: ['art_painting', 'sketch', 'photo', 'cartoon']
+Selected test domain: art_painting
+Training domains: ['sketch', 'photo', 'cartoon']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.1765
+Training domains: ['sketch', 'photo', 'cartoon']
+
+Training expert models...
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.0700
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 30.0781
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.9300
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 51.5625
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.2353
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 57.3242
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model sketch device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.3490
+Coefficient Epoch 2, Average Loss: 1.0191
+Coefficient Epoch 3, Average Loss: 1.0157
+Coefficient Epoch 4, Average Loss: 1.0230
+Coefficient Epoch 5, Average Loss: 1.0162

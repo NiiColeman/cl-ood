@@ -1,0 +1,11 @@
+
+--- Run 1/10 ---
+Domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5', 'zoe']
+Selected test domain: tucson
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'x5', 'zoe']
+
+Running LoRA with Separate Classifiers experiment
+Test domain: tucson
+Train domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'x5', 'zoe']
+
+Running Baseline experiment (train and test on test domain)

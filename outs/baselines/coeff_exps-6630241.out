@@ -1,0 +1,1842 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['cartoon', 'photo', 'art_painting', 'sketch']
+Selected test domain: photo
+Training domains: ['cartoon', 'art_painting', 'sketch']
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.2512
+Epoch 2, Average Loss: 0.0557
+Epoch 3, Average Loss: 0.0192
+Epoch 4, Average Loss: 0.0595
+Epoch 5, Average Loss: 0.0515
+Epoch 6, Average Loss: 0.0466
+Epoch 7, Average Loss: 0.0175
+Epoch 8, Average Loss: 0.0198
+Epoch 9, Average Loss: 0.0215
+Epoch 10, Average Loss: 0.0096
+Accuracy: 94.1317
+Training domains: ['cartoon', 'art_painting', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.2763
+Epoch 2, Average Loss: 0.3281
+Epoch 3, Average Loss: 0.1474
+Epoch 4, Average Loss: 0.0889
+Epoch 5, Average Loss: 0.0393
+Epoch 6, Average Loss: 0.0193
+Epoch 7, Average Loss: 0.0114
+Epoch 8, Average Loss: 0.0076
+Epoch 9, Average Loss: 0.0054
+Epoch 10, Average Loss: 0.0036
+Merged model device: cuda:0
+Accuracy: 92.4551
+Accuracy of cartoon model on test domain: 92.4551
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.3737
+Epoch 2, Average Loss: 0.2385
+Epoch 3, Average Loss: 0.0662
+Epoch 4, Average Loss: 0.0245
+Epoch 5, Average Loss: 0.0090
+Epoch 6, Average Loss: 0.0047
+Epoch 7, Average Loss: 0.0029
+Epoch 8, Average Loss: 0.0021
+Epoch 9, Average Loss: 0.0016
+Epoch 10, Average Loss: 0.0012
+Merged model device: cuda:0
+Accuracy: 99.0419
+Accuracy of art_painting model on test domain: 99.0419
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.0766
+Epoch 2, Average Loss: 0.5598
+Epoch 3, Average Loss: 0.3881
+Epoch 4, Average Loss: 0.2826
+Epoch 5, Average Loss: 0.2034
+Epoch 6, Average Loss: 0.1421
+Epoch 7, Average Loss: 0.0961
+Epoch 8, Average Loss: 0.0673
+Epoch 9, Average Loss: 0.0391
+Epoch 10, Average Loss: 0.0235
+Merged model device: cuda:0
+Accuracy: 48.2635
+Accuracy of sketch model on test domain: 48.2635
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.0322
+Coefficient Epoch 2, Average Loss: 0.0235
+Coefficient Epoch 3, Average Loss: 0.0272
+Coefficient Epoch 4, Average Loss: 0.0231
+Coefficient Epoch 5, Average Loss: 0.0233
+Coefficient Epoch 6, Average Loss: 0.0219
+Coefficient Epoch 7, Average Loss: 0.0230
+Coefficient Epoch 8, Average Loss: 0.0220
+Coefficient Epoch 9, Average Loss: 0.0243
+Coefficient Epoch 10, Average Loss: 0.0266
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.18801447749137878, 0.6870531439781189, 0.1249324306845665]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 98.9222
+Final model accuracy on test domain: 98.9222
+
+Run 2/5
+Preparing data...
+Domains: ['cartoon', 'photo', 'art_painting', 'sketch']
+Selected test domain: photo
+Training domains: ['cartoon', 'art_painting', 'sketch']
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.3149
+Epoch 2, Average Loss: 0.0376
+Epoch 3, Average Loss: 0.0620
+Epoch 4, Average Loss: 0.0358
+Epoch 5, Average Loss: 0.0265
+Epoch 6, Average Loss: 0.0284
+Epoch 7, Average Loss: 0.0114
+Epoch 8, Average Loss: 0.0952
+Epoch 9, Average Loss: 0.0522
+Epoch 10, Average Loss: 0.0101
+Accuracy: 96.2874
+Training domains: ['cartoon', 'art_painting', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.2094
+Epoch 2, Average Loss: 0.3329
+Epoch 3, Average Loss: 0.1537
+Epoch 4, Average Loss: 0.0876
+Epoch 5, Average Loss: 0.0493
+Epoch 6, Average Loss: 0.0278
+Epoch 7, Average Loss: 0.0144
+Epoch 8, Average Loss: 0.0086
+Epoch 9, Average Loss: 0.0063
+Epoch 10, Average Loss: 0.0045
+Merged model device: cuda:0
+Accuracy: 88.3832
+Accuracy of cartoon model on test domain: 88.3832
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.3743
+Epoch 2, Average Loss: 0.2554
+Epoch 3, Average Loss: 0.0840
+Epoch 4, Average Loss: 0.0341
+Epoch 5, Average Loss: 0.0122
+Epoch 6, Average Loss: 0.0067
+Epoch 7, Average Loss: 0.0042
+Epoch 8, Average Loss: 0.0028
+Epoch 9, Average Loss: 0.0021
+Epoch 10, Average Loss: 0.0017
+Merged model device: cuda:0
+Accuracy: 98.5629
+Accuracy of art_painting model on test domain: 98.5629
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.0668
+Epoch 2, Average Loss: 0.5748
+Epoch 3, Average Loss: 0.4069
+Epoch 4, Average Loss: 0.2963
+Epoch 5, Average Loss: 0.2183
+Epoch 6, Average Loss: 0.1506
+Epoch 7, Average Loss: 0.1066
+Epoch 8, Average Loss: 0.0685
+Epoch 9, Average Loss: 0.0371
+Epoch 10, Average Loss: 0.0214
+Merged model device: cuda:0
+Accuracy: 33.8922
+Accuracy of sketch model on test domain: 33.8922
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.0629
+Coefficient Epoch 2, Average Loss: 0.0368
+Coefficient Epoch 3, Average Loss: 0.0331
+Coefficient Epoch 4, Average Loss: 0.0336
+Coefficient Epoch 5, Average Loss: 0.0344
+Coefficient Epoch 6, Average Loss: 0.0348
+Coefficient Epoch 7, Average Loss: 0.0335
+Coefficient Epoch 8, Average Loss: 0.0328
+Coefficient Epoch 9, Average Loss: 0.0339
+Coefficient Epoch 10, Average Loss: 0.0370
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.26827749609947205, 0.6468769907951355, 0.08484551310539246]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 97.3653
+Final model accuracy on test domain: 97.3653
+
+Run 3/5
+Preparing data...
+Domains: ['cartoon', 'photo', 'art_painting', 'sketch']
+Selected test domain: sketch
+Training domains: ['cartoon', 'photo', 'art_painting']
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.7413
+Epoch 2, Average Loss: 1.3282
+Epoch 3, Average Loss: 0.9747
+Epoch 4, Average Loss: 0.6316
+Epoch 5, Average Loss: 0.3208
+Epoch 6, Average Loss: 0.2140
+Epoch 7, Average Loss: 0.1391
+Epoch 8, Average Loss: 0.0666
+Epoch 9, Average Loss: 0.0469
+Epoch 10, Average Loss: 0.0795
+Accuracy: 73.7913
+Training domains: ['cartoon', 'photo', 'art_painting']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.2762
+Epoch 2, Average Loss: 0.3404
+Epoch 3, Average Loss: 0.1561
+Epoch 4, Average Loss: 0.0890
+Epoch 5, Average Loss: 0.0469
+Epoch 6, Average Loss: 0.0254
+Epoch 7, Average Loss: 0.0144
+Epoch 8, Average Loss: 0.0089
+Epoch 9, Average Loss: 0.0060
+Epoch 10, Average Loss: 0.0044
+Merged model device: cuda:0
+Accuracy: 27.3791
+Accuracy of cartoon model on test domain: 27.3791
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.3026
+Epoch 2, Average Loss: 0.1362
+Epoch 3, Average Loss: 0.0230
+Epoch 4, Average Loss: 0.0070
+Epoch 5, Average Loss: 0.0033
+Epoch 6, Average Loss: 0.0020
+Epoch 7, Average Loss: 0.0015
+Epoch 8, Average Loss: 0.0011
+Epoch 9, Average Loss: 0.0008
+Epoch 10, Average Loss: 0.0007
+Merged model device: cuda:0
+Accuracy: 16.3359
+Accuracy of photo model on test domain: 16.3359
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.4633
+Epoch 2, Average Loss: 0.2679
+Epoch 3, Average Loss: 0.0772
+Epoch 4, Average Loss: 0.0307
+Epoch 5, Average Loss: 0.0103
+Epoch 6, Average Loss: 0.0051
+Epoch 7, Average Loss: 0.0033
+Epoch 8, Average Loss: 0.0022
+Epoch 9, Average Loss: 0.0017
+Epoch 10, Average Loss: 0.0013
+Merged model device: cuda:0
+Accuracy: 49.7201
+Accuracy of art_painting model on test domain: 49.7201
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model art_painting device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.5124
+Coefficient Epoch 2, Average Loss: 1.3158
+Coefficient Epoch 3, Average Loss: 1.3170
+Coefficient Epoch 4, Average Loss: 1.3078
+Coefficient Epoch 5, Average Loss: 1.3166
+Coefficient Epoch 6, Average Loss: 1.3122
+Coefficient Epoch 7, Average Loss: 1.3026
+Coefficient Epoch 8, Average Loss: 1.3175
+Coefficient Epoch 9, Average Loss: 1.3133
+Coefficient Epoch 10, Average Loss: 1.3130
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model art_painting device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.2880386710166931, 0.18775103986263275, 0.5242102742195129]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 41.7303
+Final model accuracy on test domain: 41.7303
+
+Run 4/5
+Preparing data...
+Domains: ['cartoon', 'photo', 'art_painting', 'sketch']
+Selected test domain: sketch
+Training domains: ['cartoon', 'photo', 'art_painting']
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.7750
+Epoch 2, Average Loss: 1.3010
+Epoch 3, Average Loss: 0.8616
+Epoch 4, Average Loss: 0.5491
+Epoch 5, Average Loss: 0.3197
+Epoch 6, Average Loss: 0.1863
+Epoch 7, Average Loss: 0.1012
+Epoch 8, Average Loss: 0.1058
+Epoch 9, Average Loss: 0.0869
+Epoch 10, Average Loss: 0.0623
+Accuracy: 76.6921
+Training domains: ['cartoon', 'photo', 'art_painting']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.2733
+Epoch 2, Average Loss: 0.3385
+Epoch 3, Average Loss: 0.1608
+Epoch 4, Average Loss: 0.0836
+Epoch 5, Average Loss: 0.0489
+Epoch 6, Average Loss: 0.0274
+Epoch 7, Average Loss: 0.0146
+Epoch 8, Average Loss: 0.0088
+Epoch 9, Average Loss: 0.0067
+Epoch 10, Average Loss: 0.0040
+Merged model device: cuda:0
+Accuracy: 35.1654
+Accuracy of cartoon model on test domain: 35.1654
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.0249
+Epoch 2, Average Loss: 0.0934
+Epoch 3, Average Loss: 0.0131
+Epoch 4, Average Loss: 0.0050
+Epoch 5, Average Loss: 0.0023
+Epoch 6, Average Loss: 0.0016
+Epoch 7, Average Loss: 0.0011
+Epoch 8, Average Loss: 0.0009
+Epoch 9, Average Loss: 0.0007
+Epoch 10, Average Loss: 0.0006
+Merged model device: cuda:0
+Accuracy: 21.5776
+Accuracy of photo model on test domain: 21.5776
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.2854
+Epoch 2, Average Loss: 0.2585
+Epoch 3, Average Loss: 0.0790
+Epoch 4, Average Loss: 0.0292
+Epoch 5, Average Loss: 0.0113
+Epoch 6, Average Loss: 0.0055
+Epoch 7, Average Loss: 0.0033
+Epoch 8, Average Loss: 0.0023
+Epoch 9, Average Loss: 0.0017
+Epoch 10, Average Loss: 0.0013
+Merged model device: cuda:0
+Accuracy: 49.2621
+Accuracy of art_painting model on test domain: 49.2621
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model art_painting device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.2610
+Coefficient Epoch 2, Average Loss: 1.0736
+Coefficient Epoch 3, Average Loss: 1.0757
+Coefficient Epoch 4, Average Loss: 1.0851
+Coefficient Epoch 5, Average Loss: 1.0892
+Coefficient Epoch 6, Average Loss: 1.0811
+Coefficient Epoch 7, Average Loss: 1.0797
+Coefficient Epoch 8, Average Loss: 1.0814
+Coefficient Epoch 9, Average Loss: 1.0750
+Coefficient Epoch 10, Average Loss: 1.0787
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model art_painting device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.2951231300830841, 0.1372154951095581, 0.5676613450050354]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 52.3664
+Final model accuracy on test domain: 52.3664
+
+Run 5/5
+Preparing data...
+Domains: ['cartoon', 'photo', 'art_painting', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.6344
+Epoch 2, Average Loss: 0.1039
+Epoch 3, Average Loss: 0.0789
+Epoch 4, Average Loss: 0.0578
+Epoch 5, Average Loss: 0.0585
+Epoch 6, Average Loss: 0.0589
+Epoch 7, Average Loss: 0.0347
+Epoch 8, Average Loss: 0.0302
+Epoch 9, Average Loss: 0.0135
+Epoch 10, Average Loss: 0.0009
+Accuracy: 93.0664
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.1767
+Epoch 2, Average Loss: 0.2961
+Epoch 3, Average Loss: 0.1455
+Epoch 4, Average Loss: 0.0782
+Epoch 5, Average Loss: 0.0445
+Epoch 6, Average Loss: 0.0221
+Epoch 7, Average Loss: 0.0121
+Epoch 8, Average Loss: 0.0079
+Epoch 9, Average Loss: 0.0059
+Epoch 10, Average Loss: 0.0045
+Merged model device: cuda:0
+Accuracy: 79.3945
+Accuracy of cartoon model on test domain: 79.3945
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.7811
+Epoch 2, Average Loss: 0.0568
+Epoch 3, Average Loss: 0.0120
+Epoch 4, Average Loss: 0.0052
+Epoch 5, Average Loss: 0.0026
+Epoch 6, Average Loss: 0.0016
+Epoch 7, Average Loss: 0.0012
+Epoch 8, Average Loss: 0.0009
+Epoch 9, Average Loss: 0.0008
+Epoch 10, Average Loss: 0.0006
+Merged model device: cuda:0
+Accuracy: 73.2422
+Accuracy of photo model on test domain: 73.2422
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.0979
+Epoch 2, Average Loss: 0.5481
+Epoch 3, Average Loss: 0.3756
+Epoch 4, Average Loss: 0.2566
+Epoch 5, Average Loss: 0.1824
+Epoch 6, Average Loss: 0.1288
+Epoch 7, Average Loss: 0.0881
+Epoch 8, Average Loss: 0.0546
+Epoch 9, Average Loss: 0.0296
+Epoch 10, Average Loss: 0.0170
+Merged model device: cuda:0
+Accuracy: 53.5156
+Accuracy of sketch model on test domain: 53.5156
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.5026
+Coefficient Epoch 2, Average Loss: 0.4567
+Coefficient Epoch 3, Average Loss: 0.4570
+Coefficient Epoch 4, Average Loss: 0.4560
+Coefficient Epoch 5, Average Loss: 0.4553
+Coefficient Epoch 6, Average Loss: 0.4600
+Coefficient Epoch 7, Average Loss: 0.4654
+Coefficient Epoch 8, Average Loss: 0.4583
+Coefficient Epoch 9, Average Loss: 0.4636
+Coefficient Epoch 10, Average Loss: 0.4586
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.4387083053588867, 0.3060682713985443, 0.25522345304489136]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 83.3008
+Final model accuracy on test domain: 83.3008
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'photo', 'domain_accuracies': {'cartoon': 92.45508982035928, 'art_painting': 99.04191616766467, 'sketch': 48.26347305389221}, 'final_accuracy': 98.92215568862277, 'coefficients': [0.18801447749137878, 0.6870531439781189, 0.1249324306845665]}, {'test_domain': 'photo', 'domain_accuracies': {'cartoon': 88.38323353293414, 'art_painting': 98.562874251497, 'sketch': 33.89221556886228}, 'final_accuracy': 97.36526946107784, 'coefficients': [0.26827749609947205, 0.6468769907951355, 0.08484551310539246]}, {'test_domain': 'sketch', 'domain_accuracies': {'cartoon': 27.37913486005089, 'photo': 16.335877862595417, 'art_painting': 49.720101781170484}, 'final_accuracy': 41.73027989821883, 'coefficients': [0.2880386710166931, 0.18775103986263275, 0.5242102742195129]}, {'test_domain': 'sketch', 'domain_accuracies': {'cartoon': 35.16539440203562, 'photo': 21.57760814249364, 'art_painting': 49.262086513994916}, 'final_accuracy': 52.36641221374045, 'coefficients': [0.2951231300830841, 0.1372154951095581, 0.5676613450050354]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 79.39453125, 'photo': 73.2421875, 'sketch': 53.515625}, 'final_accuracy': 83.30078125, 'coefficients': [0.4387083053588867, 0.3060682713985443, 0.25522345304489136]}]
+Final Model Accuracy: 74.7370 ± 23.4955
+Domain-specific Accuracies:
+  cartoon: 64.5555 ± 27.6123
+  art_painting: 74.1467 ± 24.6568
+  sketch: 45.2238 ± 8.2946
+  photo: 37.0519 ± 25.6797
+Average Coefficients:
+  Coefficient 1: 0.2956 ± 0.0811
+  Coefficient 2: 0.3930 ± 0.2307
+  Coefficient 3: 0.3114 ± 0.2001
+
+==================================================
+Running experiments for dataset: VLCS
+==================================================
+Dataset config for VLCS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['VOC2007', 'LabelMe', 'SUN09', 'Caltech101']
+Selected test domain: Caltech101
+Training domains: ['VOC2007', 'LabelMe', 'SUN09']
+Test domain: Caltech101
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.2059
+Epoch 2, Average Loss: 0.0339
+Epoch 3, Average Loss: 0.0019
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0001
+Epoch 6, Average Loss: 0.0000
+Epoch 7, Average Loss: 0.0000
+Epoch 8, Average Loss: 0.0000
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Accuracy: 99.8588
+Training domains: ['VOC2007', 'LabelMe', 'SUN09']
+
+Training expert models...
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.0192
+Epoch 2, Average Loss: 0.4062
+Epoch 3, Average Loss: 0.2561
+Epoch 4, Average Loss: 0.1721
+Epoch 5, Average Loss: 0.1168
+Epoch 6, Average Loss: 0.0724
+Epoch 7, Average Loss: 0.0390
+Epoch 8, Average Loss: 0.0195
+Epoch 9, Average Loss: 0.0103
+Epoch 10, Average Loss: 0.0062
+Merged model device: cuda:0
+Accuracy: 98.3051
+Accuracy of VOC2007 model on test domain: 98.3051
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 1, Average Loss: 0.9542
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 2, Average Loss: 0.6328
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 3, Average Loss: 0.5283
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 4, Average Loss: 0.4674
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 5, Average Loss: 0.3952
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 6, Average Loss: 0.3331
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 7, Average Loss: 0.2596
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 8, Average Loss: 0.1861
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 9, Average Loss: 0.1179
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 10, Average Loss: 0.0866
+Merged model device: cuda:0
+Accuracy: 61.0169
+Accuracy of LabelMe model on test domain: 61.0169
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 0.8274
+Epoch 2, Average Loss: 0.4458
+Epoch 3, Average Loss: 0.3567
+Epoch 4, Average Loss: 0.2914
+Epoch 5, Average Loss: 0.2271
+Epoch 6, Average Loss: 0.1741
+Epoch 7, Average Loss: 0.1145
+Epoch 8, Average Loss: 0.0741
+Epoch 9, Average Loss: 0.0391
+Epoch 10, Average Loss: 0.0240
+Merged model device: cuda:0
+Accuracy: 66.1017
+Accuracy of SUN09 model on test domain: 66.1017
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.1647
+Coefficient Epoch 2, Average Loss: 0.0560
+Coefficient Epoch 3, Average Loss: 0.0289
+Coefficient Epoch 4, Average Loss: 0.0353
+Coefficient Epoch 5, Average Loss: 0.0301
+Coefficient Epoch 6, Average Loss: 0.0302
+Coefficient Epoch 7, Average Loss: 0.0305
+Coefficient Epoch 8, Average Loss: 0.0384
+Coefficient Epoch 9, Average Loss: 0.0303
+Coefficient Epoch 10, Average Loss: 0.0385
+Final device check:
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.8076429963111877, 0.1390460878610611, 0.053310975432395935]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 98.1638
+Final model accuracy on test domain: 98.1638
+
+Run 2/5
+Preparing data...
+Domains: ['VOC2007', 'LabelMe', 'SUN09', 'Caltech101']
+Selected test domain: LabelMe
+Training domains: ['VOC2007', 'SUN09', 'Caltech101']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 1, Average Loss: 0.8796
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 2, Average Loss: 0.5539
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 3, Average Loss: 0.2882
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 4, Average Loss: 0.1994
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 5, Average Loss: 0.1366
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 6, Average Loss: 0.1450
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 7, Average Loss: 0.0829
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 8, Average Loss: 0.0534
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 9, Average Loss: 0.0534
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 10, Average Loss: 0.0545
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Accuracy: 71.6867
+Training domains: ['VOC2007', 'SUN09', 'Caltech101']
+
+Training expert models...
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 0.9756
+Epoch 2, Average Loss: 0.3947
+Epoch 3, Average Loss: 0.2716
+Epoch 4, Average Loss: 0.1915
+Epoch 5, Average Loss: 0.1344
+Epoch 6, Average Loss: 0.0896
+Epoch 7, Average Loss: 0.0517
+Epoch 8, Average Loss: 0.0312
+Epoch 9, Average Loss: 0.0186
+Epoch 10, Average Loss: 0.0121
+Merged model device: cuda:0
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Accuracy: 65.7380
+Accuracy of VOC2007 model on test domain: 65.7380
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 0.8303
+Epoch 2, Average Loss: 0.4404
+Epoch 3, Average Loss: 0.3641
+Epoch 4, Average Loss: 0.2909
+Epoch 5, Average Loss: 0.2277
+Epoch 6, Average Loss: 0.1645
+Epoch 7, Average Loss: 0.1047
+Epoch 8, Average Loss: 0.0657
+Epoch 9, Average Loss: 0.0309
+Epoch 10, Average Loss: 0.0138
+Merged model device: cuda:0
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Accuracy: 62.4247
+Accuracy of SUN09 model on test domain: 62.4247
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 0.7177
+Epoch 2, Average Loss: 0.0653
+Epoch 3, Average Loss: 0.0084
+Epoch 4, Average Loss: 0.0029
+Epoch 5, Average Loss: 0.0015
+Epoch 6, Average Loss: 0.0009
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0005
+Epoch 9, Average Loss: 0.0004
+Epoch 10, Average Loss: 0.0003
+Merged model device: cuda:0
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Accuracy: 44.4277
+Accuracy of Caltech101 model on test domain: 44.4277
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model VOC2007 device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 1, Average Loss: 1.7944
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 2, Average Loss: 1.0501
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 3, Average Loss: 1.0377
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 4, Average Loss: 1.0536
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 5, Average Loss: 1.0541
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 6, Average Loss: 1.0548
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 7, Average Loss: 1.0809
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 8, Average Loss: 1.0785
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 9, Average Loss: 1.0494
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Coefficient Epoch 10, Average Loss: 1.0639
+Final device check:
+Expert model VOC2007 device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3939945697784424, 0.32080507278442383, 0.28520041704177856]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Accuracy: 66.4910
+Final model accuracy on test domain: 66.4910
+
+Run 3/5
+Preparing data...
+Domains: ['VOC2007', 'LabelMe', 'SUN09', 'Caltech101']
+Selected test domain: SUN09
+Training domains: ['VOC2007', 'LabelMe', 'Caltech101']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.6645
+Epoch 2, Average Loss: 0.3018
+Epoch 3, Average Loss: 0.1528
+Epoch 4, Average Loss: 0.1440
+Epoch 5, Average Loss: 0.0744
+Epoch 6, Average Loss: 0.0480
+Epoch 7, Average Loss: 0.0727
+Epoch 8, Average Loss: 0.0737
+Epoch 9, Average Loss: 0.0885
+Epoch 10, Average Loss: 0.0795
+Accuracy: 79.2200
+Training domains: ['VOC2007', 'LabelMe', 'Caltech101']
+
+Training expert models...
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 0.9406
+Epoch 2, Average Loss: 0.3611
+Epoch 3, Average Loss: 0.2329
+Epoch 4, Average Loss: 0.1590
+Epoch 5, Average Loss: 0.1032
+Epoch 6, Average Loss: 0.0644
+Epoch 7, Average Loss: 0.0372
+Epoch 8, Average Loss: 0.0194
+Epoch 9, Average Loss: 0.0126
+Epoch 10, Average Loss: 0.0063
+Merged model device: cuda:0
+Accuracy: 80.5606
+Accuracy of VOC2007 model on test domain: 80.5606
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 1, Average Loss: 0.8708
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 2, Average Loss: 0.6228
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 3, Average Loss: 0.5274
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 4, Average Loss: 0.4652
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 5, Average Loss: 0.3883
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 6, Average Loss: 0.3191
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 7, Average Loss: 0.2445
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 8, Average Loss: 0.1667
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 9, Average Loss: 0.0957
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 10, Average Loss: 0.0501
+Merged model device: cuda:0
+Accuracy: 52.1633
+Accuracy of LabelMe model on test domain: 52.1633
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 0.7022
+Epoch 2, Average Loss: 0.0674
+Epoch 3, Average Loss: 0.0118
+Epoch 4, Average Loss: 0.0043
+Epoch 5, Average Loss: 0.0022
+Epoch 6, Average Loss: 0.0013
+Epoch 7, Average Loss: 0.0009
+Epoch 8, Average Loss: 0.0006
+Epoch 9, Average Loss: 0.0005
+Epoch 10, Average Loss: 0.0004
+Merged model device: cuda:0
+Accuracy: 45.3991
+Accuracy of Caltech101 model on test domain: 45.3991
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.6291
+Coefficient Epoch 2, Average Loss: 0.5341
+Coefficient Epoch 3, Average Loss: 0.5340
+Coefficient Epoch 4, Average Loss: 0.5343
+Coefficient Epoch 5, Average Loss: 0.5336
+Coefficient Epoch 6, Average Loss: 0.5489
+Coefficient Epoch 7, Average Loss: 0.5396
+Coefficient Epoch 8, Average Loss: 0.5378
+Coefficient Epoch 9, Average Loss: 0.5504
+Coefficient Epoch 10, Average Loss: 0.5429
+Final device check:
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.4420108199119568, 0.2917203903198242, 0.266268789768219]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 77.0871
+Final model accuracy on test domain: 77.0871
+
+Run 4/5
+Preparing data...
+Domains: ['VOC2007', 'LabelMe', 'SUN09', 'Caltech101']
+Selected test domain: SUN09
+Training domains: ['VOC2007', 'LabelMe', 'Caltech101']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.6696
+Epoch 2, Average Loss: 0.2695
+Epoch 3, Average Loss: 0.1523
+Epoch 4, Average Loss: 0.1690
+Epoch 5, Average Loss: 0.0901
+Epoch 6, Average Loss: 0.0435
+Epoch 7, Average Loss: 0.1609
+Epoch 8, Average Loss: 0.1067
+Epoch 9, Average Loss: 0.0575
+Epoch 10, Average Loss: 0.0641
+Accuracy: 76.3559
+Training domains: ['VOC2007', 'LabelMe', 'Caltech101']
+
+Training expert models...
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.0224
+Epoch 2, Average Loss: 0.4038
+Epoch 3, Average Loss: 0.2583
+Epoch 4, Average Loss: 0.1785
+Epoch 5, Average Loss: 0.1187
+Epoch 6, Average Loss: 0.0818
+Epoch 7, Average Loss: 0.0479
+Epoch 8, Average Loss: 0.0288
+Epoch 9, Average Loss: 0.0159
+Epoch 10, Average Loss: 0.0099
+Merged model device: cuda:0
+Accuracy: 81.9013
+Accuracy of VOC2007 model on test domain: 81.9013
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 1, Average Loss: 0.9160
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 2, Average Loss: 0.6229
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 3, Average Loss: 0.5175
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 4, Average Loss: 0.4355
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 5, Average Loss: 0.3639
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 6, Average Loss: 0.2946
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 7, Average Loss: 0.2129
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 8, Average Loss: 0.1320
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 9, Average Loss: 0.0767
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Epoch 10, Average Loss: 0.0379
+Merged model device: cuda:0
+Accuracy: 57.1603
+Accuracy of LabelMe model on test domain: 57.1603
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 0.7875
+Epoch 2, Average Loss: 0.0992
+Epoch 3, Average Loss: 0.0142
+Epoch 4, Average Loss: 0.0049
+Epoch 5, Average Loss: 0.0025
+Epoch 6, Average Loss: 0.0016
+Epoch 7, Average Loss: 0.0010
+Epoch 8, Average Loss: 0.0007
+Epoch 9, Average Loss: 0.0006
+Epoch 10, Average Loss: 0.0004
+Merged model device: cuda:0
+Accuracy: 47.8976
+Accuracy of Caltech101 model on test domain: 47.8976
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.6403
+Coefficient Epoch 2, Average Loss: 0.5408
+Coefficient Epoch 3, Average Loss: 0.5496
+Coefficient Epoch 4, Average Loss: 0.5410
+Coefficient Epoch 5, Average Loss: 0.5342
+Coefficient Epoch 6, Average Loss: 0.5326
+Coefficient Epoch 7, Average Loss: 0.5397
+Coefficient Epoch 8, Average Loss: 0.5438
+Coefficient Epoch 9, Average Loss: 0.5402
+Coefficient Epoch 10, Average Loss: 0.5430
+Final device check:
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.4283420145511627, 0.3062337338924408, 0.2654241919517517]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 76.2340
+Final model accuracy on test domain: 76.2340
+
+Run 5/5
+Preparing data...
+Domains: ['VOC2007', 'LabelMe', 'SUN09', 'Caltech101']
+Selected test domain: Caltech101
+Training domains: ['VOC2007', 'LabelMe', 'SUN09']
+Test domain: Caltech101
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.2196
+Epoch 2, Average Loss: 0.0472
+Epoch 3, Average Loss: 0.0423
+Epoch 4, Average Loss: 0.0028
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Accuracy: 99.7175
+Training domains: ['VOC2007', 'LabelMe', 'SUN09']
+
+Training expert models...
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.0369
+Epoch 2, Average Loss: 0.4275
+Epoch 3, Average Loss: 0.2841
+Epoch 4, Average Loss: 0.1982
+Epoch 5, Average Loss: 0.1316
+Epoch 6, Average Loss: 0.0897
+Epoch 7, Average Loss: 0.0519
+Epoch 8, Average Loss: 0.0283
+Epoch 9, Average Loss: 0.0148
+Epoch 10, Average Loss: 0.0080
+Merged model device: cuda:0
+Accuracy: 98.0226
+Accuracy of VOC2007 model on test domain: 98.0226
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 1, Average Loss: 0.8939
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 2, Average Loss: 0.6185
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 3, Average Loss: 0.5170
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 4, Average Loss: 0.4356
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 5, Average Loss: 0.3860
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 6, Average Loss: 0.3106
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 7, Average Loss: 0.2407
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Epoch 8, Average Loss: 0.1624
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Epoch 9, Average Loss: 0.0977
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/7e457522cdcb4790b70f8b7eefb8e4b0.jpg: image file is truncated (1477 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/a4fc44181c584986888c78fea2c1d310.jpg: image file is truncated (4038 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/car/44b07a801b794b0ebadf75eabe761386.jpg: image file is truncated (1525 bytes not processed)
+Error loading image /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS/LabelMe/person/54acb3ec4dbc42d3bcff926091dbadd1.jpg: image file is truncated (99 bytes not processed)
+Epoch 10, Average Loss: 0.0551
+Merged model device: cuda:0
+Accuracy: 49.7175
+Accuracy of LabelMe model on test domain: 49.7175
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 0.7714
+Epoch 2, Average Loss: 0.4410
+Epoch 3, Average Loss: 0.3543
+Epoch 4, Average Loss: 0.2752
+Epoch 5, Average Loss: 0.2128
+Epoch 6, Average Loss: 0.1427
+Epoch 7, Average Loss: 0.0888
+Epoch 8, Average Loss: 0.0496
+Epoch 9, Average Loss: 0.0232
+Epoch 10, Average Loss: 0.0122
+Merged model device: cuda:0
+Accuracy: 57.9096
+Accuracy of SUN09 model on test domain: 57.9096
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.2121
+Coefficient Epoch 2, Average Loss: 0.0592
+Coefficient Epoch 3, Average Loss: 0.1055
+Coefficient Epoch 4, Average Loss: 0.1040
+Coefficient Epoch 5, Average Loss: 0.0696
+Coefficient Epoch 6, Average Loss: 0.0435
+Coefficient Epoch 7, Average Loss: 0.0404
+Coefficient Epoch 8, Average Loss: 0.0417
+Coefficient Epoch 9, Average Loss: 0.0384
+Coefficient Epoch 10, Average Loss: 0.0397
+Final device check:
+Expert model VOC2007 device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.7411218285560608, 0.18377618491649628, 0.07510194182395935]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 96.8927
+Final model accuracy on test domain: 96.8927
+
+Summary for VLCS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'Caltech101', 'domain_accuracies': {'VOC2007': 98.30508474576271, 'LabelMe': 61.016949152542374, 'SUN09': 66.10169491525424}, 'final_accuracy': 98.1638418079096, 'coefficients': [0.8076429963111877, 0.1390460878610611, 0.053310975432395935]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'VOC2007': 65.73795180722891, 'SUN09': 62.424698795180724, 'Caltech101': 44.42771084337349}, 'final_accuracy': 66.4909638554217, 'coefficients': [0.3939945697784424, 0.32080507278442383, 0.28520041704177856]}, {'test_domain': 'SUN09', 'domain_accuracies': {'VOC2007': 80.5606337599025, 'LabelMe': 52.16331505179769, 'Caltech101': 45.39914686166971}, 'final_accuracy': 77.08714198659354, 'coefficients': [0.4420108199119568, 0.2917203903198242, 0.266268789768219]}, {'test_domain': 'SUN09', 'domain_accuracies': {'VOC2007': 81.90127970749543, 'LabelMe': 57.16026812918952, 'Caltech101': 47.89762340036563}, 'final_accuracy': 76.23400365630712, 'coefficients': [0.4283420145511627, 0.3062337338924408, 0.2654241919517517]}, {'test_domain': 'Caltech101', 'domain_accuracies': {'VOC2007': 98.0225988700565, 'LabelMe': 49.717514124293785, 'SUN09': 57.909604519774014}, 'final_accuracy': 96.89265536723164, 'coefficients': [0.7411218285560608, 0.18377618491649628, 0.07510194182395935]}]
+Final Model Accuracy: 82.9737 ± 12.4598
+Domain-specific Accuracies:
+  VOC2007: 84.9055 ± 12.2222
+  LabelMe: 55.0145 ± 4.3824
+  SUN09: 62.1453 ± 3.3502
+  Caltech101: 45.9082 ± 1.4616
+Average Coefficients:
+  Coefficient 1: 0.5626 ± 0.1749
+  Coefficient 2: 0.2483 ± 0.0729
+  Coefficient 3: 0.1891 ± 0.1024
+
+==================================================
+Running experiments for dataset: OfficeHome
+==================================================
+Dataset config for OfficeHome:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['Product', 'Clipart', 'Real World', 'Art']
+Selected test domain: Clipart
+Training domains: ['Product', 'Real World', 'Art']
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.8592
+Epoch 2, Average Loss: 1.6926
+Epoch 3, Average Loss: 0.4439
+Epoch 4, Average Loss: 0.1551
+Epoch 5, Average Loss: 0.0769
+Epoch 6, Average Loss: 0.0515
+Epoch 7, Average Loss: 0.0414
+Epoch 8, Average Loss: 0.0353
+Epoch 9, Average Loss: 0.0329
+Epoch 10, Average Loss: 0.0324
+Accuracy: 73.0646
+Training domains: ['Product', 'Real World', 'Art']
+
+Training expert models...
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3871
+Epoch 2, Average Loss: 4.0217
+Epoch 3, Average Loss: 3.6923
+Epoch 4, Average Loss: 3.2594
+Epoch 5, Average Loss: 2.6313
+Epoch 6, Average Loss: 1.9068
+Epoch 7, Average Loss: 1.3459
+Epoch 8, Average Loss: 1.0009
+Epoch 9, Average Loss: 0.7914
+Epoch 10, Average Loss: 0.6523
+Merged model device: cuda:0
+Accuracy: 38.0211
+Accuracy of Product model on test domain: 38.0211
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.4156
+Epoch 2, Average Loss: 4.0956
+Epoch 3, Average Loss: 3.8155
+Epoch 4, Average Loss: 3.5059
+Epoch 5, Average Loss: 3.1203
+Epoch 6, Average Loss: 2.6200
+Epoch 7, Average Loss: 2.0379
+Epoch 8, Average Loss: 1.4776
+Epoch 9, Average Loss: 1.0791
+Epoch 10, Average Loss: 0.8431
+Merged model device: cuda:0
+Accuracy: 40.1741
+Accuracy of Real World model on test domain: 40.1741
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.5121
+Epoch 2, Average Loss: 4.3258
+Epoch 3, Average Loss: 4.1526
+Epoch 4, Average Loss: 3.9879
+Epoch 5, Average Loss: 3.8261
+Epoch 6, Average Loss: 3.6632
+Epoch 7, Average Loss: 3.4934
+Epoch 8, Average Loss: 3.3196
+Epoch 9, Average Loss: 3.1408
+Epoch 10, Average Loss: 2.9577
+Merged model device: cuda:0
+Accuracy: 15.3917
+Accuracy of Art model on test domain: 15.3917
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Expert model Art device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.6359
+Coefficient Epoch 2, Average Loss: 2.5316
+Coefficient Epoch 3, Average Loss: 2.5297
+Coefficient Epoch 4, Average Loss: 2.5431
+Coefficient Epoch 5, Average Loss: 2.5268
+Coefficient Epoch 6, Average Loss: 2.5440
+Coefficient Epoch 7, Average Loss: 2.5407
+Coefficient Epoch 8, Average Loss: 2.5415
+Coefficient Epoch 9, Average Loss: 2.5394
+Coefficient Epoch 10, Average Loss: 2.5369
+Final device check:
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Expert model Art device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.35289832949638367, 0.4834563732147217, 0.16364529728889465]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 38.3417
+Final model accuracy on test domain: 38.3417
+
+Run 2/5
+Preparing data...
+Domains: ['Product', 'Clipart', 'Real World', 'Art']
+Selected test domain: Art
+Training domains: ['Product', 'Clipart', 'Real World']
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.0414
+Epoch 2, Average Loss: 2.4268
+Epoch 3, Average Loss: 0.7868
+Epoch 4, Average Loss: 0.1543
+Epoch 5, Average Loss: 0.0536
+Epoch 6, Average Loss: 0.0312
+Epoch 7, Average Loss: 0.0261
+Epoch 8, Average Loss: 0.0194
+Epoch 9, Average Loss: 0.0171
+Epoch 10, Average Loss: 0.0160
+Accuracy: 61.3674
+Training domains: ['Product', 'Clipart', 'Real World']
+
+Training expert models...
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3256
+Epoch 2, Average Loss: 3.9709
+Epoch 3, Average Loss: 3.6193
+Epoch 4, Average Loss: 3.1682
+Epoch 5, Average Loss: 2.5237
+Epoch 6, Average Loss: 1.7861
+Epoch 7, Average Loss: 1.2547
+Epoch 8, Average Loss: 0.9532
+Epoch 9, Average Loss: 0.7683
+Epoch 10, Average Loss: 0.6392
+Merged model device: cuda:0
+Accuracy: 42.7512
+Accuracy of Product model on test domain: 42.7512
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4689
+Epoch 2, Average Loss: 4.1749
+Epoch 3, Average Loss: 3.9593
+Epoch 4, Average Loss: 3.7508
+Epoch 5, Average Loss: 3.5014
+Epoch 6, Average Loss: 3.1822
+Epoch 7, Average Loss: 2.7909
+Epoch 8, Average Loss: 2.3861
+Epoch 9, Average Loss: 2.0217
+Epoch 10, Average Loss: 1.7367
+Merged model device: cuda:0
+Accuracy: 34.2669
+Accuracy of Clipart model on test domain: 34.2669
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3976
+Epoch 2, Average Loss: 4.0853
+Epoch 3, Average Loss: 3.7975
+Epoch 4, Average Loss: 3.4740
+Epoch 5, Average Loss: 3.0625
+Epoch 6, Average Loss: 2.5296
+Epoch 7, Average Loss: 1.9433
+Epoch 8, Average Loss: 1.4266
+Epoch 9, Average Loss: 1.0769
+Epoch 10, Average Loss: 0.8526
+Merged model device: cuda:0
+Accuracy: 57.0016
+Accuracy of Real World model on test domain: 57.0016
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.9446
+Coefficient Epoch 2, Average Loss: 1.8432
+Coefficient Epoch 3, Average Loss: 1.8448
+Coefficient Epoch 4, Average Loss: 1.8564
+Coefficient Epoch 5, Average Loss: 1.8358
+Coefficient Epoch 6, Average Loss: 1.8305
+Coefficient Epoch 7, Average Loss: 1.8339
+Coefficient Epoch 8, Average Loss: 1.8355
+Coefficient Epoch 9, Average Loss: 1.8385
+Coefficient Epoch 10, Average Loss: 1.8405
+Final device check:
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.18339510262012482, 0.23596994578838348, 0.5806350111961365]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 53.1301
+Final model accuracy on test domain: 53.1301
+
+Run 3/5
+Preparing data...
+Domains: ['Product', 'Clipart', 'Real World', 'Art']
+Selected test domain: Art
+Training domains: ['Product', 'Clipart', 'Real World']
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.9831
+Epoch 2, Average Loss: 2.3276
+Epoch 3, Average Loss: 0.7112
+Epoch 4, Average Loss: 0.1502
+Epoch 5, Average Loss: 0.0528
+Epoch 6, Average Loss: 0.0347
+Epoch 7, Average Loss: 0.0294
+Epoch 8, Average Loss: 0.0257
+Epoch 9, Average Loss: 0.0205
+Epoch 10, Average Loss: 0.0181
+Accuracy: 59.8847
+Training domains: ['Product', 'Clipart', 'Real World']
+
+Training expert models...
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3736
+Epoch 2, Average Loss: 4.0099
+Epoch 3, Average Loss: 3.6679
+Epoch 4, Average Loss: 3.2552
+Epoch 5, Average Loss: 2.6796
+Epoch 6, Average Loss: 1.9813
+Epoch 7, Average Loss: 1.4359
+Epoch 8, Average Loss: 1.1044
+Epoch 9, Average Loss: 0.8917
+Epoch 10, Average Loss: 0.7399
+Merged model device: cuda:0
+Accuracy: 41.0214
+Accuracy of Product model on test domain: 41.0214
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4905
+Epoch 2, Average Loss: 4.1848
+Epoch 3, Average Loss: 3.9706
+Epoch 4, Average Loss: 3.7838
+Epoch 5, Average Loss: 3.5628
+Epoch 6, Average Loss: 3.2831
+Epoch 7, Average Loss: 2.9295
+Epoch 8, Average Loss: 2.5328
+Epoch 9, Average Loss: 2.1433
+Epoch 10, Average Loss: 1.8018
+Merged model device: cuda:0
+Accuracy: 39.2916
+Accuracy of Clipart model on test domain: 39.2916
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3857
+Epoch 2, Average Loss: 4.0724
+Epoch 3, Average Loss: 3.7719
+Epoch 4, Average Loss: 3.4419
+Epoch 5, Average Loss: 3.0555
+Epoch 6, Average Loss: 2.5661
+Epoch 7, Average Loss: 1.9791
+Epoch 8, Average Loss: 1.4380
+Epoch 9, Average Loss: 1.0621
+Epoch 10, Average Loss: 0.8392
+Merged model device: cuda:0
+Accuracy: 58.9786
+Accuracy of Real World model on test domain: 58.9786
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.8276
+Coefficient Epoch 2, Average Loss: 1.7319
+Coefficient Epoch 3, Average Loss: 1.7295
+Coefficient Epoch 4, Average Loss: 1.7234
+Coefficient Epoch 5, Average Loss: 1.7324
+Coefficient Epoch 6, Average Loss: 1.7257
+Coefficient Epoch 7, Average Loss: 1.7249
+Coefficient Epoch 8, Average Loss: 1.7255
+Coefficient Epoch 9, Average Loss: 1.7420
+Coefficient Epoch 10, Average Loss: 1.7256
+Final device check:
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.16836874186992645, 0.253629207611084, 0.5780020952224731]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 54.6952
+Final model accuracy on test domain: 54.6952
+
+Run 4/5
+Preparing data...
+Domains: ['Product', 'Clipart', 'Real World', 'Art']
+Selected test domain: Real World
+Training domains: ['Product', 'Clipart', 'Art']
+Test domain: Real World
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.4675
+Epoch 2, Average Loss: 0.8138
+Epoch 3, Average Loss: 0.1246
+Epoch 4, Average Loss: 0.0389
+Epoch 5, Average Loss: 0.0256
+Epoch 6, Average Loss: 0.0162
+Epoch 7, Average Loss: 0.0120
+Epoch 8, Average Loss: 0.0099
+Epoch 9, Average Loss: 0.0094
+Epoch 10, Average Loss: 0.0079
+Accuracy: 85.1767
+Training domains: ['Product', 'Clipart', 'Art']
+
+Training expert models...
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3551
+Epoch 2, Average Loss: 3.9849
+Epoch 3, Average Loss: 3.6264
+Epoch 4, Average Loss: 3.1824
+Epoch 5, Average Loss: 2.6026
+Epoch 6, Average Loss: 1.9490
+Epoch 7, Average Loss: 1.3986
+Epoch 8, Average Loss: 1.0413
+Epoch 9, Average Loss: 0.8225
+Epoch 10, Average Loss: 0.6746
+Merged model device: cuda:0
+Accuracy: 63.7448
+Accuracy of Product model on test domain: 63.7448
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4799
+Epoch 2, Average Loss: 4.1697
+Epoch 3, Average Loss: 3.9537
+Epoch 4, Average Loss: 3.7577
+Epoch 5, Average Loss: 3.5404
+Epoch 6, Average Loss: 3.2756
+Epoch 7, Average Loss: 2.9417
+Epoch 8, Average Loss: 2.5459
+Epoch 9, Average Loss: 2.1509
+Epoch 10, Average Loss: 1.8406
+Merged model device: cuda:0
+Accuracy: 41.7623
+Accuracy of Clipart model on test domain: 41.7623
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.5381
+Epoch 2, Average Loss: 4.3388
+Epoch 3, Average Loss: 4.1599
+Epoch 4, Average Loss: 3.9944
+Epoch 5, Average Loss: 3.8303
+Epoch 6, Average Loss: 3.6634
+Epoch 7, Average Loss: 3.4874
+Epoch 8, Average Loss: 3.3052
+Epoch 9, Average Loss: 3.1146
+Epoch 10, Average Loss: 2.9150
+Merged model device: cuda:0
+Accuracy: 28.1781
+Accuracy of Art model on test domain: 28.1781
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Art device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.5754
+Coefficient Epoch 2, Average Loss: 1.5583
+Coefficient Epoch 3, Average Loss: 1.5465
+Coefficient Epoch 4, Average Loss: 1.5394
+Coefficient Epoch 5, Average Loss: 1.5436
+Coefficient Epoch 6, Average Loss: 1.5640
+Coefficient Epoch 7, Average Loss: 1.5394
+Coefficient Epoch 8, Average Loss: 1.5312
+Coefficient Epoch 9, Average Loss: 1.5759
+Coefficient Epoch 10, Average Loss: 1.5719
+Final device check:
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Art device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.68769770860672, 0.16075241565704346, 0.15154986083507538]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 59.2474
+Final model accuracy on test domain: 59.2474
+
+Run 5/5
+Preparing data...
+Domains: ['Product', 'Clipart', 'Real World', 'Art']
+Selected test domain: Product
+Training domains: ['Clipart', 'Real World', 'Art']
+Test domain: Product
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.4216
+Epoch 2, Average Loss: 0.7257
+Epoch 3, Average Loss: 0.1060
+Epoch 4, Average Loss: 0.0348
+Epoch 5, Average Loss: 0.0199
+Epoch 6, Average Loss: 0.0151
+Epoch 7, Average Loss: 0.0115
+Epoch 8, Average Loss: 0.0105
+Epoch 9, Average Loss: 0.0087
+Epoch 10, Average Loss: 0.0075
+Accuracy: 89.8649
+Training domains: ['Clipart', 'Real World', 'Art']
+
+Training expert models...
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4385
+Epoch 2, Average Loss: 4.1260
+Epoch 3, Average Loss: 3.9192
+Epoch 4, Average Loss: 3.7160
+Epoch 5, Average Loss: 3.4760
+Epoch 6, Average Loss: 3.1707
+Epoch 7, Average Loss: 2.8012
+Epoch 8, Average Loss: 2.4035
+Epoch 9, Average Loss: 2.0307
+Epoch 10, Average Loss: 1.7333
+Merged model device: cuda:0
+Accuracy: 46.1261
+Accuracy of Clipart model on test domain: 46.1261
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3910
+Epoch 2, Average Loss: 4.0703
+Epoch 3, Average Loss: 3.7842
+Epoch 4, Average Loss: 3.4649
+Epoch 5, Average Loss: 3.0694
+Epoch 6, Average Loss: 2.5752
+Epoch 7, Average Loss: 2.0115
+Epoch 8, Average Loss: 1.4695
+Epoch 9, Average Loss: 1.0913
+Epoch 10, Average Loss: 0.8501
+Merged model device: cuda:0
+Accuracy: 68.4685
+Accuracy of Real World model on test domain: 68.4685
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4857
+Epoch 2, Average Loss: 4.2920
+Epoch 3, Average Loss: 4.1200
+Epoch 4, Average Loss: 3.9590
+Epoch 5, Average Loss: 3.7988
+Epoch 6, Average Loss: 3.6382
+Epoch 7, Average Loss: 3.4696
+Epoch 8, Average Loss: 3.2971
+Epoch 9, Average Loss: 3.1126
+Epoch 10, Average Loss: 2.9177
+Merged model device: cuda:0
+Accuracy: 21.4414
+Accuracy of Art model on test domain: 21.4414
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Expert model Art device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.1878
+Coefficient Epoch 2, Average Loss: 1.1219
+Coefficient Epoch 3, Average Loss: 1.1297
+Coefficient Epoch 4, Average Loss: 1.1246
+Coefficient Epoch 5, Average Loss: 1.1257
+Coefficient Epoch 6, Average Loss: 1.1232
+Coefficient Epoch 7, Average Loss: 1.1268
+Coefficient Epoch 8, Average Loss: 1.1418
+Coefficient Epoch 9, Average Loss: 1.1235
+Coefficient Epoch 10, Average Loss: 1.1312
+Final device check:
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Expert model Art device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.20646408200263977, 0.7236413955688477, 0.06989450752735138]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 66.3063
+Final model accuracy on test domain: 66.3063
+
+Summary for OfficeHome:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'Clipart', 'domain_accuracies': {'Product': 38.021071919377, 'Real World': 40.1740723774622, 'Art': 15.39166284928997}, 'final_accuracy': 38.34173156207055, 'coefficients': [0.35289832949638367, 0.4834563732147217, 0.16364529728889465]}, {'test_domain': 'Art', 'domain_accuracies': {'Product': 42.75123558484349, 'Clipart': 34.2668863261944, 'Real World': 57.001647446457994}, 'final_accuracy': 53.13014827018122, 'coefficients': [0.18339510262012482, 0.23596994578838348, 0.5806350111961365]}, {'test_domain': 'Art', 'domain_accuracies': {'Product': 41.02141680395387, 'Clipart': 39.29159802306425, 'Real World': 58.97858319604613}, 'final_accuracy': 54.69522240527183, 'coefficients': [0.16836874186992645, 0.253629207611084, 0.5780020952224731]}, {'test_domain': 'Real World', 'domain_accuracies': {'Product': 63.744837081229925, 'Clipart': 41.762276273519966, 'Art': 28.178063331803582}, 'final_accuracy': 59.24736117485085, 'coefficients': [0.68769770860672, 0.16075241565704346, 0.15154986083507538]}, {'test_domain': 'Product', 'domain_accuracies': {'Clipart': 46.126126126126124, 'Real World': 68.46846846846847, 'Art': 21.44144144144144}, 'final_accuracy': 66.30630630630631, 'coefficients': [0.20646408200263977, 0.7236413955688477, 0.06989450752735138]}]
+Final Model Accuracy: 54.3442 ± 9.2175
+Domain-specific Accuracies:
+  Product: 46.3846 ± 10.1648
+  Real World: 56.1557 ± 10.1944
+  Art: 21.6704 ± 5.2225
+  Clipart: 40.3617 ± 4.2861
+Average Coefficients:
+  Coefficient 1: 0.3198 ± 0.1954
+  Coefficient 2: 0.3715 ± 0.2065
+  Coefficient 3: 0.3087 ± 0.2233
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': [{'test_domain': 'photo', 'domain_accuracies': {'cartoon': 92.45508982035928, 'art_painting': 99.04191616766467, 'sketch': 48.26347305389221}, 'final_accuracy': 98.92215568862277, 'coefficients': [0.18801447749137878, 0.6870531439781189, 0.1249324306845665]}, {'test_domain': 'photo', 'domain_accuracies': {'cartoon': 88.38323353293414, 'art_painting': 98.562874251497, 'sketch': 33.89221556886228}, 'final_accuracy': 97.36526946107784, 'coefficients': [0.26827749609947205, 0.6468769907951355, 0.08484551310539246]}, {'test_domain': 'sketch', 'domain_accuracies': {'cartoon': 27.37913486005089, 'photo': 16.335877862595417, 'art_painting': 49.720101781170484}, 'final_accuracy': 41.73027989821883, 'coefficients': [0.2880386710166931, 0.18775103986263275, 0.5242102742195129]}, {'test_domain': 'sketch', 'domain_accuracies': {'cartoon': 35.16539440203562, 'photo': 21.57760814249364, 'art_painting': 49.262086513994916}, 'final_accuracy': 52.36641221374045, 'coefficients': [0.2951231300830841, 0.1372154951095581, 0.5676613450050354]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 79.39453125, 'photo': 73.2421875, 'sketch': 53.515625}, 'final_accuracy': 83.30078125, 'coefficients': [0.4387083053588867, 0.3060682713985443, 0.25522345304489136]}], 'VLCS': [{'test_domain': 'Caltech101', 'domain_accuracies': {'VOC2007': 98.30508474576271, 'LabelMe': 61.016949152542374, 'SUN09': 66.10169491525424}, 'final_accuracy': 98.1638418079096, 'coefficients': [0.8076429963111877, 0.1390460878610611, 0.053310975432395935]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'VOC2007': 65.73795180722891, 'SUN09': 62.424698795180724, 'Caltech101': 44.42771084337349}, 'final_accuracy': 66.4909638554217, 'coefficients': [0.3939945697784424, 0.32080507278442383, 0.28520041704177856]}, {'test_domain': 'SUN09', 'domain_accuracies': {'VOC2007': 80.5606337599025, 'LabelMe': 52.16331505179769, 'Caltech101': 45.39914686166971}, 'final_accuracy': 77.08714198659354, 'coefficients': [0.4420108199119568, 0.2917203903198242, 0.266268789768219]}, {'test_domain': 'SUN09', 'domain_accuracies': {'VOC2007': 81.90127970749543, 'LabelMe': 57.16026812918952, 'Caltech101': 47.89762340036563}, 'final_accuracy': 76.23400365630712, 'coefficients': [0.4283420145511627, 0.3062337338924408, 0.2654241919517517]}, {'test_domain': 'Caltech101', 'domain_accuracies': {'VOC2007': 98.0225988700565, 'LabelMe': 49.717514124293785, 'SUN09': 57.909604519774014}, 'final_accuracy': 96.89265536723164, 'coefficients': [0.7411218285560608, 0.18377618491649628, 0.07510194182395935]}], 'OfficeHome': [{'test_domain': 'Clipart', 'domain_accuracies': {'Product': 38.021071919377, 'Real World': 40.1740723774622, 'Art': 15.39166284928997}, 'final_accuracy': 38.34173156207055, 'coefficients': [0.35289832949638367, 0.4834563732147217, 0.16364529728889465]}, {'test_domain': 'Art', 'domain_accuracies': {'Product': 42.75123558484349, 'Clipart': 34.2668863261944, 'Real World': 57.001647446457994}, 'final_accuracy': 53.13014827018122, 'coefficients': [0.18339510262012482, 0.23596994578838348, 0.5806350111961365]}, {'test_domain': 'Art', 'domain_accuracies': {'Product': 41.02141680395387, 'Clipart': 39.29159802306425, 'Real World': 58.97858319604613}, 'final_accuracy': 54.69522240527183, 'coefficients': [0.16836874186992645, 0.253629207611084, 0.5780020952224731]}, {'test_domain': 'Real World', 'domain_accuracies': {'Product': 63.744837081229925, 'Clipart': 41.762276273519966, 'Art': 28.178063331803582}, 'final_accuracy': 59.24736117485085, 'coefficients': [0.68769770860672, 0.16075241565704346, 0.15154986083507538]}, {'test_domain': 'Product', 'domain_accuracies': {'Clipart': 46.126126126126124, 'Real World': 68.46846846846847, 'Art': 21.44144144144144}, 'final_accuracy': 66.30630630630631, 'coefficients': [0.20646408200263977, 0.7236413955688477, 0.06989450752735138]}]}
+No valid results to summarize.

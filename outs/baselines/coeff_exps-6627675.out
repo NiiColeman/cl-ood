@@ -1,0 +1,34 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['photo', 'cartoon', 'sketch', 'art_painting']
+Selected test domain: cartoon
+Training domains: ['photo', 'sketch', 'art_painting']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.9273
+Epoch 2, Average Loss: 0.2510
+Epoch 3, Average Loss: 0.0775
+Epoch 4, Average Loss: 0.0411
+Epoch 5, Average Loss: 0.0170
+Epoch 6, Average Loss: 0.0014
+Epoch 7, Average Loss: 0.0002
+Epoch 8, Average Loss: 0.0000
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Training domains: ['photo', 'sketch', 'art_painting']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.1109

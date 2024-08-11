@@ -1,0 +1,54 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 16, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 1, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 16, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 1, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.5989
+Accuracy: 91.8945
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.2711
+Merged model device: cuda:0
+Accuracy: 55.4688
+Accuracy of cartoon model on test domain: 55.4688
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.0993
+Merged model device: cuda:0
+Accuracy: 51.8555
+Accuracy of photo model on test domain: 51.8555
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.9816
+Merged model device: cuda:0
+Accuracy: 29.1016
+Accuracy of sketch model on test domain: 29.1016
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0

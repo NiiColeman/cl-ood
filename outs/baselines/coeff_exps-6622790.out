@@ -1,0 +1,198 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+
+Test Domain: art_painting, Run 1/1
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Training domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain art_painting, run 1: None
+
+Results for test domain: art_painting
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: cartoon, Run 1/1
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Training domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain cartoon, run 1: None
+
+Results for test domain: cartoon
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: photo, Run 1/1
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Training domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain photo, run 1: None
+
+Results for test domain: photo
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: sketch, Run 1/1
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Training domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain sketch, run 1: None
+
+Results for test domain: sketch
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+==================================================
+Running experiments for dataset: VLCS
+==================================================
+
+Test Domain: Caltech101, Run 1/1
+Preparing data...
+Domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Training domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain Caltech101, run 1: None
+
+Results for test domain: Caltech101
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: LabelMe, Run 1/1
+Preparing data...
+Domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Training domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain LabelMe, run 1: None
+
+Results for test domain: LabelMe
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: SUN09, Run 1/1
+Preparing data...
+Domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Training domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain SUN09, run 1: None
+
+Results for test domain: SUN09
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: VOC2007, Run 1/1
+Preparing data...
+Domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Training domains: ['Caltech101', 'LabelMe', 'SUN09', 'VOC2007']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain VOC2007, run 1: None
+
+Results for test domain: VOC2007
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Summary for VLCS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+==================================================
+Running experiments for dataset: OfficeHome
+==================================================
+
+Test Domain: Art, Run 1/1
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Training domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain Art, run 1: None
+
+Results for test domain: Art
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: Clipart, Run 1/1
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Training domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain Clipart, run 1: None
+
+Results for test domain: Clipart
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: Product, Run 1/1
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Training domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain Product, run 1: None
+
+Results for test domain: Product
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Test Domain: Real World, Run 1/1
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Training domains: ['Art', 'Clipart', 'Product', 'Real World']
+Test domain: None
+Performing naive fine-tuning on test domain
+Error in run for test domain Real World, run 1: None
+
+Results for test domain: Real World
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+
+Summary for OfficeHome:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': [], 'VLCS': [], 'OfficeHome': []}
+No valid results to summarize.

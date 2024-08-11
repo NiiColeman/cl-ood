@@ -1,0 +1,713 @@
+
+--- Run 1/3 ---
+
+Running LoRA with TIES experiment
+Test domain: photo
+Train domains: ['art_painting', 'sketch', 'cartoon']
+Baseline Model - Test Loss: 2.1066, Test Accuracy: 21.88%
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2928, Train Accuracy: 17.86%
+Val Loss: 2.1699, Val Accuracy: 14.29%
+Epoch 2/10, Train Loss: 2.1958, Train Accuracy: 17.86%
+Val Loss: 2.1515, Val Accuracy: 14.29%
+Epoch 3/10, Train Loss: 2.1211, Train Accuracy: 21.43%
+Val Loss: 2.1367, Val Accuracy: 14.29%
+Epoch 4/10, Train Loss: 2.0470, Train Accuracy: 21.43%
+Val Loss: 2.1218, Val Accuracy: 14.29%
+Epoch 5/10, Train Loss: 1.9710, Train Accuracy: 21.43%
+Val Loss: 2.1065, Val Accuracy: 14.29%
+Epoch 6/10, Train Loss: 1.8949, Train Accuracy: 21.43%
+Val Loss: 2.0903, Val Accuracy: 14.29%
+Epoch 7/10, Train Loss: 1.8179, Train Accuracy: 21.43%
+Val Loss: 2.0728, Val Accuracy: 14.29%
+Epoch 8/10, Train Loss: 1.7421, Train Accuracy: 28.57%
+Val Loss: 2.0550, Val Accuracy: 14.29%
+Epoch 9/10, Train Loss: 1.6645, Train Accuracy: 39.29%
+Val Loss: 2.0366, Val Accuracy: 14.29%
+Epoch 10/10, Train Loss: 1.5881, Train Accuracy: 39.29%
+Val Loss: 2.0177, Val Accuracy: 14.29%
+Best validation accuracy for art_painting: 14.29%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+art_painting adapter trained. Validation Accuracy: 14.29%
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%
+Val Loss: 2.1154, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1746, Train Accuracy: 21.43%
+Val Loss: 2.0720, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0838, Train Accuracy: 21.43%
+Val Loss: 2.0313, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9957, Train Accuracy: 21.43%
+Val Loss: 2.0008, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9116, Train Accuracy: 21.43%
+Val Loss: 1.9802, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8295, Train Accuracy: 21.43%
+Val Loss: 1.9696, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7550, Train Accuracy: 21.43%
+Val Loss: 1.9656, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6867, Train Accuracy: 39.29%
+Val Loss: 1.9687, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6206, Train Accuracy: 50.00%
+Val Loss: 1.9792, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5566, Train Accuracy: 53.57%
+Val Loss: 1.9973, Val Accuracy: 28.57%
+Best validation accuracy for sketch: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+sketch adapter trained. Validation Accuracy: 28.57%
+
+Training LoRA adapter for domain: cartoon
+
+Training LoRA adapter for domain: cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.6139, Train Accuracy: 10.71%
+Val Loss: 2.2349, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 2.4922, Train Accuracy: 14.29%
+Val Loss: 2.2195, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 2.4229, Train Accuracy: 10.71%
+Val Loss: 2.2224, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 2.3432, Train Accuracy: 10.71%
+Val Loss: 2.2234, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 2.2615, Train Accuracy: 10.71%
+Val Loss: 2.2240, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 2.1825, Train Accuracy: 10.71%
+Val Loss: 2.2182, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 2.1018, Train Accuracy: 10.71%
+Val Loss: 2.2115, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 2.0235, Train Accuracy: 10.71%
+Val Loss: 2.2080, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.9431, Train Accuracy: 17.86%
+Val Loss: 2.2105, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.8733, Train Accuracy: 17.86%
+Val Loss: 2.2084, Val Accuracy: 0.00%
+Warning: No best state found for domain cartoon. Using the final state.
+Best validation accuracy for cartoon: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+cartoon adapter trained. Validation Accuracy: 0.00%
+
+Evaluating individual LoRA adapters on the test domain:
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+art_painting adapter - Test Loss: 2.0543, Test Accuracy: 21.88%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+sketch adapter - Test Loss: 2.0639, Test Accuracy: 18.75%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+cartoon adapter - Test Loss: 2.0659, Test Accuracy: 25.00%
+
+Performing grid search for adapter coefficients
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficients: [nan nan nan], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 33.33%
+Coefficients: [0.   0.25 0.75], Accuracy: 33.33%
+Coefficients: [0.  0.2 0.8], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.  0.4 0.6], Accuracy: 33.33%
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.   0.75 0.25], Accuracy: 33.33%
+Coefficients: [0.  0.6 0.4], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.         0.42857143 0.57142857], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.  0.8 0.2], Accuracy: 33.33%
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.         0.57142857 0.42857143], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 33.33%
+Coefficients: [0.25 0.   0.75], Accuracy: 33.33%
+Coefficients: [0.2 0.  0.8], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 33.33%
+Coefficients: [0.2 0.2 0.6], Accuracy: 33.33%
+Coefficients: [0.16666667 0.16666667 0.66666667], Accuracy: 33.33%
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 33.33%
+Coefficients: [0.25 0.5  0.25], Accuracy: 33.33%
+Coefficients: [0.2 0.4 0.4], Accuracy: 33.33%
+Coefficients: [0.16666667 0.33333333 0.5       ], Accuracy: 33.33%
+Coefficients: [0.14285714 0.28571429 0.57142857], Accuracy: 33.33%
+Coefficients: [0.25 0.75 0.  ], Accuracy: 33.33%
+Coefficients: [0.2 0.6 0.2], Accuracy: 33.33%
+Coefficients: [0.16666667 0.5        0.33333333], Accuracy: 33.33%
+Coefficients: [0.14285714 0.42857143 0.42857143], Accuracy: 33.33%
+Coefficients: [0.125 0.375 0.5  ], Accuracy: 33.33%
+Coefficients: [0.2 0.8 0. ], Accuracy: 33.33%
+Coefficients: [0.16666667 0.66666667 0.16666667], Accuracy: 33.33%
+Coefficients: [0.14285714 0.57142857 0.28571429], Accuracy: 33.33%
+Coefficients: [0.125 0.5   0.375], Accuracy: 33.33%
+Coefficients: [0.11111111 0.44444444 0.44444444], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.4 0.  0.6], Accuracy: 33.33%
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 33.33%
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 33.33%
+Coefficients: [0.5  0.25 0.25], Accuracy: 33.33%
+Coefficients: [0.4 0.2 0.4], Accuracy: 33.33%
+Coefficients: [0.33333333 0.16666667 0.5       ], Accuracy: 33.33%
+Coefficients: [0.28571429 0.14285714 0.57142857], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.4 0.4 0.2], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.28571429 0.28571429 0.42857143], Accuracy: 33.33%
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 33.33%
+Coefficients: [0.4 0.6 0. ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.5        0.16666667], Accuracy: 33.33%
+Coefficients: [0.28571429 0.42857143 0.28571429], Accuracy: 33.33%
+Coefficients: [0.25  0.375 0.375], Accuracy: 33.33%
+Coefficients: [0.22222222 0.33333333 0.44444444], Accuracy: 33.33%
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 33.33%
+Coefficients: [0.28571429 0.57142857 0.14285714], Accuracy: 33.33%
+Coefficients: [0.25 0.5  0.25], Accuracy: 33.33%
+Coefficients: [0.22222222 0.44444444 0.33333333], Accuracy: 33.33%
+Coefficients: [0.2 0.4 0.4], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.75 0.   0.25], Accuracy: 33.33%
+Coefficients: [0.6 0.  0.4], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.42857143 0.         0.57142857], Accuracy: 33.33%
+Coefficients: [0.75 0.25 0.  ], Accuracy: 33.33%
+Coefficients: [0.6 0.2 0.2], Accuracy: 33.33%
+Coefficients: [0.5        0.16666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.42857143 0.14285714 0.42857143], Accuracy: 33.33%
+Coefficients: [0.375 0.125 0.5  ], Accuracy: 33.33%
+Coefficients: [0.6 0.4 0. ], Accuracy: 33.33%
+Coefficients: [0.5        0.33333333 0.16666667], Accuracy: 33.33%
+Coefficients: [0.42857143 0.28571429 0.28571429], Accuracy: 33.33%
+Coefficients: [0.375 0.25  0.375], Accuracy: 33.33%
+Coefficients: [0.33333333 0.22222222 0.44444444], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.42857143 0.42857143 0.14285714], Accuracy: 33.33%
+Coefficients: [0.375 0.375 0.25 ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.3 0.3 0.4], Accuracy: 33.33%
+Coefficients: [0.42857143 0.57142857 0.        ], Accuracy: 33.33%
+Coefficients: [0.375 0.5   0.125], Accuracy: 33.33%
+Coefficients: [0.33333333 0.44444444 0.22222222], Accuracy: 33.33%
+Coefficients: [0.3 0.4 0.3], Accuracy: 33.33%
+Coefficients: [0.27272727 0.36363636 0.36363636], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.8 0.  0.2], Accuracy: 33.33%
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 33.33%
+Coefficients: [0.57142857 0.         0.42857143], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.8 0.2 0. ], Accuracy: 33.33%
+Coefficients: [0.66666667 0.16666667 0.16666667], Accuracy: 33.33%
+Coefficients: [0.57142857 0.14285714 0.28571429], Accuracy: 33.33%
+Coefficients: [0.5   0.125 0.375], Accuracy: 33.33%
+Coefficients: [0.44444444 0.11111111 0.44444444], Accuracy: 33.33%
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 33.33%
+Coefficients: [0.57142857 0.28571429 0.14285714], Accuracy: 33.33%
+Coefficients: [0.5  0.25 0.25], Accuracy: 33.33%
+Coefficients: [0.44444444 0.22222222 0.33333333], Accuracy: 33.33%
+Coefficients: [0.4 0.2 0.4], Accuracy: 33.33%
+Coefficients: [0.57142857 0.42857143 0.        ], Accuracy: 33.33%
+Coefficients: [0.5   0.375 0.125], Accuracy: 33.33%
+Coefficients: [0.44444444 0.33333333 0.22222222], Accuracy: 33.33%
+Coefficients: [0.4 0.3 0.3], Accuracy: 33.33%
+Coefficients: [0.36363636 0.27272727 0.36363636], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.44444444 0.44444444 0.11111111], Accuracy: 33.33%
+Coefficients: [0.4 0.4 0.2], Accuracy: 33.33%
+Coefficients: [0.36363636 0.36363636 0.27272727], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+
+Best coefficient accuracy: 33.33%
+Best coefficients: [nan nan nan]
+
+Merged model with TIES - Test Loss: nan, Test Accuracy: 12.50%
+
+--- Run 2/3 ---
+
+Running LoRA with TIES experiment
+Test domain: photo
+Train domains: ['art_painting', 'sketch', 'cartoon']
+Baseline Model - Test Loss: 2.1066, Test Accuracy: 21.88%
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2928, Train Accuracy: 17.86%
+Val Loss: 2.1699, Val Accuracy: 14.29%
+Epoch 2/10, Train Loss: 2.1958, Train Accuracy: 17.86%
+Val Loss: 2.1515, Val Accuracy: 14.29%
+Epoch 3/10, Train Loss: 2.1211, Train Accuracy: 21.43%
+Val Loss: 2.1367, Val Accuracy: 14.29%
+Epoch 4/10, Train Loss: 2.0470, Train Accuracy: 21.43%
+Val Loss: 2.1218, Val Accuracy: 14.29%
+Epoch 5/10, Train Loss: 1.9710, Train Accuracy: 21.43%
+Val Loss: 2.1065, Val Accuracy: 14.29%
+Epoch 6/10, Train Loss: 1.8949, Train Accuracy: 21.43%
+Val Loss: 2.0903, Val Accuracy: 14.29%
+Epoch 7/10, Train Loss: 1.8179, Train Accuracy: 21.43%
+Val Loss: 2.0728, Val Accuracy: 14.29%
+Epoch 8/10, Train Loss: 1.7421, Train Accuracy: 28.57%
+Val Loss: 2.0550, Val Accuracy: 14.29%
+Epoch 9/10, Train Loss: 1.6645, Train Accuracy: 39.29%
+Val Loss: 2.0366, Val Accuracy: 14.29%
+Epoch 10/10, Train Loss: 1.5881, Train Accuracy: 39.29%
+Val Loss: 2.0177, Val Accuracy: 14.29%
+Best validation accuracy for art_painting: 14.29%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+art_painting adapter trained. Validation Accuracy: 14.29%
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%
+Val Loss: 2.1154, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1746, Train Accuracy: 21.43%
+Val Loss: 2.0720, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0838, Train Accuracy: 21.43%
+Val Loss: 2.0313, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9957, Train Accuracy: 21.43%
+Val Loss: 2.0008, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9116, Train Accuracy: 21.43%
+Val Loss: 1.9802, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8295, Train Accuracy: 21.43%
+Val Loss: 1.9696, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7550, Train Accuracy: 21.43%
+Val Loss: 1.9656, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6867, Train Accuracy: 39.29%
+Val Loss: 1.9687, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6206, Train Accuracy: 50.00%
+Val Loss: 1.9792, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5566, Train Accuracy: 53.57%
+Val Loss: 1.9973, Val Accuracy: 28.57%
+Best validation accuracy for sketch: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+sketch adapter trained. Validation Accuracy: 28.57%
+
+Training LoRA adapter for domain: cartoon
+
+Training LoRA adapter for domain: cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.6139, Train Accuracy: 10.71%
+Val Loss: 2.2349, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 2.4922, Train Accuracy: 14.29%
+Val Loss: 2.2195, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 2.4229, Train Accuracy: 10.71%
+Val Loss: 2.2224, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 2.3432, Train Accuracy: 10.71%
+Val Loss: 2.2234, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 2.2615, Train Accuracy: 10.71%
+Val Loss: 2.2240, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 2.1825, Train Accuracy: 10.71%
+Val Loss: 2.2182, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 2.1018, Train Accuracy: 10.71%
+Val Loss: 2.2115, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 2.0235, Train Accuracy: 10.71%
+Val Loss: 2.2080, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.9431, Train Accuracy: 17.86%
+Val Loss: 2.2105, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.8733, Train Accuracy: 17.86%
+Val Loss: 2.2084, Val Accuracy: 0.00%
+Warning: No best state found for domain cartoon. Using the final state.
+Best validation accuracy for cartoon: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+cartoon adapter trained. Validation Accuracy: 0.00%
+
+Evaluating individual LoRA adapters on the test domain:
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+art_painting adapter - Test Loss: 2.0543, Test Accuracy: 21.88%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+sketch adapter - Test Loss: 2.0639, Test Accuracy: 18.75%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+cartoon adapter - Test Loss: 2.0659, Test Accuracy: 25.00%
+
+Performing grid search for adapter coefficients
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficients: [nan nan nan], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 33.33%
+Coefficients: [0.   0.25 0.75], Accuracy: 33.33%
+Coefficients: [0.  0.2 0.8], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.  0.4 0.6], Accuracy: 33.33%
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.   0.75 0.25], Accuracy: 33.33%
+Coefficients: [0.  0.6 0.4], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.         0.42857143 0.57142857], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.  0.8 0.2], Accuracy: 33.33%
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.         0.57142857 0.42857143], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 33.33%
+Coefficients: [0.25 0.   0.75], Accuracy: 33.33%
+Coefficients: [0.2 0.  0.8], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 33.33%
+Coefficients: [0.2 0.2 0.6], Accuracy: 33.33%
+Coefficients: [0.16666667 0.16666667 0.66666667], Accuracy: 33.33%
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 33.33%
+Coefficients: [0.25 0.5  0.25], Accuracy: 33.33%
+Coefficients: [0.2 0.4 0.4], Accuracy: 33.33%
+Coefficients: [0.16666667 0.33333333 0.5       ], Accuracy: 33.33%
+Coefficients: [0.14285714 0.28571429 0.57142857], Accuracy: 33.33%
+Coefficients: [0.25 0.75 0.  ], Accuracy: 33.33%
+Coefficients: [0.2 0.6 0.2], Accuracy: 33.33%
+Coefficients: [0.16666667 0.5        0.33333333], Accuracy: 33.33%
+Coefficients: [0.14285714 0.42857143 0.42857143], Accuracy: 33.33%
+Coefficients: [0.125 0.375 0.5  ], Accuracy: 33.33%
+Coefficients: [0.2 0.8 0. ], Accuracy: 33.33%
+Coefficients: [0.16666667 0.66666667 0.16666667], Accuracy: 33.33%
+Coefficients: [0.14285714 0.57142857 0.28571429], Accuracy: 33.33%
+Coefficients: [0.125 0.5   0.375], Accuracy: 33.33%
+Coefficients: [0.11111111 0.44444444 0.44444444], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.4 0.  0.6], Accuracy: 33.33%
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 33.33%
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 33.33%
+Coefficients: [0.5  0.25 0.25], Accuracy: 33.33%
+Coefficients: [0.4 0.2 0.4], Accuracy: 33.33%
+Coefficients: [0.33333333 0.16666667 0.5       ], Accuracy: 33.33%
+Coefficients: [0.28571429 0.14285714 0.57142857], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.4 0.4 0.2], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.28571429 0.28571429 0.42857143], Accuracy: 33.33%
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 33.33%
+Coefficients: [0.4 0.6 0. ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.5        0.16666667], Accuracy: 33.33%
+Coefficients: [0.28571429 0.42857143 0.28571429], Accuracy: 33.33%
+Coefficients: [0.25  0.375 0.375], Accuracy: 33.33%
+Coefficients: [0.22222222 0.33333333 0.44444444], Accuracy: 33.33%
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 33.33%
+Coefficients: [0.28571429 0.57142857 0.14285714], Accuracy: 33.33%
+Coefficients: [0.25 0.5  0.25], Accuracy: 33.33%
+Coefficients: [0.22222222 0.44444444 0.33333333], Accuracy: 33.33%
+Coefficients: [0.2 0.4 0.4], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.75 0.   0.25], Accuracy: 33.33%
+Coefficients: [0.6 0.  0.4], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.42857143 0.         0.57142857], Accuracy: 33.33%
+Coefficients: [0.75 0.25 0.  ], Accuracy: 33.33%
+Coefficients: [0.6 0.2 0.2], Accuracy: 33.33%
+Coefficients: [0.5        0.16666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.42857143 0.14285714 0.42857143], Accuracy: 33.33%
+Coefficients: [0.375 0.125 0.5  ], Accuracy: 33.33%
+Coefficients: [0.6 0.4 0. ], Accuracy: 33.33%
+Coefficients: [0.5        0.33333333 0.16666667], Accuracy: 33.33%
+Coefficients: [0.42857143 0.28571429 0.28571429], Accuracy: 33.33%
+Coefficients: [0.375 0.25  0.375], Accuracy: 33.33%
+Coefficients: [0.33333333 0.22222222 0.44444444], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.42857143 0.42857143 0.14285714], Accuracy: 33.33%
+Coefficients: [0.375 0.375 0.25 ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.3 0.3 0.4], Accuracy: 33.33%
+Coefficients: [0.42857143 0.57142857 0.        ], Accuracy: 33.33%
+Coefficients: [0.375 0.5   0.125], Accuracy: 33.33%
+Coefficients: [0.33333333 0.44444444 0.22222222], Accuracy: 33.33%
+Coefficients: [0.3 0.4 0.3], Accuracy: 33.33%
+Coefficients: [0.27272727 0.36363636 0.36363636], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.8 0.  0.2], Accuracy: 33.33%
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 33.33%
+Coefficients: [0.57142857 0.         0.42857143], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.8 0.2 0. ], Accuracy: 33.33%
+Coefficients: [0.66666667 0.16666667 0.16666667], Accuracy: 33.33%
+Coefficients: [0.57142857 0.14285714 0.28571429], Accuracy: 33.33%
+Coefficients: [0.5   0.125 0.375], Accuracy: 33.33%
+Coefficients: [0.44444444 0.11111111 0.44444444], Accuracy: 33.33%
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 33.33%
+Coefficients: [0.57142857 0.28571429 0.14285714], Accuracy: 33.33%
+Coefficients: [0.5  0.25 0.25], Accuracy: 33.33%
+Coefficients: [0.44444444 0.22222222 0.33333333], Accuracy: 33.33%
+Coefficients: [0.4 0.2 0.4], Accuracy: 33.33%
+Coefficients: [0.57142857 0.42857143 0.        ], Accuracy: 33.33%
+Coefficients: [0.5   0.375 0.125], Accuracy: 33.33%
+Coefficients: [0.44444444 0.33333333 0.22222222], Accuracy: 33.33%
+Coefficients: [0.4 0.3 0.3], Accuracy: 33.33%
+Coefficients: [0.36363636 0.27272727 0.36363636], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.44444444 0.44444444 0.11111111], Accuracy: 33.33%
+Coefficients: [0.4 0.4 0.2], Accuracy: 33.33%
+Coefficients: [0.36363636 0.36363636 0.27272727], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+
+Best coefficient accuracy: 33.33%
+Best coefficients: [nan nan nan]
+
+Merged model with TIES - Test Loss: nan, Test Accuracy: 12.50%
+
+--- Run 3/3 ---
+
+Running LoRA with TIES experiment
+Test domain: photo
+Train domains: ['art_painting', 'sketch', 'cartoon']
+Baseline Model - Test Loss: 2.1066, Test Accuracy: 21.88%
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2928, Train Accuracy: 17.86%
+Val Loss: 2.1699, Val Accuracy: 14.29%
+Epoch 2/10, Train Loss: 2.1958, Train Accuracy: 17.86%
+Val Loss: 2.1515, Val Accuracy: 14.29%
+Epoch 3/10, Train Loss: 2.1211, Train Accuracy: 21.43%
+Val Loss: 2.1367, Val Accuracy: 14.29%
+Epoch 4/10, Train Loss: 2.0470, Train Accuracy: 21.43%
+Val Loss: 2.1218, Val Accuracy: 14.29%
+Epoch 5/10, Train Loss: 1.9710, Train Accuracy: 21.43%
+Val Loss: 2.1065, Val Accuracy: 14.29%
+Epoch 6/10, Train Loss: 1.8949, Train Accuracy: 21.43%
+Val Loss: 2.0903, Val Accuracy: 14.29%
+Epoch 7/10, Train Loss: 1.8179, Train Accuracy: 21.43%
+Val Loss: 2.0728, Val Accuracy: 14.29%
+Epoch 8/10, Train Loss: 1.7421, Train Accuracy: 28.57%
+Val Loss: 2.0550, Val Accuracy: 14.29%
+Epoch 9/10, Train Loss: 1.6645, Train Accuracy: 39.29%
+Val Loss: 2.0366, Val Accuracy: 14.29%
+Epoch 10/10, Train Loss: 1.5881, Train Accuracy: 39.29%
+Val Loss: 2.0177, Val Accuracy: 14.29%
+Best validation accuracy for art_painting: 14.29%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+art_painting adapter trained. Validation Accuracy: 14.29%
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%
+Val Loss: 2.1154, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1746, Train Accuracy: 21.43%
+Val Loss: 2.0720, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0838, Train Accuracy: 21.43%
+Val Loss: 2.0313, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9957, Train Accuracy: 21.43%
+Val Loss: 2.0008, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9116, Train Accuracy: 21.43%
+Val Loss: 1.9802, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8295, Train Accuracy: 21.43%
+Val Loss: 1.9696, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7550, Train Accuracy: 21.43%
+Val Loss: 1.9656, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6867, Train Accuracy: 39.29%
+Val Loss: 1.9687, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6206, Train Accuracy: 50.00%
+Val Loss: 1.9792, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5566, Train Accuracy: 53.57%
+Val Loss: 1.9973, Val Accuracy: 28.57%
+Best validation accuracy for sketch: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+sketch adapter trained. Validation Accuracy: 28.57%
+
+Training LoRA adapter for domain: cartoon
+
+Training LoRA adapter for domain: cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.6139, Train Accuracy: 10.71%
+Val Loss: 2.2349, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 2.4922, Train Accuracy: 14.29%
+Val Loss: 2.2195, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 2.4229, Train Accuracy: 10.71%
+Val Loss: 2.2224, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 2.3432, Train Accuracy: 10.71%
+Val Loss: 2.2234, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 2.2615, Train Accuracy: 10.71%
+Val Loss: 2.2240, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 2.1825, Train Accuracy: 10.71%
+Val Loss: 2.2182, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 2.1018, Train Accuracy: 10.71%
+Val Loss: 2.2115, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 2.0235, Train Accuracy: 10.71%
+Val Loss: 2.2080, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.9431, Train Accuracy: 17.86%
+Val Loss: 2.2105, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.8733, Train Accuracy: 17.86%
+Val Loss: 2.2084, Val Accuracy: 0.00%
+Warning: No best state found for domain cartoon. Using the final state.
+Best validation accuracy for cartoon: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+cartoon adapter trained. Validation Accuracy: 0.00%
+
+Evaluating individual LoRA adapters on the test domain:
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+art_painting adapter - Test Loss: 2.0543, Test Accuracy: 21.88%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+sketch adapter - Test Loss: 2.0639, Test Accuracy: 18.75%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+cartoon adapter - Test Loss: 2.0659, Test Accuracy: 25.00%
+
+Performing grid search for adapter coefficients
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficients: [nan nan nan], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 0. 1.], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 33.33%
+Coefficients: [0.   0.25 0.75], Accuracy: 33.33%
+Coefficients: [0.  0.2 0.8], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.  0.4 0.6], Accuracy: 33.33%
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.   0.75 0.25], Accuracy: 33.33%
+Coefficients: [0.  0.6 0.4], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [0.         0.42857143 0.57142857], Accuracy: 33.33%
+Coefficients: [0. 1. 0.], Accuracy: 33.33%
+Coefficients: [0.  0.8 0.2], Accuracy: 33.33%
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.         0.57142857 0.42857143], Accuracy: 33.33%
+Coefficients: [0.  0.5 0.5], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 33.33%
+Coefficients: [0.25 0.   0.75], Accuracy: 33.33%
+Coefficients: [0.2 0.  0.8], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 33.33%
+Coefficients: [0.2 0.2 0.6], Accuracy: 33.33%
+Coefficients: [0.16666667 0.16666667 0.66666667], Accuracy: 33.33%
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 33.33%
+Coefficients: [0.25 0.5  0.25], Accuracy: 33.33%
+Coefficients: [0.2 0.4 0.4], Accuracy: 33.33%
+Coefficients: [0.16666667 0.33333333 0.5       ], Accuracy: 33.33%
+Coefficients: [0.14285714 0.28571429 0.57142857], Accuracy: 33.33%
+Coefficients: [0.25 0.75 0.  ], Accuracy: 33.33%
+Coefficients: [0.2 0.6 0.2], Accuracy: 33.33%
+Coefficients: [0.16666667 0.5        0.33333333], Accuracy: 33.33%
+Coefficients: [0.14285714 0.42857143 0.42857143], Accuracy: 33.33%
+Coefficients: [0.125 0.375 0.5  ], Accuracy: 33.33%
+Coefficients: [0.2 0.8 0. ], Accuracy: 33.33%
+Coefficients: [0.16666667 0.66666667 0.16666667], Accuracy: 33.33%
+Coefficients: [0.14285714 0.57142857 0.28571429], Accuracy: 33.33%
+Coefficients: [0.125 0.5   0.375], Accuracy: 33.33%
+Coefficients: [0.11111111 0.44444444 0.44444444], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.4 0.  0.6], Accuracy: 33.33%
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 33.33%
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 33.33%
+Coefficients: [0.5  0.25 0.25], Accuracy: 33.33%
+Coefficients: [0.4 0.2 0.4], Accuracy: 33.33%
+Coefficients: [0.33333333 0.16666667 0.5       ], Accuracy: 33.33%
+Coefficients: [0.28571429 0.14285714 0.57142857], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.4 0.4 0.2], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.28571429 0.28571429 0.42857143], Accuracy: 33.33%
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 33.33%
+Coefficients: [0.4 0.6 0. ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.5        0.16666667], Accuracy: 33.33%
+Coefficients: [0.28571429 0.42857143 0.28571429], Accuracy: 33.33%
+Coefficients: [0.25  0.375 0.375], Accuracy: 33.33%
+Coefficients: [0.22222222 0.33333333 0.44444444], Accuracy: 33.33%
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 33.33%
+Coefficients: [0.28571429 0.57142857 0.14285714], Accuracy: 33.33%
+Coefficients: [0.25 0.5  0.25], Accuracy: 33.33%
+Coefficients: [0.22222222 0.44444444 0.33333333], Accuracy: 33.33%
+Coefficients: [0.2 0.4 0.4], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.75 0.   0.25], Accuracy: 33.33%
+Coefficients: [0.6 0.  0.4], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.42857143 0.         0.57142857], Accuracy: 33.33%
+Coefficients: [0.75 0.25 0.  ], Accuracy: 33.33%
+Coefficients: [0.6 0.2 0.2], Accuracy: 33.33%
+Coefficients: [0.5        0.16666667 0.33333333], Accuracy: 33.33%
+Coefficients: [0.42857143 0.14285714 0.42857143], Accuracy: 33.33%
+Coefficients: [0.375 0.125 0.5  ], Accuracy: 33.33%
+Coefficients: [0.6 0.4 0. ], Accuracy: 33.33%
+Coefficients: [0.5        0.33333333 0.16666667], Accuracy: 33.33%
+Coefficients: [0.42857143 0.28571429 0.28571429], Accuracy: 33.33%
+Coefficients: [0.375 0.25  0.375], Accuracy: 33.33%
+Coefficients: [0.33333333 0.22222222 0.44444444], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.42857143 0.42857143 0.14285714], Accuracy: 33.33%
+Coefficients: [0.375 0.375 0.25 ], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+Coefficients: [0.3 0.3 0.4], Accuracy: 33.33%
+Coefficients: [0.42857143 0.57142857 0.        ], Accuracy: 33.33%
+Coefficients: [0.375 0.5   0.125], Accuracy: 33.33%
+Coefficients: [0.33333333 0.44444444 0.22222222], Accuracy: 33.33%
+Coefficients: [0.3 0.4 0.3], Accuracy: 33.33%
+Coefficients: [0.27272727 0.36363636 0.36363636], Accuracy: 33.33%
+Coefficients: [1. 0. 0.], Accuracy: 33.33%
+Coefficients: [0.8 0.  0.2], Accuracy: 33.33%
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 33.33%
+Coefficients: [0.57142857 0.         0.42857143], Accuracy: 33.33%
+Coefficients: [0.5 0.  0.5], Accuracy: 33.33%
+Coefficients: [0.8 0.2 0. ], Accuracy: 33.33%
+Coefficients: [0.66666667 0.16666667 0.16666667], Accuracy: 33.33%
+Coefficients: [0.57142857 0.14285714 0.28571429], Accuracy: 33.33%
+Coefficients: [0.5   0.125 0.375], Accuracy: 33.33%
+Coefficients: [0.44444444 0.11111111 0.44444444], Accuracy: 33.33%
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 33.33%
+Coefficients: [0.57142857 0.28571429 0.14285714], Accuracy: 33.33%
+Coefficients: [0.5  0.25 0.25], Accuracy: 33.33%
+Coefficients: [0.44444444 0.22222222 0.33333333], Accuracy: 33.33%
+Coefficients: [0.4 0.2 0.4], Accuracy: 33.33%
+Coefficients: [0.57142857 0.42857143 0.        ], Accuracy: 33.33%
+Coefficients: [0.5   0.375 0.125], Accuracy: 33.33%
+Coefficients: [0.44444444 0.33333333 0.22222222], Accuracy: 33.33%
+Coefficients: [0.4 0.3 0.3], Accuracy: 33.33%
+Coefficients: [0.36363636 0.27272727 0.36363636], Accuracy: 33.33%
+Coefficients: [0.5 0.5 0. ], Accuracy: 33.33%
+Coefficients: [0.44444444 0.44444444 0.11111111], Accuracy: 33.33%
+Coefficients: [0.4 0.4 0.2], Accuracy: 33.33%
+Coefficients: [0.36363636 0.36363636 0.27272727], Accuracy: 33.33%
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 33.33%
+
+Best coefficient accuracy: 33.33%
+Best coefficients: [nan nan nan]
+
+Merged model with TIES - Test Loss: nan, Test Accuracy: 12.50%
+
+Summary of All Runs:
+Baseline Model Accuracy: 21.88% ± 0.00%
+Merged Model Accuracy: 12.50% ± 0.00%
+Average Coefficients:
+  art_painting: nan ± nan
+  sketch: nan ± nan
+  cartoon: nan ± nan

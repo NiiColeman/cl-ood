@@ -1,0 +1,6 @@
+
+--- Run 1/10 ---
+
+Running LoRA with Separate Classifiers experiment
+Test domain: Art
+Train domains: ['Product', 'Clipart', 'Real World']

@@ -1,0 +1,1477 @@
+rank 32
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 4, 'lora_alpha': 64, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 4, 'lora_alpha': 64, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.8685
+Epoch 2, Average Loss: 2.1329
+Epoch 3, Average Loss: 1.9621
+Epoch 4, Average Loss: 1.9355
+Epoch 5, Average Loss: 1.8521
+Epoch 6, Average Loss: 1.8759
+Epoch 7, Average Loss: 1.8447
+Epoch 8, Average Loss: 1.8478
+Epoch 9, Average Loss: 1.7267
+Epoch 10, Average Loss: 1.7035
+Accuracy: 24.0781
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 0.4710
+Epoch 2, Average Loss: 0.1723
+Epoch 3, Average Loss: 0.1795
+Epoch 4, Average Loss: 0.1325
+Epoch 5, Average Loss: 0.1263
+Epoch 6, Average Loss: 0.1877
+Epoch 7, Average Loss: 0.3312
+Epoch 8, Average Loss: 1.6195
+Epoch 9, Average Loss: 2.0221
+Epoch 10, Average Loss: 1.9620
+Merged model device: cuda:0
+Accuracy: 16.0521
+Accuracy of cartoon model on test domain: 16.0521
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.2317
+Epoch 2, Average Loss: 0.0580
+Epoch 3, Average Loss: 0.0364
+Epoch 4, Average Loss: 0.0337
+Epoch 5, Average Loss: 0.0323
+Epoch 6, Average Loss: 0.1108
+Epoch 7, Average Loss: 0.1514
+Epoch 8, Average Loss: 2.3916
+Epoch 9, Average Loss: 2.6424
+Epoch 10, Average Loss: 2.0707
+Merged model device: cuda:0
+Accuracy: 21.7462
+Accuracy of photo model on test domain: 21.7462
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7553
+Epoch 2, Average Loss: 0.3701
+Epoch 3, Average Loss: 0.3744
+Epoch 4, Average Loss: 0.4020
+Epoch 5, Average Loss: 0.3467
+Epoch 6, Average Loss: 0.3062
+Epoch 7, Average Loss: 0.2918
+Epoch 8, Average Loss: 0.3662
+Epoch 9, Average Loss: 0.5054
+Epoch 10, Average Loss: 0.4124
+Merged model device: cuda:0
+Accuracy: 32.9176
+Accuracy of sketch model on test domain: 32.9176
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.2158
+Coefficient Epoch 2, Average Loss: 1.8439
+Coefficient Epoch 3, Average Loss: 1.6826
+Coefficient Epoch 4, Average Loss: 1.7319
+Coefficient Epoch 5, Average Loss: 1.6841
+Coefficient Epoch 6, Average Loss: 1.7137
+Coefficient Epoch 7, Average Loss: 1.7190
+Coefficient Epoch 8, Average Loss: 1.6853
+Coefficient Epoch 9, Average Loss: 1.6666
+Coefficient Epoch 10, Average Loss: 1.6665
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.18936538696289062, 0.5148591995239258, 0.2957754135131836]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 21.7462
+Final model accuracy on test domain: 21.7462
+
+Run 2/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 6.0715
+Epoch 2, Average Loss: 2.0870
+Epoch 3, Average Loss: 1.9392
+Epoch 4, Average Loss: 1.8846
+Epoch 5, Average Loss: 1.8870
+Epoch 6, Average Loss: 1.9699
+Epoch 7, Average Loss: 1.9924
+Epoch 8, Average Loss: 1.7254
+Epoch 9, Average Loss: 1.5527
+Epoch 10, Average Loss: 1.4961
+Accuracy: 41.0900
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 0.4349
+Epoch 2, Average Loss: 0.1486
+Epoch 3, Average Loss: 0.1426
+Epoch 4, Average Loss: 0.1296
+Epoch 5, Average Loss: 0.1863
+Epoch 6, Average Loss: 0.2202
+Epoch 7, Average Loss: 0.2872
+Epoch 8, Average Loss: 2.7324
+Epoch 9, Average Loss: 2.3406
+Epoch 10, Average Loss: 2.1452
+Merged model device: cuda:0
+Accuracy: 19.4313
+Accuracy of art_painting model on test domain: 19.4313
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.2285
+Epoch 2, Average Loss: 0.0704
+Epoch 3, Average Loss: 0.0496
+Epoch 4, Average Loss: 0.1708
+Epoch 5, Average Loss: 0.1094
+Epoch 6, Average Loss: 0.0829
+Epoch 7, Average Loss: 0.0848
+Epoch 8, Average Loss: 0.9627
+Epoch 9, Average Loss: 3.4625
+Epoch 10, Average Loss: 2.0906
+Merged model device: cuda:0
+Accuracy: 17.6303
+Accuracy of photo model on test domain: 17.6303
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7299
+Epoch 2, Average Loss: 0.3910
+Epoch 3, Average Loss: 0.3304
+Epoch 4, Average Loss: 0.3033
+Epoch 5, Average Loss: 0.3533
+Epoch 6, Average Loss: 0.4892
+Epoch 7, Average Loss: 0.7592
+Epoch 8, Average Loss: 1.5817
+Epoch 9, Average Loss: 1.4644
+Epoch 10, Average Loss: 1.2210
+Merged model device: cuda:0
+Accuracy: 14.9763
+Accuracy of sketch model on test domain: 14.9763
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.6410
+Coefficient Epoch 2, Average Loss: 2.0111
+Coefficient Epoch 3, Average Loss: 2.0046
+Coefficient Epoch 4, Average Loss: 1.9693
+Coefficient Epoch 5, Average Loss: 1.9463
+Coefficient Epoch 6, Average Loss: 1.9500
+Coefficient Epoch 7, Average Loss: 1.9314
+Coefficient Epoch 8, Average Loss: 1.9385
+Coefficient Epoch 9, Average Loss: 1.9338
+Coefficient Epoch 10, Average Loss: 1.9365
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.37995418906211853, 0.3044429421424866, 0.3156028687953949]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 11.2322
+Final model accuracy on test domain: 11.2322
+
+Run 3/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 5.6796
+Epoch 2, Average Loss: 3.3956
+Epoch 3, Average Loss: 2.4136
+Epoch 4, Average Loss: 2.3014
+Epoch 5, Average Loss: 2.2069
+Epoch 6, Average Loss: 2.0428
+Epoch 7, Average Loss: 2.1274
+Epoch 8, Average Loss: 1.8983
+Epoch 9, Average Loss: 1.9408
+Epoch 10, Average Loss: 1.8680
+Accuracy: 26.3473
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 0.4171
+Epoch 2, Average Loss: 0.1362
+Epoch 3, Average Loss: 0.0882
+Epoch 4, Average Loss: 0.1663
+Epoch 5, Average Loss: 0.2522
+Epoch 6, Average Loss: 0.1765
+Epoch 7, Average Loss: 0.2019
+Epoch 8, Average Loss: 0.1622
+Epoch 9, Average Loss: 0.2070
+Epoch 10, Average Loss: 3.8101
+Merged model device: cuda:0
+Accuracy: 11.2442
+Accuracy of art_painting model on test domain: 11.2442
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 0.4507
+Epoch 2, Average Loss: 0.1612
+Epoch 3, Average Loss: 0.0959
+Epoch 4, Average Loss: 0.1376
+Epoch 5, Average Loss: 0.4298
+Epoch 6, Average Loss: 0.8328
+Epoch 7, Average Loss: 2.1501
+Epoch 8, Average Loss: 1.9411
+Epoch 9, Average Loss: 1.8846
+Epoch 10, Average Loss: 1.8223
+Merged model device: cuda:0
+Accuracy: 11.9760
+Accuracy of cartoon model on test domain: 11.9760
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7797
+Epoch 2, Average Loss: 0.3526
+Epoch 3, Average Loss: 0.3374
+Epoch 4, Average Loss: 0.5021
+Epoch 5, Average Loss: 1.4477
+Epoch 6, Average Loss: 1.8271
+Epoch 7, Average Loss: 1.8125
+Epoch 8, Average Loss: 1.7934
+Epoch 9, Average Loss: 1.7778
+Epoch 10, Average Loss: 1.7645
+Merged model device: cuda:0
+Accuracy: 11.9760
+Accuracy of sketch model on test domain: 11.9760
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.5238
+Coefficient Epoch 2, Average Loss: 2.0369
+Coefficient Epoch 3, Average Loss: 1.8949
+Coefficient Epoch 4, Average Loss: 1.9133
+Coefficient Epoch 5, Average Loss: 1.9216
+Coefficient Epoch 6, Average Loss: 1.9503
+Coefficient Epoch 7, Average Loss: 1.9098
+Coefficient Epoch 8, Average Loss: 1.9034
+Coefficient Epoch 9, Average Loss: 1.9205
+Coefficient Epoch 10, Average Loss: 1.8907
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.34688863158226013, 0.39925482869148254, 0.25385650992393494]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 10.9780
+Final model accuracy on test domain: 10.9780
+
+Run 4/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: sketch
+Training domains: ['art_painting', 'cartoon', 'photo']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 5.9115
+Epoch 2, Average Loss: 2.1583
+Epoch 3, Average Loss: 1.9894
+Epoch 4, Average Loss: 1.9395
+Epoch 5, Average Loss: 1.9763
+Epoch 6, Average Loss: 1.7540
+Epoch 7, Average Loss: 1.8032
+Epoch 8, Average Loss: 1.8416
+Epoch 9, Average Loss: 1.9426
+Epoch 10, Average Loss: 1.8779
+Accuracy: 22.7877
+Training domains: ['art_painting', 'cartoon', 'photo']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 0.4189
+Epoch 2, Average Loss: 0.1662
+Epoch 3, Average Loss: 0.1159
+Epoch 4, Average Loss: 0.2339
+Epoch 5, Average Loss: 0.1713
+Epoch 6, Average Loss: 0.5195
+Epoch 7, Average Loss: 3.2374
+Epoch 8, Average Loss: 2.1691
+Epoch 9, Average Loss: 2.0407
+Epoch 10, Average Loss: 2.1134
+Merged model device: cuda:0
+Accuracy: 2.0356
+Accuracy of art_painting model on test domain: 2.0356
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 0.4187
+Epoch 2, Average Loss: 0.1526
+Epoch 3, Average Loss: 0.2035
+Epoch 4, Average Loss: 0.1979
+Epoch 5, Average Loss: 0.1832
+Epoch 6, Average Loss: 0.1105
+Epoch 7, Average Loss: 0.0535
+Epoch 8, Average Loss: 0.1388
+Epoch 9, Average Loss: 0.1884
+Epoch 10, Average Loss: 0.5631
+Merged model device: cuda:0
+Accuracy: 18.1510
+Accuracy of cartoon model on test domain: 18.1510
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.1862
+Epoch 2, Average Loss: 0.0475
+Epoch 3, Average Loss: 0.0586
+Epoch 4, Average Loss: 0.2177
+Epoch 5, Average Loss: 0.4084
+Epoch 6, Average Loss: 0.2017
+Epoch 7, Average Loss: 0.1128
+Epoch 8, Average Loss: 0.1328
+Epoch 9, Average Loss: 0.1842
+Epoch 10, Average Loss: 0.1012
+Merged model device: cuda:0
+Accuracy: 19.2536
+Accuracy of photo model on test domain: 19.2536
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.6519
+Coefficient Epoch 2, Average Loss: 1.9325
+Coefficient Epoch 3, Average Loss: 1.8349
+Coefficient Epoch 4, Average Loss: 1.7666
+Coefficient Epoch 5, Average Loss: 1.8011
+Coefficient Epoch 6, Average Loss: 1.8073
+Coefficient Epoch 7, Average Loss: 1.7869
+Coefficient Epoch 8, Average Loss: 1.7553
+Coefficient Epoch 9, Average Loss: 1.7664
+Coefficient Epoch 10, Average Loss: 1.7633
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3061555325984955, 0.33552849292755127, 0.35831597447395325]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 19.3950
+Final model accuracy on test domain: 19.3950
+
+Run 5/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.8409
+Epoch 2, Average Loss: 2.6845
+Epoch 3, Average Loss: 2.0022
+Epoch 4, Average Loss: 1.9114
+Epoch 5, Average Loss: 1.8171
+Epoch 6, Average Loss: 1.8925
+Epoch 7, Average Loss: 1.9730
+Epoch 8, Average Loss: 1.8450
+Epoch 9, Average Loss: 1.8404
+Epoch 10, Average Loss: 1.7352
+Accuracy: 26.4100
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 0.4340
+Epoch 2, Average Loss: 0.1493
+Epoch 3, Average Loss: 0.1776
+Epoch 4, Average Loss: 0.2131
+Epoch 5, Average Loss: 0.2132
+Epoch 6, Average Loss: 0.2650
+Epoch 7, Average Loss: 0.2694
+Epoch 8, Average Loss: 0.6308
+Epoch 9, Average Loss: 3.7640
+Epoch 10, Average Loss: 2.1296
+Merged model device: cuda:0
+Accuracy: 21.9089
+Accuracy of cartoon model on test domain: 21.9089
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.1556
+Epoch 2, Average Loss: 0.0759
+Epoch 3, Average Loss: 0.3468
+Epoch 4, Average Loss: 0.0574
+Epoch 5, Average Loss: 0.0433
+Epoch 6, Average Loss: 0.0274
+Epoch 7, Average Loss: 0.0207
+Epoch 8, Average Loss: 0.1106
+Epoch 9, Average Loss: 2.0024
+Epoch 10, Average Loss: 2.3283
+Merged model device: cuda:0
+Accuracy: 14.1540
+Accuracy of photo model on test domain: 14.1540
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7002
+Epoch 2, Average Loss: 0.3242
+Epoch 3, Average Loss: 0.3103
+Epoch 4, Average Loss: 0.3469
+Epoch 5, Average Loss: 0.4178
+Epoch 6, Average Loss: 0.4837
+Epoch 7, Average Loss: 0.3425
+Epoch 8, Average Loss: 0.3162
+Epoch 9, Average Loss: 0.3677
+Epoch 10, Average Loss: 0.3899
+Merged model device: cuda:0
+Accuracy: 28.2538
+Accuracy of sketch model on test domain: 28.2538
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.9750
+Coefficient Epoch 2, Average Loss: 1.9390
+Coefficient Epoch 3, Average Loss: 2.0198
+Coefficient Epoch 4, Average Loss: 1.9003
+Coefficient Epoch 5, Average Loss: 1.8877
+Coefficient Epoch 6, Average Loss: 1.8609
+Coefficient Epoch 7, Average Loss: 1.8610
+Coefficient Epoch 8, Average Loss: 1.8537
+Coefficient Epoch 9, Average Loss: 1.8556
+Coefficient Epoch 10, Average Loss: 1.8843
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.402557909488678, 0.24748170375823975, 0.34996047616004944]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 12.3102
+Final model accuracy on test domain: 12.3102
+
+Run 6/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.9004
+Epoch 2, Average Loss: 2.0519
+Epoch 3, Average Loss: 1.9582
+Epoch 4, Average Loss: 1.8036
+Epoch 5, Average Loss: 1.5971
+Epoch 6, Average Loss: 1.6280
+Epoch 7, Average Loss: 1.5937
+Epoch 8, Average Loss: 1.5796
+Epoch 9, Average Loss: 1.7195
+Epoch 10, Average Loss: 1.4463
+Accuracy: 39.3365
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 0.3852
+Epoch 2, Average Loss: 0.1475
+Epoch 3, Average Loss: 0.1591
+Epoch 4, Average Loss: 0.1850
+Epoch 5, Average Loss: 0.2172
+Epoch 6, Average Loss: 0.2571
+Epoch 7, Average Loss: 0.2377
+Epoch 8, Average Loss: 0.4415
+Epoch 9, Average Loss: 0.4584
+Epoch 10, Average Loss: 2.6842
+Merged model device: cuda:0
+Accuracy: 17.5355
+Accuracy of art_painting model on test domain: 17.5355
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.1828
+Epoch 2, Average Loss: 0.0529
+Epoch 3, Average Loss: 0.0124
+Epoch 4, Average Loss: 0.0590
+Epoch 5, Average Loss: 0.1118
+Epoch 6, Average Loss: 0.3397
+Epoch 7, Average Loss: 2.5848
+Epoch 8, Average Loss: 2.3120
+Epoch 9, Average Loss: 2.1340
+Epoch 10, Average Loss: 2.1507
+Merged model device: cuda:0
+Accuracy: 5.8768
+Accuracy of photo model on test domain: 5.8768
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7208
+Epoch 2, Average Loss: 0.4259
+Epoch 3, Average Loss: 0.3616
+Epoch 4, Average Loss: 0.3553
+Epoch 5, Average Loss: 0.3454
+Epoch 6, Average Loss: 0.3293
+Epoch 7, Average Loss: 0.4131
+Epoch 8, Average Loss: 1.0147
+Epoch 9, Average Loss: 2.7131
+Epoch 10, Average Loss: 1.9540
+Merged model device: cuda:0
+Accuracy: 13.6493
+Accuracy of sketch model on test domain: 13.6493
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.2485
+Coefficient Epoch 2, Average Loss: 1.9377
+Coefficient Epoch 3, Average Loss: 1.9582
+Coefficient Epoch 4, Average Loss: 1.9347
+Coefficient Epoch 5, Average Loss: 1.9546
+Coefficient Epoch 6, Average Loss: 1.9325
+Coefficient Epoch 7, Average Loss: 1.9321
+Coefficient Epoch 8, Average Loss: 1.9301
+Coefficient Epoch 9, Average Loss: 1.9246
+Coefficient Epoch 10, Average Loss: 1.9243
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3692280650138855, 0.24579644203186035, 0.3849755525588989]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 16.6351
+Final model accuracy on test domain: 16.6351
+
+Run 7/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 6.9733
+Epoch 2, Average Loss: 4.0204
+Epoch 3, Average Loss: 2.1725
+Epoch 4, Average Loss: 1.9929
+Epoch 5, Average Loss: 2.0178
+Epoch 6, Average Loss: 2.0017
+Epoch 7, Average Loss: 1.9041
+Epoch 8, Average Loss: 1.7977
+Epoch 9, Average Loss: 1.7741
+Epoch 10, Average Loss: 1.7859
+Accuracy: 25.3493
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 0.4104
+Epoch 2, Average Loss: 0.1374
+Epoch 3, Average Loss: 0.1410
+Epoch 4, Average Loss: 0.2074
+Epoch 5, Average Loss: 0.1850
+Epoch 6, Average Loss: 0.3068
+Epoch 7, Average Loss: 0.6106
+Epoch 8, Average Loss: 3.0786
+Epoch 9, Average Loss: 2.5363
+Epoch 10, Average Loss: 2.1598
+Merged model device: cuda:0
+Accuracy: 22.0892
+Accuracy of art_painting model on test domain: 22.0892
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 0.4668
+Epoch 2, Average Loss: 0.1359
+Epoch 3, Average Loss: 0.1887
+Epoch 4, Average Loss: 0.1184
+Epoch 5, Average Loss: 0.1812
+Epoch 6, Average Loss: 0.1876
+Epoch 7, Average Loss: 0.2575
+Epoch 8, Average Loss: 0.2453
+Epoch 9, Average Loss: 0.3693
+Epoch 10, Average Loss: 0.3980
+Merged model device: cuda:0
+Accuracy: 65.6687
+Accuracy of cartoon model on test domain: 65.6687
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7783
+Epoch 2, Average Loss: 0.3479
+Epoch 3, Average Loss: 0.3451
+Epoch 4, Average Loss: 0.3324
+Epoch 5, Average Loss: 0.2925
+Epoch 6, Average Loss: 0.4505
+Epoch 7, Average Loss: 2.5769
+Epoch 8, Average Loss: 1.9018
+Epoch 9, Average Loss: 1.9387
+Epoch 10, Average Loss: 1.8944
+Merged model device: cuda:0
+Accuracy: 10.3792
+Accuracy of sketch model on test domain: 10.3792
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.8730
+Coefficient Epoch 2, Average Loss: 0.9074
+Coefficient Epoch 3, Average Loss: 0.9146
+Coefficient Epoch 4, Average Loss: 0.8710
+Coefficient Epoch 5, Average Loss: 0.8070
+Coefficient Epoch 6, Average Loss: 0.8478
+Coefficient Epoch 7, Average Loss: 0.8852
+Coefficient Epoch 8, Average Loss: 0.7867
+Coefficient Epoch 9, Average Loss: 0.8297
+Coefficient Epoch 10, Average Loss: 0.8729
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.2288597673177719, 0.3688327968120575, 0.4023074805736542]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 12.2422
+Final model accuracy on test domain: 12.2422
+
+Run 8/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: sketch
+Training domains: ['art_painting', 'cartoon', 'photo']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.9231
+Epoch 2, Average Loss: 2.6858
+Epoch 3, Average Loss: 1.8883
+Epoch 4, Average Loss: 1.8636
+Epoch 5, Average Loss: 1.7809
+Epoch 6, Average Loss: 1.7531
+Epoch 7, Average Loss: 1.7250
+Epoch 8, Average Loss: 1.7566
+Epoch 9, Average Loss: 1.6469
+Epoch 10, Average Loss: 1.6722
+Accuracy: 25.2757
+Training domains: ['art_painting', 'cartoon', 'photo']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 0.4155
+Epoch 2, Average Loss: 0.1582
+Epoch 3, Average Loss: 0.1421
+Epoch 4, Average Loss: 0.1296
+Epoch 5, Average Loss: 0.1645
+Epoch 6, Average Loss: 0.1990
+Epoch 7, Average Loss: 0.3017
+Epoch 8, Average Loss: 0.4066
+Epoch 9, Average Loss: 0.7930
+Epoch 10, Average Loss: 2.0586
+Merged model device: cuda:0
+Accuracy: 1.9791
+Accuracy of art_painting model on test domain: 1.9791
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 0.5208
+Epoch 2, Average Loss: 0.1775
+Epoch 3, Average Loss: 0.1751
+Epoch 4, Average Loss: 0.1655
+Epoch 5, Average Loss: 0.1641
+Epoch 6, Average Loss: 0.2165
+Epoch 7, Average Loss: 1.7001
+Epoch 8, Average Loss: 2.2691
+Epoch 9, Average Loss: 1.9157
+Epoch 10, Average Loss: 1.8911
+Merged model device: cuda:0
+Accuracy: 22.3070
+Accuracy of cartoon model on test domain: 22.3070
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.1975
+Epoch 2, Average Loss: 0.0212
+Epoch 3, Average Loss: 0.1192
+Epoch 4, Average Loss: 0.1338
+Epoch 5, Average Loss: 0.2978
+Epoch 6, Average Loss: 2.1134
+Epoch 7, Average Loss: 2.2547
+Epoch 8, Average Loss: 1.9591
+Epoch 9, Average Loss: 1.9411
+Epoch 10, Average Loss: 1.8841
+Merged model device: cuda:0
+Accuracy: 2.8555
+Accuracy of photo model on test domain: 2.8555
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 5.5399
+Coefficient Epoch 2, Average Loss: 2.6333
+Coefficient Epoch 3, Average Loss: 2.0144
+Coefficient Epoch 4, Average Loss: 1.8847
+Coefficient Epoch 5, Average Loss: 1.8452
+Coefficient Epoch 6, Average Loss: 1.8196
+Coefficient Epoch 7, Average Loss: 1.8261
+Coefficient Epoch 8, Average Loss: 1.8461
+Coefficient Epoch 9, Average Loss: 1.8254
+Coefficient Epoch 10, Average Loss: 1.8321
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3187185227870941, 0.47426116466522217, 0.20702029764652252]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 20.2997
+Final model accuracy on test domain: 20.2997
+
+Run 9/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 5.4368
+Epoch 2, Average Loss: 2.6750
+Epoch 3, Average Loss: 2.3142
+Epoch 4, Average Loss: 2.0854
+Epoch 5, Average Loss: 1.8631
+Epoch 6, Average Loss: 2.0391
+Epoch 7, Average Loss: 1.9276
+Epoch 8, Average Loss: 1.9165
+Epoch 9, Average Loss: 1.8297
+Epoch 10, Average Loss: 1.9196
+Accuracy: 24.8373
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 0.4298
+Epoch 2, Average Loss: 0.2458
+Epoch 3, Average Loss: 0.1319
+Epoch 4, Average Loss: 0.0724
+Epoch 5, Average Loss: 0.1872
+Epoch 6, Average Loss: 0.3120
+Epoch 7, Average Loss: 2.7885
+Epoch 8, Average Loss: 2.0713
+Epoch 9, Average Loss: 2.0061
+Epoch 10, Average Loss: 1.9182
+Merged model device: cuda:0
+Accuracy: 21.7462
+Accuracy of cartoon model on test domain: 21.7462
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.1729
+Epoch 2, Average Loss: 0.0775
+Epoch 3, Average Loss: 0.1887
+Epoch 4, Average Loss: 0.6093
+Epoch 5, Average Loss: 0.6566
+Epoch 6, Average Loss: 2.0236
+Epoch 7, Average Loss: 1.7141
+Epoch 8, Average Loss: 1.5027
+Epoch 9, Average Loss: 1.6797
+Epoch 10, Average Loss: 1.8461
+Merged model device: cuda:0
+Accuracy: 24.4035
+Accuracy of photo model on test domain: 24.4035
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7334
+Epoch 2, Average Loss: 0.3418
+Epoch 3, Average Loss: 0.3366
+Epoch 4, Average Loss: 0.3724
+Epoch 5, Average Loss: 0.2695
+Epoch 6, Average Loss: 0.3485
+Epoch 7, Average Loss: 2.5105
+Epoch 8, Average Loss: 1.9326
+Epoch 9, Average Loss: 1.9006
+Epoch 10, Average Loss: 1.8583
+Merged model device: cuda:0
+Accuracy: 9.8698
+Accuracy of sketch model on test domain: 9.8698
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.3992
+Coefficient Epoch 2, Average Loss: 2.0353
+Coefficient Epoch 3, Average Loss: 1.9344
+Coefficient Epoch 4, Average Loss: 1.8881
+Coefficient Epoch 5, Average Loss: 1.8894
+Coefficient Epoch 6, Average Loss: 1.8651
+Coefficient Epoch 7, Average Loss: 1.8663
+Coefficient Epoch 8, Average Loss: 1.8826
+Coefficient Epoch 9, Average Loss: 1.8761
+Coefficient Epoch 10, Average Loss: 1.8636
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3783866763114929, 0.37856200337409973, 0.24305129051208496]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 17.4078
+Final model accuracy on test domain: 17.4078
+
+Run 10/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 405 samples
+  Class giraffe: 346 samples
+  Class elephant: 457 samples
+  Class house: 288 samples
+  Class guitar: 135 samples
+  Class dog: 389 samples
+  Class horse: 324 samples
+  Total samples: 2344
+
+Domain: sketch
+  Class person: 160 samples
+  Class giraffe: 753 samples
+  Class elephant: 740 samples
+  Class house: 80 samples
+  Class guitar: 608 samples
+  Class dog: 772 samples
+  Class horse: 816 samples
+  Total samples: 3929
+
+Domain: art_painting
+  Class person: 449 samples
+  Class giraffe: 285 samples
+  Class elephant: 255 samples
+  Class house: 295 samples
+  Class guitar: 184 samples
+  Class dog: 379 samples
+  Class horse: 201 samples
+  Total samples: 2048
+
+Domain: photo
+  Class person: 432 samples
+  Class giraffe: 182 samples
+  Class elephant: 202 samples
+  Class house: 280 samples
+  Class guitar: 186 samples
+  Class dog: 189 samples
+  Class horse: 199 samples
+  Total samples: 1670
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.5686
+Epoch 2, Average Loss: 2.3670
+Epoch 3, Average Loss: 1.8438
+Epoch 4, Average Loss: 1.7168
+Epoch 5, Average Loss: 1.6880
+Epoch 6, Average Loss: 1.7082
+Epoch 7, Average Loss: 1.5498
+Epoch 8, Average Loss: 1.4893
+Epoch 9, Average Loss: 1.4037
+Epoch 10, Average Loss: 1.2684
+Accuracy: 41.2796
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 0.4020
+Epoch 2, Average Loss: 0.1567
+Epoch 3, Average Loss: 0.2294
+Epoch 4, Average Loss: 0.1675
+Epoch 5, Average Loss: 0.1784
+Epoch 6, Average Loss: 0.2292
+Epoch 7, Average Loss: 0.2431
+Epoch 8, Average Loss: 0.1993
+Epoch 9, Average Loss: 0.1842
+Epoch 10, Average Loss: 1.7494
+Merged model device: cuda:0
+Accuracy: 17.1564
+Accuracy of art_painting model on test domain: 17.1564
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.2095
+Epoch 2, Average Loss: 0.1048
+Epoch 3, Average Loss: 0.0518
+Epoch 4, Average Loss: 0.0230
+Epoch 5, Average Loss: 0.0160
+Epoch 6, Average Loss: 0.0319
+Epoch 7, Average Loss: 0.0330
+Epoch 8, Average Loss: 1.9118
+Epoch 9, Average Loss: 2.6063
+Epoch 10, Average Loss: 2.1360
+Merged model device: cuda:0
+Accuracy: 17.2038
+Accuracy of photo model on test domain: 17.2038
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 0.7343
+Epoch 2, Average Loss: 0.3596
+Epoch 3, Average Loss: 0.3274
+Epoch 4, Average Loss: 0.3668
+Epoch 5, Average Loss: 0.3615
+Epoch 6, Average Loss: 0.3806
+Epoch 7, Average Loss: 0.2999
+Epoch 8, Average Loss: 0.3562
+Epoch 9, Average Loss: 0.4653
+Epoch 10, Average Loss: 0.3626
+Merged model device: cuda:0
+Accuracy: 50.8531
+Accuracy of sketch model on test domain: 50.8531
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.5507
+Coefficient Epoch 2, Average Loss: 1.3884
+Coefficient Epoch 3, Average Loss: 1.5171
+Coefficient Epoch 4, Average Loss: 1.3444
+Coefficient Epoch 5, Average Loss: 1.3043
+Coefficient Epoch 6, Average Loss: 1.3778
+Coefficient Epoch 7, Average Loss: 1.3318
+Coefficient Epoch 8, Average Loss: 1.3596
+Coefficient Epoch 9, Average Loss: 1.3832
+Coefficient Epoch 10, Average Loss: 1.2958
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.28335386514663696, 0.29732760787010193, 0.4193185269832611]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 14.5972
+Final model accuracy on test domain: 14.5972
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 16.052060737527114, 'photo': 21.746203904555315, 'sketch': 32.9175704989154}, 'final_accuracy': 21.746203904555315, 'coefficients': [0.18936538696289062, 0.5148591995239258, 0.2957754135131836]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 19.431279620853083, 'photo': 17.6303317535545, 'sketch': 14.976303317535544}, 'final_accuracy': 11.232227488151658, 'coefficients': [0.37995418906211853, 0.3044429421424866, 0.3156028687953949]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 11.244178310046573, 'cartoon': 11.976047904191617, 'sketch': 11.976047904191617}, 'final_accuracy': 10.978043912175648, 'coefficients': [0.34688863158226013, 0.39925482869148254, 0.25385650992393494]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 2.035623409669211, 'cartoon': 18.1509754028838, 'photo': 19.253604749787957}, 'final_accuracy': 19.39496748657054, 'coefficients': [0.3061555325984955, 0.33552849292755127, 0.35831597447395325]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 21.908893709327547, 'photo': 14.154013015184383, 'sketch': 28.253796095444685}, 'final_accuracy': 12.310195227765727, 'coefficients': [0.402557909488678, 0.24748170375823975, 0.34996047616004944]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 17.535545023696685, 'photo': 5.876777251184834, 'sketch': 13.649289099526065}, 'final_accuracy': 16.635071090047393, 'coefficients': [0.3692280650138855, 0.24579644203186035, 0.3849755525588989]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 22.08915502328676, 'cartoon': 65.6686626746507, 'sketch': 10.379241516966067}, 'final_accuracy': 12.242182302062542, 'coefficients': [0.2288597673177719, 0.3688327968120575, 0.4023074805736542]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 1.9790783149561775, 'cartoon': 22.307039864291774, 'photo': 2.855527283008199}, 'final_accuracy': 20.29968900197908, 'coefficients': [0.3187185227870941, 0.47426116466522217, 0.20702029764652252]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 21.746203904555315, 'photo': 24.40347071583514, 'sketch': 9.869848156182211}, 'final_accuracy': 17.407809110629067, 'coefficients': [0.3783866763114929, 0.37856200337409973, 0.24305129051208496]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 17.156398104265403, 'photo': 17.203791469194314, 'sketch': 50.85308056872038}, 'final_accuracy': 14.597156398104266, 'coefficients': [0.28335386514663696, 0.29732760787010193, 0.4193185269832611]}]
+Final Model Accuracy: 15.6844 ± 3.7693
+Domain-specific Accuracies:
+  cartoon: 25.4014 ± 16.8048
+  photo: 15.3905 ± 7.0180
+  sketch: 21.6094 ± 13.6534
+  art_painting: 13.0673 ± 7.6209
+Average Coefficients:
+  Coefficient 1: 0.3203 ± 0.0662
+  Coefficient 2: 0.3566 ± 0.0850
+  Coefficient 3: 0.3230 ± 0.0684
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': [{'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 16.052060737527114, 'photo': 21.746203904555315, 'sketch': 32.9175704989154}, 'final_accuracy': 21.746203904555315, 'coefficients': [0.18936538696289062, 0.5148591995239258, 0.2957754135131836]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 19.431279620853083, 'photo': 17.6303317535545, 'sketch': 14.976303317535544}, 'final_accuracy': 11.232227488151658, 'coefficients': [0.37995418906211853, 0.3044429421424866, 0.3156028687953949]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 11.244178310046573, 'cartoon': 11.976047904191617, 'sketch': 11.976047904191617}, 'final_accuracy': 10.978043912175648, 'coefficients': [0.34688863158226013, 0.39925482869148254, 0.25385650992393494]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 2.035623409669211, 'cartoon': 18.1509754028838, 'photo': 19.253604749787957}, 'final_accuracy': 19.39496748657054, 'coefficients': [0.3061555325984955, 0.33552849292755127, 0.35831597447395325]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 21.908893709327547, 'photo': 14.154013015184383, 'sketch': 28.253796095444685}, 'final_accuracy': 12.310195227765727, 'coefficients': [0.402557909488678, 0.24748170375823975, 0.34996047616004944]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 17.535545023696685, 'photo': 5.876777251184834, 'sketch': 13.649289099526065}, 'final_accuracy': 16.635071090047393, 'coefficients': [0.3692280650138855, 0.24579644203186035, 0.3849755525588989]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 22.08915502328676, 'cartoon': 65.6686626746507, 'sketch': 10.379241516966067}, 'final_accuracy': 12.242182302062542, 'coefficients': [0.2288597673177719, 0.3688327968120575, 0.4023074805736542]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 1.9790783149561775, 'cartoon': 22.307039864291774, 'photo': 2.855527283008199}, 'final_accuracy': 20.29968900197908, 'coefficients': [0.3187185227870941, 0.47426116466522217, 0.20702029764652252]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 21.746203904555315, 'photo': 24.40347071583514, 'sketch': 9.869848156182211}, 'final_accuracy': 17.407809110629067, 'coefficients': [0.3783866763114929, 0.37856200337409973, 0.24305129051208496]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 17.156398104265403, 'photo': 17.203791469194314, 'sketch': 50.85308056872038}, 'final_accuracy': 14.597156398104266, 'coefficients': [0.28335386514663696, 0.29732760787010193, 0.4193185269832611]}]}
+No valid results to summarize.

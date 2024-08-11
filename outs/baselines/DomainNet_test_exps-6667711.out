@@ -1,0 +1,37 @@
+
+==================================================
+Running experiments for dataset: DomainNet
+==================================================
+Dataset config for DomainNet:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/domain_net', 'max_samples_per_class': 10, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 15, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/domain_net', 'max_samples_per_class': 10, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 15, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Domains: ['clipart', 'infograph', 'painting', 'quickdraw', 'real', 'sketch']
+Selected test domain: clipart
+Training domains: ['infograph', 'painting', 'quickdraw', 'real', 'sketch']
+Test domain: clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 5.9316
+Epoch 2, Average Loss: 5.4760
+Epoch 3, Average Loss: 4.3555
+Epoch 4, Average Loss: 2.2503
+Epoch 5, Average Loss: 0.8036
+Epoch 6, Average Loss: 0.2579
+Epoch 7, Average Loss: 0.1140
+Epoch 8, Average Loss: 0.0743
+Epoch 9, Average Loss: 0.0637
+Epoch 10, Average Loss: 0.0535
+Accuracy: 10.0290
+Training domains: ['infograph', 'painting', 'quickdraw', 'real', 'sketch']
+
+Training expert models...
+
+Training model for domain: infograph
+Training model for domain: infograph
+Epoch 1, Average Loss: 6.2055
+Epoch 2, Average Loss: 5.9865
+Epoch 3, Average Loss: 5.8971

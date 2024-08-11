@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/ties.py", line 16, in <module>
+    class LoraTIESExperiment:
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/ties.py", line 175, in LoraTIESExperiment
+    def ties_merge(self, task_tensors: List[torch.Tensor], weights: torch.Tensor, density: float, majority_sign_method: Literal["total", "frequency"] = "total") -> torch.Tensor:
+NameError: name 'List' is not defined. Did you mean: 'list'?

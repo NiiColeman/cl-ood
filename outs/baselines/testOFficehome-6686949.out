@@ -1,0 +1,35 @@
+
+--- Run 1/10 ---
+
+Running LoRA with Separate Classifiers experiment
+Test domain: Art
+Train domains: ['Product', 'Real World', 'Clipart']
+
+Running Baseline experiment (train and test on test domain)
+Epoch 1/10, Train Loss: 4.4173, Train Accuracy: 3.72%
+Val Loss: 4.2312, Val Accuracy: 3.39%
+Epoch 2/10, Train Loss: 3.4496, Train Accuracy: 20.66%
+Val Loss: 4.0753, Val Accuracy: 7.05%
+Epoch 3/10, Train Loss: 2.5407, Train Accuracy: 52.48%
+Val Loss: 3.9637, Val Accuracy: 12.04%
+Epoch 4/10, Train Loss: 1.6442, Train Accuracy: 76.86%
+Val Loss: 3.8700, Val Accuracy: 15.79%
+Epoch 5/10, Train Loss: 0.8262, Train Accuracy: 90.08%
+Val Loss: 3.7728, Val Accuracy: 19.27%
+Epoch 6/10, Train Loss: 0.3170, Train Accuracy: 97.11%
+Val Loss: 3.6914, Val Accuracy: 20.55%
+Epoch 7/10, Train Loss: 0.1159, Train Accuracy: 100.00%
+Val Loss: 3.6292, Val Accuracy: 21.69%
+Epoch 8/10, Train Loss: 0.0475, Train Accuracy: 100.00%
+Val Loss: 3.5880, Val Accuracy: 22.20%
+Epoch 9/10, Train Loss: 0.0215, Train Accuracy: 100.00%
+Val Loss: 3.5583, Val Accuracy: 22.70%
+Epoch 10/10, Train Loss: 0.0126, Train Accuracy: 100.00%
+Val Loss: 3.5346, Val Accuracy: 23.07%
+Baseline Model - Final Test Loss: 3.5346, Test Accuracy: 23.07%
+
+Training LoRA adapter for domain: Product
+Epoch 1/10, Train Loss: 2.9975, Train Accuracy: 34.75%
+Val Loss: 1.0685, Val Accuracy: 78.49%
+Epoch 2/10, Train Loss: 0.5388, Train Accuracy: 87.27%
+Val Loss: 0.3660, Val Accuracy: 92.34%

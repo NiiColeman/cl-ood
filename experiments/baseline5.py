@@ -13,6 +13,8 @@ import timm
 from torch.utils.data import random_split
 from collections import defaultdict
 
+print("50 OfficeHome")
+
 class Baseline5Experiment:
     def __init__(self, config):
         self.config = config
@@ -24,6 +26,7 @@ class Baseline5Experiment:
         self.train_domains = None
         self.domain_loaders = None
         self.dataset = self.load_dataset()
+        self.test_domain_index=0
 
  
 
@@ -45,21 +48,39 @@ class Baseline5Experiment:
         
         return model
 
+    # def prepare_data(self):
+    #     self.domains = list(set(self.dataset.domains))
+    #     self.test_domain = random.choice(self.domains)
+    #     self.train_domains = [d for d in self.domains if d != self.test_domain]
+    #     self.domain_loaders = self._create_domain_loaders()
+    #     print(f"Domains: {self.domains}")
+    #     print(f"Selected test domain: {self.test_domain}")
+    #     print(f"Training domains: {self.train_domains}")
+
     def prepare_data(self):
-        self.domains = list(set(self.dataset.domains))
-        self.test_domain = random.choice(self.domains)
+        self.domains = sorted(list(set(self.dataset.domains)))  # Sort to ensure consistent ordering
+        num_domains = len(self.domains)
+        
+        # Select the test domain based on the current index
+        self.test_domain = self.domains[Baseline5Experiment.test_domain_index]
+        
+        # Update the index for the next run
+        Baseline5Experiment.test_domain_index = (Baseline5Experiment.test_domain_index + 1) % num_domains
+        
         self.train_domains = [d for d in self.domains if d != self.test_domain]
         self.domain_loaders = self._create_domain_loaders()
+        
         print(f"Domains: {self.domains}")
         print(f"Selected test domain: {self.test_domain}")
         print(f"Training domains: {self.train_domains}")
+        self.dataset.print_samples_per_class_per_domain()
 
     def _create_domain_loaders(self):
         domain_loaders = {}
         for domain in self.domains:
             domain_data = self.dataset.get_domain_data(domain)
             if domain == self.test_domain:
-                train_size = int(0.5 * len(domain_data))
+                train_size = int(0.50 * len(domain_data))
                 test_size = len(domain_data) - train_size
                 train_subset, test_subset = random_split(domain_data, [train_size, test_size])
                 domain_loaders[domain] = {
@@ -77,18 +98,18 @@ class Baseline5Experiment:
         lora_config = LoraConfig(
             r=self.config['lora_r'],
             lora_alpha=self.config['lora_alpha'],
-            target_modules=["qkv"],
+            target_modules=["qkv", "fc1", "fc2"],
             lora_dropout=self.config['lora_dropout'],
             bias="none",
             
         )
-        model = get_peft_model(deepcopy(self.base_model), lora_config)
+        model = get_peft_model(self.create_base_model(), lora_config)
         model=self.update_head(model)
         model.to(self.device)
 
         optimizer = optim.AdamW(model.parameters(), lr=self.config['learning_rate'])
         criterion = nn.CrossEntropyLoss()
-
+        
         for epoch in range(self.config['num_epochs']):
             model.train()
             total_loss = 0
@@ -103,6 +124,7 @@ class Baseline5Experiment:
             
             avg_loss = total_loss / len(self.domain_loaders[domain]['train'])
             print(f"Epoch {epoch+1}, Average Loss: {avg_loss:.4f}")
+            
 
         # Merge and unload the LoRA adapter
         merged_model = model.merge_and_unload()
@@ -123,7 +145,10 @@ class Baseline5Experiment:
         # Debug: Print device information
         print(f"Device: {self.device}")
         print(f"Coefficients device: {coefficients.device}")
-
+        initial_coeffs = torch.softmax(coefficients, dim=0)
+        print("Initial coefficients (after normalization):")
+        for domain, coeff in zip(self.train_domains, initial_coeffs):
+            print(f"  {domain}: {coeff.item():.4f}")
         # Ensure all expert models are on the correct device
         for domain in self.train_domains:
             self.expert_models[domain] = self.expert_models[domain].to(self.device)
@@ -164,7 +189,7 @@ class Baseline5Experiment:
 
     def naive_finetune_baseline(self):
         print("Performing naive fine-tuning on test domain")
-        model = deepcopy(self.base_model).to(self.device)
+        model = self.create_base_model().to(self.device)
         optimizer = optim.AdamW(model.parameters(), lr=self.config['learning_rate'])
         criterion = nn.CrossEntropyLoss()
 
@@ -185,17 +210,6 @@ class Baseline5Experiment:
 
         return model
 
-    # def create_weight_averaged_model(self, coefficients):
-    #     print("Creating weight-averaged model")
-    #     avg_model = deepcopy(self.base_model)
-    #     with torch.no_grad():
-    #         for name, param in avg_model.named_parameters():
-    #             avg_param = torch.zeros_like(param)
-    #             for i, domain in enumerate(self.train_domains):
-    #                 avg_param += coefficients[i] * self.expert_models[domain].state_dict()[name]
-    #             param.copy_(avg_param)
-    #     return avg_model
-
     @staticmethod
     def set_seed(seed):
         random.seed(seed)
@@ -209,7 +223,7 @@ class Baseline5Experiment:
 
     def create_weight_averaged_model(self, coefficients):
         print("Creating weight-averaged model")
-        avg_model = deepcopy(self.base_model)
+        avg_model = self.create_base_model()
         avg_model.to(self.device)
         
         with torch.no_grad():
@@ -237,18 +251,15 @@ class Baseline5Experiment:
                 total += labels.size(0)
                 correct += (predicted == labels).sum().item()
         accuracy = accuracy = (correct / total) * 100
+        print(f"Accuracy: {accuracy:.4f}")
         return accuracy
-
-
-
-
     
-
     def run_experiment(self):
         print("Preparing data...")
         self.prepare_data()
         print(f"Test domain: {self.test_domain}")
-        self.naive_finetune_baseline()
+        naive_model=self.naive_finetune_baseline()
+        self.evaluate(naive_model,self.domain_loaders[self.test_domain]['eval'])
         print(f"Training domains: {self.train_domains}")
 
         print("\nTraining expert models...")
@@ -281,8 +292,6 @@ class Baseline5Experiment:
             'final_accuracy': final_accuracy,
             'coefficients': coefficients.tolist()
         }
-
-
     
 def run_experiments_multiple_datasets(datasets_config, num_runs):
     all_results = {}
@@ -309,6 +318,7 @@ def run_experiments_multiple_datasets(datasets_config, num_runs):
 
 def run_multiple_experiments(dataset_config, num_runs):
     dataset_results = []
+    Baseline5Experiment.test_domain_index = 0
     
     # Debug: Print the type and content of dataset_config
     print(f"Type of dataset_config: {type(dataset_config)}")
@@ -335,7 +345,6 @@ def run_multiple_experiments(dataset_config, num_runs):
             print(f"Error in run {run + 1}: {str(e)}")
     
     return dataset_results
-
 
 def summarize_results(results):
     print("Debug: Type of results:", type(results))
@@ -388,41 +397,70 @@ def summarize_results(results):
 
 
 if __name__ == "__main__":
-    datasets_config ={ 'PACS': {
-        'dataset_path': '/disk2/dataset/scripts/data/PACS',
-        'max_samples_per_class': 5,  # Adjust as needed
-        'base_model': 'vit_base_patch16_224',  # Specify your base model
-        'batch_size': 32,
-        'num_epochs': 1,
-        'learning_rate': 1e-4,
-        'lora_r': 8,
-        'lora_alpha': 32,
-        'lora_dropout': 0.1,
-        'coefficient_learning_rate': 1e-1,
-        'coefficient_epochs': 10,
-        'seed': 42
-    },
-    'VLCS': {
-            'dataset_path': '/disk2/dataset/scripts/data/VLCS',
-            'max_samples_per_class': 5,
+    datasets_config ={ 
+    # 'PACS': {
+    #     'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS',
+    #     'max_samples_per_class': None,  # Adjust as needed
+    #     'base_model': 'vit_base_patch16_224',  # Specify your base model
+    #     'batch_size': 32,
+    #     'num_epochs': 10,
+    #     'learning_rate': 1e-3,
+    #     'lora_r': 8,
+    #     'lora_alpha': 32,
+    #     'lora_dropout': 0.1,
+    #     'coefficient_learning_rate': 1e-1,
+    #     'coefficient_epochs': 10,
+    #     'seed': 42
+    # },
+    # 'VLCS': {
+    #         'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS',
+    #         'max_samples_per_class': None,
+    #         'base_model': 'vit_base_patch16_224',
+    #         'batch_size': 32,
+    #         'num_epochs': 10,
+    #         'learning_rate': 1e-3,
+    #         'lora_r': 8,
+    #         'lora_alpha': 32,
+    #         'lora_dropout': 0.1,
+    #         'coefficient_learning_rate': 1e-1,
+    #         'coefficient_epochs': 10,
+    #         'seed': 42
+    #     },
+    # 'OfficeHome': {
+    #         'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home',
+    #         'max_samples_per_class': None,
+    #         'base_model': 'vit_base_patch16_224',
+    #         'batch_size': 32,
+    #         'num_epochs': 10,
+    #         'learning_rate': 1e-3,
+    #         'lora_r': 8,
+    #         'lora_alpha': 32,
+    #         'lora_dropout': 0.1,
+    #         'coefficient_learning_rate': 1e-1,
+    #         'coefficient_epochs': 10,
+    #         'seed': 42
+    #     }
+    #  'DomainNet': {
+    #         'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/domain_net',
+    #         'max_samples_per_class': 10,
+    #         'base_model': 'vit_base_patch16_224',
+    #         'batch_size': 32,
+    #         'num_epochs': 10,
+    #         'learning_rate': 1e-5,
+    #         'lora_r': 8,
+    #         'lora_alpha': 32,
+    #         'lora_dropout': 0.05,
+    #         'coefficient_learning_rate': 1,
+    #         'coefficient_epochs': 15,
+    #         'seed': 42
+    #     }
+     'SVIRO': {
+            'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/sviro',
+            'max_samples_per_class': None,
             'base_model': 'vit_base_patch16_224',
             'batch_size': 32,
-            'num_epochs': 1,
+            'num_epochs': 10,
             'learning_rate': 1e-4,
-            'lora_r': 8,
-            'lora_alpha': 32,
-            'lora_dropout': 0.1,
-            'coefficient_learning_rate': 1e-1,
-            'coefficient_epochs': 10,
-            'seed': 42
-        },
-    'OfficeHome': {
-            'dataset_path': '/disk2/dataset/scripts/data/OfficeHome',
-            'max_samples_per_class': 5,
-            'base_model': 'vit_base_patch16_224',
-            'batch_size': 32,
-            'num_epochs': 1,
-            'learning_rate': 1e-5,
             'lora_r': 8,
             'lora_alpha': 32,
             'lora_dropout': 0.1,
@@ -432,7 +470,7 @@ if __name__ == "__main__":
         }
     }
     
-    num_runs = 1
+    num_runs = 10
      # Number of times to repeat the experiment for each dataset
     
     all_results = run_experiments_multiple_datasets(datasets_config, num_runs)

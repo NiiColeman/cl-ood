@@ -1,0 +1,3837 @@
+50 OfficeHome
+
+==================================================
+Running experiments for dataset: OfficeHome
+==================================================
+Dataset config for OfficeHome:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Art
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.6382
+Epoch 2, Average Loss: 4.2264
+Epoch 3, Average Loss: 4.1313
+Epoch 4, Average Loss: 4.1148
+Epoch 5, Average Loss: 4.0261
+Epoch 6, Average Loss: 3.9849
+Epoch 7, Average Loss: 3.9268
+Epoch 8, Average Loss: 3.8714
+Epoch 9, Average Loss: 3.8367
+Epoch 10, Average Loss: 3.7697
+Accuracy: 5.6013
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 1.3108
+Epoch 2, Average Loss: 0.3650
+Epoch 3, Average Loss: 0.2606
+Epoch 4, Average Loss: 0.2134
+Epoch 5, Average Loss: 0.2405
+Epoch 6, Average Loss: 0.2794
+Epoch 7, Average Loss: 0.3008
+Epoch 8, Average Loss: 0.3169
+Epoch 9, Average Loss: 0.1922
+Epoch 10, Average Loss: 0.1868
+Merged model device: cuda:0
+Accuracy: 54.8600
+Accuracy of Clipart model on test domain: 54.8600
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.7212
+Epoch 2, Average Loss: 0.1243
+Epoch 3, Average Loss: 0.1232
+Epoch 4, Average Loss: 0.1884
+Epoch 5, Average Loss: 0.1589
+Epoch 6, Average Loss: 0.1313
+Epoch 7, Average Loss: 0.1029
+Epoch 8, Average Loss: 0.0974
+Epoch 9, Average Loss: 0.1123
+Epoch 10, Average Loss: 0.1218
+Merged model device: cuda:0
+Accuracy: 45.7990
+Accuracy of Product model on test domain: 45.7990
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8728
+Epoch 2, Average Loss: 0.2244
+Epoch 3, Average Loss: 0.1554
+Epoch 4, Average Loss: 0.1994
+Epoch 5, Average Loss: 0.1886
+Epoch 6, Average Loss: 0.1326
+Epoch 7, Average Loss: 0.1479
+Epoch 8, Average Loss: 0.1549
+Epoch 9, Average Loss: 0.1371
+Epoch 10, Average Loss: 0.2354
+Merged model device: cuda:0
+Accuracy: 54.3657
+Accuracy of Real World model on test domain: 54.3657
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Clipart: 0.3333
+  Product: 0.3333
+  Real World: 0.3333
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.7178
+Coefficient Epoch 2, Average Loss: 1.3985
+Coefficient Epoch 3, Average Loss: 1.4006
+Coefficient Epoch 4, Average Loss: 1.4096
+Coefficient Epoch 5, Average Loss: 1.4103
+Coefficient Epoch 6, Average Loss: 1.4232
+Coefficient Epoch 7, Average Loss: 1.4289
+Coefficient Epoch 8, Average Loss: 1.3937
+Coefficient Epoch 9, Average Loss: 1.4149
+Coefficient Epoch 10, Average Loss: 1.3951
+Final device check:
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3350970149040222, 0.3095549941062927, 0.3553480803966522]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 80.3954
+Final model accuracy on test domain: 80.3954
+
+Run 2/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Clipart
+Training domains: ['Art', 'Product', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.3847
+Epoch 2, Average Loss: 4.1299
+Epoch 3, Average Loss: 3.9890
+Epoch 4, Average Loss: 3.9044
+Epoch 5, Average Loss: 3.8747
+Epoch 6, Average Loss: 3.9234
+Epoch 7, Average Loss: 3.8307
+Epoch 8, Average Loss: 3.7511
+Epoch 9, Average Loss: 3.7544
+Epoch 10, Average Loss: 3.6434
+Accuracy: 8.5662
+Training domains: ['Art', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 1.4385
+Epoch 2, Average Loss: 0.2204
+Epoch 3, Average Loss: 0.0972
+Epoch 4, Average Loss: 0.0469
+Epoch 5, Average Loss: 0.0718
+Epoch 6, Average Loss: 0.2800
+Epoch 7, Average Loss: 0.2927
+Epoch 8, Average Loss: 0.3179
+Epoch 9, Average Loss: 0.2155
+Epoch 10, Average Loss: 0.1198
+Merged model device: cuda:0
+Accuracy: 48.6945
+Accuracy of Art model on test domain: 48.6945
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.6903
+Epoch 2, Average Loss: 0.1639
+Epoch 3, Average Loss: 0.0887
+Epoch 4, Average Loss: 0.1138
+Epoch 5, Average Loss: 0.2002
+Epoch 6, Average Loss: 0.2061
+Epoch 7, Average Loss: 0.1500
+Epoch 8, Average Loss: 0.0912
+Epoch 9, Average Loss: 0.0577
+Epoch 10, Average Loss: 0.0427
+Merged model device: cuda:0
+Accuracy: 44.6633
+Accuracy of Product model on test domain: 44.6633
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8479
+Epoch 2, Average Loss: 0.1974
+Epoch 3, Average Loss: 0.1469
+Epoch 4, Average Loss: 0.1977
+Epoch 5, Average Loss: 0.1907
+Epoch 6, Average Loss: 0.1605
+Epoch 7, Average Loss: 0.1637
+Epoch 8, Average Loss: 0.1712
+Epoch 9, Average Loss: 0.1135
+Epoch 10, Average Loss: 0.1551
+Merged model device: cuda:0
+Accuracy: 37.7920
+Accuracy of Real World model on test domain: 37.7920
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Art: 0.3333
+  Product: 0.3333
+  Real World: 0.3333
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.1319
+Coefficient Epoch 2, Average Loss: 1.8452
+Coefficient Epoch 3, Average Loss: 1.8578
+Coefficient Epoch 4, Average Loss: 1.8433
+Coefficient Epoch 5, Average Loss: 1.8584
+Coefficient Epoch 6, Average Loss: 1.8563
+Coefficient Epoch 7, Average Loss: 1.8714
+Coefficient Epoch 8, Average Loss: 1.8700
+Coefficient Epoch 9, Average Loss: 1.8452
+Coefficient Epoch 10, Average Loss: 1.8712
+Final device check:
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3509367108345032, 0.3081161379814148, 0.34094715118408203]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 63.9945
+Final model accuracy on test domain: 63.9945
+
+Run 3/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Product
+Training domains: ['Art', 'Clipart', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Product
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.3356
+Epoch 2, Average Loss: 4.0491
+Epoch 3, Average Loss: 3.8870
+Epoch 4, Average Loss: 3.8242
+Epoch 5, Average Loss: 3.7449
+Epoch 6, Average Loss: 3.6877
+Epoch 7, Average Loss: 3.7242
+Epoch 8, Average Loss: 3.6278
+Epoch 9, Average Loss: 3.6450
+Epoch 10, Average Loss: 3.6876
+Accuracy: 7.8378
+Training domains: ['Art', 'Clipart', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 1.5250
+Epoch 2, Average Loss: 0.2235
+Epoch 3, Average Loss: 0.0977
+Epoch 4, Average Loss: 0.0719
+Epoch 5, Average Loss: 0.1470
+Epoch 6, Average Loss: 0.1859
+Epoch 7, Average Loss: 0.3374
+Epoch 8, Average Loss: 0.2442
+Epoch 9, Average Loss: 0.1405
+Epoch 10, Average Loss: 0.0704
+Merged model device: cuda:0
+Accuracy: 70.9009
+Accuracy of Art model on test domain: 70.9009
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 1.3152
+Epoch 2, Average Loss: 0.3584
+Epoch 3, Average Loss: 0.2568
+Epoch 4, Average Loss: 0.2447
+Epoch 5, Average Loss: 0.2546
+Epoch 6, Average Loss: 0.3097
+Epoch 7, Average Loss: 0.2254
+Epoch 8, Average Loss: 0.2273
+Epoch 9, Average Loss: 0.1719
+Epoch 10, Average Loss: 0.1615
+Merged model device: cuda:0
+Accuracy: 64.0991
+Accuracy of Clipart model on test domain: 64.0991
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8382
+Epoch 2, Average Loss: 0.2137
+Epoch 3, Average Loss: 0.1436
+Epoch 4, Average Loss: 0.1550
+Epoch 5, Average Loss: 0.2553
+Epoch 6, Average Loss: 0.2935
+Epoch 7, Average Loss: 0.2275
+Epoch 8, Average Loss: 0.0861
+Epoch 9, Average Loss: 0.0680
+Epoch 10, Average Loss: 0.0511
+Merged model device: cuda:0
+Accuracy: 79.2793
+Accuracy of Real World model on test domain: 79.2793
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Art: 0.3333
+  Clipart: 0.3333
+  Real World: 0.3333
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.7182
+Coefficient Epoch 2, Average Loss: 0.6457
+Coefficient Epoch 3, Average Loss: 0.6565
+Coefficient Epoch 4, Average Loss: 0.6446
+Coefficient Epoch 5, Average Loss: 0.6518
+Coefficient Epoch 6, Average Loss: 0.6583
+Coefficient Epoch 7, Average Loss: 0.6400
+Coefficient Epoch 8, Average Loss: 0.6476
+Coefficient Epoch 9, Average Loss: 0.6618
+Coefficient Epoch 10, Average Loss: 0.6434
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33297398686408997, 0.3087541460990906, 0.35827183723449707]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 87.2523
+Final model accuracy on test domain: 87.2523
+
+Run 4/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Real World
+Training domains: ['Art', 'Clipart', 'Product']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Real World
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.3939
+Epoch 2, Average Loss: 4.1598
+Epoch 3, Average Loss: 4.0924
+Epoch 4, Average Loss: 4.0198
+Epoch 5, Average Loss: 3.9340
+Epoch 6, Average Loss: 3.8613
+Epoch 7, Average Loss: 3.7572
+Epoch 8, Average Loss: 3.7397
+Epoch 9, Average Loss: 3.6748
+Epoch 10, Average Loss: 3.6316
+Accuracy: 8.0771
+Training domains: ['Art', 'Clipart', 'Product']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 1.4968
+Epoch 2, Average Loss: 0.2242
+Epoch 3, Average Loss: 0.1051
+Epoch 4, Average Loss: 0.0794
+Epoch 5, Average Loss: 0.0968
+Epoch 6, Average Loss: 0.1759
+Epoch 7, Average Loss: 0.4071
+Epoch 8, Average Loss: 0.2687
+Epoch 9, Average Loss: 0.2188
+Epoch 10, Average Loss: 0.1177
+Merged model device: cuda:0
+Accuracy: 74.7132
+Accuracy of Art model on test domain: 74.7132
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 1.3102
+Epoch 2, Average Loss: 0.3759
+Epoch 3, Average Loss: 0.2578
+Epoch 4, Average Loss: 0.2262
+Epoch 5, Average Loss: 0.2731
+Epoch 6, Average Loss: 0.2737
+Epoch 7, Average Loss: 0.2059
+Epoch 8, Average Loss: 0.1846
+Epoch 9, Average Loss: 0.2027
+Epoch 10, Average Loss: 0.2328
+Merged model device: cuda:0
+Accuracy: 68.1964
+Accuracy of Clipart model on test domain: 68.1964
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.6942
+Epoch 2, Average Loss: 0.1122
+Epoch 3, Average Loss: 0.1130
+Epoch 4, Average Loss: 0.2183
+Epoch 5, Average Loss: 0.1737
+Epoch 6, Average Loss: 0.1099
+Epoch 7, Average Loss: 0.0944
+Epoch 8, Average Loss: 0.0793
+Epoch 9, Average Loss: 0.0808
+Epoch 10, Average Loss: 0.1168
+Merged model device: cuda:0
+Accuracy: 69.2520
+Accuracy of Product model on test domain: 69.2520
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Art: 0.3333
+  Clipart: 0.3333
+  Product: 0.3333
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.7143
+Coefficient Epoch 2, Average Loss: 0.6501
+Coefficient Epoch 3, Average Loss: 0.6424
+Coefficient Epoch 4, Average Loss: 0.6562
+Coefficient Epoch 5, Average Loss: 0.6697
+Coefficient Epoch 6, Average Loss: 0.6590
+Coefficient Epoch 7, Average Loss: 0.6518
+Coefficient Epoch 8, Average Loss: 0.6624
+Coefficient Epoch 9, Average Loss: 0.6635
+Coefficient Epoch 10, Average Loss: 0.6574
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3679009974002838, 0.3015175759792328, 0.330581396818161]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 88.1138
+Final model accuracy on test domain: 88.1138
+
+Run 5/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Art
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.4518
+Epoch 2, Average Loss: 4.1766
+Epoch 3, Average Loss: 4.0863
+Epoch 4, Average Loss: 4.0082
+Epoch 5, Average Loss: 3.9590
+Epoch 6, Average Loss: 3.9391
+Epoch 7, Average Loss: 3.8923
+Epoch 8, Average Loss: 3.8606
+Epoch 9, Average Loss: 3.7954
+Epoch 10, Average Loss: 3.7466
+Accuracy: 5.4366
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 1.3165
+Epoch 2, Average Loss: 0.3654
+Epoch 3, Average Loss: 0.2612
+Epoch 4, Average Loss: 0.2596
+Epoch 5, Average Loss: 0.3124
+Epoch 6, Average Loss: 0.2894
+Epoch 7, Average Loss: 0.2038
+Epoch 8, Average Loss: 0.2007
+Epoch 9, Average Loss: 0.2139
+Epoch 10, Average Loss: 0.3242
+Merged model device: cuda:0
+Accuracy: 44.8929
+Accuracy of Clipart model on test domain: 44.8929
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.6828
+Epoch 2, Average Loss: 0.1277
+Epoch 3, Average Loss: 0.1257
+Epoch 4, Average Loss: 0.1797
+Epoch 5, Average Loss: 0.1242
+Epoch 6, Average Loss: 0.1116
+Epoch 7, Average Loss: 0.1250
+Epoch 8, Average Loss: 0.1435
+Epoch 9, Average Loss: 0.0967
+Epoch 10, Average Loss: 0.0880
+Merged model device: cuda:0
+Accuracy: 48.5997
+Accuracy of Product model on test domain: 48.5997
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8238
+Epoch 2, Average Loss: 0.2061
+Epoch 3, Average Loss: 0.1413
+Epoch 4, Average Loss: 0.1530
+Epoch 5, Average Loss: 0.2341
+Epoch 6, Average Loss: 0.2884
+Epoch 7, Average Loss: 0.1163
+Epoch 8, Average Loss: 0.0985
+Epoch 9, Average Loss: 0.0953
+Epoch 10, Average Loss: 0.1081
+Merged model device: cuda:0
+Accuracy: 57.6606
+Accuracy of Real World model on test domain: 57.6606
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Clipart: 0.3333
+  Product: 0.3333
+  Real World: 0.3333
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.6613
+Coefficient Epoch 2, Average Loss: 1.4034
+Coefficient Epoch 3, Average Loss: 1.4132
+Coefficient Epoch 4, Average Loss: 1.4000
+Coefficient Epoch 5, Average Loss: 1.4021
+Coefficient Epoch 6, Average Loss: 1.4108
+Coefficient Epoch 7, Average Loss: 1.4091
+Coefficient Epoch 8, Average Loss: 1.4049
+Coefficient Epoch 9, Average Loss: 1.4240
+Coefficient Epoch 10, Average Loss: 1.4328
+Final device check:
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33309659361839294, 0.32746371626853943, 0.3394396901130676]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 79.4069
+Final model accuracy on test domain: 79.4069
+
+Run 6/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Clipart
+Training domains: ['Art', 'Product', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.3742
+Epoch 2, Average Loss: 4.1505
+Epoch 3, Average Loss: 4.0258
+Epoch 4, Average Loss: 3.9541
+Epoch 5, Average Loss: 3.8983
+Epoch 6, Average Loss: 3.7665
+Epoch 7, Average Loss: 3.7430
+Epoch 8, Average Loss: 3.6904
+Epoch 9, Average Loss: 3.6246
+Epoch 10, Average Loss: 3.5676
+Accuracy: 9.2991
+Training domains: ['Art', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 1.4418
+Epoch 2, Average Loss: 0.2092
+Epoch 3, Average Loss: 0.0940
+Epoch 4, Average Loss: 0.1076
+Epoch 5, Average Loss: 0.2263
+Epoch 6, Average Loss: 0.2572
+Epoch 7, Average Loss: 0.2139
+Epoch 8, Average Loss: 0.1850
+Epoch 9, Average Loss: 0.0765
+Epoch 10, Average Loss: 0.0543
+Merged model device: cuda:0
+Accuracy: 47.1828
+Accuracy of Art model on test domain: 47.1828
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.6921
+Epoch 2, Average Loss: 0.1163
+Epoch 3, Average Loss: 0.1181
+Epoch 4, Average Loss: 0.1846
+Epoch 5, Average Loss: 0.1702
+Epoch 6, Average Loss: 0.1231
+Epoch 7, Average Loss: 0.1063
+Epoch 8, Average Loss: 0.1054
+Epoch 9, Average Loss: 0.0867
+Epoch 10, Average Loss: 0.1443
+Merged model device: cuda:0
+Accuracy: 35.2726
+Accuracy of Product model on test domain: 35.2726
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8129
+Epoch 2, Average Loss: 0.1928
+Epoch 3, Average Loss: 0.2610
+Epoch 4, Average Loss: 0.1576
+Epoch 5, Average Loss: 0.1571
+Epoch 6, Average Loss: 0.1320
+Epoch 7, Average Loss: 0.2095
+Epoch 8, Average Loss: 0.1508
+Epoch 9, Average Loss: 0.1864
+Epoch 10, Average Loss: 0.1390
+Merged model device: cuda:0
+Accuracy: 45.0756
+Accuracy of Real World model on test domain: 45.0756
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Art: 0.3333
+  Product: 0.3333
+  Real World: 0.3333
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.1623
+Coefficient Epoch 2, Average Loss: 1.9124
+Coefficient Epoch 3, Average Loss: 1.9514
+Coefficient Epoch 4, Average Loss: 1.9184
+Coefficient Epoch 5, Average Loss: 1.9442
+Coefficient Epoch 6, Average Loss: 1.9205
+Coefficient Epoch 7, Average Loss: 1.9188
+Coefficient Epoch 8, Average Loss: 1.9167
+Coefficient Epoch 9, Average Loss: 1.9343
+Coefficient Epoch 10, Average Loss: 1.9277
+Final device check:
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.35298705101013184, 0.3251970112323761, 0.32181596755981445]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 64.5900
+Final model accuracy on test domain: 64.5900
+
+Run 7/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Product
+Training domains: ['Art', 'Clipart', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Product
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.3563
+Epoch 2, Average Loss: 4.0383
+Epoch 3, Average Loss: 3.9090
+Epoch 4, Average Loss: 3.8034
+Epoch 5, Average Loss: 3.6942
+Epoch 6, Average Loss: 3.6189
+Epoch 7, Average Loss: 3.5367
+Epoch 8, Average Loss: 3.5574
+Epoch 9, Average Loss: 3.4461
+Epoch 10, Average Loss: 3.3716
+Accuracy: 12.9730
+Training domains: ['Art', 'Clipart', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 1.4873
+Epoch 2, Average Loss: 0.2222
+Epoch 3, Average Loss: 0.1007
+Epoch 4, Average Loss: 0.0413
+Epoch 5, Average Loss: 0.0467
+Epoch 6, Average Loss: 0.0514
+Epoch 7, Average Loss: 0.1883
+Epoch 8, Average Loss: 0.5795
+Epoch 9, Average Loss: 0.3135
+Epoch 10, Average Loss: 0.1897
+Merged model device: cuda:0
+Accuracy: 66.1712
+Accuracy of Art model on test domain: 66.1712
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 1.3007
+Epoch 2, Average Loss: 0.3693
+Epoch 3, Average Loss: 0.2691
+Epoch 4, Average Loss: 0.2233
+Epoch 5, Average Loss: 0.2347
+Epoch 6, Average Loss: 0.3395
+Epoch 7, Average Loss: 0.2710
+Epoch 8, Average Loss: 0.2103
+Epoch 9, Average Loss: 0.1687
+Epoch 10, Average Loss: 0.1785
+Merged model device: cuda:0
+Accuracy: 67.0721
+Accuracy of Clipart model on test domain: 67.0721
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8305
+Epoch 2, Average Loss: 0.2051
+Epoch 3, Average Loss: 0.1726
+Epoch 4, Average Loss: 0.1576
+Epoch 5, Average Loss: 0.2079
+Epoch 6, Average Loss: 0.1980
+Epoch 7, Average Loss: 0.2020
+Epoch 8, Average Loss: 0.1704
+Epoch 9, Average Loss: 0.0976
+Epoch 10, Average Loss: 0.1230
+Merged model device: cuda:0
+Accuracy: 75.5405
+Accuracy of Real World model on test domain: 75.5405
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Art: 0.3333
+  Clipart: 0.3333
+  Real World: 0.3333
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.8292
+Coefficient Epoch 2, Average Loss: 0.7496
+Coefficient Epoch 3, Average Loss: 0.7516
+Coefficient Epoch 4, Average Loss: 0.7522
+Coefficient Epoch 5, Average Loss: 0.7840
+Coefficient Epoch 6, Average Loss: 0.7560
+Coefficient Epoch 7, Average Loss: 0.7609
+Coefficient Epoch 8, Average Loss: 0.7531
+Coefficient Epoch 9, Average Loss: 0.7655
+Coefficient Epoch 10, Average Loss: 0.7583
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3578225076198578, 0.29663124680519104, 0.3455462157726288]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 86.3514
+Final model accuracy on test domain: 86.3514
+
+Run 8/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Real World
+Training domains: ['Art', 'Clipart', 'Product']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Real World
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.5412
+Epoch 2, Average Loss: 4.1550
+Epoch 3, Average Loss: 4.1100
+Epoch 4, Average Loss: 4.0605
+Epoch 5, Average Loss: 3.9603
+Epoch 6, Average Loss: 3.8896
+Epoch 7, Average Loss: 3.8494
+Epoch 8, Average Loss: 3.7815
+Epoch 9, Average Loss: 3.7538
+Epoch 10, Average Loss: 3.6586
+Accuracy: 7.4805
+Training domains: ['Art', 'Clipart', 'Product']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 1.4276
+Epoch 2, Average Loss: 0.2129
+Epoch 3, Average Loss: 0.0910
+Epoch 4, Average Loss: 0.0523
+Epoch 5, Average Loss: 0.0700
+Epoch 6, Average Loss: 0.1848
+Epoch 7, Average Loss: 0.4910
+Epoch 8, Average Loss: 0.3513
+Epoch 9, Average Loss: 0.1304
+Epoch 10, Average Loss: 0.0805
+Merged model device: cuda:0
+Accuracy: 77.6962
+Accuracy of Art model on test domain: 77.6962
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 1.3022
+Epoch 2, Average Loss: 0.3543
+Epoch 3, Average Loss: 0.3278
+Epoch 4, Average Loss: 0.2338
+Epoch 5, Average Loss: 0.2290
+Epoch 6, Average Loss: 0.2352
+Epoch 7, Average Loss: 0.2586
+Epoch 8, Average Loss: 0.2283
+Epoch 9, Average Loss: 0.2076
+Epoch 10, Average Loss: 0.2718
+Merged model device: cuda:0
+Accuracy: 64.3414
+Accuracy of Clipart model on test domain: 64.3414
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.6688
+Epoch 2, Average Loss: 0.1300
+Epoch 3, Average Loss: 0.1458
+Epoch 4, Average Loss: 0.1547
+Epoch 5, Average Loss: 0.1007
+Epoch 6, Average Loss: 0.1395
+Epoch 7, Average Loss: 0.1731
+Epoch 8, Average Loss: 0.1124
+Epoch 9, Average Loss: 0.0803
+Epoch 10, Average Loss: 0.0584
+Merged model device: cuda:0
+Accuracy: 70.5369
+Accuracy of Product model on test domain: 70.5369
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Art: 0.3333
+  Clipart: 0.3333
+  Product: 0.3333
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.6066
+Coefficient Epoch 2, Average Loss: 0.5267
+Coefficient Epoch 3, Average Loss: 0.5232
+Coefficient Epoch 4, Average Loss: 0.5287
+Coefficient Epoch 5, Average Loss: 0.5491
+Coefficient Epoch 6, Average Loss: 0.5409
+Coefficient Epoch 7, Average Loss: 0.5473
+Coefficient Epoch 8, Average Loss: 0.5327
+Coefficient Epoch 9, Average Loss: 0.5342
+Coefficient Epoch 10, Average Loss: 0.5281
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.34730085730552673, 0.33571311831474304, 0.3169860243797302]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 87.3795
+Final model accuracy on test domain: 87.3795
+
+Run 9/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Art
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.4483
+Epoch 2, Average Loss: 4.1603
+Epoch 3, Average Loss: 4.0829
+Epoch 4, Average Loss: 4.0504
+Epoch 5, Average Loss: 3.9871
+Epoch 6, Average Loss: 3.9245
+Epoch 7, Average Loss: 3.9127
+Epoch 8, Average Loss: 3.8994
+Epoch 9, Average Loss: 3.9218
+Epoch 10, Average Loss: 3.8662
+Accuracy: 5.2718
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 1.3324
+Epoch 2, Average Loss: 0.3936
+Epoch 3, Average Loss: 0.2193
+Epoch 4, Average Loss: 0.2600
+Epoch 5, Average Loss: 0.2909
+Epoch 6, Average Loss: 0.3660
+Epoch 7, Average Loss: 0.2051
+Epoch 8, Average Loss: 0.1904
+Epoch 9, Average Loss: 0.1701
+Epoch 10, Average Loss: 0.1547
+Merged model device: cuda:0
+Accuracy: 55.0247
+Accuracy of Clipart model on test domain: 55.0247
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.7238
+Epoch 2, Average Loss: 0.1405
+Epoch 3, Average Loss: 0.1124
+Epoch 4, Average Loss: 0.1753
+Epoch 5, Average Loss: 0.1784
+Epoch 6, Average Loss: 0.1375
+Epoch 7, Average Loss: 0.1019
+Epoch 8, Average Loss: 0.1338
+Epoch 9, Average Loss: 0.0948
+Epoch 10, Average Loss: 0.0825
+Merged model device: cuda:0
+Accuracy: 48.9292
+Accuracy of Product model on test domain: 48.9292
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8061
+Epoch 2, Average Loss: 0.1769
+Epoch 3, Average Loss: 0.1668
+Epoch 4, Average Loss: 0.2348
+Epoch 5, Average Loss: 0.1682
+Epoch 6, Average Loss: 0.1663
+Epoch 7, Average Loss: 0.0959
+Epoch 8, Average Loss: 0.0752
+Epoch 9, Average Loss: 0.1653
+Epoch 10, Average Loss: 0.2428
+Merged model device: cuda:0
+Accuracy: 54.9423
+Accuracy of Real World model on test domain: 54.9423
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Clipart: 0.3333
+  Product: 0.3333
+  Real World: 0.3333
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.5751
+Coefficient Epoch 2, Average Loss: 1.3541
+Coefficient Epoch 3, Average Loss: 1.3458
+Coefficient Epoch 4, Average Loss: 1.3385
+Coefficient Epoch 5, Average Loss: 1.3610
+Coefficient Epoch 6, Average Loss: 1.3417
+Coefficient Epoch 7, Average Loss: 1.3384
+Coefficient Epoch 8, Average Loss: 1.3438
+Coefficient Epoch 9, Average Loss: 1.3591
+Coefficient Epoch 10, Average Loss: 1.3523
+Final device check:
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33484575152397156, 0.3371942639350891, 0.3279600143432617]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 80.7249
+Final model accuracy on test domain: 80.7249
+
+Run 10/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Clipart
+Training domains: ['Art', 'Product', 'Real World']
+
+Domain: Clipart
+  Class ToothBrush: 39 samples
+  Class File_Cabinet: 40 samples
+  Class Glasses: 52 samples
+  Class Drill: 48 samples
+  Class Kettle: 40 samples
+  Class Soda: 61 samples
+  Class TV: 99 samples
+  Class Ruler: 67 samples
+  Class Push_Pin: 40 samples
+  Class Sneakers: 43 samples
+  Class Postit_Notes: 41 samples
+  Class Oven: 40 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 40 samples
+  Class Mouse: 76 samples
+  Class Sink: 42 samples
+  Class Screwdriver: 75 samples
+  Class Keyboard: 99 samples
+  Class Toys: 99 samples
+  Class Shelf: 42 samples
+  Class Calculator: 46 samples
+  Class Eraser: 40 samples
+  Class Computer: 99 samples
+  Class Mug: 99 samples
+  Class Pencil: 99 samples
+  Class Knives: 53 samples
+  Class Marker: 71 samples
+  Class Fan: 50 samples
+  Class Trash_Can: 53 samples
+  Class Flipflops: 40 samples
+  Class Clipboards: 40 samples
+  Class Hammer: 99 samples
+  Class Helmet: 69 samples
+  Class Exit_Sign: 41 samples
+  Class Alarm_Clock: 60 samples
+  Class Mop: 40 samples
+  Class Curtains: 42 samples
+  Class Printer: 87 samples
+  Class Pen: 99 samples
+  Class Speaker: 90 samples
+  Class Chair: 99 samples
+  Class Folder: 99 samples
+  Class Telephone: 99 samples
+  Class Bucket: 73 samples
+  Class Webcam: 40 samples
+  Class Backpack: 56 samples
+  Class Bottle: 99 samples
+  Class Fork: 61 samples
+  Class Pan: 51 samples
+  Class Candles: 99 samples
+  Class Notebook: 83 samples
+  Class Calendar: 78 samples
+  Class Table: 80 samples
+  Class Flowers: 99 samples
+  Class Laptop: 99 samples
+  Class Monitor: 99 samples
+  Class Desk_Lamp: 41 samples
+  Class Spoon: 60 samples
+  Class Scissors: 99 samples
+  Class Radio: 46 samples
+  Class Paper_Clip: 40 samples
+  Class Couch: 64 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 40 samples
+  Class Bed: 98 samples
+  Total samples: 4365
+
+Domain: Product
+  Class ToothBrush: 42 samples
+  Class File_Cabinet: 71 samples
+  Class Glasses: 67 samples
+  Class Drill: 67 samples
+  Class Kettle: 72 samples
+  Class Soda: 43 samples
+  Class TV: 76 samples
+  Class Ruler: 58 samples
+  Class Push_Pin: 43 samples
+  Class Sneakers: 99 samples
+  Class Postit_Notes: 38 samples
+  Class Oven: 68 samples
+  Class Batteries: 62 samples
+  Class Lamp_Shade: 54 samples
+  Class Mouse: 96 samples
+  Class Sink: 46 samples
+  Class Screwdriver: 40 samples
+  Class Keyboard: 99 samples
+  Class Toys: 45 samples
+  Class Shelf: 49 samples
+  Class Calculator: 81 samples
+  Class Eraser: 41 samples
+  Class Computer: 96 samples
+  Class Mug: 41 samples
+  Class Pencil: 40 samples
+  Class Knives: 41 samples
+  Class Marker: 56 samples
+  Class Fan: 58 samples
+  Class Trash_Can: 93 samples
+  Class Flipflops: 99 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 57 samples
+  Class Helmet: 90 samples
+  Class Exit_Sign: 67 samples
+  Class Alarm_Clock: 79 samples
+  Class Mop: 72 samples
+  Class Curtains: 75 samples
+  Class Printer: 99 samples
+  Class Pen: 60 samples
+  Class Speaker: 99 samples
+  Class Chair: 99 samples
+  Class Folder: 90 samples
+  Class Telephone: 58 samples
+  Class Bucket: 47 samples
+  Class Webcam: 98 samples
+  Class Backpack: 99 samples
+  Class Bottle: 62 samples
+  Class Fork: 41 samples
+  Class Pan: 70 samples
+  Class Candles: 56 samples
+  Class Notebook: 93 samples
+  Class Calendar: 81 samples
+  Class Table: 60 samples
+  Class Flowers: 91 samples
+  Class Laptop: 99 samples
+  Class Monitor: 98 samples
+  Class Desk_Lamp: 83 samples
+  Class Spoon: 47 samples
+  Class Scissors: 99 samples
+  Class Radio: 43 samples
+  Class Paper_Clip: 47 samples
+  Class Couch: 88 samples
+  Class Bike: 44 samples
+  Class Refrigerator: 59 samples
+  Class Bed: 43 samples
+  Total samples: 4439
+
+Domain: Real World
+  Class ToothBrush: 85 samples
+  Class File_Cabinet: 58 samples
+  Class Glasses: 60 samples
+  Class Drill: 51 samples
+  Class Kettle: 72 samples
+  Class Soda: 63 samples
+  Class TV: 53 samples
+  Class Ruler: 41 samples
+  Class Push_Pin: 53 samples
+  Class Sneakers: 88 samples
+  Class Postit_Notes: 67 samples
+  Class Oven: 64 samples
+  Class Batteries: 64 samples
+  Class Lamp_Shade: 78 samples
+  Class Mouse: 60 samples
+  Class Sink: 77 samples
+  Class Screwdriver: 51 samples
+  Class Keyboard: 75 samples
+  Class Toys: 67 samples
+  Class Shelf: 66 samples
+  Class Calculator: 73 samples
+  Class Eraser: 43 samples
+  Class Computer: 64 samples
+  Class Mug: 58 samples
+  Class Pencil: 59 samples
+  Class Knives: 83 samples
+  Class Marker: 23 samples
+  Class Fan: 60 samples
+  Class Trash_Can: 81 samples
+  Class Flipflops: 85 samples
+  Class Clipboards: 65 samples
+  Class Hammer: 52 samples
+  Class Helmet: 60 samples
+  Class Exit_Sign: 81 samples
+  Class Alarm_Clock: 86 samples
+  Class Mop: 46 samples
+  Class Curtains: 73 samples
+  Class Printer: 52 samples
+  Class Pen: 65 samples
+  Class Speaker: 81 samples
+  Class Chair: 96 samples
+  Class Folder: 57 samples
+  Class Telephone: 82 samples
+  Class Bucket: 80 samples
+  Class Webcam: 49 samples
+  Class Backpack: 99 samples
+  Class Bottle: 78 samples
+  Class Fork: 36 samples
+  Class Pan: 30 samples
+  Class Candles: 99 samples
+  Class Notebook: 68 samples
+  Class Calendar: 68 samples
+  Class Table: 59 samples
+  Class Flowers: 75 samples
+  Class Laptop: 67 samples
+  Class Monitor: 71 samples
+  Class Desk_Lamp: 62 samples
+  Class Spoon: 54 samples
+  Class Scissors: 77 samples
+  Class Radio: 66 samples
+  Class Paper_Clip: 68 samples
+  Class Couch: 76 samples
+  Class Bike: 99 samples
+  Class Refrigerator: 75 samples
+  Class Bed: 83 samples
+  Total samples: 4357
+
+Domain: Art
+  Class ToothBrush: 43 samples
+  Class File_Cabinet: 22 samples
+  Class Glasses: 40 samples
+  Class Drill: 15 samples
+  Class Kettle: 46 samples
+  Class Soda: 40 samples
+  Class TV: 40 samples
+  Class Ruler: 15 samples
+  Class Push_Pin: 24 samples
+  Class Sneakers: 46 samples
+  Class Postit_Notes: 19 samples
+  Class Oven: 20 samples
+  Class Batteries: 27 samples
+  Class Lamp_Shade: 49 samples
+  Class Mouse: 18 samples
+  Class Sink: 41 samples
+  Class Screwdriver: 30 samples
+  Class Keyboard: 18 samples
+  Class Toys: 20 samples
+  Class Shelf: 42 samples
+  Class Calculator: 33 samples
+  Class Eraser: 18 samples
+  Class Computer: 44 samples
+  Class Mug: 49 samples
+  Class Pencil: 26 samples
+  Class Knives: 72 samples
+  Class Marker: 20 samples
+  Class Fan: 45 samples
+  Class Trash_Can: 21 samples
+  Class Flipflops: 46 samples
+  Class Clipboards: 25 samples
+  Class Hammer: 40 samples
+  Class Helmet: 79 samples
+  Class Exit_Sign: 21 samples
+  Class Alarm_Clock: 74 samples
+  Class Mop: 32 samples
+  Class Curtains: 40 samples
+  Class Printer: 18 samples
+  Class Pen: 20 samples
+  Class Speaker: 20 samples
+  Class Chair: 69 samples
+  Class Folder: 20 samples
+  Class Telephone: 44 samples
+  Class Bucket: 40 samples
+  Class Webcam: 16 samples
+  Class Backpack: 41 samples
+  Class Bottle: 99 samples
+  Class Fork: 46 samples
+  Class Pan: 19 samples
+  Class Candles: 76 samples
+  Class Notebook: 21 samples
+  Class Calendar: 20 samples
+  Class Table: 16 samples
+  Class Flowers: 90 samples
+  Class Laptop: 51 samples
+  Class Monitor: 42 samples
+  Class Desk_Lamp: 23 samples
+  Class Spoon: 46 samples
+  Class Scissors: 20 samples
+  Class Radio: 47 samples
+  Class Paper_Clip: 19 samples
+  Class Couch: 40 samples
+  Class Bike: 75 samples
+  Class Refrigerator: 49 samples
+  Class Bed: 40 samples
+  Total samples: 2427
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.4253
+Epoch 2, Average Loss: 4.1624
+Epoch 3, Average Loss: 4.0067
+Epoch 4, Average Loss: 3.9204
+Epoch 5, Average Loss: 3.8264
+Epoch 6, Average Loss: 3.7511
+Epoch 7, Average Loss: 3.7087
+Epoch 8, Average Loss: 3.6802
+Epoch 9, Average Loss: 3.6362
+Epoch 10, Average Loss: 3.6404
+Accuracy: 8.3372
+Training domains: ['Art', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 1.4350
+Epoch 2, Average Loss: 0.2267
+Epoch 3, Average Loss: 0.1538
+Epoch 4, Average Loss: 0.0709
+Epoch 5, Average Loss: 0.0785
+Epoch 6, Average Loss: 0.1315
+Epoch 7, Average Loss: 0.3210
+Epoch 8, Average Loss: 0.2633
+Epoch 9, Average Loss: 0.1578
+Epoch 10, Average Loss: 0.1834
+Merged model device: cuda:0
+Accuracy: 45.5337
+Accuracy of Art model on test domain: 45.5337
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 0.7090
+Epoch 2, Average Loss: 0.1328
+Epoch 3, Average Loss: 0.1072
+Epoch 4, Average Loss: 0.1183
+Epoch 5, Average Loss: 0.1991
+Epoch 6, Average Loss: 0.1987
+Epoch 7, Average Loss: 0.1206
+Epoch 8, Average Loss: 0.0912
+Epoch 9, Average Loss: 0.0983
+Epoch 10, Average Loss: 0.1237
+Merged model device: cuda:0
+Accuracy: 35.3642
+Accuracy of Product model on test domain: 35.3642
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 0.8122
+Epoch 2, Average Loss: 0.1952
+Epoch 3, Average Loss: 0.1830
+Epoch 4, Average Loss: 0.2077
+Epoch 5, Average Loss: 0.1806
+Epoch 6, Average Loss: 0.1432
+Epoch 7, Average Loss: 0.1643
+Epoch 8, Average Loss: 0.1466
+Epoch 9, Average Loss: 0.2491
+Epoch 10, Average Loss: 0.1749
+Merged model device: cuda:0
+Accuracy: 41.2735
+Accuracy of Real World model on test domain: 41.2735
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  Art: 0.3333
+  Product: 0.3333
+  Real World: 0.3333
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.3286
+Coefficient Epoch 2, Average Loss: 2.0545
+Coefficient Epoch 3, Average Loss: 2.0266
+Coefficient Epoch 4, Average Loss: 2.0506
+Coefficient Epoch 5, Average Loss: 2.0587
+Coefficient Epoch 6, Average Loss: 2.0563
+Coefficient Epoch 7, Average Loss: 2.0397
+Coefficient Epoch 8, Average Loss: 2.0712
+Coefficient Epoch 9, Average Loss: 2.0588
+Coefficient Epoch 10, Average Loss: 2.0721
+Final device check:
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.38733920454978943, 0.3336730897426605, 0.27898770570755005]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 63.5364
+Final model accuracy on test domain: 63.5364
+
+Summary for OfficeHome:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'Art', 'domain_accuracies': {'Clipart': 54.85996705107083, 'Product': 45.799011532125206, 'Real World': 54.36573311367381}, 'final_accuracy': 80.39538714991762, 'coefficients': [0.3350970149040222, 0.3095549941062927, 0.3553480803966522]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 48.69445716903344, 'Product': 44.66330737517178, 'Real World': 37.79202931745304}, 'final_accuracy': 63.99450297755382, 'coefficients': [0.3509367108345032, 0.3081161379814148, 0.34094715118408203]}, {'test_domain': 'Product', 'domain_accuracies': {'Art': 70.9009009009009, 'Clipart': 64.0990990990991, 'Real World': 79.27927927927928}, 'final_accuracy': 87.25225225225225, 'coefficients': [0.33297398686408997, 0.3087541460990906, 0.35827183723449707]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 74.71317117944011, 'Clipart': 68.19642037631941, 'Product': 69.25195043597981}, 'final_accuracy': 88.11381367599816, 'coefficients': [0.3679009974002838, 0.3015175759792328, 0.330581396818161]}, {'test_domain': 'Art', 'domain_accuracies': {'Clipart': 44.89291598023064, 'Product': 48.59967051070841, 'Real World': 57.66062602965404}, 'final_accuracy': 79.40691927512356, 'coefficients': [0.33309659361839294, 0.32746371626853943, 0.3394396901130676]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 47.182775996335316, 'Product': 35.27256069628951, 'Real World': 45.0755840586349}, 'final_accuracy': 64.59001374255612, 'coefficients': [0.35298705101013184, 0.3251970112323761, 0.32181596755981445]}, {'test_domain': 'Product', 'domain_accuracies': {'Art': 66.17117117117117, 'Clipart': 67.07207207207207, 'Real World': 75.54054054054053}, 'final_accuracy': 86.35135135135134, 'coefficients': [0.3578225076198578, 0.29663124680519104, 0.3455462157726288]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 77.69619091326297, 'Clipart': 64.34144102799449, 'Product': 70.53694355208812}, 'final_accuracy': 87.37953189536485, 'coefficients': [0.34730085730552673, 0.33571311831474304, 0.3169860243797302]}, {'test_domain': 'Art', 'domain_accuracies': {'Clipart': 55.02471169686986, 'Product': 48.92915980230643, 'Real World': 54.94233937397035}, 'final_accuracy': 80.72487644151565, 'coefficients': [0.33484575152397156, 0.3371942639350891, 0.3279600143432617]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 45.533669262482825, 'Product': 35.364177737059094, 'Real World': 41.27347686669721}, 'final_accuracy': 63.536417773705914, 'coefficients': [0.38733920454978943, 0.3336730897426605, 0.27898770570755005]}]
+Final Model Accuracy: 78.1745 ± 9.7243
+Domain-specific Accuracies:
+  Clipart: 59.7838 ± 7.8551
+  Product: 49.8021 ± 12.6117
+  Real World: 55.7412 ± 14.1311
+  Art: 61.5560 ± 12.9337
+Average Coefficients:
+  Coefficient 1: 0.3500 ± 0.0168
+  Coefficient 2: 0.3184 ± 0.0143
+  Coefficient 3: 0.3316 ± 0.0217
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'OfficeHome': [{'test_domain': 'Art', 'domain_accuracies': {'Clipart': 54.85996705107083, 'Product': 45.799011532125206, 'Real World': 54.36573311367381}, 'final_accuracy': 80.39538714991762, 'coefficients': [0.3350970149040222, 0.3095549941062927, 0.3553480803966522]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 48.69445716903344, 'Product': 44.66330737517178, 'Real World': 37.79202931745304}, 'final_accuracy': 63.99450297755382, 'coefficients': [0.3509367108345032, 0.3081161379814148, 0.34094715118408203]}, {'test_domain': 'Product', 'domain_accuracies': {'Art': 70.9009009009009, 'Clipart': 64.0990990990991, 'Real World': 79.27927927927928}, 'final_accuracy': 87.25225225225225, 'coefficients': [0.33297398686408997, 0.3087541460990906, 0.35827183723449707]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 74.71317117944011, 'Clipart': 68.19642037631941, 'Product': 69.25195043597981}, 'final_accuracy': 88.11381367599816, 'coefficients': [0.3679009974002838, 0.3015175759792328, 0.330581396818161]}, {'test_domain': 'Art', 'domain_accuracies': {'Clipart': 44.89291598023064, 'Product': 48.59967051070841, 'Real World': 57.66062602965404}, 'final_accuracy': 79.40691927512356, 'coefficients': [0.33309659361839294, 0.32746371626853943, 0.3394396901130676]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 47.182775996335316, 'Product': 35.27256069628951, 'Real World': 45.0755840586349}, 'final_accuracy': 64.59001374255612, 'coefficients': [0.35298705101013184, 0.3251970112323761, 0.32181596755981445]}, {'test_domain': 'Product', 'domain_accuracies': {'Art': 66.17117117117117, 'Clipart': 67.07207207207207, 'Real World': 75.54054054054053}, 'final_accuracy': 86.35135135135134, 'coefficients': [0.3578225076198578, 0.29663124680519104, 0.3455462157726288]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 77.69619091326297, 'Clipart': 64.34144102799449, 'Product': 70.53694355208812}, 'final_accuracy': 87.37953189536485, 'coefficients': [0.34730085730552673, 0.33571311831474304, 0.3169860243797302]}, {'test_domain': 'Art', 'domain_accuracies': {'Clipart': 55.02471169686986, 'Product': 48.92915980230643, 'Real World': 54.94233937397035}, 'final_accuracy': 80.72487644151565, 'coefficients': [0.33484575152397156, 0.3371942639350891, 0.3279600143432617]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 45.533669262482825, 'Product': 35.364177737059094, 'Real World': 41.27347686669721}, 'final_accuracy': 63.536417773705914, 'coefficients': [0.38733920454978943, 0.3336730897426605, 0.27898770570755005]}]}
+No valid results to summarize.

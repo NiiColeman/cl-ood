@@ -1,0 +1,1076 @@
+
+==================================================
+Running experiments for dataset: OfficeHome
+==================================================
+Dataset config for OfficeHome:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Art
+Training domains: ['Clipart', 'Product', 'Real World']
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.9575
+Epoch 2, Average Loss: 2.4405
+Epoch 3, Average Loss: 0.7791
+Epoch 4, Average Loss: 0.1508
+Epoch 5, Average Loss: 0.0433
+Epoch 6, Average Loss: 0.0248
+Epoch 7, Average Loss: 0.0183
+Epoch 8, Average Loss: 0.0165
+Epoch 9, Average Loss: 0.0118
+Epoch 10, Average Loss: 0.0109
+Accuracy: 61.2850
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4893
+Epoch 2, Average Loss: 4.1618
+Epoch 3, Average Loss: 3.9468
+Epoch 4, Average Loss: 3.7397
+Epoch 5, Average Loss: 3.5012
+Epoch 6, Average Loss: 3.1930
+Epoch 7, Average Loss: 2.8019
+Epoch 8, Average Loss: 2.3904
+Epoch 9, Average Loss: 2.0332
+Epoch 10, Average Loss: 1.7531
+Merged model device: cuda:0
+Accuracy: 34.7611
+Accuracy of Clipart model on test domain: 34.7611
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3639
+Epoch 2, Average Loss: 3.9963
+Epoch 3, Average Loss: 3.6641
+Epoch 4, Average Loss: 3.2354
+Epoch 5, Average Loss: 2.6518
+Epoch 6, Average Loss: 1.9688
+Epoch 7, Average Loss: 1.3902
+Epoch 8, Average Loss: 1.0230
+Epoch 9, Average Loss: 0.7997
+Epoch 10, Average Loss: 0.6539
+Merged model device: cuda:0
+Accuracy: 44.9753
+Accuracy of Product model on test domain: 44.9753
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.2648
+Epoch 2, Average Loss: 3.9408
+Epoch 3, Average Loss: 3.6272
+Epoch 4, Average Loss: 3.2790
+Epoch 5, Average Loss: 2.8525
+Epoch 6, Average Loss: 2.3179
+Epoch 7, Average Loss: 1.7580
+Epoch 8, Average Loss: 1.2941
+Epoch 9, Average Loss: 0.9781
+Epoch 10, Average Loss: 0.7755
+Merged model device: cuda:0
+Accuracy: 57.9077
+Accuracy of Real World model on test domain: 57.9077
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.9039
+Coefficient Epoch 2, Average Loss: 1.6222
+Coefficient Epoch 3, Average Loss: 1.5618
+Coefficient Epoch 4, Average Loss: 1.4857
+Coefficient Epoch 5, Average Loss: 1.5442
+Coefficient Epoch 6, Average Loss: 1.5209
+Coefficient Epoch 7, Average Loss: 1.5002
+Coefficient Epoch 8, Average Loss: 1.6397
+Coefficient Epoch 9, Average Loss: 1.5728
+Coefficient Epoch 10, Average Loss: 1.5159
+Final device check:
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.2817326486110687, 0.31678512692451477, 0.4014822542667389]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 62.1911
+Final model accuracy on test domain: 62.1911
+
+Run 2/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Clipart
+Training domains: ['Art', 'Product', 'Real World']
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.7624
+Epoch 2, Average Loss: 1.6097
+Epoch 3, Average Loss: 0.4048
+Epoch 4, Average Loss: 0.1326
+Epoch 5, Average Loss: 0.0804
+Epoch 6, Average Loss: 0.0587
+Epoch 7, Average Loss: 0.0522
+Epoch 8, Average Loss: 0.0476
+Epoch 9, Average Loss: 0.0424
+Epoch 10, Average Loss: 0.0378
+Accuracy: 75.2634
+Training domains: ['Art', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4881
+Epoch 2, Average Loss: 4.2970
+Epoch 3, Average Loss: 4.1096
+Epoch 4, Average Loss: 3.9357
+Epoch 5, Average Loss: 3.7602
+Epoch 6, Average Loss: 3.5770
+Epoch 7, Average Loss: 3.3877
+Epoch 8, Average Loss: 3.1892
+Epoch 9, Average Loss: 2.9819
+Epoch 10, Average Loss: 2.7624
+Merged model device: cuda:0
+Accuracy: 16.9033
+Accuracy of Art model on test domain: 16.9033
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3463
+Epoch 2, Average Loss: 3.9961
+Epoch 3, Average Loss: 3.6491
+Epoch 4, Average Loss: 3.2092
+Epoch 5, Average Loss: 2.5880
+Epoch 6, Average Loss: 1.8242
+Epoch 7, Average Loss: 1.2462
+Epoch 8, Average Loss: 0.9239
+Epoch 9, Average Loss: 0.7362
+Epoch 10, Average Loss: 0.6129
+Merged model device: cuda:0
+Accuracy: 37.9295
+Accuracy of Product model on test domain: 37.9295
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3563
+Epoch 2, Average Loss: 4.0369
+Epoch 3, Average Loss: 3.7402
+Epoch 4, Average Loss: 3.4045
+Epoch 5, Average Loss: 3.0071
+Epoch 6, Average Loss: 2.5289
+Epoch 7, Average Loss: 1.9984
+Epoch 8, Average Loss: 1.5047
+Epoch 9, Average Loss: 1.1370
+Epoch 10, Average Loss: 0.9016
+Merged model device: cuda:0
+Accuracy: 35.0893
+Accuracy of Real World model on test domain: 35.0893
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.4341
+Coefficient Epoch 2, Average Loss: 2.3234
+Coefficient Epoch 3, Average Loss: 2.3753
+Coefficient Epoch 4, Average Loss: 2.4523
+Coefficient Epoch 5, Average Loss: 2.4408
+Coefficient Epoch 6, Average Loss: 2.3266
+Coefficient Epoch 7, Average Loss: 2.3769
+Coefficient Epoch 8, Average Loss: 2.4044
+Coefficient Epoch 9, Average Loss: 2.4110
+Coefficient Epoch 10, Average Loss: 2.4418
+Final device check:
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.20361514389514923, 0.2823713719844818, 0.5140134692192078]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 42.6019
+Final model accuracy on test domain: 42.6019
+
+Run 3/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Real World
+Training domains: ['Art', 'Clipart', 'Product']
+Test domain: Real World
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.5154
+Epoch 2, Average Loss: 0.7697
+Epoch 3, Average Loss: 0.1177
+Epoch 4, Average Loss: 0.0397
+Epoch 5, Average Loss: 0.0224
+Epoch 6, Average Loss: 0.0158
+Epoch 7, Average Loss: 0.0129
+Epoch 8, Average Loss: 0.0111
+Epoch 9, Average Loss: 0.0092
+Epoch 10, Average Loss: 0.0076
+Accuracy: 84.9472
+Training domains: ['Art', 'Clipart', 'Product']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4972
+Epoch 2, Average Loss: 4.3164
+Epoch 3, Average Loss: 4.1399
+Epoch 4, Average Loss: 3.9725
+Epoch 5, Average Loss: 3.7985
+Epoch 6, Average Loss: 3.6218
+Epoch 7, Average Loss: 3.4417
+Epoch 8, Average Loss: 3.2553
+Epoch 9, Average Loss: 3.0638
+Epoch 10, Average Loss: 2.8651
+Merged model device: cuda:0
+Accuracy: 28.1322
+Accuracy of Art model on test domain: 28.1322
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4556
+Epoch 2, Average Loss: 4.1457
+Epoch 3, Average Loss: 3.9261
+Epoch 4, Average Loss: 3.7088
+Epoch 5, Average Loss: 3.4430
+Epoch 6, Average Loss: 3.1007
+Epoch 7, Average Loss: 2.7132
+Epoch 8, Average Loss: 2.3087
+Epoch 9, Average Loss: 1.9530
+Epoch 10, Average Loss: 1.6847
+Merged model device: cuda:0
+Accuracy: 45.6173
+Accuracy of Clipart model on test domain: 45.6173
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.2544
+Epoch 2, Average Loss: 3.8921
+Epoch 3, Average Loss: 3.5259
+Epoch 4, Average Loss: 3.0713
+Epoch 5, Average Loss: 2.4758
+Epoch 6, Average Loss: 1.8117
+Epoch 7, Average Loss: 1.2756
+Epoch 8, Average Loss: 0.9456
+Epoch 9, Average Loss: 0.7437
+Epoch 10, Average Loss: 0.6113
+Merged model device: cuda:0
+Accuracy: 69.4814
+Accuracy of Product model on test domain: 69.4814
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.9793
+Coefficient Epoch 2, Average Loss: 1.0003
+Coefficient Epoch 3, Average Loss: 0.9823
+Coefficient Epoch 4, Average Loss: 1.0150
+Coefficient Epoch 5, Average Loss: 0.9804
+Coefficient Epoch 6, Average Loss: 0.9550
+Coefficient Epoch 7, Average Loss: 0.9611
+Coefficient Epoch 8, Average Loss: 0.9939
+Coefficient Epoch 9, Average Loss: 1.0370
+Coefficient Epoch 10, Average Loss: 0.9533
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.45273587107658386, 0.18422602117061615, 0.3630381226539612]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 66.7279
+Final model accuracy on test domain: 66.7279
+
+Run 4/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Real World
+Training domains: ['Art', 'Clipart', 'Product']
+Test domain: Real World
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.4091
+Epoch 2, Average Loss: 0.8365
+Epoch 3, Average Loss: 0.1380
+Epoch 4, Average Loss: 0.0429
+Epoch 5, Average Loss: 0.0245
+Epoch 6, Average Loss: 0.0170
+Epoch 7, Average Loss: 0.0137
+Epoch 8, Average Loss: 0.0108
+Epoch 9, Average Loss: 0.0099
+Epoch 10, Average Loss: 0.0080
+Accuracy: 84.1670
+Training domains: ['Art', 'Clipart', 'Product']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4439
+Epoch 2, Average Loss: 4.2585
+Epoch 3, Average Loss: 4.0836
+Epoch 4, Average Loss: 3.9141
+Epoch 5, Average Loss: 3.7419
+Epoch 6, Average Loss: 3.5646
+Epoch 7, Average Loss: 3.3805
+Epoch 8, Average Loss: 3.1866
+Epoch 9, Average Loss: 2.9879
+Epoch 10, Average Loss: 2.7776
+Merged model device: cuda:0
+Accuracy: 33.3639
+Accuracy of Art model on test domain: 33.3639
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.5182
+Epoch 2, Average Loss: 4.1750
+Epoch 3, Average Loss: 3.9494
+Epoch 4, Average Loss: 3.7439
+Epoch 5, Average Loss: 3.4912
+Epoch 6, Average Loss: 3.1773
+Epoch 7, Average Loss: 2.8077
+Epoch 8, Average Loss: 2.4168
+Epoch 9, Average Loss: 2.0439
+Epoch 10, Average Loss: 1.7460
+Merged model device: cuda:0
+Accuracy: 49.4263
+Accuracy of Clipart model on test domain: 49.4263
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.2160
+Epoch 2, Average Loss: 3.8505
+Epoch 3, Average Loss: 3.4753
+Epoch 4, Average Loss: 2.9933
+Epoch 5, Average Loss: 2.3556
+Epoch 6, Average Loss: 1.6948
+Epoch 7, Average Loss: 1.1997
+Epoch 8, Average Loss: 0.8960
+Epoch 9, Average Loss: 0.7138
+Epoch 10, Average Loss: 0.5930
+Merged model device: cuda:0
+Accuracy: 67.6457
+Accuracy of Product model on test domain: 67.6457
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.1782
+Coefficient Epoch 2, Average Loss: 0.9389
+Coefficient Epoch 3, Average Loss: 0.9800
+Coefficient Epoch 4, Average Loss: 0.9787
+Coefficient Epoch 5, Average Loss: 0.9472
+Coefficient Epoch 6, Average Loss: 0.9907
+Coefficient Epoch 7, Average Loss: 1.0366
+Coefficient Epoch 8, Average Loss: 1.0043
+Coefficient Epoch 9, Average Loss: 0.9713
+Coefficient Epoch 10, Average Loss: 0.9869
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.1977434754371643, 0.4048227071762085, 0.3974337577819824]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 72.2809
+Final model accuracy on test domain: 72.2809
+
+Run 5/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Real World
+Training domains: ['Art', 'Clipart', 'Product']
+Test domain: Real World
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.4820
+Epoch 2, Average Loss: 0.7863
+Epoch 3, Average Loss: 0.1271
+Epoch 4, Average Loss: 0.0456
+Epoch 5, Average Loss: 0.0271
+Epoch 6, Average Loss: 0.0197
+Epoch 7, Average Loss: 0.0147
+Epoch 8, Average Loss: 0.0132
+Epoch 9, Average Loss: 0.0102
+Epoch 10, Average Loss: 0.0100
+Accuracy: 85.8192
+Training domains: ['Art', 'Clipart', 'Product']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4660
+Epoch 2, Average Loss: 4.2723
+Epoch 3, Average Loss: 4.0862
+Epoch 4, Average Loss: 3.9188
+Epoch 5, Average Loss: 3.7541
+Epoch 6, Average Loss: 3.5887
+Epoch 7, Average Loss: 3.4175
+Epoch 8, Average Loss: 3.2432
+Epoch 9, Average Loss: 3.0564
+Epoch 10, Average Loss: 2.8615
+Merged model device: cuda:0
+Accuracy: 27.3979
+Accuracy of Art model on test domain: 27.3979
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4904
+Epoch 2, Average Loss: 4.1787
+Epoch 3, Average Loss: 3.9640
+Epoch 4, Average Loss: 3.7727
+Epoch 5, Average Loss: 3.5449
+Epoch 6, Average Loss: 3.2440
+Epoch 7, Average Loss: 2.8722
+Epoch 8, Average Loss: 2.4628
+Epoch 9, Average Loss: 2.0751
+Epoch 10, Average Loss: 1.7653
+Merged model device: cuda:0
+Accuracy: 46.3515
+Accuracy of Clipart model on test domain: 46.3515
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.2834
+Epoch 2, Average Loss: 3.9288
+Epoch 3, Average Loss: 3.5617
+Epoch 4, Average Loss: 3.0985
+Epoch 5, Average Loss: 2.4837
+Epoch 6, Average Loss: 1.8189
+Epoch 7, Average Loss: 1.2986
+Epoch 8, Average Loss: 0.9785
+Epoch 9, Average Loss: 0.7778
+Epoch 10, Average Loss: 0.6434
+Merged model device: cuda:0
+Accuracy: 65.5805
+Accuracy of Product model on test domain: 65.5805
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.1123
+Coefficient Epoch 2, Average Loss: 1.1030
+Coefficient Epoch 3, Average Loss: 1.1268
+Coefficient Epoch 4, Average Loss: 1.1042
+Coefficient Epoch 5, Average Loss: 1.1353
+Coefficient Epoch 6, Average Loss: 1.1655
+Coefficient Epoch 7, Average Loss: 1.0802
+Coefficient Epoch 8, Average Loss: 1.0595
+Coefficient Epoch 9, Average Loss: 1.1016
+Coefficient Epoch 10, Average Loss: 1.1120
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.5383338928222656, 0.19893765449523926, 0.2627285122871399]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 60.0275
+Final model accuracy on test domain: 60.0275
+
+Run 6/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Clipart
+Training domains: ['Art', 'Product', 'Real World']
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.8441
+Epoch 2, Average Loss: 1.7428
+Epoch 3, Average Loss: 0.4498
+Epoch 4, Average Loss: 0.1340
+Epoch 5, Average Loss: 0.0667
+Epoch 6, Average Loss: 0.0469
+Epoch 7, Average Loss: 0.0456
+Epoch 8, Average Loss: 0.0370
+Epoch 9, Average Loss: 0.0291
+Epoch 10, Average Loss: 0.0281
+Accuracy: 73.7059
+Training domains: ['Art', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4606
+Epoch 2, Average Loss: 4.2842
+Epoch 3, Average Loss: 4.1108
+Epoch 4, Average Loss: 3.9383
+Epoch 5, Average Loss: 3.7658
+Epoch 6, Average Loss: 3.5943
+Epoch 7, Average Loss: 3.4201
+Epoch 8, Average Loss: 3.2446
+Epoch 9, Average Loss: 3.0608
+Epoch 10, Average Loss: 2.8671
+Merged model device: cuda:0
+Accuracy: 14.7045
+Accuracy of Art model on test domain: 14.7045
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3521
+Epoch 2, Average Loss: 3.9627
+Epoch 3, Average Loss: 3.5699
+Epoch 4, Average Loss: 3.0601
+Epoch 5, Average Loss: 2.3756
+Epoch 6, Average Loss: 1.6826
+Epoch 7, Average Loss: 1.1967
+Epoch 8, Average Loss: 0.9106
+Epoch 9, Average Loss: 0.7268
+Epoch 10, Average Loss: 0.6019
+Merged model device: cuda:0
+Accuracy: 36.0513
+Accuracy of Product model on test domain: 36.0513
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3794
+Epoch 2, Average Loss: 4.0578
+Epoch 3, Average Loss: 3.7669
+Epoch 4, Average Loss: 3.4437
+Epoch 5, Average Loss: 3.0458
+Epoch 6, Average Loss: 2.5640
+Epoch 7, Average Loss: 2.0437
+Epoch 8, Average Loss: 1.5323
+Epoch 9, Average Loss: 1.1315
+Epoch 10, Average Loss: 0.8702
+Merged model device: cuda:0
+Accuracy: 38.7082
+Accuracy of Real World model on test domain: 38.7082
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.4398
+Coefficient Epoch 2, Average Loss: 2.3172
+Coefficient Epoch 3, Average Loss: 2.3377
+Coefficient Epoch 4, Average Loss: 2.2986
+Coefficient Epoch 5, Average Loss: 2.3298
+Coefficient Epoch 6, Average Loss: 2.3064
+Coefficient Epoch 7, Average Loss: 2.3449
+Coefficient Epoch 8, Average Loss: 2.3803
+Coefficient Epoch 9, Average Loss: 2.3106
+Coefficient Epoch 10, Average Loss: 2.3666
+Final device check:
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.36179104447364807, 0.34128203988075256, 0.296926885843277]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 41.6858
+Final model accuracy on test domain: 41.6858
+
+Run 7/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Product
+Training domains: ['Art', 'Clipart', 'Real World']
+Test domain: Product
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.1608
+Epoch 2, Average Loss: 0.6648
+Epoch 3, Average Loss: 0.1195
+Epoch 4, Average Loss: 0.0349
+Epoch 5, Average Loss: 0.0200
+Epoch 6, Average Loss: 0.0130
+Epoch 7, Average Loss: 0.0105
+Epoch 8, Average Loss: 0.0098
+Epoch 9, Average Loss: 0.0077
+Epoch 10, Average Loss: 0.0083
+Accuracy: 88.6486
+Training domains: ['Art', 'Clipart', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4994
+Epoch 2, Average Loss: 4.3097
+Epoch 3, Average Loss: 4.1340
+Epoch 4, Average Loss: 3.9663
+Epoch 5, Average Loss: 3.8002
+Epoch 6, Average Loss: 3.6282
+Epoch 7, Average Loss: 3.4520
+Epoch 8, Average Loss: 3.2716
+Epoch 9, Average Loss: 3.0831
+Epoch 10, Average Loss: 2.8889
+Merged model device: cuda:0
+Accuracy: 19.0541
+Accuracy of Art model on test domain: 19.0541
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4679
+Epoch 2, Average Loss: 4.1724
+Epoch 3, Average Loss: 3.9412
+Epoch 4, Average Loss: 3.7121
+Epoch 5, Average Loss: 3.4502
+Epoch 6, Average Loss: 3.1340
+Epoch 7, Average Loss: 2.7699
+Epoch 8, Average Loss: 2.3915
+Epoch 9, Average Loss: 2.0413
+Epoch 10, Average Loss: 1.7661
+Merged model device: cuda:0
+Accuracy: 44.5946
+Accuracy of Clipart model on test domain: 44.5946
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3346
+Epoch 2, Average Loss: 4.0196
+Epoch 3, Average Loss: 3.7175
+Epoch 4, Average Loss: 3.3888
+Epoch 5, Average Loss: 2.9868
+Epoch 6, Average Loss: 2.5182
+Epoch 7, Average Loss: 1.9936
+Epoch 8, Average Loss: 1.5122
+Epoch 9, Average Loss: 1.1592
+Epoch 10, Average Loss: 0.9175
+Merged model device: cuda:0
+Accuracy: 68.4234
+Accuracy of Real World model on test domain: 68.4234
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.2904
+Coefficient Epoch 2, Average Loss: 1.0581
+Coefficient Epoch 3, Average Loss: 1.0469
+Coefficient Epoch 4, Average Loss: 1.0585
+Coefficient Epoch 5, Average Loss: 1.0631
+Coefficient Epoch 6, Average Loss: 1.0400
+Coefficient Epoch 7, Average Loss: 1.0624
+Coefficient Epoch 8, Average Loss: 1.0536
+Coefficient Epoch 9, Average Loss: 1.0494
+Coefficient Epoch 10, Average Loss: 1.0974
+Final device check:
+Expert model Art device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.23332136869430542, 0.36010217666625977, 0.4065764844417572]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 68.4685
+Final model accuracy on test domain: 68.4685
+
+Run 8/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Art
+Training domains: ['Clipart', 'Product', 'Real World']
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.0592
+Epoch 2, Average Loss: 2.4744
+Epoch 3, Average Loss: 0.8011
+Epoch 4, Average Loss: 0.1357
+Epoch 5, Average Loss: 0.0433
+Epoch 6, Average Loss: 0.0295
+Epoch 7, Average Loss: 0.0211
+Epoch 8, Average Loss: 0.0171
+Epoch 9, Average Loss: 0.0144
+Epoch 10, Average Loss: 0.0126
+Accuracy: 62.0264
+Training domains: ['Clipart', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4948
+Epoch 2, Average Loss: 4.1807
+Epoch 3, Average Loss: 3.9555
+Epoch 4, Average Loss: 3.7540
+Epoch 5, Average Loss: 3.5271
+Epoch 6, Average Loss: 3.2412
+Epoch 7, Average Loss: 2.8959
+Epoch 8, Average Loss: 2.5200
+Epoch 9, Average Loss: 2.1707
+Epoch 10, Average Loss: 1.8757
+Merged model device: cuda:0
+Accuracy: 33.0313
+Accuracy of Clipart model on test domain: 33.0313
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3067
+Epoch 2, Average Loss: 3.9561
+Epoch 3, Average Loss: 3.6111
+Epoch 4, Average Loss: 3.1763
+Epoch 5, Average Loss: 2.5938
+Epoch 6, Average Loss: 1.9246
+Epoch 7, Average Loss: 1.3797
+Epoch 8, Average Loss: 1.0375
+Epoch 9, Average Loss: 0.8213
+Epoch 10, Average Loss: 0.6729
+Merged model device: cuda:0
+Accuracy: 41.6804
+Accuracy of Product model on test domain: 41.6804
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3569
+Epoch 2, Average Loss: 4.0525
+Epoch 3, Average Loss: 3.7393
+Epoch 4, Average Loss: 3.3877
+Epoch 5, Average Loss: 2.9516
+Epoch 6, Average Loss: 2.4338
+Epoch 7, Average Loss: 1.8817
+Epoch 8, Average Loss: 1.4039
+Epoch 9, Average Loss: 1.0746
+Epoch 10, Average Loss: 0.8641
+Merged model device: cuda:0
+Accuracy: 57.5783
+Accuracy of Real World model on test domain: 57.5783
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 1.9418
+Coefficient Epoch 2, Average Loss: 1.5128
+Coefficient Epoch 3, Average Loss: 1.4508
+Coefficient Epoch 4, Average Loss: 1.4924
+Coefficient Epoch 5, Average Loss: 1.5198
+Coefficient Epoch 6, Average Loss: 1.4859
+Coefficient Epoch 7, Average Loss: 1.4835
+Coefficient Epoch 8, Average Loss: 1.5135
+Coefficient Epoch 9, Average Loss: 1.5607
+Coefficient Epoch 10, Average Loss: 1.4958
+Final device check:
+Expert model Clipart device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.26954764127731323, 0.45810118317604065, 0.27235111594200134]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 60.0494
+Final model accuracy on test domain: 60.0494
+
+Run 9/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Clipart
+Training domains: ['Art', 'Product', 'Real World']
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.7673
+Epoch 2, Average Loss: 1.7135
+Epoch 3, Average Loss: 0.4707
+Epoch 4, Average Loss: 0.1597
+Epoch 5, Average Loss: 0.0812
+Epoch 6, Average Loss: 0.0512
+Epoch 7, Average Loss: 0.0398
+Epoch 8, Average Loss: 0.0330
+Epoch 9, Average Loss: 0.0318
+Epoch 10, Average Loss: 0.0312
+Accuracy: 73.7059
+Training domains: ['Art', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.3816
+Epoch 2, Average Loss: 4.1987
+Epoch 3, Average Loss: 4.0203
+Epoch 4, Average Loss: 3.8476
+Epoch 5, Average Loss: 3.6750
+Epoch 6, Average Loss: 3.4966
+Epoch 7, Average Loss: 3.3148
+Epoch 8, Average Loss: 3.1268
+Epoch 9, Average Loss: 2.9261
+Epoch 10, Average Loss: 2.7166
+Merged model device: cuda:0
+Accuracy: 17.1324
+Accuracy of Art model on test domain: 17.1324
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.3456
+Epoch 2, Average Loss: 3.9744
+Epoch 3, Average Loss: 3.6267
+Epoch 4, Average Loss: 3.1675
+Epoch 5, Average Loss: 2.5016
+Epoch 6, Average Loss: 1.7527
+Epoch 7, Average Loss: 1.2145
+Epoch 8, Average Loss: 0.9134
+Epoch 9, Average Loss: 0.7331
+Epoch 10, Average Loss: 0.6118
+Merged model device: cuda:0
+Accuracy: 39.2121
+Accuracy of Product model on test domain: 39.2121
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3608
+Epoch 2, Average Loss: 4.0367
+Epoch 3, Average Loss: 3.7341
+Epoch 4, Average Loss: 3.4091
+Epoch 5, Average Loss: 2.9968
+Epoch 6, Average Loss: 2.4757
+Epoch 7, Average Loss: 1.8999
+Epoch 8, Average Loss: 1.4314
+Epoch 9, Average Loss: 1.1072
+Epoch 10, Average Loss: 0.8883
+Merged model device: cuda:0
+Accuracy: 39.0289
+Accuracy of Real World model on test domain: 39.0289
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.3855
+Coefficient Epoch 2, Average Loss: 2.3049
+Coefficient Epoch 3, Average Loss: 2.3291
+Coefficient Epoch 4, Average Loss: 2.2932
+Coefficient Epoch 5, Average Loss: 2.2852
+Coefficient Epoch 6, Average Loss: 2.3131
+Coefficient Epoch 7, Average Loss: 2.3274
+Coefficient Epoch 8, Average Loss: 2.3655
+Coefficient Epoch 9, Average Loss: 2.3461
+Coefficient Epoch 10, Average Loss: 2.2806
+Final device check:
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3405255377292633, 0.300717830657959, 0.3587566912174225]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 42.4187
+Final model accuracy on test domain: 42.4187
+
+Run 10/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Clipart
+Training domains: ['Art', 'Product', 'Real World']
+Test domain: Clipart
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.7807
+Epoch 2, Average Loss: 1.6040
+Epoch 3, Average Loss: 0.4025
+Epoch 4, Average Loss: 0.1323
+Epoch 5, Average Loss: 0.0653
+Epoch 6, Average Loss: 0.0481
+Epoch 7, Average Loss: 0.0409
+Epoch 8, Average Loss: 0.0354
+Epoch 9, Average Loss: 0.0310
+Epoch 10, Average Loss: 0.0297
+Accuracy: 73.6143
+Training domains: ['Art', 'Product', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.4902
+Epoch 2, Average Loss: 4.2994
+Epoch 3, Average Loss: 4.1221
+Epoch 4, Average Loss: 3.9566
+Epoch 5, Average Loss: 3.7896
+Epoch 6, Average Loss: 3.6188
+Epoch 7, Average Loss: 3.4412
+Epoch 8, Average Loss: 3.2554
+Epoch 9, Average Loss: 3.0646
+Epoch 10, Average Loss: 2.8688
+Merged model device: cuda:0
+Accuracy: 17.6821
+Accuracy of Art model on test domain: 17.6821
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.2809
+Epoch 2, Average Loss: 3.9124
+Epoch 3, Average Loss: 3.5394
+Epoch 4, Average Loss: 3.0582
+Epoch 5, Average Loss: 2.4163
+Epoch 6, Average Loss: 1.7526
+Epoch 7, Average Loss: 1.2615
+Epoch 8, Average Loss: 0.9585
+Epoch 9, Average Loss: 0.7711
+Epoch 10, Average Loss: 0.6417
+Merged model device: cuda:0
+Accuracy: 36.6926
+Accuracy of Product model on test domain: 36.6926
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.3902
+Epoch 2, Average Loss: 4.0789
+Epoch 3, Average Loss: 3.7897
+Epoch 4, Average Loss: 3.4767
+Epoch 5, Average Loss: 3.1003
+Epoch 6, Average Loss: 2.6271
+Epoch 7, Average Loss: 2.0710
+Epoch 8, Average Loss: 1.5277
+Epoch 9, Average Loss: 1.1368
+Epoch 10, Average Loss: 0.8897
+Merged model device: cuda:0
+Accuracy: 38.6166
+Accuracy of Real World model on test domain: 38.6166
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Domain Art - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.4752
+Coefficient Epoch 2, Average Loss: 2.4406
+Coefficient Epoch 3, Average Loss: 2.4139
+Coefficient Epoch 4, Average Loss: 2.4932
+Coefficient Epoch 5, Average Loss: 2.4136
+Coefficient Epoch 6, Average Loss: 2.4999
+Coefficient Epoch 7, Average Loss: 2.5250
+Coefficient Epoch 8, Average Loss: 2.3784
+Coefficient Epoch 9, Average Loss: 2.5060
+Coefficient Epoch 10, Average Loss: 2.4391
+Final device check:
+Expert model Art device: cuda:0
+Expert model Product device: cuda:0
+Expert model Real World device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.28176450729370117, 0.27750036120414734, 0.44073519110679626]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 42.7393
+Final model accuracy on test domain: 42.7393
+
+Summary for OfficeHome:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'Art', 'domain_accuracies': {'Clipart': 34.76112026359143, 'Product': 44.97528830313015, 'Real World': 57.90774299835255}, 'final_accuracy': 62.191103789126856, 'coefficients': [0.2817326486110687, 0.31678512692451477, 0.4014822542667389]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 16.90334402198809, 'Product': 37.92945487860742, 'Real World': 35.08932661475034}, 'final_accuracy': 42.601923957856165, 'coefficients': [0.20361514389514923, 0.2823713719844818, 0.5140134692192078]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 28.132170720514, 'Clipart': 45.61725562184488, 'Product': 69.48141349242772}, 'final_accuracy': 66.72785681505277, 'coefficients': [0.45273587107658386, 0.18422602117061615, 0.3630381226539612]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 33.36392840752639, 'Clipart': 49.42634235888022, 'Product': 67.64570904084442}, 'final_accuracy': 72.28086278109225, 'coefficients': [0.1977434754371643, 0.4048227071762085, 0.3974337577819824]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 27.397888939880676, 'Clipart': 46.3515374024782, 'Product': 65.58054153281321}, 'final_accuracy': 60.02753556677375, 'coefficients': [0.5383338928222656, 0.19893765449523926, 0.2627285122871399]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 14.704535043518094, 'Product': 36.05130554283097, 'Real World': 38.70819972514888}, 'final_accuracy': 41.68575355016033, 'coefficients': [0.36179104447364807, 0.34128203988075256, 0.296926885843277]}, {'test_domain': 'Product', 'domain_accuracies': {'Art': 19.054054054054053, 'Clipart': 44.5945945945946, 'Real World': 68.42342342342343}, 'final_accuracy': 68.46846846846847, 'coefficients': [0.23332136869430542, 0.36010217666625977, 0.4065764844417572]}, {'test_domain': 'Art', 'domain_accuracies': {'Clipart': 33.031301482701814, 'Product': 41.680395387149915, 'Real World': 57.57825370675454}, 'final_accuracy': 60.0494233937397, 'coefficients': [0.26954764127731323, 0.45810118317604065, 0.27235111594200134]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 17.132386623912048, 'Product': 39.212093449381584, 'Real World': 39.028859367842415}, 'final_accuracy': 42.418689876316996, 'coefficients': [0.3405255377292633, 0.300717830657959, 0.3587566912174225]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 17.682088868529547, 'Product': 36.69262482821805, 'Real World': 38.616582684379296}, 'final_accuracy': 42.73934951901053, 'coefficients': [0.28176450729370117, 0.27750036120414734, 0.44073519110679626]}]
+Final Model Accuracy: 55.9191 ± 11.6241
+Domain-specific Accuracies:
+  Clipart: 42.2970 ± 6.1402
+  Product: 48.8054 ± 13.5360
+  Real World: 47.9075 ± 12.1215
+  Art: 21.7963 ± 6.3813
+Average Coefficients:
+  Coefficient 1: 0.3161 ± 0.1043
+  Coefficient 2: 0.3125 ± 0.0803
+  Coefficient 3: 0.3714 ± 0.0744
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'OfficeHome': [{'test_domain': 'Art', 'domain_accuracies': {'Clipart': 34.76112026359143, 'Product': 44.97528830313015, 'Real World': 57.90774299835255}, 'final_accuracy': 62.191103789126856, 'coefficients': [0.2817326486110687, 0.31678512692451477, 0.4014822542667389]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 16.90334402198809, 'Product': 37.92945487860742, 'Real World': 35.08932661475034}, 'final_accuracy': 42.601923957856165, 'coefficients': [0.20361514389514923, 0.2823713719844818, 0.5140134692192078]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 28.132170720514, 'Clipart': 45.61725562184488, 'Product': 69.48141349242772}, 'final_accuracy': 66.72785681505277, 'coefficients': [0.45273587107658386, 0.18422602117061615, 0.3630381226539612]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 33.36392840752639, 'Clipart': 49.42634235888022, 'Product': 67.64570904084442}, 'final_accuracy': 72.28086278109225, 'coefficients': [0.1977434754371643, 0.4048227071762085, 0.3974337577819824]}, {'test_domain': 'Real World', 'domain_accuracies': {'Art': 27.397888939880676, 'Clipart': 46.3515374024782, 'Product': 65.58054153281321}, 'final_accuracy': 60.02753556677375, 'coefficients': [0.5383338928222656, 0.19893765449523926, 0.2627285122871399]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 14.704535043518094, 'Product': 36.05130554283097, 'Real World': 38.70819972514888}, 'final_accuracy': 41.68575355016033, 'coefficients': [0.36179104447364807, 0.34128203988075256, 0.296926885843277]}, {'test_domain': 'Product', 'domain_accuracies': {'Art': 19.054054054054053, 'Clipart': 44.5945945945946, 'Real World': 68.42342342342343}, 'final_accuracy': 68.46846846846847, 'coefficients': [0.23332136869430542, 0.36010217666625977, 0.4065764844417572]}, {'test_domain': 'Art', 'domain_accuracies': {'Clipart': 33.031301482701814, 'Product': 41.680395387149915, 'Real World': 57.57825370675454}, 'final_accuracy': 60.0494233937397, 'coefficients': [0.26954764127731323, 0.45810118317604065, 0.27235111594200134]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 17.132386623912048, 'Product': 39.212093449381584, 'Real World': 39.028859367842415}, 'final_accuracy': 42.418689876316996, 'coefficients': [0.3405255377292633, 0.300717830657959, 0.3587566912174225]}, {'test_domain': 'Clipart', 'domain_accuracies': {'Art': 17.682088868529547, 'Product': 36.69262482821805, 'Real World': 38.616582684379296}, 'final_accuracy': 42.73934951901053, 'coefficients': [0.28176450729370117, 0.27750036120414734, 0.44073519110679626]}]}
+No valid results to summarize.

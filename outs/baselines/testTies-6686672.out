@@ -1,0 +1,31 @@
+
+--- Run 1/3 ---
+
+Running LoRA with TIES experiment
+Test domain: photo
+Train domains: ['cartoon', 'art_painting', 'sketch']
+Baseline Epoch 1/10, Train Loss: 1.9407, Train Accuracy: 14.29%
+Val Loss: 2.1931, Val Accuracy: 23.81%
+Baseline Epoch 2/10, Train Loss: 1.1602, Train Accuracy: 71.43%
+Val Loss: 2.1780, Val Accuracy: 23.81%
+Baseline Epoch 3/10, Train Loss: 0.6925, Train Accuracy: 100.00%
+Val Loss: 2.1649, Val Accuracy: 22.22%
+Baseline Epoch 4/10, Train Loss: 0.3621, Train Accuracy: 100.00%
+Val Loss: 2.1640, Val Accuracy: 25.40%
+Baseline Epoch 5/10, Train Loss: 0.1648, Train Accuracy: 100.00%
+Val Loss: 2.1814, Val Accuracy: 28.57%
+Baseline Epoch 6/10, Train Loss: 0.0696, Train Accuracy: 100.00%
+Val Loss: 2.2060, Val Accuracy: 28.57%
+Baseline Epoch 7/10, Train Loss: 0.0312, Train Accuracy: 100.00%
+Val Loss: 2.2331, Val Accuracy: 28.57%
+Baseline Epoch 8/10, Train Loss: 0.0155, Train Accuracy: 100.00%
+Val Loss: 2.2617, Val Accuracy: 28.57%
+Baseline Epoch 9/10, Train Loss: 0.0085, Train Accuracy: 100.00%
+Val Loss: 2.2908, Val Accuracy: 30.16%
+Baseline Epoch 10/10, Train Loss: 0.0050, Train Accuracy: 100.00%
+Val Loss: 2.3204, Val Accuracy: 30.16%
+Baseline Model - Final Test Accuracy: 30.16%
+
+Evaluating individual LoRA adapters on the test domain:
+
+Training coefficients for adapter merging

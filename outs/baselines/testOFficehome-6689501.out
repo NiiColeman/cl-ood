@@ -1,0 +1,108 @@
+
+--- Run 1/4 ---
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Running LoRA with Separate Classifiers experiment
+Test domain: art_painting
+Train domains: ['cartoon', 'photo', 'sketch']
+
+Running Baseline experiment (train and test on test domain)
+Epoch 1/10, Train Loss: 1.0503, Train Accuracy: 66.67%
+Val Loss: 2.4122, Val Accuracy: 12.50%
+Epoch 2/10, Train Loss: 0.1508, Train Accuracy: 100.00%
+Val Loss: 2.4754, Val Accuracy: 12.50%
+Epoch 3/10, Train Loss: 0.0215, Train Accuracy: 100.00%
+Val Loss: 2.5211, Val Accuracy: 12.50%
+Epoch 4/10, Train Loss: 0.0054, Train Accuracy: 100.00%
+Val Loss: 2.5760, Val Accuracy: 12.50%
+Epoch 5/10, Train Loss: 0.0020, Train Accuracy: 100.00%
+Val Loss: 2.6105, Val Accuracy: 12.50%
+Epoch 6/10, Train Loss: 0.0010, Train Accuracy: 100.00%
+Val Loss: 2.6502, Val Accuracy: 12.50%
+Epoch 7/10, Train Loss: 0.0006, Train Accuracy: 100.00%
+Val Loss: 2.7050, Val Accuracy: 12.50%
+Epoch 8/10, Train Loss: 0.0004, Train Accuracy: 100.00%
+Val Loss: 2.7604, Val Accuracy: 12.50%
+Epoch 9/10, Train Loss: 0.0003, Train Accuracy: 100.00%
+Val Loss: 2.8183, Val Accuracy: 12.50%
+Epoch 10/10, Train Loss: 0.0002, Train Accuracy: 100.00%
+Val Loss: 2.8527, Val Accuracy: 12.50%
+Baseline Model - Final Test Loss: 2.4122, Test Accuracy: 12.50%
+
+Training LoRA adapter for domain: cartoon
+Epoch 1/10, Train Loss: 2.5252, Train Accuracy: 10.71%
+Val Loss: 2.6249, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 2.5084, Train Accuracy: 10.71%
+Val Loss: 2.6198, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 2.4923, Train Accuracy: 10.71%
+Val Loss: 2.6150, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 2.4764, Train Accuracy: 10.71%
+Val Loss: 2.6104, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 2.4617, Train Accuracy: 10.71%
+Val Loss: 2.6060, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 2.4481, Train Accuracy: 10.71%
+Val Loss: 2.6017, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 2.4373, Train Accuracy: 10.71%
+Val Loss: 2.5974, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 2.4266, Train Accuracy: 14.29%
+Val Loss: 2.5929, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 2.4161, Train Accuracy: 14.29%
+Val Loss: 2.5881, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 2.4076, Train Accuracy: 14.29%
+Val Loss: 2.5830, Val Accuracy: 0.00%
+Warning: No best LoRA state found for domain cartoon. Using the final state.
+Warning: No best head state found for domain cartoon. Using the final state.
+cartoon adapter trained. Validation Accuracy: 0.00%
+
+Training LoRA adapter for domain: photo
+Epoch 1/10, Train Loss: 2.0397, Train Accuracy: 21.43%
+Val Loss: 2.1605, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.0337, Train Accuracy: 21.43%
+Val Loss: 2.1587, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0282, Train Accuracy: 21.43%
+Val Loss: 2.1568, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 2.0227, Train Accuracy: 21.43%
+Val Loss: 2.1549, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 2.0175, Train Accuracy: 21.43%
+Val Loss: 2.1531, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 2.0120, Train Accuracy: 21.43%
+Val Loss: 2.1512, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 2.0067, Train Accuracy: 21.43%
+Val Loss: 2.1494, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 2.0013, Train Accuracy: 21.43%
+Val Loss: 2.1476, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.9958, Train Accuracy: 21.43%
+Val Loss: 2.1458, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.9909, Train Accuracy: 21.43%
+Val Loss: 2.1441, Val Accuracy: 28.57%
+photo adapter trained. Validation Accuracy: 28.57%
+
+Training LoRA adapter for domain: sketch
+Epoch 1/10, Train Loss: 2.2758, Train Accuracy: 32.14%
+Val Loss: 2.1170, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 2.2647, Train Accuracy: 32.14%
+Val Loss: 2.1157, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 2.2539, Train Accuracy: 32.14%
+Val Loss: 2.1146, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 2.2430, Train Accuracy: 28.57%
+Val Loss: 2.1132, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 2.2326, Train Accuracy: 28.57%
+Val Loss: 2.1112, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 2.2220, Train Accuracy: 28.57%
+Val Loss: 2.1087, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 2.2113, Train Accuracy: 28.57%
+Val Loss: 2.1057, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 2.2011, Train Accuracy: 28.57%
+Val Loss: 2.1023, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 2.1905, Train Accuracy: 28.57%
+Val Loss: 2.0987, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 2.1803, Train Accuracy: 28.57%
+Val Loss: 2.0948, Val Accuracy: 0.00%
+Warning: No best LoRA state found for domain sketch. Using the final state.
+Warning: No best head state found for domain sketch. Using the final state.
+sketch adapter trained. Validation Accuracy: 0.00%
+
+Training coefficients for adapter merging
+Initial coefficients: [0.33276686 0.33233485 0.33489832]

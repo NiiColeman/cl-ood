@@ -1,0 +1,46 @@
+
+Run 1/5
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Training LoRA adapter for domain: cartoon
+Epoch 1, Average Loss: 2.1531
+Epoch 2, Average Loss: 1.3351
+Epoch 3, Average Loss: 0.5274
+Epoch 4, Average Loss: 0.1666
+Epoch 5, Average Loss: 0.0586
+Epoch 6, Average Loss: 0.0193
+Epoch 7, Average Loss: 0.0097
+Epoch 8, Average Loss: 0.0061
+Epoch 9, Average Loss: 0.0046
+Epoch 10, Average Loss: 0.0035
+Training LoRA adapter for domain: photo
+Epoch 1, Average Loss: 1.6319
+Epoch 2, Average Loss: 0.4738
+Epoch 3, Average Loss: 0.0656
+Epoch 4, Average Loss: 0.0134
+Epoch 5, Average Loss: 0.0046
+Epoch 6, Average Loss: 0.0026
+Epoch 7, Average Loss: 0.0018
+Epoch 8, Average Loss: 0.0014
+Epoch 9, Average Loss: 0.0011
+Epoch 10, Average Loss: 0.0009
+Training LoRA adapter for domain: sketch
+Epoch 1, Average Loss: 1.7627
+Epoch 2, Average Loss: 1.1206
+Epoch 3, Average Loss: 0.7258
+Epoch 4, Average Loss: 0.5136
+Epoch 5, Average Loss: 0.3453
+Epoch 6, Average Loss: 0.2476
+Epoch 7, Average Loss: 0.1750
+Epoch 8, Average Loss: 0.0990
+Epoch 9, Average Loss: 0.0583
+Epoch 10, Average Loss: 0.0261
+Training coefficients for weight averaging
+Initial coefficients (before normalization):
+  cartoon: 1.0000
+  photo: 1.0000
+  sketch: 1.0000
+Initial coefficients (after normalization):
+  cartoon: 0.3333
+  photo: 0.3333
+  sketch: 0.3333

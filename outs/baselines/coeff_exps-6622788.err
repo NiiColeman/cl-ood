@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/baseline5.py", line 441, in <module>
+    all_results = run_experiments_multiple_datasets(datasets_config, num_runs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/baseline5.py", line 304, in run_experiments_multiple_datasets
+    dataset_results = run_dataset_experiments(dataset_config, num_runs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/baseline5.py", line 316, in run_dataset_experiments
+    temp_experiment = Baseline5Experiment(dataset_config)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/baseline5.py", line 24, in __init__
+    self.test_domain = config['test_domain']
+KeyError: 'test_domain'

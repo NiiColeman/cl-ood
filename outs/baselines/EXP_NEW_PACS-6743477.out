@@ -1,0 +1,45 @@
+
+Run 1/5
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Training LoRA adapter for domain: cartoon
+Epoch 1, Average Loss: 0.4428
+Epoch 2, Average Loss: 0.0791
+Epoch 3, Average Loss: 0.0638
+Epoch 4, Average Loss: 0.0403
+Epoch 5, Average Loss: 0.0659
+Epoch 6, Average Loss: 0.0604
+Epoch 7, Average Loss: 0.0534
+Epoch 8, Average Loss: 0.1203
+Epoch 9, Average Loss: 0.1192
+Epoch 10, Average Loss: 0.1457
+Training LoRA adapter for domain: photo
+Epoch 1, Average Loss: 0.2572
+Epoch 2, Average Loss: 0.0289
+Epoch 3, Average Loss: 0.0088
+Epoch 4, Average Loss: 0.0125
+Epoch 5, Average Loss: 0.0001
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0000
+Epoch 8, Average Loss: 0.0000
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Training LoRA adapter for domain: sketch
+Epoch 1, Average Loss: 0.6366
+Epoch 2, Average Loss: 0.2078
+Epoch 3, Average Loss: 0.2028
+Epoch 4, Average Loss: 0.1465
+Epoch 5, Average Loss: 0.1622
+Epoch 6, Average Loss: 0.1077
+Epoch 7, Average Loss: 0.1406
+Epoch 8, Average Loss: 0.1209
+Epoch 9, Average Loss: 0.1142
+Epoch 10, Average Loss: 0.1580
+Training coefficients for weight averaging
+Coefficient Epoch 1, Average Loss: 1.0312
+Coefficient Epoch 2, Average Loss: 1.0091
+Coefficient Epoch 3, Average Loss: 0.8955
+Coefficient Epoch 4, Average Loss: 0.9303
+Coefficient Epoch 5, Average Loss: 0.8948
+Learned coefficients: [0.36042657494544983, 0.31102773547172546, 0.3285456597805023]
+Creating weight-averaged model

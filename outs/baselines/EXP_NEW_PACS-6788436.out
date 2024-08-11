@@ -1,0 +1,31 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/path/to/PACS/dataset', 'max_samples_per_class': 10, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Error in run 1: [Errno 2] No such file or directory: '/path/to/PACS/dataset'
+
+Run 2/5
+Error in run 2: [Errno 2] No such file or directory: '/path/to/PACS/dataset'
+
+Run 3/5
+Error in run 3: [Errno 2] No such file or directory: '/path/to/PACS/dataset'
+
+Run 4/5
+Error in run 4: [Errno 2] No such file or directory: '/path/to/PACS/dataset'
+
+Run 5/5
+Error in run 5: [Errno 2] No such file or directory: '/path/to/PACS/dataset'
+
+Summary for PACS:
+No valid results to summarize.
+
+Results saved to ties_lora_results_20240809_141746.json
+
+Overall Summary:
+
+PACS:
+No valid results to summarize.

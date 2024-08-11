@@ -1,0 +1,626 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': 3, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 16, 'lora_alpha': 16, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 1, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': 3, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 16, 'lora_alpha': 16, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 1, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.4327
+Accuracy: 18.1818
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.1039
+Merged model device: cuda:0
+Accuracy: 27.2727
+Accuracy of cartoon model on test domain: 27.2727
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.4264
+Merged model device: cuda:0
+Accuracy: 18.1818
+Accuracy of photo model on test domain: 18.1818
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.4644
+Merged model device: cuda:0
+Accuracy: 45.4545
+Accuracy of sketch model on test domain: 45.4545
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.1345
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 27.2727
+Final model accuracy on test domain: 27.2727
+
+Run 2/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.9852
+Accuracy: 0.0000
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.4509
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of art_painting model on test domain: 9.0909
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.4074
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of photo model on test domain: 9.0909
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.0303
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of sketch model on test domain: 9.0909
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.0919
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.10650701820850372, 0.10650699585676193, 0.7869859933853149]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 18.1818
+Final model accuracy on test domain: 18.1818
+
+Run 3/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.8877
+Accuracy: 27.2727
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.6016
+Merged model device: cuda:0
+Accuracy: 36.3636
+Accuracy of art_painting model on test domain: 36.3636
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.2796
+Merged model device: cuda:0
+Accuracy: 0.0000
+Accuracy of cartoon model on test domain: 0.0000
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.2098
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of sketch model on test domain: 9.0909
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.3593
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.333333283662796]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 18.1818
+Final model accuracy on test domain: 18.1818
+
+Run 4/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: sketch
+Training domains: ['art_painting', 'cartoon', 'photo']
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.4213
+Accuracy: 18.1818
+Training domains: ['art_painting', 'cartoon', 'photo']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.1357
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of art_painting model on test domain: 9.0909
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.4522
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of cartoon model on test domain: 9.0909
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.0046
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of photo model on test domain: 9.0909
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.9004
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 0.0000
+Final model accuracy on test domain: 0.0000
+
+Run 5/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.6602
+Accuracy: 0.0000
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.5520
+Merged model device: cuda:0
+Accuracy: 0.0000
+Accuracy of cartoon model on test domain: 0.0000
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.4399
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of photo model on test domain: 9.0909
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.5368
+Merged model device: cuda:0
+Accuracy: 0.0000
+Accuracy of sketch model on test domain: 0.0000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.5778
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 0.0000
+Final model accuracy on test domain: 0.0000
+
+Run 6/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.8512
+Accuracy: 9.0909
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.4293
+Merged model device: cuda:0
+Accuracy: 27.2727
+Accuracy of art_painting model on test domain: 27.2727
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.4772
+Merged model device: cuda:0
+Accuracy: 18.1818
+Accuracy of photo model on test domain: 18.1818
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.4770
+Merged model device: cuda:0
+Accuracy: 27.2727
+Accuracy of sketch model on test domain: 27.2727
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.9139
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 9.0909
+Final model accuracy on test domain: 9.0909
+
+Run 7/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2236
+Accuracy: 18.1818
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.0534
+Merged model device: cuda:0
+Accuracy: 18.1818
+Accuracy of art_painting model on test domain: 18.1818
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.4319
+Merged model device: cuda:0
+Accuracy: 18.1818
+Accuracy of cartoon model on test domain: 18.1818
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.3527
+Merged model device: cuda:0
+Accuracy: 18.1818
+Accuracy of sketch model on test domain: 18.1818
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.1579
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.7869859933853149, 0.10650697350502014, 0.10650697350502014]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 18.1818
+Final model accuracy on test domain: 18.1818
+
+Run 8/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: sketch
+Training domains: ['art_painting', 'cartoon', 'photo']
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2563
+Accuracy: 9.0909
+Training domains: ['art_painting', 'cartoon', 'photo']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.0606
+Merged model device: cuda:0
+Accuracy: 27.2727
+Accuracy of art_painting model on test domain: 27.2727
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.4986
+Merged model device: cuda:0
+Accuracy: 0.0000
+Accuracy of cartoon model on test domain: 0.0000
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.4623
+Merged model device: cuda:0
+Accuracy: 18.1818
+Accuracy of photo model on test domain: 18.1818
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.6890
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.333333283662796]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 0.0000
+Final model accuracy on test domain: 0.0000
+
+Run 9/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.9298
+Accuracy: 27.2727
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.6230
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of cartoon model on test domain: 9.0909
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.1834
+Merged model device: cuda:0
+Accuracy: 27.2727
+Accuracy of photo model on test domain: 27.2727
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.1445
+Merged model device: cuda:0
+Accuracy: 0.0000
+Accuracy of sketch model on test domain: 0.0000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.9955
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 9.0909
+Final model accuracy on test domain: 9.0909
+
+Run 10/10
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.2277
+Accuracy: 9.0909
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.1742
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of art_painting model on test domain: 9.0909
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.9896
+Merged model device: cuda:0
+Accuracy: 18.1818
+Accuracy of photo model on test domain: 18.1818
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.3983
+Merged model device: cuda:0
+Accuracy: 9.0909
+Accuracy of sketch model on test domain: 9.0909
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.7948
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 0.0000
+Final model accuracy on test domain: 0.0000
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 27.27272727272727, 'photo': 18.181818181818183, 'sketch': 45.45454545454545}, 'final_accuracy': 27.27272727272727, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 9.090909090909092, 'photo': 9.090909090909092, 'sketch': 9.090909090909092}, 'final_accuracy': 18.181818181818183, 'coefficients': [0.10650701820850372, 0.10650699585676193, 0.7869859933853149]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 36.36363636363637, 'cartoon': 0.0, 'sketch': 9.090909090909092}, 'final_accuracy': 18.181818181818183, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.333333283662796]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 9.090909090909092, 'cartoon': 9.090909090909092, 'photo': 9.090909090909092}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 0.0, 'photo': 9.090909090909092, 'sketch': 0.0}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 27.27272727272727, 'photo': 18.181818181818183, 'sketch': 27.27272727272727}, 'final_accuracy': 9.090909090909092, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 18.181818181818183, 'cartoon': 18.181818181818183, 'sketch': 18.181818181818183}, 'final_accuracy': 18.181818181818183, 'coefficients': [0.7869859933853149, 0.10650697350502014, 0.10650697350502014]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 27.27272727272727, 'cartoon': 0.0, 'photo': 18.181818181818183}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.333333283662796]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 9.090909090909092, 'photo': 27.27272727272727, 'sketch': 0.0}, 'final_accuracy': 9.090909090909092, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 9.090909090909092, 'photo': 18.181818181818183, 'sketch': 9.090909090909092}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}]
+Final Model Accuracy: 10.0000 ± 9.4912
+Domain-specific Accuracies:
+  cartoon: 9.0909 ± 9.7186
+  photo: 15.9091 ± 6.0131
+  sketch: 14.7727 ± 14.3290
+  art_painting: 19.4805 ± 10.2260
+Average Coefficients:
+  Coefficient 1: 0.3560 ± 0.1588
+  Coefficient 2: 0.2880 ± 0.0907
+  Coefficient 3: 0.3560 ± 0.1588
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': [{'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 27.27272727272727, 'photo': 18.181818181818183, 'sketch': 45.45454545454545}, 'final_accuracy': 27.27272727272727, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 9.090909090909092, 'photo': 9.090909090909092, 'sketch': 9.090909090909092}, 'final_accuracy': 18.181818181818183, 'coefficients': [0.10650701820850372, 0.10650699585676193, 0.7869859933853149]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 36.36363636363637, 'cartoon': 0.0, 'sketch': 9.090909090909092}, 'final_accuracy': 18.181818181818183, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.333333283662796]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 9.090909090909092, 'cartoon': 9.090909090909092, 'photo': 9.090909090909092}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 0.0, 'photo': 9.090909090909092, 'sketch': 0.0}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 27.27272727272727, 'photo': 18.181818181818183, 'sketch': 27.27272727272727}, 'final_accuracy': 9.090909090909092, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 18.181818181818183, 'cartoon': 18.181818181818183, 'sketch': 18.181818181818183}, 'final_accuracy': 18.181818181818183, 'coefficients': [0.7869859933853149, 0.10650697350502014, 0.10650697350502014]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 27.27272727272727, 'cartoon': 0.0, 'photo': 18.181818181818183}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.333333283662796]}, {'test_domain': 'art_painting', 'domain_accuracies': {'cartoon': 9.090909090909092, 'photo': 27.27272727272727, 'sketch': 0.0}, 'final_accuracy': 9.090909090909092, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 9.090909090909092, 'photo': 18.181818181818183, 'sketch': 9.090909090909092}, 'final_accuracy': 0.0, 'coefficients': [0.3333333432674408, 0.3333333432674408, 0.3333333432674408]}]}
+No valid results to summarize.

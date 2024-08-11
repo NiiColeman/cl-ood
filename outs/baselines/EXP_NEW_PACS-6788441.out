@@ -1,0 +1,281 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': 10, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: sketch
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: art_painting
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: photo
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Error in run 1: 'TIESLoRAExperiment' object has no attribute 'train_and_merge_domain_model'
+
+Run 2/5
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: sketch
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: art_painting
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: photo
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Error in run 2: 'TIESLoRAExperiment' object has no attribute 'train_and_merge_domain_model'
+
+Run 3/5
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: sketch
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: art_painting
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: photo
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Error in run 3: 'TIESLoRAExperiment' object has no attribute 'train_and_merge_domain_model'
+
+Run 4/5
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: sketch
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: art_painting
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: photo
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Error in run 4: 'TIESLoRAExperiment' object has no attribute 'train_and_merge_domain_model'
+
+Run 5/5
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'photo', 'sketch']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Domain: cartoon
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: sketch
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: art_painting
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+
+Domain: photo
+  Class person: 10 samples
+  Class giraffe: 10 samples
+  Class elephant: 10 samples
+  Class house: 10 samples
+  Class guitar: 10 samples
+  Class dog: 10 samples
+  Class horse: 10 samples
+  Total samples: 70
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: cartoon
+Error in run 5: 'TIESLoRAExperiment' object has no attribute 'train_and_merge_domain_model'
+
+Summary for PACS:
+No valid results to summarize.
+
+Results saved to ties_lora_results_20240809_141934.json
+
+Overall Summary:
+
+PACS:
+No valid results to summarize.

@@ -1,0 +1,57 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 15, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 15, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 15, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 15, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Error in run 1: object of type 'NoneType' has no len()
+
+Run 2/10
+Preparing data...
+Error in run 2: object of type 'NoneType' has no len()
+
+Run 3/10
+Preparing data...
+Error in run 3: object of type 'NoneType' has no len()
+
+Run 4/10
+Preparing data...
+Error in run 4: object of type 'NoneType' has no len()
+
+Run 5/10
+Preparing data...
+Error in run 5: object of type 'NoneType' has no len()
+
+Run 6/10
+Preparing data...
+Error in run 6: object of type 'NoneType' has no len()
+
+Run 7/10
+Preparing data...
+Error in run 7: object of type 'NoneType' has no len()
+
+Run 8/10
+Preparing data...
+Error in run 8: object of type 'NoneType' has no len()
+
+Run 9/10
+Preparing data...
+Error in run 9: object of type 'NoneType' has no len()
+
+Run 10/10
+Preparing data...
+Error in run 10: object of type 'NoneType' has no len()
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': []}
+No valid results to summarize.

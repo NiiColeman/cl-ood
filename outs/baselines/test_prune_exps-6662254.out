@@ -1,0 +1,41 @@
+Preparing data...
+Selected test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.1138
+Epoch 2, Average Loss: 0.1236
+Epoch 3, Average Loss: 0.0241
+Epoch 4, Average Loss: 0.0064
+Epoch 5, Average Loss: 0.0017
+Epoch 6, Average Loss: 0.0010
+Epoch 7, Average Loss: 0.0007
+Epoch 8, Average Loss: 0.0005
+Epoch 9, Average Loss: 0.0004
+Epoch 10, Average Loss: 0.0003
+Training model for domain: photo
+Epoch 1, Average Loss: 0.8883
+Epoch 2, Average Loss: 0.0409
+Epoch 3, Average Loss: 0.0045
+Epoch 4, Average Loss: 0.0018
+Epoch 5, Average Loss: 0.0008
+Epoch 6, Average Loss: 0.0005
+Epoch 7, Average Loss: 0.0004
+Epoch 8, Average Loss: 0.0003
+Epoch 9, Average Loss: 0.0002
+Epoch 10, Average Loss: 0.0002
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.0476
+Epoch 2, Average Loss: 0.4878
+Epoch 3, Average Loss: 0.2813
+Epoch 4, Average Loss: 0.1435
+Epoch 5, Average Loss: 0.0649
+Epoch 6, Average Loss: 0.0277
+Epoch 7, Average Loss: 0.0077
+Epoch 8, Average Loss: 0.0024
+Epoch 9, Average Loss: 0.0014
+Epoch 10, Average Loss: 0.0009
+
+Creating final models...
+Training coefficients for weight averaging

@@ -1,0 +1,53 @@
+
+==================================================
+Running experiments for dataset: OfficeHome
+==================================================
+Dataset config for OfficeHome:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 15, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.05, 'coefficient_learning_rate': 1, 'coefficient_epochs': 15, 'seed': 42}
+
+Run 1/10
+Preparing data...
+Domains: ['Art', 'Clipart', 'Product', 'Real World']
+Selected test domain: Product
+Training domains: ['Art', 'Clipart', 'Real World']
+Test domain: Product
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.0478
+Epoch 2, Average Loss: 0.5350
+Epoch 3, Average Loss: 0.0906
+Epoch 4, Average Loss: 0.0269
+Epoch 5, Average Loss: 0.0143
+Epoch 6, Average Loss: 0.0100
+Epoch 7, Average Loss: 0.0076
+Epoch 8, Average Loss: 0.0059
+Epoch 9, Average Loss: 0.0048
+Epoch 10, Average Loss: 0.0040
+Accuracy: 90.2252
+Training domains: ['Art', 'Clipart', 'Real World']
+
+Training expert models...
+
+Training model for domain: Art
+Training model for domain: Art
+Epoch 1, Average Loss: 4.3335
+Epoch 2, Average Loss: 4.0753
+Epoch 3, Average Loss: 3.8393
+Epoch 4, Average Loss: 3.6142
+Epoch 5, Average Loss: 3.3741
+Epoch 6, Average Loss: 3.0946
+Epoch 7, Average Loss: 2.7567
+Epoch 8, Average Loss: 2.3604
+Epoch 9, Average Loss: 1.9336
+Epoch 10, Average Loss: 1.5350
+Merged model device: cuda:0
+Accuracy: 39.5946
+Accuracy of Art model on test domain: 39.5946
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.4067
+Epoch 2, Average Loss: 4.0215
+Epoch 3, Average Loss: 3.7193

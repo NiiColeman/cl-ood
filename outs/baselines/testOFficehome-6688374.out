@@ -1,0 +1,14 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+
+Run 1/5
+
+Running LoRA with Separate Classifiers experiment
+Test domain: Real World
+Train domains: ['Clipart', 'Art', 'Product']
+
+Running Baseline experiment (train and test on test domain)
+Epoch 1/10, Train Loss: 3.6557, Train Accuracy: 20.92%
+Val Loss: 2.7210, Val Accuracy: 37.33%

@@ -1,0 +1,52 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 16, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 16, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['sketch', 'photo', 'cartoon', 'art_painting']
+Selected test domain: art_painting
+Training domains: ['sketch', 'photo', 'cartoon']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.6443
+Epoch 2, Average Loss: 0.1272
+Epoch 3, Average Loss: 0.0271
+Epoch 4, Average Loss: 0.0046
+Epoch 5, Average Loss: 0.0887
+Epoch 6, Average Loss: 0.0921
+Epoch 7, Average Loss: 0.0647
+Epoch 8, Average Loss: 0.0484
+Epoch 9, Average Loss: 0.0438
+Epoch 10, Average Loss: 0.0496
+Training domains: ['sketch', 'photo', 'cartoon']
+
+Training expert models...
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.0610
+Epoch 2, Average Loss: 0.5394
+Epoch 3, Average Loss: 0.3671
+Epoch 4, Average Loss: 0.2472
+Epoch 5, Average Loss: 0.1744
+Epoch 6, Average Loss: 0.1262
+Epoch 7, Average Loss: 0.0803
+Epoch 8, Average Loss: 0.0469
+Epoch 9, Average Loss: 0.0243
+Epoch 10, Average Loss: 0.0227
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 46.8750
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.0319
+Epoch 2, Average Loss: 0.0874
+Epoch 3, Average Loss: 0.0182
+Epoch 4, Average Loss: 0.0078

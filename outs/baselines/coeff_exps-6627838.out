@@ -1,0 +1,73 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['art_painting', 'cartoon', 'sketch', 'photo']
+Selected test domain: art_painting
+Training domains: ['cartoon', 'sketch', 'photo']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.6563
+Epoch 2, Average Loss: 0.1116
+Epoch 3, Average Loss: 0.0648
+Epoch 4, Average Loss: 0.1535
+Epoch 5, Average Loss: 0.0575
+Epoch 6, Average Loss: 0.0325
+Epoch 7, Average Loss: 0.0266
+Epoch 8, Average Loss: 0.0351
+Epoch 9, Average Loss: 0.0585
+Epoch 10, Average Loss: 0.0940
+Accuracy: 87.1094
+Training domains: ['cartoon', 'sketch', 'photo']
+
+Training expert models...
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.0564
+Epoch 2, Average Loss: 0.2603
+Epoch 3, Average Loss: 0.1314
+Epoch 4, Average Loss: 0.0683
+Epoch 5, Average Loss: 0.0346
+Epoch 6, Average Loss: 0.0182
+Epoch 7, Average Loss: 0.0096
+Epoch 8, Average Loss: 0.0061
+Epoch 9, Average Loss: 0.0043
+Epoch 10, Average Loss: 0.0031
+Merged model device: cuda:0
+Accuracy: 82.0312
+Accuracy of cartoon model on test domain: 82.0312
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.0401
+Epoch 2, Average Loss: 0.4887
+Epoch 3, Average Loss: 0.3176
+Epoch 4, Average Loss: 0.2122
+Epoch 5, Average Loss: 0.1355
+Epoch 6, Average Loss: 0.0901
+Epoch 7, Average Loss: 0.0499
+Epoch 8, Average Loss: 0.0304
+Epoch 9, Average Loss: 0.0141
+Epoch 10, Average Loss: 0.0100
+Merged model device: cuda:0
+Accuracy: 71.3867
+Accuracy of sketch model on test domain: 71.3867
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 0.8417
+Epoch 2, Average Loss: 0.0746
+Epoch 3, Average Loss: 0.0110
+Epoch 4, Average Loss: 0.0037
+Epoch 5, Average Loss: 0.0020
+Epoch 6, Average Loss: 0.0013
+Epoch 7, Average Loss: 0.0009

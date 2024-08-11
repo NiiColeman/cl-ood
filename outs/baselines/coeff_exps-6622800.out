@@ -1,0 +1,261 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': 5, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': 5, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/1
+Preparing data...
+Domains: ['cartoon', 'photo', 'art_painting', 'sketch']
+Selected test domain: cartoon
+Training domains: ['photo', 'art_painting', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.5015
+Training domains: ['photo', 'art_painting', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.0380
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 0.0000
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.1962
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 0.0000
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.3696
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 0.0000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.4343
+Coefficient Epoch 2, Average Loss: 4.1018
+Coefficient Epoch 3, Average Loss: 3.7783
+Coefficient Epoch 4, Average Loss: 3.4662
+Coefficient Epoch 5, Average Loss: 3.1685
+Coefficient Epoch 6, Average Loss: 2.8891
+Coefficient Epoch 7, Average Loss: 2.6330
+Coefficient Epoch 8, Average Loss: 2.4063
+Coefficient Epoch 9, Average Loss: 2.2156
+Coefficient Epoch 10, Average Loss: 2.0672
+Final device check:
+Expert model photo device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3334912359714508, 0.3335207402706146, 0.33298805356025696]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 0.0000
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'cartoon', 'domain_accuracies': {'photo': 0.0, 'art_painting': 0.0, 'sketch': 0.0}, 'final_accuracy': 0.0, 'coefficients': [0.3334912359714508, 0.3335207402706146, 0.33298805356025696]}]
+Final Model Accuracy: 0.0000 ± 0.0000
+Domain-specific Accuracies:
+  photo: 0.0000 ± 0.0000
+  art_painting: 0.0000 ± 0.0000
+  sketch: 0.0000 ± 0.0000
+Average Coefficients:
+  Coefficient 1: 0.3335 ± 0.0000
+  Coefficient 2: 0.3335 ± 0.0000
+  Coefficient 3: 0.3330 ± 0.0000
+
+==================================================
+Running experiments for dataset: VLCS
+==================================================
+Dataset config for VLCS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'max_samples_per_class': 5, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS', 'max_samples_per_class': 5, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/1
+Preparing data...
+Domains: ['SUN09', 'Caltech101', 'LabelMe', 'VOC2007']
+Selected test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.7653
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.7218
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.8494
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 23.0769
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 2.0401
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 23.0769
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.1178
+Coefficient Epoch 2, Average Loss: 2.8688
+Coefficient Epoch 3, Average Loss: 2.6298
+Coefficient Epoch 4, Average Loss: 2.4044
+Coefficient Epoch 5, Average Loss: 2.1970
+Coefficient Epoch 6, Average Loss: 2.0127
+Coefficient Epoch 7, Average Loss: 1.8574
+Coefficient Epoch 8, Average Loss: 1.7364
+Coefficient Epoch 9, Average Loss: 1.6536
+Coefficient Epoch 10, Average Loss: 1.6094
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3330042064189911, 0.3335317373275757, 0.3334640562534332]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 23.0769
+
+Summary for VLCS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 23.076923076923077, 'Caltech101': 23.076923076923077, 'VOC2007': 23.076923076923077}, 'final_accuracy': 23.076923076923077, 'coefficients': [0.3330042064189911, 0.3335317373275757, 0.3334640562534332]}]
+Final Model Accuracy: 23.0769 ± 0.0000
+Domain-specific Accuracies:
+  SUN09: 23.0769 ± 0.0000
+  Caltech101: 23.0769 ± 0.0000
+  VOC2007: 23.0769 ± 0.0000
+Average Coefficients:
+  Coefficient 1: 0.3330 ± 0.0000
+  Coefficient 2: 0.3335 ± 0.0000
+  Coefficient 3: 0.3335 ± 0.0000
+
+==================================================
+Running experiments for dataset: OfficeHome
+==================================================
+Dataset config for OfficeHome:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': 5, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home', 'max_samples_per_class': 5, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 1, 'learning_rate': 1e-05, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/1
+Preparing data...
+Domains: ['Real World', 'Product', 'Art', 'Clipart']
+Selected test domain: Art
+Training domains: ['Real World', 'Product', 'Clipart']
+Test domain: Art
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 4.6388
+Training domains: ['Real World', 'Product', 'Clipart']
+
+Training expert models...
+
+Training model for domain: Real World
+Training model for domain: Real World
+Epoch 1, Average Loss: 4.5121
+Merged model device: cuda:0
+Accuracy of Real World model on test domain: 2.4540
+
+Training model for domain: Product
+Training model for domain: Product
+Epoch 1, Average Loss: 4.5012
+Merged model device: cuda:0
+Accuracy of Product model on test domain: 2.4540
+
+Training model for domain: Clipart
+Training model for domain: Clipart
+Epoch 1, Average Loss: 4.6729
+Merged model device: cuda:0
+Accuracy of Clipart model on test domain: 2.4540
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model Real World device: cuda:0
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Domain Real World - Input device: cuda:0, Model device: cuda:0
+Domain Product - Input device: cuda:0, Model device: cuda:0
+Domain Clipart - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 5.6620
+Coefficient Epoch 2, Average Loss: 4.3320
+Coefficient Epoch 3, Average Loss: 4.3513
+Coefficient Epoch 4, Average Loss: 4.3882
+Coefficient Epoch 5, Average Loss: 4.1846
+Coefficient Epoch 6, Average Loss: 4.1823
+Coefficient Epoch 7, Average Loss: 4.1723
+Coefficient Epoch 8, Average Loss: 4.2233
+Coefficient Epoch 9, Average Loss: 4.1935
+Coefficient Epoch 10, Average Loss: 4.2221
+Final device check:
+Expert model Real World device: cuda:0
+Expert model Product device: cuda:0
+Expert model Clipart device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.34060484170913696, 0.3312012553215027, 0.32819393277168274]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 2.4540
+
+Summary for OfficeHome:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'Art', 'domain_accuracies': {'Real World': 2.4539877300613497, 'Product': 2.4539877300613497, 'Clipart': 2.4539877300613497}, 'final_accuracy': 2.4539877300613497, 'coefficients': [0.34060484170913696, 0.3312012553215027, 0.32819393277168274]}]
+Final Model Accuracy: 2.4540 ± 0.0000
+Domain-specific Accuracies:
+  Real World: 2.4540 ± 0.0000
+  Product: 2.4540 ± 0.0000
+  Clipart: 2.4540 ± 0.0000
+Average Coefficients:
+  Coefficient 1: 0.3406 ± 0.0000
+  Coefficient 2: 0.3312 ± 0.0000
+  Coefficient 3: 0.3282 ± 0.0000
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': [{'test_domain': 'cartoon', 'domain_accuracies': {'photo': 0.0, 'art_painting': 0.0, 'sketch': 0.0}, 'final_accuracy': 0.0, 'coefficients': [0.3334912359714508, 0.3335207402706146, 0.33298805356025696]}], 'VLCS': [{'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 23.076923076923077, 'Caltech101': 23.076923076923077, 'VOC2007': 23.076923076923077}, 'final_accuracy': 23.076923076923077, 'coefficients': [0.3330042064189911, 0.3335317373275757, 0.3334640562534332]}], 'OfficeHome': [{'test_domain': 'Art', 'domain_accuracies': {'Real World': 2.4539877300613497, 'Product': 2.4539877300613497, 'Clipart': 2.4539877300613497}, 'final_accuracy': 2.4539877300613497, 'coefficients': [0.34060484170913696, 0.3312012553215027, 0.32819393277168274]}]}
+No valid results to summarize.

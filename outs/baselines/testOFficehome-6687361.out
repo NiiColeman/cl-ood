@@ -1,0 +1,12 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+
+Run 1/5
+
+Running LoRA with Separate Classifiers experiment
+Test domain: Product
+Train domains: ['Art', 'Clipart', 'Real World']
+
+Running Baseline experiment (train and test on test domain)

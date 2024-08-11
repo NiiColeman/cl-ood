@@ -7,8 +7,8 @@
 #SBATCH --gres=gpu:3      # 4 gpus per node out of 4
 #SBATCH --mem=64GB          # memory per node out of 494000MB 
 #SBATCH --job-name=ood_generalization
-#SBATCH --output=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/coeff_exps-%j.out
-#SBATCH --error=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/coeff_exps-%j.err
+#SBATCH --output=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/EXP_NEW_SVIRO-%j.out
+#SBATCH --error=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/EXP_NEW_SVIRO-%j.err
 
 # Load necessary modules
 export CUDA_HOME=/leonardo/prod/opt/compilers/cuda/12.1/none
@@ -23,10 +23,13 @@ source /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/bin/activate
 # python experiments/hyperparamsearch.py
 # python experiments/lora_hyperparameter_search.py
 # python experiments/baseline_experiments.py
-# python experiments/base_line_3.py
-# python experiments/baseline_4.py
-python experiments/test.py 
+# python experiments/exp.py
+python experiments/baseline5.py
+# python experiments/run.py
+# python experiments/ties.py
+# python experiments/test.py 
 # python experiments/weighted_avg.py
 # Deactivate the virtual environment
+# python experiments/weight_pruning.py
 
 deactivate

@@ -1,0 +1,2759 @@
+
+--- Run 1/3 ---
+
+Running LoRA with TIES experiment
+Test domain: art_painting
+Train domains: ['cartoon', 'photo', 'sketch']
+Baseline Epoch 1/10, Train Loss: 1.8297, Train Accuracy: 30.39%
+Val Loss: 1.4580, Val Accuracy: 47.72%
+Baseline Epoch 2/10, Train Loss: 0.7885, Train Accuracy: 84.31%
+Val Loss: 1.0676, Val Accuracy: 66.38%
+Baseline Epoch 3/10, Train Loss: 0.3408, Train Accuracy: 97.06%
+Val Loss: 0.7412, Val Accuracy: 79.45%
+Baseline Epoch 4/10, Train Loss: 0.1133, Train Accuracy: 100.00%
+Val Loss: 0.5565, Val Accuracy: 84.76%
+Baseline Epoch 5/10, Train Loss: 0.0367, Train Accuracy: 100.00%
+Val Loss: 0.4780, Val Accuracy: 86.23%
+Baseline Epoch 6/10, Train Loss: 0.0156, Train Accuracy: 100.00%
+Val Loss: 0.4475, Val Accuracy: 86.33%
+Baseline Epoch 7/10, Train Loss: 0.0078, Train Accuracy: 100.00%
+Val Loss: 0.4338, Val Accuracy: 86.17%
+Baseline Epoch 8/10, Train Loss: 0.0049, Train Accuracy: 100.00%
+Val Loss: 0.4279, Val Accuracy: 86.50%
+Baseline Epoch 9/10, Train Loss: 0.0035, Train Accuracy: 100.00%
+Val Loss: 0.4236, Val Accuracy: 86.55%
+Baseline Epoch 10/10, Train Loss: 0.0030, Train Accuracy: 100.00%
+Val Loss: 0.4196, Val Accuracy: 86.77%
+Baseline Model - Final Test Accuracy: 86.77%
+
+Training LoRA adapter for domain: cartoon
+
+Training LoRA adapter for domain: cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.6867, Train Accuracy: 34.03%
+Val Loss: 1.1511, Val Accuracy: 61.19%
+Epoch 2/10, Train Loss: 0.6550, Train Accuracy: 77.49%
+Val Loss: 0.4256, Val Accuracy: 88.06%
+Epoch 3/10, Train Loss: 0.2784, Train Accuracy: 91.79%
+Val Loss: 0.2436, Val Accuracy: 92.96%
+Epoch 4/10, Train Loss: 0.1428, Train Accuracy: 95.68%
+Val Loss: 0.2285, Val Accuracy: 92.11%
+Epoch 5/10, Train Loss: 0.0796, Train Accuracy: 97.97%
+Val Loss: 0.1956, Val Accuracy: 93.82%
+Epoch 6/10, Train Loss: 0.0466, Train Accuracy: 99.15%
+Val Loss: 0.1464, Val Accuracy: 95.52%
+Epoch 7/10, Train Loss: 0.0247, Train Accuracy: 99.79%
+Val Loss: 0.1452, Val Accuracy: 94.88%
+Epoch 8/10, Train Loss: 0.0135, Train Accuracy: 100.00%
+Val Loss: 0.1466, Val Accuracy: 95.31%
+Epoch 9/10, Train Loss: 0.0078, Train Accuracy: 100.00%
+Val Loss: 0.1277, Val Accuracy: 95.74%
+Epoch 10/10, Train Loss: 0.0053, Train Accuracy: 100.00%
+Val Loss: 0.1331, Val Accuracy: 95.52%
+cartoon adapter trained. Validation Accuracy: 95.74%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.6183, Train Accuracy: 40.79%
+Val Loss: 0.9835, Val Accuracy: 70.06%
+Epoch 2/10, Train Loss: 0.5268, Train Accuracy: 89.15%
+Val Loss: 0.1690, Val Accuracy: 96.71%
+Epoch 3/10, Train Loss: 0.0726, Train Accuracy: 98.95%
+Val Loss: 0.0308, Val Accuracy: 99.70%
+Epoch 4/10, Train Loss: 0.0168, Train Accuracy: 99.85%
+Val Loss: 0.0165, Val Accuracy: 100.00%
+Epoch 5/10, Train Loss: 0.0058, Train Accuracy: 100.00%
+Val Loss: 0.0161, Val Accuracy: 99.70%
+Epoch 6/10, Train Loss: 0.0034, Train Accuracy: 100.00%
+Val Loss: 0.0108, Val Accuracy: 100.00%
+Epoch 7/10, Train Loss: 0.0024, Train Accuracy: 100.00%
+Val Loss: 0.0094, Val Accuracy: 100.00%
+Epoch 8/10, Train Loss: 0.0018, Train Accuracy: 100.00%
+Val Loss: 0.0095, Val Accuracy: 99.70%
+Epoch 9/10, Train Loss: 0.0013, Train Accuracy: 100.00%
+Val Loss: 0.0082, Val Accuracy: 99.70%
+Epoch 10/10, Train Loss: 0.0011, Train Accuracy: 100.00%
+Val Loss: 0.0074, Val Accuracy: 100.00%
+photo adapter trained. Validation Accuracy: 100.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.2255, Train Accuracy: 51.00%
+Val Loss: 0.8503, Val Accuracy: 63.99%
+Epoch 2/10, Train Loss: 0.6905, Train Accuracy: 73.18%
+Val Loss: 0.5996, Val Accuracy: 76.21%
+Epoch 3/10, Train Loss: 0.4653, Train Accuracy: 81.83%
+Val Loss: 0.4786, Val Accuracy: 81.81%
+Epoch 4/10, Train Loss: 0.3461, Train Accuracy: 87.46%
+Val Loss: 0.4743, Val Accuracy: 80.79%
+Epoch 5/10, Train Loss: 0.2758, Train Accuracy: 90.42%
+Val Loss: 0.4341, Val Accuracy: 83.97%
+Epoch 6/10, Train Loss: 0.1867, Train Accuracy: 93.73%
+Val Loss: 0.4141, Val Accuracy: 86.39%
+Epoch 7/10, Train Loss: 0.1581, Train Accuracy: 94.75%
+Val Loss: 0.3745, Val Accuracy: 87.15%
+Epoch 8/10, Train Loss: 0.1047, Train Accuracy: 97.01%
+Val Loss: 0.3504, Val Accuracy: 88.68%
+Epoch 9/10, Train Loss: 0.0738, Train Accuracy: 97.80%
+Val Loss: 0.3681, Val Accuracy: 88.30%
+Epoch 10/10, Train Loss: 0.0439, Train Accuracy: 99.17%
+Val Loss: 0.4166, Val Accuracy: 87.91%
+sketch adapter trained. Validation Accuracy: 88.68%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Number of trained LoRA adapters: 3
+
+Training coefficients for adapter merging
+Number of LoRA adapters: 3
+Creating LoRA model for cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for cartoon
+Creating LoRA model for photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for photo
+Creating LoRA model for sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for sketch
+Number of LoRA models created: 3
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 1, Loss: 1.8492, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 2, Loss: 1.8634, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 3, Loss: 1.8512, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 4, Loss: 1.8001, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 5, Loss: 1.8435, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 6, Loss: 1.8342, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 7, Loss: 1.8132, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 8, Loss: 1.8240, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 9, Loss: 1.8300, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 10, Loss: 1.8305, Accuracy: 40.69%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Best coefficient accuracy: 40.69%
+Final best coefficients: [0.33333334 0.33333334 0.33333334]
+
+Merged model with TIES - Test Loss: 1.6810, Test Accuracy: 38.02%
+
+--- Run 2/3 ---
+
+Running LoRA with TIES experiment
+Test domain: art_painting
+Train domains: ['cartoon', 'photo', 'sketch']
+Baseline Epoch 1/10, Train Loss: 1.8297, Train Accuracy: 30.39%
+Val Loss: 1.4580, Val Accuracy: 47.78%
+Baseline Epoch 2/10, Train Loss: 0.7883, Train Accuracy: 84.31%
+Val Loss: 1.0674, Val Accuracy: 66.38%
+Baseline Epoch 3/10, Train Loss: 0.3403, Train Accuracy: 97.06%
+Val Loss: 0.7408, Val Accuracy: 79.61%
+Baseline Epoch 4/10, Train Loss: 0.1131, Train Accuracy: 100.00%
+Val Loss: 0.5558, Val Accuracy: 84.98%
+Baseline Epoch 5/10, Train Loss: 0.0365, Train Accuracy: 100.00%
+Val Loss: 0.4772, Val Accuracy: 86.39%
+Baseline Epoch 6/10, Train Loss: 0.0155, Train Accuracy: 100.00%
+Val Loss: 0.4468, Val Accuracy: 86.55%
+Baseline Epoch 7/10, Train Loss: 0.0078, Train Accuracy: 100.00%
+Val Loss: 0.4329, Val Accuracy: 86.28%
+Baseline Epoch 8/10, Train Loss: 0.0049, Train Accuracy: 100.00%
+Val Loss: 0.4271, Val Accuracy: 86.66%
+Baseline Epoch 9/10, Train Loss: 0.0035, Train Accuracy: 100.00%
+Val Loss: 0.4234, Val Accuracy: 86.44%
+Baseline Epoch 10/10, Train Loss: 0.0030, Train Accuracy: 100.00%
+Val Loss: 0.4196, Val Accuracy: 86.66%
+Baseline Model - Final Test Accuracy: 86.66%
+
+Training LoRA adapter for domain: cartoon
+
+Training LoRA adapter for domain: cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.6867, Train Accuracy: 34.03%
+Val Loss: 1.1511, Val Accuracy: 61.19%
+Epoch 2/10, Train Loss: 0.6549, Train Accuracy: 77.49%
+Val Loss: 0.4261, Val Accuracy: 88.27%
+Epoch 3/10, Train Loss: 0.2791, Train Accuracy: 91.73%
+Val Loss: 0.2439, Val Accuracy: 92.96%
+Epoch 4/10, Train Loss: 0.1426, Train Accuracy: 95.57%
+Val Loss: 0.2323, Val Accuracy: 92.32%
+Epoch 5/10, Train Loss: 0.0801, Train Accuracy: 97.92%
+Val Loss: 0.2010, Val Accuracy: 93.39%
+Epoch 6/10, Train Loss: 0.0471, Train Accuracy: 99.09%
+Val Loss: 0.1481, Val Accuracy: 95.31%
+Epoch 7/10, Train Loss: 0.0260, Train Accuracy: 99.73%
+Val Loss: 0.1460, Val Accuracy: 95.10%
+Epoch 8/10, Train Loss: 0.0134, Train Accuracy: 100.00%
+Val Loss: 0.1447, Val Accuracy: 95.52%
+Epoch 9/10, Train Loss: 0.0078, Train Accuracy: 100.00%
+Val Loss: 0.1276, Val Accuracy: 95.95%
+Epoch 10/10, Train Loss: 0.0054, Train Accuracy: 100.00%
+Val Loss: 0.1326, Val Accuracy: 95.95%
+cartoon adapter trained. Validation Accuracy: 95.95%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.6183, Train Accuracy: 40.79%
+Val Loss: 0.9835, Val Accuracy: 70.06%
+Epoch 2/10, Train Loss: 0.5269, Train Accuracy: 89.15%
+Val Loss: 0.1692, Val Accuracy: 97.01%
+Epoch 3/10, Train Loss: 0.0729, Train Accuracy: 98.95%
+Val Loss: 0.0312, Val Accuracy: 99.70%
+Epoch 4/10, Train Loss: 0.0169, Train Accuracy: 99.85%
+Val Loss: 0.0160, Val Accuracy: 100.00%
+Epoch 5/10, Train Loss: 0.0058, Train Accuracy: 100.00%
+Val Loss: 0.0157, Val Accuracy: 99.70%
+Epoch 6/10, Train Loss: 0.0034, Train Accuracy: 100.00%
+Val Loss: 0.0108, Val Accuracy: 100.00%
+Epoch 7/10, Train Loss: 0.0024, Train Accuracy: 100.00%
+Val Loss: 0.0090, Val Accuracy: 100.00%
+Epoch 8/10, Train Loss: 0.0017, Train Accuracy: 100.00%
+Val Loss: 0.0093, Val Accuracy: 99.70%
+Epoch 9/10, Train Loss: 0.0013, Train Accuracy: 100.00%
+Val Loss: 0.0080, Val Accuracy: 99.70%
+Epoch 10/10, Train Loss: 0.0011, Train Accuracy: 100.00%
+Val Loss: 0.0072, Val Accuracy: 100.00%
+photo adapter trained. Validation Accuracy: 100.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.2255, Train Accuracy: 51.00%
+Val Loss: 0.8503, Val Accuracy: 63.99%
+Epoch 2/10, Train Loss: 0.6905, Train Accuracy: 73.18%
+Val Loss: 0.5996, Val Accuracy: 76.21%
+Epoch 3/10, Train Loss: 0.4653, Train Accuracy: 81.86%
+Val Loss: 0.4786, Val Accuracy: 81.81%
+Epoch 4/10, Train Loss: 0.3457, Train Accuracy: 87.50%
+Val Loss: 0.4769, Val Accuracy: 80.53%
+Epoch 5/10, Train Loss: 0.2768, Train Accuracy: 90.45%
+Val Loss: 0.4366, Val Accuracy: 83.97%
+Epoch 6/10, Train Loss: 0.1871, Train Accuracy: 93.60%
+Val Loss: 0.4079, Val Accuracy: 86.39%
+Epoch 7/10, Train Loss: 0.1567, Train Accuracy: 94.78%
+Val Loss: 0.3722, Val Accuracy: 87.53%
+Epoch 8/10, Train Loss: 0.1044, Train Accuracy: 96.88%
+Val Loss: 0.3509, Val Accuracy: 88.80%
+Epoch 9/10, Train Loss: 0.0751, Train Accuracy: 97.71%
+Val Loss: 0.3680, Val Accuracy: 88.30%
+Epoch 10/10, Train Loss: 0.0439, Train Accuracy: 99.14%
+Val Loss: 0.4175, Val Accuracy: 88.30%
+sketch adapter trained. Validation Accuracy: 88.80%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Number of trained LoRA adapters: 3
+
+Training coefficients for adapter merging
+Number of LoRA adapters: 3
+Creating LoRA model for cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for cartoon
+Creating LoRA model for photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for photo
+Creating LoRA model for sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for sketch
+Number of LoRA models created: 3
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 1, Loss: 1.8492, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 2, Loss: 1.8616, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 3, Loss: 1.8481, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 4, Loss: 1.7983, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 5, Loss: 1.8408, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 6, Loss: 1.8321, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 7, Loss: 1.8106, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 8, Loss: 1.8215, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 9, Loss: 1.8264, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 10, Loss: 1.8297, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Best coefficient accuracy: 41.18%
+Final best coefficients: [0.33333334 0.33333334 0.33333334]
+
+Merged model with TIES - Test Loss: 1.6793, Test Accuracy: 38.07%
+
+--- Run 3/3 ---
+
+Running LoRA with TIES experiment
+Test domain: art_painting
+Train domains: ['cartoon', 'photo', 'sketch']
+Baseline Epoch 1/10, Train Loss: 1.8297, Train Accuracy: 30.39%
+Val Loss: 1.4580, Val Accuracy: 47.72%
+Baseline Epoch 2/10, Train Loss: 0.7885, Train Accuracy: 84.31%
+Val Loss: 1.0676, Val Accuracy: 66.38%
+Baseline Epoch 3/10, Train Loss: 0.3408, Train Accuracy: 97.06%
+Val Loss: 0.7412, Val Accuracy: 79.45%
+Baseline Epoch 4/10, Train Loss: 0.1133, Train Accuracy: 100.00%
+Val Loss: 0.5565, Val Accuracy: 84.76%
+Baseline Epoch 5/10, Train Loss: 0.0367, Train Accuracy: 100.00%
+Val Loss: 0.4780, Val Accuracy: 86.17%
+Baseline Epoch 6/10, Train Loss: 0.0156, Train Accuracy: 100.00%
+Val Loss: 0.4474, Val Accuracy: 86.28%
+Baseline Epoch 7/10, Train Loss: 0.0078, Train Accuracy: 100.00%
+Val Loss: 0.4335, Val Accuracy: 86.17%
+Baseline Epoch 8/10, Train Loss: 0.0049, Train Accuracy: 100.00%
+Val Loss: 0.4275, Val Accuracy: 86.55%
+Baseline Epoch 9/10, Train Loss: 0.0035, Train Accuracy: 100.00%
+Val Loss: 0.4233, Val Accuracy: 86.50%
+Baseline Epoch 10/10, Train Loss: 0.0030, Train Accuracy: 100.00%
+Val Loss: 0.4193, Val Accuracy: 86.77%
+Baseline Model - Final Test Accuracy: 86.77%
+
+Training LoRA adapter for domain: cartoon
+
+Training LoRA adapter for domain: cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.6867, Train Accuracy: 34.03%
+Val Loss: 1.1511, Val Accuracy: 61.19%
+Epoch 2/10, Train Loss: 0.6556, Train Accuracy: 77.39%
+Val Loss: 0.4273, Val Accuracy: 88.49%
+Epoch 3/10, Train Loss: 0.2757, Train Accuracy: 92.00%
+Val Loss: 0.2418, Val Accuracy: 93.18%
+Epoch 4/10, Train Loss: 0.1413, Train Accuracy: 95.57%
+Val Loss: 0.2293, Val Accuracy: 92.11%
+Epoch 5/10, Train Loss: 0.0800, Train Accuracy: 98.24%
+Val Loss: 0.1933, Val Accuracy: 93.60%
+Epoch 6/10, Train Loss: 0.0466, Train Accuracy: 99.04%
+Val Loss: 0.1480, Val Accuracy: 95.74%
+Epoch 7/10, Train Loss: 0.0239, Train Accuracy: 99.73%
+Val Loss: 0.1551, Val Accuracy: 95.52%
+Epoch 8/10, Train Loss: 0.0136, Train Accuracy: 100.00%
+Val Loss: 0.1451, Val Accuracy: 95.52%
+Epoch 9/10, Train Loss: 0.0081, Train Accuracy: 100.00%
+Val Loss: 0.1273, Val Accuracy: 95.95%
+Epoch 10/10, Train Loss: 0.0054, Train Accuracy: 100.00%
+Val Loss: 0.1320, Val Accuracy: 95.74%
+cartoon adapter trained. Validation Accuracy: 95.95%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.6184, Train Accuracy: 40.79%
+Val Loss: 0.9833, Val Accuracy: 69.76%
+Epoch 2/10, Train Loss: 0.5275, Train Accuracy: 88.85%
+Val Loss: 0.1734, Val Accuracy: 97.01%
+Epoch 3/10, Train Loss: 0.0743, Train Accuracy: 99.10%
+Val Loss: 0.0380, Val Accuracy: 99.40%
+Epoch 4/10, Train Loss: 0.0172, Train Accuracy: 99.85%
+Val Loss: 0.0213, Val Accuracy: 99.70%
+Epoch 5/10, Train Loss: 0.0061, Train Accuracy: 100.00%
+Val Loss: 0.0213, Val Accuracy: 99.40%
+Epoch 6/10, Train Loss: 0.0036, Train Accuracy: 100.00%
+Val Loss: 0.0167, Val Accuracy: 99.70%
+Epoch 7/10, Train Loss: 0.0025, Train Accuracy: 100.00%
+Val Loss: 0.0145, Val Accuracy: 99.70%
+Epoch 8/10, Train Loss: 0.0018, Train Accuracy: 100.00%
+Val Loss: 0.0153, Val Accuracy: 99.40%
+Epoch 9/10, Train Loss: 0.0014, Train Accuracy: 100.00%
+Val Loss: 0.0140, Val Accuracy: 99.70%
+Epoch 10/10, Train Loss: 0.0011, Train Accuracy: 100.00%
+Val Loss: 0.0136, Val Accuracy: 99.70%
+photo adapter trained. Validation Accuracy: 99.70%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.2255, Train Accuracy: 51.00%
+Val Loss: 0.8503, Val Accuracy: 63.99%
+Epoch 2/10, Train Loss: 0.6905, Train Accuracy: 73.18%
+Val Loss: 0.5996, Val Accuracy: 76.21%
+Epoch 3/10, Train Loss: 0.4653, Train Accuracy: 81.83%
+Val Loss: 0.4786, Val Accuracy: 81.81%
+Epoch 4/10, Train Loss: 0.3461, Train Accuracy: 87.46%
+Val Loss: 0.4746, Val Accuracy: 80.79%
+Epoch 5/10, Train Loss: 0.2757, Train Accuracy: 90.42%
+Val Loss: 0.4342, Val Accuracy: 83.84%
+Epoch 6/10, Train Loss: 0.1867, Train Accuracy: 93.76%
+Val Loss: 0.4141, Val Accuracy: 86.39%
+Epoch 7/10, Train Loss: 0.1580, Train Accuracy: 94.81%
+Val Loss: 0.3739, Val Accuracy: 87.40%
+Epoch 8/10, Train Loss: 0.1046, Train Accuracy: 96.95%
+Val Loss: 0.3513, Val Accuracy: 88.68%
+Epoch 9/10, Train Loss: 0.0742, Train Accuracy: 97.74%
+Val Loss: 0.3674, Val Accuracy: 88.30%
+Epoch 10/10, Train Loss: 0.0440, Train Accuracy: 99.14%
+Val Loss: 0.4155, Val Accuracy: 88.04%
+sketch adapter trained. Validation Accuracy: 88.68%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Number of trained LoRA adapters: 3
+
+Training coefficients for adapter merging
+Number of LoRA adapters: 3
+Creating LoRA model for cartoon
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for cartoon
+Creating LoRA model for photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for photo
+Creating LoRA model for sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Setting weights for sketch
+Number of LoRA models created: 3
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 1, Loss: 1.8497, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 2, Loss: 1.8637, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 3, Loss: 1.8513, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 4, Loss: 1.8005, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 5, Loss: 1.8435, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 6, Loss: 1.8341, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 7, Loss: 1.8132, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 8, Loss: 1.8240, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 9, Loss: 1.8297, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([32, 3, 224, 224])
+Target shape: torch.Size([32])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([32, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([32, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([32, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 32, 7])
+Final outputs shape: torch.Size([32, 7])
+Input shape: torch.Size([12, 3, 224, 224])
+Target shape: torch.Size([12])
+Processing model 0: cartoon
+Model 0 (cartoon) output shape: torch.Size([12, 7])
+Processing model 1: photo
+Model 1 (photo) output shape: torch.Size([12, 7])
+Processing model 2: sketch
+Model 2 (sketch) output shape: torch.Size([12, 7])
+Number of model outputs: 3
+Weighted outputs shape: torch.Size([3, 12, 7])
+Final outputs shape: torch.Size([12, 7])
+Epoch 10, Loss: 1.8309, Accuracy: 41.18%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Best coefficient accuracy: 41.18%
+Final best coefficients: [0.33333334 0.33333334 0.33333334]
+
+Merged model with TIES - Test Loss: 1.6810, Test Accuracy: 38.02%
+
+Summary of All Runs:
+Baseline Model Accuracy: 86.73% ± 0.05%
+Merged Model Accuracy: 38.03% ± 0.03%
+Average Coefficients:
+  cartoon: 0.3333 ± 0.0000
+  photo: 0.3333 ± 0.0000
+  sketch: 0.3333 ± 0.0000

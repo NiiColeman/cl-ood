@@ -1,0 +1,67 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.0001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/5
+Preparing data...
+Domains: ['photo', 'art_painting', 'cartoon', 'sketch']
+Selected test domain: sketch
+Training domains: ['photo', 'art_painting', 'cartoon']
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.6122
+Epoch 2, Average Loss: 1.1362
+Epoch 3, Average Loss: 0.7534
+Epoch 4, Average Loss: 0.4193
+Epoch 5, Average Loss: 0.2212
+Epoch 6, Average Loss: 0.2192
+Epoch 7, Average Loss: 0.0767
+Epoch 8, Average Loss: 0.0924
+Epoch 9, Average Loss: 0.0638
+Epoch 10, Average Loss: 0.0381
+Training domains: ['photo', 'art_painting', 'cartoon']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.1319
+Epoch 2, Average Loss: 0.0871
+Epoch 3, Average Loss: 0.0165
+Epoch 4, Average Loss: 0.0058
+Epoch 5, Average Loss: 0.0032
+Epoch 6, Average Loss: 0.0020
+Epoch 7, Average Loss: 0.0014
+Epoch 8, Average Loss: 0.0011
+Epoch 9, Average Loss: 0.0009
+Epoch 10, Average Loss: 0.0007
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 22.0865
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.5524
+Epoch 2, Average Loss: 0.2859
+Epoch 3, Average Loss: 0.0759
+Epoch 4, Average Loss: 0.0281
+Epoch 5, Average Loss: 0.0106
+Epoch 6, Average Loss: 0.0050
+Epoch 7, Average Loss: 0.0030
+Epoch 8, Average Loss: 0.0021
+Epoch 9, Average Loss: 0.0016
+Epoch 10, Average Loss: 0.0013
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 54.0458
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.2590
+Epoch 2, Average Loss: 0.3203
+Epoch 3, Average Loss: 0.1552
+Epoch 4, Average Loss: 0.0895

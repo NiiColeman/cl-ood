@@ -1,0 +1,965 @@
+
+--- Run 1/3 ---
+
+Running LoRA with TIES experiment
+Test domain: cartoon
+Train domains: ['photo', 'sketch', 'art_painting']
+Baseline Model - Test Loss: 2.6230, Test Accuracy: 9.38%
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.9158, Train Accuracy: 28.57%, Val Loss: 2.6360, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 1.8712, Train Accuracy: 28.57%, Val Loss: 2.6143, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 1.8223, Train Accuracy: 32.14%, Val Loss: 2.5920, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 1.7702, Train Accuracy: 35.71%, Val Loss: 2.5692, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 1.7209, Train Accuracy: 39.29%, Val Loss: 2.5481, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 1.6712, Train Accuracy: 39.29%, Val Loss: 2.5278, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 1.6224, Train Accuracy: 42.86%, Val Loss: 2.5078, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 1.5727, Train Accuracy: 42.86%, Val Loss: 2.4873, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.5208, Train Accuracy: 46.43%, Val Loss: 2.4669, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.4693, Train Accuracy: 46.43%, Val Loss: 2.4461, Val Accuracy: 0.00%
+Warning: No improvement found during training for photo. Using final state.
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+photo adapter - Test Loss: 2.5622, Test Accuracy: 6.25%
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%, Val Loss: 2.1097, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1662, Train Accuracy: 21.43%, Val Loss: 2.0625, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0686, Train Accuracy: 21.43%, Val Loss: 2.0212, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9761, Train Accuracy: 21.43%, Val Loss: 1.9925, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.8845, Train Accuracy: 21.43%, Val Loss: 1.9742, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8022, Train Accuracy: 21.43%, Val Loss: 1.9666, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7266, Train Accuracy: 32.14%, Val Loss: 1.9675, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6554, Train Accuracy: 42.86%, Val Loss: 1.9771, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.5893, Train Accuracy: 53.57%, Val Loss: 1.9956, Val Accuracy: 42.86%
+Epoch 10/10, Train Loss: 1.5305, Train Accuracy: 50.00%, Val Loss: 2.0223, Val Accuracy: 42.86%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+sketch adapter - Test Loss: 2.4266, Test Accuracy: 6.25%
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.3176, Train Accuracy: 14.29%, Val Loss: 2.0860, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.2178, Train Accuracy: 17.86%, Val Loss: 2.0876, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.1411, Train Accuracy: 17.86%, Val Loss: 2.0898, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 2.0625, Train Accuracy: 17.86%, Val Loss: 2.0928, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9859, Train Accuracy: 17.86%, Val Loss: 2.0965, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.9064, Train Accuracy: 21.43%, Val Loss: 2.1009, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.8246, Train Accuracy: 28.57%, Val Loss: 2.1060, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.7452, Train Accuracy: 32.14%, Val Loss: 2.1121, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6666, Train Accuracy: 35.71%, Val Loss: 2.1188, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5897, Train Accuracy: 39.29%, Val Loss: 2.1260, Val Accuracy: 28.57%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+art_painting adapter - Test Loss: 2.5969, Test Accuracy: 9.38%
+
+Performing grid search for adapter coefficients
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficients: [nan nan nan], Accuracy: 33.33%
+Predictions: [3]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.   0.25 0.75], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.2 0.8], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.4 0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.   0.75 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.6 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.42857143 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.8 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.57142857 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.   0.75], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.  0.8], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.2 0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.16666667 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.5  0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.4 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.33333333 0.5       ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.28571429 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.75 0.  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.6 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.5        0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.42857143 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.125 0.375 0.5  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.8 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.66666667 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.57142857 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.125 0.5   0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.11111111 0.44444444 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.  0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5  0.25 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.2 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.16666667 0.5       ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.14285714 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.4 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.28571429 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.6 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.5        0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.42857143 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25  0.375 0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.22222222 0.33333333 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.57142857 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.5  0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.22222222 0.44444444 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.4 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.75 0.   0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.  0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.         0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.75 0.25 0.  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.2 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5        0.16666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.14285714 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.125 0.5  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.4 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5        0.33333333 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.28571429 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.25  0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.22222222 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.42857143 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.375 0.25 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.3 0.3 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.57142857 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.5   0.125], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.44444444 0.22222222], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.3 0.4 0.3], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.27272727 0.36363636 0.36363636], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.8 0.  0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.         0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.8 0.2 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.16666667 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.14285714 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5   0.125 0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.11111111 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.28571429 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5  0.25 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.22222222 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.2 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.42857143 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5   0.375 0.125], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.33333333 0.22222222], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.3 0.3], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.36363636 0.27272727 0.36363636], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.44444444 0.11111111], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.4 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.36363636 0.36363636 0.27272727], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+
+Best coefficient accuracy: 33.33%
+Best coefficients: [nan nan nan]
+
+Merged model with TIES - Test Loss: nan, Test Accuracy: 12.50%
+
+--- Run 2/3 ---
+
+Running LoRA with TIES experiment
+Test domain: cartoon
+Train domains: ['photo', 'sketch', 'art_painting']
+Baseline Model - Test Loss: 2.6230, Test Accuracy: 9.38%
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.9158, Train Accuracy: 28.57%, Val Loss: 2.6360, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 1.8712, Train Accuracy: 28.57%, Val Loss: 2.6143, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 1.8223, Train Accuracy: 32.14%, Val Loss: 2.5920, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 1.7702, Train Accuracy: 35.71%, Val Loss: 2.5692, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 1.7209, Train Accuracy: 39.29%, Val Loss: 2.5481, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 1.6712, Train Accuracy: 39.29%, Val Loss: 2.5278, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 1.6224, Train Accuracy: 42.86%, Val Loss: 2.5078, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 1.5727, Train Accuracy: 42.86%, Val Loss: 2.4873, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.5208, Train Accuracy: 46.43%, Val Loss: 2.4669, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.4693, Train Accuracy: 46.43%, Val Loss: 2.4460, Val Accuracy: 0.00%
+Warning: No improvement found during training for photo. Using final state.
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+photo adapter - Test Loss: 2.5622, Test Accuracy: 6.25%
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%, Val Loss: 2.1097, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1662, Train Accuracy: 21.43%, Val Loss: 2.0625, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0686, Train Accuracy: 21.43%, Val Loss: 2.0212, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9761, Train Accuracy: 21.43%, Val Loss: 1.9925, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.8845, Train Accuracy: 21.43%, Val Loss: 1.9742, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8022, Train Accuracy: 21.43%, Val Loss: 1.9666, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7266, Train Accuracy: 32.14%, Val Loss: 1.9675, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6554, Train Accuracy: 42.86%, Val Loss: 1.9771, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.5893, Train Accuracy: 53.57%, Val Loss: 1.9956, Val Accuracy: 42.86%
+Epoch 10/10, Train Loss: 1.5305, Train Accuracy: 50.00%, Val Loss: 2.0223, Val Accuracy: 42.86%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+sketch adapter - Test Loss: 2.4266, Test Accuracy: 6.25%
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.3176, Train Accuracy: 14.29%, Val Loss: 2.0860, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.2178, Train Accuracy: 17.86%, Val Loss: 2.0876, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.1411, Train Accuracy: 17.86%, Val Loss: 2.0898, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 2.0625, Train Accuracy: 17.86%, Val Loss: 2.0928, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9859, Train Accuracy: 17.86%, Val Loss: 2.0965, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.9064, Train Accuracy: 21.43%, Val Loss: 2.1009, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.8246, Train Accuracy: 28.57%, Val Loss: 2.1060, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.7452, Train Accuracy: 32.14%, Val Loss: 2.1121, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6666, Train Accuracy: 35.71%, Val Loss: 2.1188, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5897, Train Accuracy: 39.29%, Val Loss: 2.1260, Val Accuracy: 28.57%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+art_painting adapter - Test Loss: 2.5969, Test Accuracy: 9.38%
+
+Performing grid search for adapter coefficients
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficients: [nan nan nan], Accuracy: 33.33%
+Predictions: [3]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.   0.25 0.75], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.2 0.8], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.4 0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.   0.75 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.6 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.42857143 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.8 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.57142857 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.   0.75], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.  0.8], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.2 0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.16666667 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.5  0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.4 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.33333333 0.5       ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.28571429 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.75 0.  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.6 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.5        0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.42857143 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.125 0.375 0.5  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.8 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.66666667 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.57142857 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.125 0.5   0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.11111111 0.44444444 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.  0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5  0.25 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.2 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.16666667 0.5       ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.14285714 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.4 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.28571429 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.6 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.5        0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.42857143 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25  0.375 0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.22222222 0.33333333 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.57142857 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.5  0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.22222222 0.44444444 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.4 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.75 0.   0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.  0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.         0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.75 0.25 0.  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.2 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5        0.16666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.14285714 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.125 0.5  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.4 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5        0.33333333 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.28571429 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.25  0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.22222222 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.42857143 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.375 0.25 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.3 0.3 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.57142857 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.5   0.125], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.44444444 0.22222222], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.3 0.4 0.3], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.27272727 0.36363636 0.36363636], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.8 0.  0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.         0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.8 0.2 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.16666667 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.14285714 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5   0.125 0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.11111111 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.28571429 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5  0.25 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.22222222 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.2 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.42857143 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5   0.375 0.125], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.33333333 0.22222222], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.3 0.3], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.36363636 0.27272727 0.36363636], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.44444444 0.11111111], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.4 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.36363636 0.36363636 0.27272727], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+
+Best coefficient accuracy: 33.33%
+Best coefficients: [nan nan nan]
+
+Merged model with TIES - Test Loss: nan, Test Accuracy: 12.50%
+
+--- Run 3/3 ---
+
+Running LoRA with TIES experiment
+Test domain: cartoon
+Train domains: ['photo', 'sketch', 'art_painting']
+Baseline Model - Test Loss: 2.6230, Test Accuracy: 9.38%
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.9158, Train Accuracy: 28.57%, Val Loss: 2.6360, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 1.8712, Train Accuracy: 28.57%, Val Loss: 2.6143, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 1.8223, Train Accuracy: 32.14%, Val Loss: 2.5920, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 1.7702, Train Accuracy: 35.71%, Val Loss: 2.5692, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 1.7209, Train Accuracy: 39.29%, Val Loss: 2.5481, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 1.6712, Train Accuracy: 39.29%, Val Loss: 2.5278, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 1.6224, Train Accuracy: 42.86%, Val Loss: 2.5078, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 1.5727, Train Accuracy: 42.86%, Val Loss: 2.4873, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.5208, Train Accuracy: 46.43%, Val Loss: 2.4669, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.4693, Train Accuracy: 46.43%, Val Loss: 2.4461, Val Accuracy: 0.00%
+Warning: No improvement found during training for photo. Using final state.
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+photo adapter - Test Loss: 2.5622, Test Accuracy: 6.25%
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%, Val Loss: 2.1097, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1662, Train Accuracy: 21.43%, Val Loss: 2.0625, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0686, Train Accuracy: 21.43%, Val Loss: 2.0212, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9761, Train Accuracy: 21.43%, Val Loss: 1.9925, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.8845, Train Accuracy: 21.43%, Val Loss: 1.9742, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8022, Train Accuracy: 21.43%, Val Loss: 1.9666, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7266, Train Accuracy: 32.14%, Val Loss: 1.9675, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6554, Train Accuracy: 42.86%, Val Loss: 1.9771, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.5893, Train Accuracy: 53.57%, Val Loss: 1.9956, Val Accuracy: 42.86%
+Epoch 10/10, Train Loss: 1.5305, Train Accuracy: 50.00%, Val Loss: 2.0223, Val Accuracy: 42.86%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+sketch adapter - Test Loss: 2.4266, Test Accuracy: 6.25%
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.3176, Train Accuracy: 14.29%, Val Loss: 2.0860, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.2178, Train Accuracy: 17.86%, Val Loss: 2.0876, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.1411, Train Accuracy: 17.86%, Val Loss: 2.0898, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 2.0625, Train Accuracy: 17.86%, Val Loss: 2.0928, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9859, Train Accuracy: 17.86%, Val Loss: 2.0965, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.9064, Train Accuracy: 21.43%, Val Loss: 2.1009, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.8246, Train Accuracy: 28.57%, Val Loss: 2.1060, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.7452, Train Accuracy: 32.14%, Val Loss: 2.1121, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6666, Train Accuracy: 35.71%, Val Loss: 2.1188, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5897, Train Accuracy: 39.29%, Val Loss: 2.1260, Val Accuracy: 28.57%
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+art_painting adapter - Test Loss: 2.5969, Test Accuracy: 9.38%
+
+Performing grid search for adapter coefficients
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficients: [nan nan nan], Accuracy: 33.33%
+Predictions: [3]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 0. 1.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.   0.25 0.75], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.2 0.8], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.4 0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.33333333 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.   0.75 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.6 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.42857143 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0. 1. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.8 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.66666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.         0.57142857 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.  0.5 0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.   0.75], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.  0.8], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.2 0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.16666667 0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.5  0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.4 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.33333333 0.5       ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.28571429 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.75 0.  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.6 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.5        0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.42857143 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.125 0.375 0.5  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.8 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.16666667 0.66666667 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.14285714 0.57142857 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.125 0.5   0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.11111111 0.44444444 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.  0.6], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.         0.66666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5  0.25 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.2 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.16666667 0.5       ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.14285714 0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.4 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.28571429 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.25 0.5 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.6 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.5        0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.42857143 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25  0.375 0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.22222222 0.33333333 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.66666667 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.28571429 0.57142857 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.25 0.5  0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.22222222 0.44444444 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.2 0.4 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.75 0.   0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.  0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.         0.57142857], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.75 0.25 0.  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.2 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5        0.16666667 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.14285714 0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.125 0.5  ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.6 0.4 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5        0.33333333 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.28571429 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.25  0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.22222222 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.42857143 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.375 0.25 ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.3 0.3 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.42857143 0.57142857 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.375 0.5   0.125], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.44444444 0.22222222], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.3 0.4 0.3], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.27272727 0.36363636 0.36363636], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [1. 0. 0.], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.8 0.  0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.         0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.         0.42857143], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.  0.5], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.8 0.2 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.16666667 0.16666667], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.14285714 0.28571429], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5   0.125 0.375], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.11111111 0.44444444], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.66666667 0.33333333 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.28571429 0.14285714], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5  0.25 0.25], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.22222222 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.2 0.4], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.57142857 0.42857143 0.        ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5   0.375 0.125], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.33333333 0.22222222], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.3 0.3], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.36363636 0.27272727 0.36363636], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.5 0.5 0. ], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.44444444 0.44444444 0.11111111], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.4 0.4 0.2], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.36363636 0.36363636 0.27272727], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+Coefficients: [0.33333333 0.33333333 0.33333333], Accuracy: 0.00%
+Predictions: [1 0 0 0 1 0 1]
+
+Best coefficient accuracy: 33.33%
+Best coefficients: [nan nan nan]
+
+Merged model with TIES - Test Loss: nan, Test Accuracy: 12.50%
+
+Summary of All Runs:
+Baseline Model Accuracy: 9.38% ± 0.00%
+Merged Model Accuracy: 12.50% ± 0.00%
+Average Coefficients:
+  photo: nan ± nan
+  sketch: nan ± nan
+  art_painting: nan ± nan

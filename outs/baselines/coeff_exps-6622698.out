@@ -1,0 +1,4080 @@
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+
+Test Domain: art_painting, Run 1/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.7873
+Epoch 2, Average Loss: 0.5450
+Epoch 3, Average Loss: 0.1175
+Epoch 4, Average Loss: 0.0132
+Epoch 5, Average Loss: 0.0032
+Epoch 6, Average Loss: 0.0014
+Epoch 7, Average Loss: 0.0010
+Epoch 8, Average Loss: 0.0008
+Epoch 9, Average Loss: 0.0006
+Epoch 10, Average Loss: 0.0004
+Accuracy of naive model on art_painting: 38.8889
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.6794
+Epoch 2, Average Loss: 2.1444
+Epoch 3, Average Loss: 2.0771
+Epoch 4, Average Loss: 1.8742
+Epoch 5, Average Loss: 1.8482
+Epoch 6, Average Loss: 1.9317
+Epoch 7, Average Loss: 1.5214
+Epoch 8, Average Loss: 1.6999
+Epoch 9, Average Loss: 1.3982
+Epoch 10, Average Loss: 1.2800
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 11.1111
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.7488
+Epoch 2, Average Loss: 2.5595
+Epoch 3, Average Loss: 2.0550
+Epoch 4, Average Loss: 2.4109
+Epoch 5, Average Loss: 1.6875
+Epoch 6, Average Loss: 1.8626
+Epoch 7, Average Loss: 1.9394
+Epoch 8, Average Loss: 1.5313
+Epoch 9, Average Loss: 1.6493
+Epoch 10, Average Loss: 1.7808
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 11.1111
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.7475
+Epoch 2, Average Loss: 2.2736
+Epoch 3, Average Loss: 2.2758
+Epoch 4, Average Loss: 2.1545
+Epoch 5, Average Loss: 1.8223
+Epoch 6, Average Loss: 1.9024
+Epoch 7, Average Loss: 1.7550
+Epoch 8, Average Loss: 1.7286
+Epoch 9, Average Loss: 1.6274
+Epoch 10, Average Loss: 1.4384
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 11.1111
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.6931
+Coefficient Epoch 2, Average Loss: 4.3262
+Coefficient Epoch 3, Average Loss: 3.9682
+Coefficient Epoch 4, Average Loss: 3.6217
+Coefficient Epoch 5, Average Loss: 3.2897
+Coefficient Epoch 6, Average Loss: 2.9767
+Coefficient Epoch 7, Average Loss: 2.6886
+Coefficient Epoch 8, Average Loss: 2.4333
+Coefficient Epoch 9, Average Loss: 2.2208
+Coefficient Epoch 10, Average Loss: 2.0615
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3358720541000366, 0.3321232199668884, 0.33200472593307495]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 11.1111
+
+Test Domain: art_painting, Run 2/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.4041
+Epoch 2, Average Loss: 0.7630
+Epoch 3, Average Loss: 1.0076
+Epoch 4, Average Loss: 0.0436
+Epoch 5, Average Loss: 0.0145
+Epoch 6, Average Loss: 0.0124
+Epoch 7, Average Loss: 0.0130
+Epoch 8, Average Loss: 0.0092
+Epoch 9, Average Loss: 0.0043
+Epoch 10, Average Loss: 0.0020
+Accuracy of naive model on cartoon: 38.8889
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.7794
+Epoch 2, Average Loss: 2.7925
+Epoch 3, Average Loss: 2.2635
+Epoch 4, Average Loss: 1.9503
+Epoch 5, Average Loss: 1.9225
+Epoch 6, Average Loss: 1.7611
+Epoch 7, Average Loss: 1.5993
+Epoch 8, Average Loss: 1.6511
+Epoch 9, Average Loss: 1.3474
+Epoch 10, Average Loss: 1.3702
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 11.1111
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.0242
+Epoch 2, Average Loss: 1.7365
+Epoch 3, Average Loss: 1.6281
+Epoch 4, Average Loss: 1.6808
+Epoch 5, Average Loss: 1.3871
+Epoch 6, Average Loss: 1.1814
+Epoch 7, Average Loss: 1.1330
+Epoch 8, Average Loss: 1.0733
+Epoch 9, Average Loss: 1.0877
+Epoch 10, Average Loss: 0.8047
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 22.2222
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.2229
+Epoch 2, Average Loss: 2.0570
+Epoch 3, Average Loss: 1.8327
+Epoch 4, Average Loss: 2.0329
+Epoch 5, Average Loss: 1.8927
+Epoch 6, Average Loss: 1.6372
+Epoch 7, Average Loss: 1.5151
+Epoch 8, Average Loss: 1.5134
+Epoch 9, Average Loss: 1.3234
+Epoch 10, Average Loss: 1.8652
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 27.7778
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.9632
+Coefficient Epoch 2, Average Loss: 3.6727
+Coefficient Epoch 3, Average Loss: 3.3902
+Coefficient Epoch 4, Average Loss: 3.1181
+Coefficient Epoch 5, Average Loss: 2.8594
+Coefficient Epoch 6, Average Loss: 2.6184
+Coefficient Epoch 7, Average Loss: 2.4018
+Coefficient Epoch 8, Average Loss: 2.2182
+Coefficient Epoch 9, Average Loss: 2.0774
+Coefficient Epoch 10, Average Loss: 1.9866
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33488526940345764, 0.3345656991004944, 0.3305490016937256]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 27.7778
+
+Test Domain: art_painting, Run 3/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.5309
+Epoch 2, Average Loss: 0.6529
+Epoch 3, Average Loss: 0.0782
+Epoch 4, Average Loss: 0.0322
+Epoch 5, Average Loss: 0.0055
+Epoch 6, Average Loss: 0.0023
+Epoch 7, Average Loss: 0.0011
+Epoch 8, Average Loss: 0.0007
+Epoch 9, Average Loss: 0.0005
+Epoch 10, Average Loss: 0.0004
+Accuracy of naive model on art_painting: 44.4444
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.0554
+Epoch 2, Average Loss: 2.0197
+Epoch 3, Average Loss: 1.8353
+Epoch 4, Average Loss: 1.7044
+Epoch 5, Average Loss: 1.6168
+Epoch 6, Average Loss: 1.6732
+Epoch 7, Average Loss: 1.4077
+Epoch 8, Average Loss: 1.2215
+Epoch 9, Average Loss: 1.4233
+Epoch 10, Average Loss: 1.2938
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 33.3333
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.2799
+Epoch 2, Average Loss: 2.0741
+Epoch 3, Average Loss: 1.7713
+Epoch 4, Average Loss: 2.0705
+Epoch 5, Average Loss: 1.6243
+Epoch 6, Average Loss: 2.0402
+Epoch 7, Average Loss: 1.5073
+Epoch 8, Average Loss: 1.2091
+Epoch 9, Average Loss: 1.3633
+Epoch 10, Average Loss: 1.2845
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 22.2222
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.2527
+Epoch 2, Average Loss: 2.2495
+Epoch 3, Average Loss: 2.0080
+Epoch 4, Average Loss: 2.0493
+Epoch 5, Average Loss: 2.0012
+Epoch 6, Average Loss: 1.6754
+Epoch 7, Average Loss: 1.7468
+Epoch 8, Average Loss: 1.6152
+Epoch 9, Average Loss: 1.5231
+Epoch 10, Average Loss: 1.5380
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 27.7778
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.2601
+Coefficient Epoch 2, Average Loss: 3.9298
+Coefficient Epoch 3, Average Loss: 3.6084
+Coefficient Epoch 4, Average Loss: 3.2988
+Coefficient Epoch 5, Average Loss: 3.0049
+Coefficient Epoch 6, Average Loss: 2.7321
+Coefficient Epoch 7, Average Loss: 2.4876
+Coefficient Epoch 8, Average Loss: 2.2800
+Coefficient Epoch 9, Average Loss: 2.1181
+Coefficient Epoch 10, Average Loss: 2.0086
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33592233061790466, 0.3325883448123932, 0.33148932456970215]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 33.3333
+
+Test Domain: art_painting, Run 4/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2067
+Epoch 2, Average Loss: 1.3143
+Epoch 3, Average Loss: 0.3467
+Epoch 4, Average Loss: 0.0288
+Epoch 5, Average Loss: 0.0113
+Epoch 6, Average Loss: 0.0050
+Epoch 7, Average Loss: 0.0029
+Epoch 8, Average Loss: 0.0018
+Epoch 9, Average Loss: 0.0011
+Epoch 10, Average Loss: 0.0007
+Accuracy of naive model on art_painting: 27.7778
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.5514
+Epoch 2, Average Loss: 2.0579
+Epoch 3, Average Loss: 2.0787
+Epoch 4, Average Loss: 1.7373
+Epoch 5, Average Loss: 1.5827
+Epoch 6, Average Loss: 1.7742
+Epoch 7, Average Loss: 1.3405
+Epoch 8, Average Loss: 1.2779
+Epoch 9, Average Loss: 1.3537
+Epoch 10, Average Loss: 1.3591
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 44.4444
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.5423
+Epoch 2, Average Loss: 2.1469
+Epoch 3, Average Loss: 2.3928
+Epoch 4, Average Loss: 1.7923
+Epoch 5, Average Loss: 2.2363
+Epoch 6, Average Loss: 1.9313
+Epoch 7, Average Loss: 1.9343
+Epoch 8, Average Loss: 1.5530
+Epoch 9, Average Loss: 1.5794
+Epoch 10, Average Loss: 1.3880
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 38.8889
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.0803
+Epoch 2, Average Loss: 1.9138
+Epoch 3, Average Loss: 1.7489
+Epoch 4, Average Loss: 1.8636
+Epoch 5, Average Loss: 1.7690
+Epoch 6, Average Loss: 1.4784
+Epoch 7, Average Loss: 1.5605
+Epoch 8, Average Loss: 1.6480
+Epoch 9, Average Loss: 1.1743
+Epoch 10, Average Loss: 1.1153
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 22.2222
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.2880
+Coefficient Epoch 2, Average Loss: 3.0635
+Coefficient Epoch 3, Average Loss: 2.8478
+Coefficient Epoch 4, Average Loss: 2.6433
+Coefficient Epoch 5, Average Loss: 2.4531
+Coefficient Epoch 6, Average Loss: 2.2814
+Coefficient Epoch 7, Average Loss: 2.1337
+Coefficient Epoch 8, Average Loss: 2.0171
+Coefficient Epoch 9, Average Loss: 1.9391
+Coefficient Epoch 10, Average Loss: 1.9029
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3473259508609772, 0.3278907835483551, 0.3247832953929901]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 38.8889
+
+Test Domain: art_painting, Run 5/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.3392
+Epoch 2, Average Loss: 0.8794
+Epoch 3, Average Loss: 0.1566
+Epoch 4, Average Loss: 0.0169
+Epoch 5, Average Loss: 0.0043
+Epoch 6, Average Loss: 0.0019
+Epoch 7, Average Loss: 0.0009
+Epoch 8, Average Loss: 0.0005
+Epoch 9, Average Loss: 0.0004
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on cartoon: 38.8889
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 1.9268
+Epoch 2, Average Loss: 1.6504
+Epoch 3, Average Loss: 1.9475
+Epoch 4, Average Loss: 1.7264
+Epoch 5, Average Loss: 1.3887
+Epoch 6, Average Loss: 1.5874
+Epoch 7, Average Loss: 1.6020
+Epoch 8, Average Loss: 1.2697
+Epoch 9, Average Loss: 1.0238
+Epoch 10, Average Loss: 1.0696
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 16.6667
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.6630
+Epoch 2, Average Loss: 1.4214
+Epoch 3, Average Loss: 1.4695
+Epoch 4, Average Loss: 1.4699
+Epoch 5, Average Loss: 1.1972
+Epoch 6, Average Loss: 0.9443
+Epoch 7, Average Loss: 0.9701
+Epoch 8, Average Loss: 0.9778
+Epoch 9, Average Loss: 1.0588
+Epoch 10, Average Loss: 0.9197
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 22.2222
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.5647
+Epoch 2, Average Loss: 2.1080
+Epoch 3, Average Loss: 2.1889
+Epoch 4, Average Loss: 2.1276
+Epoch 5, Average Loss: 2.1451
+Epoch 6, Average Loss: 1.9893
+Epoch 7, Average Loss: 1.8866
+Epoch 8, Average Loss: 1.6489
+Epoch 9, Average Loss: 1.3628
+Epoch 10, Average Loss: 1.5067
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 16.6667
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.1781
+Coefficient Epoch 2, Average Loss: 2.9664
+Coefficient Epoch 3, Average Loss: 2.7635
+Coefficient Epoch 4, Average Loss: 2.5719
+Coefficient Epoch 5, Average Loss: 2.3951
+Coefficient Epoch 6, Average Loss: 2.2374
+Coefficient Epoch 7, Average Loss: 2.1042
+Coefficient Epoch 8, Average Loss: 2.0012
+Coefficient Epoch 9, Average Loss: 1.9338
+Coefficient Epoch 10, Average Loss: 1.9053
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3357335031032562, 0.33496594429016113, 0.32930052280426025]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 16.6667
+
+Test Domain: photo, Run 1/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.0597
+Epoch 2, Average Loss: 0.4089
+Epoch 3, Average Loss: 0.0458
+Epoch 4, Average Loss: 0.0094
+Epoch 5, Average Loss: 0.0035
+Epoch 6, Average Loss: 0.0024
+Epoch 7, Average Loss: 0.0008
+Epoch 8, Average Loss: 0.0005
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on art_painting: 44.4444
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.1565
+Epoch 2, Average Loss: 1.9240
+Epoch 3, Average Loss: 2.0344
+Epoch 4, Average Loss: 1.6897
+Epoch 5, Average Loss: 1.4135
+Epoch 6, Average Loss: 1.3868
+Epoch 7, Average Loss: 1.3233
+Epoch 8, Average Loss: 1.2639
+Epoch 9, Average Loss: 1.2045
+Epoch 10, Average Loss: 0.9177
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 16.6667
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.4184
+Epoch 2, Average Loss: 2.2009
+Epoch 3, Average Loss: 1.8109
+Epoch 4, Average Loss: 2.1367
+Epoch 5, Average Loss: 1.8171
+Epoch 6, Average Loss: 1.7410
+Epoch 7, Average Loss: 1.4528
+Epoch 8, Average Loss: 1.6015
+Epoch 9, Average Loss: 1.4728
+Epoch 10, Average Loss: 1.5940
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 16.6667
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.3630
+Epoch 2, Average Loss: 2.1807
+Epoch 3, Average Loss: 2.3282
+Epoch 4, Average Loss: 1.9784
+Epoch 5, Average Loss: 1.8777
+Epoch 6, Average Loss: 1.5041
+Epoch 7, Average Loss: 1.5910
+Epoch 8, Average Loss: 1.3740
+Epoch 9, Average Loss: 1.2960
+Epoch 10, Average Loss: 1.4745
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 11.1111
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.7366
+Coefficient Epoch 2, Average Loss: 2.5546
+Coefficient Epoch 3, Average Loss: 2.3826
+Coefficient Epoch 4, Average Loss: 2.2236
+Coefficient Epoch 5, Average Loss: 2.0817
+Coefficient Epoch 6, Average Loss: 1.9618
+Coefficient Epoch 7, Average Loss: 1.8698
+Coefficient Epoch 8, Average Loss: 1.8113
+Coefficient Epoch 9, Average Loss: 1.7893
+Coefficient Epoch 10, Average Loss: 1.7998
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.34933164715766907, 0.328287810087204, 0.32238054275512695]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 16.6667
+
+Test Domain: photo, Run 2/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.5380
+Epoch 2, Average Loss: 0.7073
+Epoch 3, Average Loss: 0.1071
+Epoch 4, Average Loss: 0.0089
+Epoch 5, Average Loss: 0.0016
+Epoch 6, Average Loss: 0.0009
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0005
+Epoch 9, Average Loss: 0.0004
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on art_painting: 44.4444
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.0511
+Epoch 2, Average Loss: 1.9021
+Epoch 3, Average Loss: 2.3314
+Epoch 4, Average Loss: 1.5089
+Epoch 5, Average Loss: 1.4323
+Epoch 6, Average Loss: 1.4257
+Epoch 7, Average Loss: 1.4108
+Epoch 8, Average Loss: 1.3969
+Epoch 9, Average Loss: 1.2876
+Epoch 10, Average Loss: 0.9550
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 27.7778
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.8716
+Epoch 2, Average Loss: 2.1484
+Epoch 3, Average Loss: 1.8335
+Epoch 4, Average Loss: 1.7675
+Epoch 5, Average Loss: 1.7262
+Epoch 6, Average Loss: 1.4340
+Epoch 7, Average Loss: 1.1990
+Epoch 8, Average Loss: 1.2051
+Epoch 9, Average Loss: 1.3282
+Epoch 10, Average Loss: 1.1703
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 16.6667
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.0196
+Epoch 2, Average Loss: 1.9566
+Epoch 3, Average Loss: 1.6800
+Epoch 4, Average Loss: 1.9016
+Epoch 5, Average Loss: 1.8239
+Epoch 6, Average Loss: 1.8145
+Epoch 7, Average Loss: 1.7073
+Epoch 8, Average Loss: 1.4036
+Epoch 9, Average Loss: 1.2939
+Epoch 10, Average Loss: 1.4855
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 16.6667
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.1909
+Coefficient Epoch 2, Average Loss: 3.8684
+Coefficient Epoch 3, Average Loss: 3.5554
+Coefficient Epoch 4, Average Loss: 3.2548
+Coefficient Epoch 5, Average Loss: 2.9702
+Coefficient Epoch 6, Average Loss: 2.7070
+Coefficient Epoch 7, Average Loss: 2.4718
+Coefficient Epoch 8, Average Loss: 2.2729
+Coefficient Epoch 9, Average Loss: 2.1181
+Coefficient Epoch 10, Average Loss: 2.0121
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33720657229423523, 0.33146706223487854, 0.33132636547088623]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 22.2222
+
+Test Domain: photo, Run 3/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2124
+Epoch 2, Average Loss: 1.3104
+Epoch 3, Average Loss: 0.2860
+Epoch 4, Average Loss: 0.0408
+Epoch 5, Average Loss: 0.0066
+Epoch 6, Average Loss: 0.0020
+Epoch 7, Average Loss: 0.0010
+Epoch 8, Average Loss: 0.0006
+Epoch 9, Average Loss: 0.0004
+Epoch 10, Average Loss: 0.0004
+Accuracy of naive model on cartoon: 22.2222
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.2973
+Epoch 2, Average Loss: 1.7748
+Epoch 3, Average Loss: 1.7228
+Epoch 4, Average Loss: 1.8822
+Epoch 5, Average Loss: 1.7388
+Epoch 6, Average Loss: 1.4576
+Epoch 7, Average Loss: 1.5642
+Epoch 8, Average Loss: 1.0427
+Epoch 9, Average Loss: 1.1268
+Epoch 10, Average Loss: 0.9810
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 11.1111
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.8886
+Epoch 2, Average Loss: 1.8006
+Epoch 3, Average Loss: 1.6199
+Epoch 4, Average Loss: 1.3672
+Epoch 5, Average Loss: 1.4977
+Epoch 6, Average Loss: 1.2050
+Epoch 7, Average Loss: 1.2346
+Epoch 8, Average Loss: 1.3686
+Epoch 9, Average Loss: 1.0174
+Epoch 10, Average Loss: 0.9464
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 16.6667
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 1.9246
+Epoch 2, Average Loss: 2.0886
+Epoch 3, Average Loss: 1.7416
+Epoch 4, Average Loss: 2.0106
+Epoch 5, Average Loss: 1.7267
+Epoch 6, Average Loss: 1.5712
+Epoch 7, Average Loss: 1.5188
+Epoch 8, Average Loss: 1.3153
+Epoch 9, Average Loss: 1.4464
+Epoch 10, Average Loss: 1.1476
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 16.6667
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.9928
+Coefficient Epoch 2, Average Loss: 3.6506
+Coefficient Epoch 3, Average Loss: 3.3183
+Coefficient Epoch 4, Average Loss: 3.0004
+Coefficient Epoch 5, Average Loss: 2.7035
+Coefficient Epoch 6, Average Loss: 2.4367
+Coefficient Epoch 7, Average Loss: 2.2118
+Coefficient Epoch 8, Average Loss: 2.0418
+Coefficient Epoch 9, Average Loss: 1.9360
+Coefficient Epoch 10, Average Loss: 1.8948
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3350770175457001, 0.3348523676395416, 0.3300705850124359]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 16.6667
+
+Test Domain: photo, Run 4/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.3871
+Epoch 2, Average Loss: 1.6678
+Epoch 3, Average Loss: 0.9185
+Epoch 4, Average Loss: 0.3547
+Epoch 5, Average Loss: 0.0487
+Epoch 6, Average Loss: 0.0132
+Epoch 7, Average Loss: 0.0075
+Epoch 8, Average Loss: 0.0040
+Epoch 9, Average Loss: 0.0022
+Epoch 10, Average Loss: 0.0012
+Accuracy of naive model on cartoon: 27.7778
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.2863
+Epoch 2, Average Loss: 2.5565
+Epoch 3, Average Loss: 2.3389
+Epoch 4, Average Loss: 2.3779
+Epoch 5, Average Loss: 1.7854
+Epoch 6, Average Loss: 1.7797
+Epoch 7, Average Loss: 1.8712
+Epoch 8, Average Loss: 1.5737
+Epoch 9, Average Loss: 1.3963
+Epoch 10, Average Loss: 1.4279
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 33.3333
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.3164
+Epoch 2, Average Loss: 2.0437
+Epoch 3, Average Loss: 1.7383
+Epoch 4, Average Loss: 1.6877
+Epoch 5, Average Loss: 1.7063
+Epoch 6, Average Loss: 1.7368
+Epoch 7, Average Loss: 1.5725
+Epoch 8, Average Loss: 1.2737
+Epoch 9, Average Loss: 1.2722
+Epoch 10, Average Loss: 1.0501
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 38.8889
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.0089
+Epoch 2, Average Loss: 2.0393
+Epoch 3, Average Loss: 1.8734
+Epoch 4, Average Loss: 1.7269
+Epoch 5, Average Loss: 1.7830
+Epoch 6, Average Loss: 1.3107
+Epoch 7, Average Loss: 1.4660
+Epoch 8, Average Loss: 1.6141
+Epoch 9, Average Loss: 1.3152
+Epoch 10, Average Loss: 1.1086
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 38.8889
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.0116
+Coefficient Epoch 2, Average Loss: 2.8105
+Coefficient Epoch 3, Average Loss: 2.6182
+Coefficient Epoch 4, Average Loss: 2.4374
+Coefficient Epoch 5, Average Loss: 2.2717
+Coefficient Epoch 6, Average Loss: 2.1260
+Coefficient Epoch 7, Average Loss: 2.0062
+Coefficient Epoch 8, Average Loss: 1.9193
+Coefficient Epoch 9, Average Loss: 1.8707
+Coefficient Epoch 10, Average Loss: 1.8598
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3266884386539459, 0.32474780082702637, 0.34856370091438293]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 33.3333
+
+Test Domain: photo, Run 5/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.5255
+Epoch 2, Average Loss: 0.5070
+Epoch 3, Average Loss: 0.0355
+Epoch 4, Average Loss: 0.0037
+Epoch 5, Average Loss: 0.0011
+Epoch 6, Average Loss: 0.0006
+Epoch 7, Average Loss: 0.0004
+Epoch 8, Average Loss: 0.0003
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on art_painting: 44.4444
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.2027
+Epoch 2, Average Loss: 1.9853
+Epoch 3, Average Loss: 1.7214
+Epoch 4, Average Loss: 1.5705
+Epoch 5, Average Loss: 1.8402
+Epoch 6, Average Loss: 1.4977
+Epoch 7, Average Loss: 1.5915
+Epoch 8, Average Loss: 1.6061
+Epoch 9, Average Loss: 1.1727
+Epoch 10, Average Loss: 1.2784
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 11.1111
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.5529
+Epoch 2, Average Loss: 2.0267
+Epoch 3, Average Loss: 1.8788
+Epoch 4, Average Loss: 1.6629
+Epoch 5, Average Loss: 1.6959
+Epoch 6, Average Loss: 1.5027
+Epoch 7, Average Loss: 1.5825
+Epoch 8, Average Loss: 1.2734
+Epoch 9, Average Loss: 1.4034
+Epoch 10, Average Loss: 1.1536
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 5.5556
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.4915
+Epoch 2, Average Loss: 2.0138
+Epoch 3, Average Loss: 1.7827
+Epoch 4, Average Loss: 1.8114
+Epoch 5, Average Loss: 1.5964
+Epoch 6, Average Loss: 1.6122
+Epoch 7, Average Loss: 2.0321
+Epoch 8, Average Loss: 1.5415
+Epoch 9, Average Loss: 1.5360
+Epoch 10, Average Loss: 1.5366
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 5.5556
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.0029
+Coefficient Epoch 2, Average Loss: 3.6986
+Coefficient Epoch 3, Average Loss: 3.4050
+Coefficient Epoch 4, Average Loss: 3.1250
+Coefficient Epoch 5, Average Loss: 2.8622
+Coefficient Epoch 6, Average Loss: 2.6211
+Coefficient Epoch 7, Average Loss: 2.4073
+Coefficient Epoch 8, Average Loss: 2.2275
+Coefficient Epoch 9, Average Loss: 2.0886
+Coefficient Epoch 10, Average Loss: 1.9959
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.335399866104126, 0.3329164981842041, 0.3316836655139923]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 5.5556
+
+Test Domain: cartoon, Run 1/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.6997
+Epoch 2, Average Loss: 0.9829
+Epoch 3, Average Loss: 0.3359
+Epoch 4, Average Loss: 0.0336
+Epoch 5, Average Loss: 0.0095
+Epoch 6, Average Loss: 0.0046
+Epoch 7, Average Loss: 0.0024
+Epoch 8, Average Loss: 0.0014
+Epoch 9, Average Loss: 0.0008
+Epoch 10, Average Loss: 0.0005
+Accuracy of naive model on cartoon: 38.8889
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.3075
+Epoch 2, Average Loss: 2.4129
+Epoch 3, Average Loss: 1.8304
+Epoch 4, Average Loss: 2.3178
+Epoch 5, Average Loss: 1.8753
+Epoch 6, Average Loss: 1.7206
+Epoch 7, Average Loss: 1.3714
+Epoch 8, Average Loss: 1.4976
+Epoch 9, Average Loss: 1.3790
+Epoch 10, Average Loss: 1.1501
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 11.1111
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.3857
+Epoch 2, Average Loss: 2.1677
+Epoch 3, Average Loss: 2.1565
+Epoch 4, Average Loss: 1.5521
+Epoch 5, Average Loss: 1.6012
+Epoch 6, Average Loss: 1.6101
+Epoch 7, Average Loss: 1.6563
+Epoch 8, Average Loss: 1.2471
+Epoch 9, Average Loss: 1.5842
+Epoch 10, Average Loss: 1.0483
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 22.2222
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.4159
+Epoch 2, Average Loss: 2.0337
+Epoch 3, Average Loss: 2.0568
+Epoch 4, Average Loss: 1.9364
+Epoch 5, Average Loss: 1.7066
+Epoch 6, Average Loss: 1.6558
+Epoch 7, Average Loss: 1.7895
+Epoch 8, Average Loss: 1.4396
+Epoch 9, Average Loss: 1.4040
+Epoch 10, Average Loss: 1.1774
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 11.1111
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.9651
+Coefficient Epoch 2, Average Loss: 4.5567
+Coefficient Epoch 3, Average Loss: 4.1594
+Coefficient Epoch 4, Average Loss: 3.7766
+Coefficient Epoch 5, Average Loss: 3.4126
+Coefficient Epoch 6, Average Loss: 3.0723
+Coefficient Epoch 7, Average Loss: 2.7619
+Coefficient Epoch 8, Average Loss: 2.4880
+Coefficient Epoch 9, Average Loss: 2.2585
+Coefficient Epoch 10, Average Loss: 2.0830
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3327387571334839, 0.33364182710647583, 0.33361944556236267]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 22.2222
+
+Test Domain: cartoon, Run 2/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: sketch
+Training domains: ['art_painting', 'photo', 'cartoon']
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.1182
+Epoch 2, Average Loss: 2.2772
+Epoch 3, Average Loss: 1.9289
+Epoch 4, Average Loss: 1.6827
+Epoch 5, Average Loss: 1.3482
+Epoch 6, Average Loss: 0.9364
+Epoch 7, Average Loss: 0.6424
+Epoch 8, Average Loss: 0.3989
+Epoch 9, Average Loss: 0.1801
+Epoch 10, Average Loss: 0.0634
+Accuracy of naive model on sketch: 33.3333
+Training domains: ['art_painting', 'photo', 'cartoon']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.5196
+Epoch 2, Average Loss: 2.6043
+Epoch 3, Average Loss: 1.9395
+Epoch 4, Average Loss: 2.0446
+Epoch 5, Average Loss: 2.1026
+Epoch 6, Average Loss: 1.8576
+Epoch 7, Average Loss: 1.7003
+Epoch 8, Average Loss: 1.5255
+Epoch 9, Average Loss: 1.2702
+Epoch 10, Average Loss: 1.3417
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 5.5556
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.9562
+Epoch 2, Average Loss: 1.7357
+Epoch 3, Average Loss: 1.7815
+Epoch 4, Average Loss: 1.5200
+Epoch 5, Average Loss: 1.7608
+Epoch 6, Average Loss: 1.4866
+Epoch 7, Average Loss: 1.2975
+Epoch 8, Average Loss: 1.0482
+Epoch 9, Average Loss: 1.0926
+Epoch 10, Average Loss: 1.0796
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 0.0000
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.5166
+Epoch 2, Average Loss: 1.9428
+Epoch 3, Average Loss: 2.2244
+Epoch 4, Average Loss: 2.1387
+Epoch 5, Average Loss: 1.8824
+Epoch 6, Average Loss: 1.8253
+Epoch 7, Average Loss: 1.7603
+Epoch 8, Average Loss: 1.7525
+Epoch 9, Average Loss: 1.4984
+Epoch 10, Average Loss: 1.4529
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 11.1111
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.0628
+Coefficient Epoch 2, Average Loss: 2.8896
+Coefficient Epoch 3, Average Loss: 2.7243
+Coefficient Epoch 4, Average Loss: 2.5684
+Coefficient Epoch 5, Average Loss: 2.4240
+Coefficient Epoch 6, Average Loss: 2.2937
+Coefficient Epoch 7, Average Loss: 2.1804
+Coefficient Epoch 8, Average Loss: 2.0871
+Coefficient Epoch 9, Average Loss: 2.0166
+Coefficient Epoch 10, Average Loss: 1.9700
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3298575282096863, 0.3285645842552185, 0.3415778875350952]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 0.0000
+
+Test Domain: cartoon, Run 3/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.3042
+Epoch 2, Average Loss: 0.5194
+Epoch 3, Average Loss: 0.0334
+Epoch 4, Average Loss: 0.0061
+Epoch 5, Average Loss: 0.0055
+Epoch 6, Average Loss: 0.0012
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0003
+Epoch 9, Average Loss: 0.0002
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on art_painting: 27.7778
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.2826
+Epoch 2, Average Loss: 2.3722
+Epoch 3, Average Loss: 2.1186
+Epoch 4, Average Loss: 2.3050
+Epoch 5, Average Loss: 2.1939
+Epoch 6, Average Loss: 1.9548
+Epoch 7, Average Loss: 1.9333
+Epoch 8, Average Loss: 1.4479
+Epoch 9, Average Loss: 1.5248
+Epoch 10, Average Loss: 1.3578
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 38.8889
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.4814
+Epoch 2, Average Loss: 2.2323
+Epoch 3, Average Loss: 2.1996
+Epoch 4, Average Loss: 1.8595
+Epoch 5, Average Loss: 2.0466
+Epoch 6, Average Loss: 1.5592
+Epoch 7, Average Loss: 1.5596
+Epoch 8, Average Loss: 1.3975
+Epoch 9, Average Loss: 1.2317
+Epoch 10, Average Loss: 1.1582
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 27.7778
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.1519
+Epoch 2, Average Loss: 1.9432
+Epoch 3, Average Loss: 1.8689
+Epoch 4, Average Loss: 1.9399
+Epoch 5, Average Loss: 1.7710
+Epoch 6, Average Loss: 1.7911
+Epoch 7, Average Loss: 1.4968
+Epoch 8, Average Loss: 1.4824
+Epoch 9, Average Loss: 1.4023
+Epoch 10, Average Loss: 1.4035
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 27.7778
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.7650
+Coefficient Epoch 2, Average Loss: 3.4580
+Coefficient Epoch 3, Average Loss: 3.1621
+Coefficient Epoch 4, Average Loss: 2.8817
+Coefficient Epoch 5, Average Loss: 2.6226
+Coefficient Epoch 6, Average Loss: 2.3923
+Coefficient Epoch 7, Average Loss: 2.1993
+Coefficient Epoch 8, Average Loss: 2.0523
+Coefficient Epoch 9, Average Loss: 1.9570
+Coefficient Epoch 10, Average Loss: 1.9141
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3348913788795471, 0.3343692719936371, 0.330739289522171]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 27.7778
+
+Test Domain: cartoon, Run 4/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2931
+Epoch 2, Average Loss: 0.4490
+Epoch 3, Average Loss: 0.0269
+Epoch 4, Average Loss: 0.0348
+Epoch 5, Average Loss: 0.0030
+Epoch 6, Average Loss: 0.0008
+Epoch 7, Average Loss: 0.0026
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Accuracy of naive model on art_painting: 27.7778
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.9907
+Epoch 2, Average Loss: 2.0024
+Epoch 3, Average Loss: 1.8855
+Epoch 4, Average Loss: 1.5844
+Epoch 5, Average Loss: 1.6754
+Epoch 6, Average Loss: 1.4130
+Epoch 7, Average Loss: 1.4174
+Epoch 8, Average Loss: 1.3226
+Epoch 9, Average Loss: 1.3454
+Epoch 10, Average Loss: 0.9747
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 16.6667
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.4117
+Epoch 2, Average Loss: 2.1854
+Epoch 3, Average Loss: 1.8976
+Epoch 4, Average Loss: 1.6287
+Epoch 5, Average Loss: 1.8376
+Epoch 6, Average Loss: 1.6710
+Epoch 7, Average Loss: 1.3842
+Epoch 8, Average Loss: 1.2546
+Epoch 9, Average Loss: 1.2584
+Epoch 10, Average Loss: 1.0233
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 33.3333
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.1111
+Epoch 2, Average Loss: 2.0431
+Epoch 3, Average Loss: 2.0709
+Epoch 4, Average Loss: 1.8156
+Epoch 5, Average Loss: 1.9172
+Epoch 6, Average Loss: 1.7168
+Epoch 7, Average Loss: 1.6802
+Epoch 8, Average Loss: 1.6316
+Epoch 9, Average Loss: 1.4742
+Epoch 10, Average Loss: 1.5796
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 11.1111
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.4492
+Coefficient Epoch 2, Average Loss: 3.2071
+Coefficient Epoch 3, Average Loss: 2.9748
+Coefficient Epoch 4, Average Loss: 2.7550
+Coefficient Epoch 5, Average Loss: 2.5512
+Coefficient Epoch 6, Average Loss: 2.3681
+Coefficient Epoch 7, Average Loss: 2.2112
+Coefficient Epoch 8, Average Loss: 2.0863
+Coefficient Epoch 9, Average Loss: 1.9983
+Coefficient Epoch 10, Average Loss: 1.9487
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3390018045902252, 0.3305509090423584, 0.3304472863674164]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 22.2222
+
+Test Domain: cartoon, Run 5/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.9519
+Epoch 2, Average Loss: 1.0652
+Epoch 3, Average Loss: 0.4748
+Epoch 4, Average Loss: 0.0353
+Epoch 5, Average Loss: 0.0110
+Epoch 6, Average Loss: 0.0037
+Epoch 7, Average Loss: 0.0039
+Epoch 8, Average Loss: 0.0030
+Epoch 9, Average Loss: 0.0024
+Epoch 10, Average Loss: 0.0018
+Accuracy of naive model on cartoon: 55.5556
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.6571
+Epoch 2, Average Loss: 2.5538
+Epoch 3, Average Loss: 2.0227
+Epoch 4, Average Loss: 1.8889
+Epoch 5, Average Loss: 1.7996
+Epoch 6, Average Loss: 1.6479
+Epoch 7, Average Loss: 1.3768
+Epoch 8, Average Loss: 1.6123
+Epoch 9, Average Loss: 1.3771
+Epoch 10, Average Loss: 1.2712
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 5.5556
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.5991
+Epoch 2, Average Loss: 2.1761
+Epoch 3, Average Loss: 2.4779
+Epoch 4, Average Loss: 1.8227
+Epoch 5, Average Loss: 1.8633
+Epoch 6, Average Loss: 1.7230
+Epoch 7, Average Loss: 1.4151
+Epoch 8, Average Loss: 1.3160
+Epoch 9, Average Loss: 1.3261
+Epoch 10, Average Loss: 1.1215
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 11.1111
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.3392
+Epoch 2, Average Loss: 2.1025
+Epoch 3, Average Loss: 2.1285
+Epoch 4, Average Loss: 1.6757
+Epoch 5, Average Loss: 1.7297
+Epoch 6, Average Loss: 1.5793
+Epoch 7, Average Loss: 1.5176
+Epoch 8, Average Loss: 1.6434
+Epoch 9, Average Loss: 1.5484
+Epoch 10, Average Loss: 1.5036
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 11.1111
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.2674
+Coefficient Epoch 2, Average Loss: 2.1568
+Coefficient Epoch 3, Average Loss: 2.0560
+Coefficient Epoch 4, Average Loss: 1.9674
+Coefficient Epoch 5, Average Loss: 1.8935
+Coefficient Epoch 6, Average Loss: 1.8371
+Coefficient Epoch 7, Average Loss: 1.8005
+Coefficient Epoch 8, Average Loss: 1.7843
+Coefficient Epoch 9, Average Loss: 1.7863
+Coefficient Epoch 10, Average Loss: 1.7999
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3411155045032501, 0.34581702947616577, 0.3130674660205841]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 5.5556
+
+Test Domain: sketch, Run 1/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Test domain: cartoon
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 3.0574
+Epoch 2, Average Loss: 0.9810
+Epoch 3, Average Loss: 0.2117
+Epoch 4, Average Loss: 0.0257
+Epoch 5, Average Loss: 0.0073
+Epoch 6, Average Loss: 0.0037
+Epoch 7, Average Loss: 0.0028
+Epoch 8, Average Loss: 0.0017
+Epoch 9, Average Loss: 0.0011
+Epoch 10, Average Loss: 0.0008
+Accuracy of naive model on cartoon: 22.2222
+Training domains: ['art_painting', 'photo', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.3503
+Epoch 2, Average Loss: 1.9560
+Epoch 3, Average Loss: 2.0971
+Epoch 4, Average Loss: 2.1021
+Epoch 5, Average Loss: 1.6935
+Epoch 6, Average Loss: 1.8088
+Epoch 7, Average Loss: 1.5021
+Epoch 8, Average Loss: 1.2747
+Epoch 9, Average Loss: 1.3642
+Epoch 10, Average Loss: 1.1336
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 27.7778
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.2651
+Epoch 2, Average Loss: 1.9203
+Epoch 3, Average Loss: 1.9319
+Epoch 4, Average Loss: 1.6298
+Epoch 5, Average Loss: 1.5733
+Epoch 6, Average Loss: 1.5052
+Epoch 7, Average Loss: 1.3260
+Epoch 8, Average Loss: 1.4553
+Epoch 9, Average Loss: 1.1667
+Epoch 10, Average Loss: 1.1682
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 27.7778
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.0541
+Epoch 2, Average Loss: 2.1543
+Epoch 3, Average Loss: 2.1389
+Epoch 4, Average Loss: 1.7027
+Epoch 5, Average Loss: 1.6897
+Epoch 6, Average Loss: 1.6515
+Epoch 7, Average Loss: 1.6979
+Epoch 8, Average Loss: 1.5160
+Epoch 9, Average Loss: 1.5911
+Epoch 10, Average Loss: 1.3370
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 16.6667
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 5.5166
+Coefficient Epoch 2, Average Loss: 5.0387
+Coefficient Epoch 3, Average Loss: 4.5706
+Coefficient Epoch 4, Average Loss: 4.1158
+Coefficient Epoch 5, Average Loss: 3.6793
+Coefficient Epoch 6, Average Loss: 3.2678
+Coefficient Epoch 7, Average Loss: 2.8907
+Coefficient Epoch 8, Average Loss: 2.5597
+Coefficient Epoch 9, Average Loss: 2.2885
+Coefficient Epoch 10, Average Loss: 2.0892
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33399656414985657, 0.33376139402389526, 0.3322420120239258]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 16.6667
+
+Test Domain: sketch, Run 2/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.3754
+Epoch 2, Average Loss: 0.3233
+Epoch 3, Average Loss: 0.0159
+Epoch 4, Average Loss: 0.0021
+Epoch 5, Average Loss: 0.0011
+Epoch 6, Average Loss: 0.0009
+Epoch 7, Average Loss: 0.0007
+Epoch 8, Average Loss: 0.0004
+Epoch 9, Average Loss: 0.0002
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on photo: 55.5556
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.5602
+Epoch 2, Average Loss: 1.9686
+Epoch 3, Average Loss: 2.1353
+Epoch 4, Average Loss: 1.9023
+Epoch 5, Average Loss: 1.5518
+Epoch 6, Average Loss: 1.6231
+Epoch 7, Average Loss: 1.4107
+Epoch 8, Average Loss: 1.2726
+Epoch 9, Average Loss: 1.1566
+Epoch 10, Average Loss: 1.3431
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 16.6667
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.7812
+Epoch 2, Average Loss: 2.3491
+Epoch 3, Average Loss: 2.0659
+Epoch 4, Average Loss: 1.8539
+Epoch 5, Average Loss: 1.4939
+Epoch 6, Average Loss: 1.5373
+Epoch 7, Average Loss: 1.8427
+Epoch 8, Average Loss: 1.4291
+Epoch 9, Average Loss: 1.0344
+Epoch 10, Average Loss: 1.0600
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 11.1111
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.3091
+Epoch 2, Average Loss: 2.0980
+Epoch 3, Average Loss: 2.0169
+Epoch 4, Average Loss: 1.9895
+Epoch 5, Average Loss: 1.7349
+Epoch 6, Average Loss: 2.0077
+Epoch 7, Average Loss: 1.6029
+Epoch 8, Average Loss: 1.5506
+Epoch 9, Average Loss: 1.4773
+Epoch 10, Average Loss: 1.4243
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 5.5556
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.8094
+Coefficient Epoch 2, Average Loss: 3.5138
+Coefficient Epoch 3, Average Loss: 3.2292
+Coefficient Epoch 4, Average Loss: 2.9591
+Coefficient Epoch 5, Average Loss: 2.7085
+Coefficient Epoch 6, Average Loss: 2.4834
+Coefficient Epoch 7, Average Loss: 2.2908
+Coefficient Epoch 8, Average Loss: 2.1375
+Coefficient Epoch 9, Average Loss: 2.0287
+Coefficient Epoch 10, Average Loss: 1.9650
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.334703654050827, 0.3346036374568939, 0.33069276809692383]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 11.1111
+
+Test Domain: sketch, Run 3/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: sketch
+Training domains: ['art_painting', 'photo', 'cartoon']
+Test domain: sketch
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.9233
+Epoch 2, Average Loss: 1.7241
+Epoch 3, Average Loss: 2.4350
+Epoch 4, Average Loss: 1.4526
+Epoch 5, Average Loss: 0.3523
+Epoch 6, Average Loss: 0.2594
+Epoch 7, Average Loss: 0.0994
+Epoch 8, Average Loss: 0.0526
+Epoch 9, Average Loss: 0.0202
+Epoch 10, Average Loss: 0.0116
+Accuracy of naive model on sketch: 38.8889
+Training domains: ['art_painting', 'photo', 'cartoon']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.3807
+Epoch 2, Average Loss: 2.3870
+Epoch 3, Average Loss: 2.1259
+Epoch 4, Average Loss: 1.4853
+Epoch 5, Average Loss: 1.5516
+Epoch 6, Average Loss: 1.6087
+Epoch 7, Average Loss: 1.4852
+Epoch 8, Average Loss: 1.4144
+Epoch 9, Average Loss: 1.3376
+Epoch 10, Average Loss: 1.3691
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 5.5556
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 1.8050
+Epoch 2, Average Loss: 1.5755
+Epoch 3, Average Loss: 1.4835
+Epoch 4, Average Loss: 1.2880
+Epoch 5, Average Loss: 1.4021
+Epoch 6, Average Loss: 1.0994
+Epoch 7, Average Loss: 1.1983
+Epoch 8, Average Loss: 1.1064
+Epoch 9, Average Loss: 0.8266
+Epoch 10, Average Loss: 1.0196
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 11.1111
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.8656
+Epoch 2, Average Loss: 1.9787
+Epoch 3, Average Loss: 1.4826
+Epoch 4, Average Loss: 1.7016
+Epoch 5, Average Loss: 1.2341
+Epoch 6, Average Loss: 1.3734
+Epoch 7, Average Loss: 1.3013
+Epoch 8, Average Loss: 1.0201
+Epoch 9, Average Loss: 1.0037
+Epoch 10, Average Loss: 0.7971
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 0.0000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.4859
+Coefficient Epoch 2, Average Loss: 2.3552
+Coefficient Epoch 3, Average Loss: 2.2354
+Coefficient Epoch 4, Average Loss: 2.1284
+Coefficient Epoch 5, Average Loss: 2.0367
+Coefficient Epoch 6, Average Loss: 1.9624
+Coefficient Epoch 7, Average Loss: 1.9076
+Coefficient Epoch 8, Average Loss: 1.8737
+Coefficient Epoch 9, Average Loss: 1.8606
+Coefficient Epoch 10, Average Loss: 1.8660
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33171358704566956, 0.3313688337802887, 0.33691760897636414]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 5.5556
+
+Test Domain: sketch, Run 4/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+Test domain: photo
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.1459
+Epoch 2, Average Loss: 0.2763
+Epoch 3, Average Loss: 0.0066
+Epoch 4, Average Loss: 0.0008
+Epoch 5, Average Loss: 0.0004
+Epoch 6, Average Loss: 0.0003
+Epoch 7, Average Loss: 0.0003
+Epoch 8, Average Loss: 0.0004
+Epoch 9, Average Loss: 0.0004
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on photo: 44.4444
+Training domains: ['art_painting', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: art_painting
+Training model for domain: art_painting
+Epoch 1, Average Loss: 2.1007
+Epoch 2, Average Loss: 2.2735
+Epoch 3, Average Loss: 2.1539
+Epoch 4, Average Loss: 1.6220
+Epoch 5, Average Loss: 1.4522
+Epoch 6, Average Loss: 1.4967
+Epoch 7, Average Loss: 1.3122
+Epoch 8, Average Loss: 1.2002
+Epoch 9, Average Loss: 1.1399
+Epoch 10, Average Loss: 1.2519
+Merged model device: cuda:0
+Accuracy of art_painting model on test domain: 27.7778
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 2.7511
+Epoch 2, Average Loss: 2.2749
+Epoch 3, Average Loss: 2.2126
+Epoch 4, Average Loss: 1.8087
+Epoch 5, Average Loss: 1.9228
+Epoch 6, Average Loss: 1.6957
+Epoch 7, Average Loss: 1.5314
+Epoch 8, Average Loss: 1.5415
+Epoch 9, Average Loss: 1.3411
+Epoch 10, Average Loss: 1.3807
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 16.6667
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.0589
+Epoch 2, Average Loss: 1.9902
+Epoch 3, Average Loss: 1.7106
+Epoch 4, Average Loss: 1.9304
+Epoch 5, Average Loss: 1.7421
+Epoch 6, Average Loss: 1.8319
+Epoch 7, Average Loss: 1.5139
+Epoch 8, Average Loss: 1.7427
+Epoch 9, Average Loss: 1.5591
+Epoch 10, Average Loss: 1.3736
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 11.1111
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.1141
+Coefficient Epoch 2, Average Loss: 2.9084
+Coefficient Epoch 3, Average Loss: 2.7117
+Coefficient Epoch 4, Average Loss: 2.5266
+Coefficient Epoch 5, Average Loss: 2.3565
+Coefficient Epoch 6, Average Loss: 2.2060
+Coefficient Epoch 7, Average Loss: 2.0804
+Coefficient Epoch 8, Average Loss: 1.9851
+Coefficient Epoch 9, Average Loss: 1.9245
+Coefficient Epoch 10, Average Loss: 1.8996
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3431720435619354, 0.329434871673584, 0.327393114566803]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 16.6667
+
+Test Domain: sketch, Run 5/5
+Preparing data...
+Domains: ['art_painting', 'photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Training domains: ['photo', 'cartoon', 'sketch']
+Test domain: art_painting
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.3891
+Epoch 2, Average Loss: 0.8915
+Epoch 3, Average Loss: 0.0889
+Epoch 4, Average Loss: 0.0147
+Epoch 5, Average Loss: 0.0051
+Epoch 6, Average Loss: 0.0031
+Epoch 7, Average Loss: 0.0015
+Epoch 8, Average Loss: 0.0008
+Epoch 9, Average Loss: 0.0005
+Epoch 10, Average Loss: 0.0004
+Accuracy of naive model on art_painting: 27.7778
+Training domains: ['photo', 'cartoon', 'sketch']
+
+Training expert models...
+
+Training model for domain: photo
+Training model for domain: photo
+Epoch 1, Average Loss: 2.2406
+Epoch 2, Average Loss: 2.1042
+Epoch 3, Average Loss: 1.8000
+Epoch 4, Average Loss: 1.9989
+Epoch 5, Average Loss: 1.6995
+Epoch 6, Average Loss: 1.4906
+Epoch 7, Average Loss: 1.3754
+Epoch 8, Average Loss: 1.4576
+Epoch 9, Average Loss: 1.2684
+Epoch 10, Average Loss: 1.0739
+Merged model device: cuda:0
+Accuracy of photo model on test domain: 16.6667
+
+Training model for domain: cartoon
+Training model for domain: cartoon
+Epoch 1, Average Loss: 1.9637
+Epoch 2, Average Loss: 2.2612
+Epoch 3, Average Loss: 1.4172
+Epoch 4, Average Loss: 1.8264
+Epoch 5, Average Loss: 1.5717
+Epoch 6, Average Loss: 1.6399
+Epoch 7, Average Loss: 1.4732
+Epoch 8, Average Loss: 1.6724
+Epoch 9, Average Loss: 1.2529
+Epoch 10, Average Loss: 1.3919
+Merged model device: cuda:0
+Accuracy of cartoon model on test domain: 16.6667
+
+Training model for domain: sketch
+Training model for domain: sketch
+Epoch 1, Average Loss: 2.1311
+Epoch 2, Average Loss: 1.9503
+Epoch 3, Average Loss: 2.1617
+Epoch 4, Average Loss: 1.7754
+Epoch 5, Average Loss: 1.7808
+Epoch 6, Average Loss: 1.6428
+Epoch 7, Average Loss: 1.5790
+Epoch 8, Average Loss: 1.4478
+Epoch 9, Average Loss: 1.5337
+Epoch 10, Average Loss: 1.5478
+Merged model device: cuda:0
+Accuracy of sketch model on test domain: 16.6667
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.8124
+Coefficient Epoch 2, Average Loss: 3.5155
+Coefficient Epoch 3, Average Loss: 3.2274
+Coefficient Epoch 4, Average Loss: 2.9510
+Coefficient Epoch 5, Average Loss: 2.6903
+Coefficient Epoch 6, Average Loss: 2.4513
+Coefficient Epoch 7, Average Loss: 2.2424
+Coefficient Epoch 8, Average Loss: 2.0749
+Coefficient Epoch 9, Average Loss: 1.9612
+Coefficient Epoch 10, Average Loss: 1.9096
+Final device check:
+Expert model photo device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3364301919937134, 0.3328738510608673, 0.3306959569454193]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 16.6667
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'art_painting', 'domain_accuracies': {'photo': 11.11111111111111, 'cartoon': 11.11111111111111, 'sketch': 11.11111111111111}, 'final_accuracy': 11.11111111111111, 'coefficients': [0.3358720541000366, 0.3321232199668884, 0.33200472593307495]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 11.11111111111111, 'photo': 22.22222222222222, 'sketch': 27.77777777777778}, 'final_accuracy': 27.77777777777778, 'coefficients': [0.33488526940345764, 0.3345656991004944, 0.3305490016937256]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 33.33333333333333, 'cartoon': 22.22222222222222, 'sketch': 27.77777777777778}, 'final_accuracy': 33.33333333333333, 'coefficients': [0.33592233061790466, 0.3325883448123932, 0.33148932456970215]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 44.44444444444444, 'cartoon': 38.88888888888889, 'sketch': 22.22222222222222}, 'final_accuracy': 38.88888888888889, 'coefficients': [0.3473259508609772, 0.3278907835483551, 0.3247832953929901]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 16.666666666666664, 'photo': 22.22222222222222, 'sketch': 16.666666666666664}, 'final_accuracy': 16.666666666666664, 'coefficients': [0.3357335031032562, 0.33496594429016113, 0.32930052280426025]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 16.666666666666664, 'cartoon': 16.666666666666664, 'sketch': 11.11111111111111}, 'final_accuracy': 16.666666666666664, 'coefficients': [0.34933164715766907, 0.328287810087204, 0.32238054275512695]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 27.77777777777778, 'cartoon': 16.666666666666664, 'sketch': 16.666666666666664}, 'final_accuracy': 22.22222222222222, 'coefficients': [0.33720657229423523, 0.33146706223487854, 0.33132636547088623]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 11.11111111111111, 'photo': 16.666666666666664, 'sketch': 16.666666666666664}, 'final_accuracy': 16.666666666666664, 'coefficients': [0.3350770175457001, 0.3348523676395416, 0.3300705850124359]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 33.33333333333333, 'photo': 38.88888888888889, 'sketch': 38.88888888888889}, 'final_accuracy': 33.33333333333333, 'coefficients': [0.3266884386539459, 0.32474780082702637, 0.34856370091438293]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 11.11111111111111, 'cartoon': 5.555555555555555, 'sketch': 5.555555555555555}, 'final_accuracy': 5.555555555555555, 'coefficients': [0.335399866104126, 0.3329164981842041, 0.3316836655139923]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 11.11111111111111, 'photo': 22.22222222222222, 'sketch': 11.11111111111111}, 'final_accuracy': 22.22222222222222, 'coefficients': [0.3327387571334839, 0.33364182710647583, 0.33361944556236267]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 5.555555555555555, 'photo': 0.0, 'cartoon': 11.11111111111111}, 'final_accuracy': 0.0, 'coefficients': [0.3298575282096863, 0.3285645842552185, 0.3415778875350952]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 38.88888888888889, 'cartoon': 27.77777777777778, 'sketch': 27.77777777777778}, 'final_accuracy': 27.77777777777778, 'coefficients': [0.3348913788795471, 0.3343692719936371, 0.330739289522171]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 16.666666666666664, 'cartoon': 33.33333333333333, 'sketch': 11.11111111111111}, 'final_accuracy': 22.22222222222222, 'coefficients': [0.3390018045902252, 0.3305509090423584, 0.3304472863674164]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 5.555555555555555, 'photo': 11.11111111111111, 'sketch': 11.11111111111111}, 'final_accuracy': 5.555555555555555, 'coefficients': [0.3411155045032501, 0.34581702947616577, 0.3130674660205841]}, {'test_domain': 'cartoon', 'domain_accuracies': {'art_painting': 27.77777777777778, 'photo': 27.77777777777778, 'sketch': 16.666666666666664}, 'final_accuracy': 16.666666666666664, 'coefficients': [0.33399656414985657, 0.33376139402389526, 0.3322420120239258]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 16.666666666666664, 'cartoon': 11.11111111111111, 'sketch': 5.555555555555555}, 'final_accuracy': 11.11111111111111, 'coefficients': [0.334703654050827, 0.3346036374568939, 0.33069276809692383]}, {'test_domain': 'sketch', 'domain_accuracies': {'art_painting': 5.555555555555555, 'photo': 11.11111111111111, 'cartoon': 0.0}, 'final_accuracy': 5.555555555555555, 'coefficients': [0.33171358704566956, 0.3313688337802887, 0.33691760897636414]}, {'test_domain': 'photo', 'domain_accuracies': {'art_painting': 27.77777777777778, 'cartoon': 16.666666666666664, 'sketch': 11.11111111111111}, 'final_accuracy': 16.666666666666664, 'coefficients': [0.3431720435619354, 0.329434871673584, 0.327393114566803]}, {'test_domain': 'art_painting', 'domain_accuracies': {'photo': 16.666666666666664, 'cartoon': 16.666666666666664, 'sketch': 16.666666666666664}, 'final_accuracy': 16.666666666666664, 'coefficients': [0.3364301919937134, 0.3328738510608673, 0.3306959569454193]}]
+Final Model Accuracy: 18.3333 ± 10.1074
+Domain-specific Accuracies:
+  photo: 21.6049 ± 11.3989
+  cartoon: 17.5214 ± 10.4154
+  sketch: 16.9753 ± 8.5811
+  art_painting: 15.6566 ± 9.4216
+Average Coefficients:
+  Coefficient 1: 0.3366 ± 0.0052
+  Coefficient 2: 0.3325 ± 0.0041
+  Coefficient 3: 0.3310 ± 0.0068
+
+==================================================
+Running experiments for dataset: VLCS
+==================================================
+
+Test Domain: LabelMe, Run 1/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.3107
+Epoch 2, Average Loss: 1.1561
+Epoch 3, Average Loss: 0.4989
+Epoch 4, Average Loss: 0.0922
+Epoch 5, Average Loss: 0.0235
+Epoch 6, Average Loss: 0.0095
+Epoch 7, Average Loss: 0.0044
+Epoch 8, Average Loss: 0.0021
+Epoch 9, Average Loss: 0.0011
+Epoch 10, Average Loss: 0.0006
+Accuracy of naive model on LabelMe: 23.0769
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.6534
+Epoch 2, Average Loss: 1.5298
+Epoch 3, Average Loss: 1.4121
+Epoch 4, Average Loss: 1.2980
+Epoch 5, Average Loss: 1.1927
+Epoch 6, Average Loss: 1.0925
+Epoch 7, Average Loss: 0.9981
+Epoch 8, Average Loss: 0.9071
+Epoch 9, Average Loss: 0.8283
+Epoch 10, Average Loss: 0.7502
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 15.3846
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.2406
+Epoch 2, Average Loss: 1.1471
+Epoch 3, Average Loss: 1.0551
+Epoch 4, Average Loss: 0.9670
+Epoch 5, Average Loss: 0.8808
+Epoch 6, Average Loss: 0.7978
+Epoch 7, Average Loss: 0.7183
+Epoch 8, Average Loss: 0.6452
+Epoch 9, Average Loss: 0.5748
+Epoch 10, Average Loss: 0.5127
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 15.3846
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.8762
+Epoch 2, Average Loss: 1.7117
+Epoch 3, Average Loss: 1.5761
+Epoch 4, Average Loss: 1.4494
+Epoch 5, Average Loss: 1.3309
+Epoch 6, Average Loss: 1.2206
+Epoch 7, Average Loss: 1.1142
+Epoch 8, Average Loss: 1.0144
+Epoch 9, Average Loss: 0.9233
+Epoch 10, Average Loss: 0.8322
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 15.3846
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.4851
+Coefficient Epoch 2, Average Loss: 4.0955
+Coefficient Epoch 3, Average Loss: 3.7117
+Coefficient Epoch 4, Average Loss: 3.3361
+Coefficient Epoch 5, Average Loss: 2.9727
+Coefficient Epoch 6, Average Loss: 2.6276
+Coefficient Epoch 7, Average Loss: 2.3103
+Coefficient Epoch 8, Average Loss: 2.0344
+Coefficient Epoch 9, Average Loss: 1.8172
+Coefficient Epoch 10, Average Loss: 1.6746
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3336365222930908, 0.3329794108867645, 0.33338403701782227]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 15.3846
+
+Test Domain: LabelMe, Run 2/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: VOC2007
+Training domains: ['LabelMe', 'SUN09', 'Caltech101']
+Test domain: VOC2007
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.9536
+Epoch 2, Average Loss: 0.0800
+Epoch 3, Average Loss: 0.0050
+Epoch 4, Average Loss: 0.0031
+Epoch 5, Average Loss: 0.0009
+Epoch 6, Average Loss: 0.0004
+Epoch 7, Average Loss: 0.0003
+Epoch 8, Average Loss: 0.0003
+Epoch 9, Average Loss: 0.0002
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on VOC2007: 69.2308
+Training domains: ['LabelMe', 'SUN09', 'Caltech101']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.8512
+Epoch 2, Average Loss: 1.7360
+Epoch 3, Average Loss: 1.6202
+Epoch 4, Average Loss: 1.5165
+Epoch 5, Average Loss: 1.4174
+Epoch 6, Average Loss: 1.3234
+Epoch 7, Average Loss: 1.2349
+Epoch 8, Average Loss: 1.1470
+Epoch 9, Average Loss: 1.0651
+Epoch 10, Average Loss: 0.9869
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 7.6923
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 2.0469
+Epoch 2, Average Loss: 1.9208
+Epoch 3, Average Loss: 1.8032
+Epoch 4, Average Loss: 1.7012
+Epoch 5, Average Loss: 1.5953
+Epoch 6, Average Loss: 1.4908
+Epoch 7, Average Loss: 1.3967
+Epoch 8, Average Loss: 1.3054
+Epoch 9, Average Loss: 1.2176
+Epoch 10, Average Loss: 1.1337
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 15.3846
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.7075
+Epoch 2, Average Loss: 1.5862
+Epoch 3, Average Loss: 1.4782
+Epoch 4, Average Loss: 1.3714
+Epoch 5, Average Loss: 1.2667
+Epoch 6, Average Loss: 1.1634
+Epoch 7, Average Loss: 1.0625
+Epoch 8, Average Loss: 0.9680
+Epoch 9, Average Loss: 0.8741
+Epoch 10, Average Loss: 0.7850
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 15.3846
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.7638
+Coefficient Epoch 2, Average Loss: 2.5717
+Coefficient Epoch 3, Average Loss: 2.3877
+Coefficient Epoch 4, Average Loss: 2.2140
+Coefficient Epoch 5, Average Loss: 2.0533
+Coefficient Epoch 6, Average Loss: 1.9090
+Coefficient Epoch 7, Average Loss: 1.7851
+Coefficient Epoch 8, Average Loss: 1.6863
+Coefficient Epoch 9, Average Loss: 1.6178
+Coefficient Epoch 10, Average Loss: 1.5843
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3302057087421417, 0.33559978008270264, 0.334194540977478]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 15.3846
+
+Test Domain: LabelMe, Run 3/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: VOC2007
+Training domains: ['LabelMe', 'SUN09', 'Caltech101']
+Test domain: VOC2007
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.8511
+Epoch 2, Average Loss: 0.3618
+Epoch 3, Average Loss: 0.0195
+Epoch 4, Average Loss: 0.0150
+Epoch 5, Average Loss: 0.0030
+Epoch 6, Average Loss: 0.0008
+Epoch 7, Average Loss: 0.0003
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Accuracy of naive model on VOC2007: 38.4615
+Training domains: ['LabelMe', 'SUN09', 'Caltech101']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.7295
+Epoch 2, Average Loss: 1.6275
+Epoch 3, Average Loss: 1.5291
+Epoch 4, Average Loss: 1.4344
+Epoch 5, Average Loss: 1.3398
+Epoch 6, Average Loss: 1.2498
+Epoch 7, Average Loss: 1.1618
+Epoch 8, Average Loss: 1.0774
+Epoch 9, Average Loss: 0.9946
+Epoch 10, Average Loss: 0.9184
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 38.4615
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.8070
+Epoch 2, Average Loss: 1.6768
+Epoch 3, Average Loss: 1.5578
+Epoch 4, Average Loss: 1.4478
+Epoch 5, Average Loss: 1.3452
+Epoch 6, Average Loss: 1.2438
+Epoch 7, Average Loss: 1.1512
+Epoch 8, Average Loss: 1.0646
+Epoch 9, Average Loss: 0.9876
+Epoch 10, Average Loss: 0.9117
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.9316
+Epoch 2, Average Loss: 1.8037
+Epoch 3, Average Loss: 1.6919
+Epoch 4, Average Loss: 1.5860
+Epoch 5, Average Loss: 1.4862
+Epoch 6, Average Loss: 1.3877
+Epoch 7, Average Loss: 1.2938
+Epoch 8, Average Loss: 1.2025
+Epoch 9, Average Loss: 1.1167
+Epoch 10, Average Loss: 1.0309
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 38.4615
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.3706
+Coefficient Epoch 2, Average Loss: 2.2224
+Coefficient Epoch 3, Average Loss: 2.0814
+Coefficient Epoch 4, Average Loss: 1.9499
+Coefficient Epoch 5, Average Loss: 1.8305
+Coefficient Epoch 6, Average Loss: 1.7267
+Coefficient Epoch 7, Average Loss: 1.6425
+Coefficient Epoch 8, Average Loss: 1.5825
+Coefficient Epoch 9, Average Loss: 1.5500
+Coefficient Epoch 10, Average Loss: 1.5456
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3282618224620819, 0.33514711260795593, 0.33659103512763977]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 38.4615
+
+Test Domain: LabelMe, Run 4/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.0417
+Epoch 2, Average Loss: 0.6272
+Epoch 3, Average Loss: 0.0670
+Epoch 4, Average Loss: 0.0065
+Epoch 5, Average Loss: 0.0027
+Epoch 6, Average Loss: 0.0022
+Epoch 7, Average Loss: 0.0019
+Epoch 8, Average Loss: 0.0012
+Epoch 9, Average Loss: 0.0006
+Epoch 10, Average Loss: 0.0004
+Accuracy of naive model on LabelMe: 38.4615
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 2.2357
+Epoch 2, Average Loss: 2.1075
+Epoch 3, Average Loss: 1.9822
+Epoch 4, Average Loss: 1.8445
+Epoch 5, Average Loss: 1.7249
+Epoch 6, Average Loss: 1.6151
+Epoch 7, Average Loss: 1.5105
+Epoch 8, Average Loss: 1.4102
+Epoch 9, Average Loss: 1.3113
+Epoch 10, Average Loss: 1.2184
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.9113
+Epoch 2, Average Loss: 1.7769
+Epoch 3, Average Loss: 1.6588
+Epoch 4, Average Loss: 1.5458
+Epoch 5, Average Loss: 1.4370
+Epoch 6, Average Loss: 1.3316
+Epoch 7, Average Loss: 1.2288
+Epoch 8, Average Loss: 1.1304
+Epoch 9, Average Loss: 1.0375
+Epoch 10, Average Loss: 0.9479
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 38.4615
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.9373
+Epoch 2, Average Loss: 1.8018
+Epoch 3, Average Loss: 1.6782
+Epoch 4, Average Loss: 1.5560
+Epoch 5, Average Loss: 1.4385
+Epoch 6, Average Loss: 1.3274
+Epoch 7, Average Loss: 1.2223
+Epoch 8, Average Loss: 1.1225
+Epoch 9, Average Loss: 1.0289
+Epoch 10, Average Loss: 0.9399
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 30.7692
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.2572
+Coefficient Epoch 2, Average Loss: 3.0148
+Coefficient Epoch 3, Average Loss: 2.7797
+Coefficient Epoch 4, Average Loss: 2.5541
+Coefficient Epoch 5, Average Loss: 2.3413
+Coefficient Epoch 6, Average Loss: 2.1454
+Coefficient Epoch 7, Average Loss: 1.9721
+Coefficient Epoch 8, Average Loss: 1.8275
+Coefficient Epoch 9, Average Loss: 1.7177
+Coefficient Epoch 10, Average Loss: 1.6464
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33266377449035645, 0.3339810073375702, 0.3333551585674286]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 30.7692
+
+Test Domain: LabelMe, Run 5/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2989
+Epoch 2, Average Loss: 0.1843
+Epoch 3, Average Loss: 0.0280
+Epoch 4, Average Loss: 0.0028
+Epoch 5, Average Loss: 0.0011
+Epoch 6, Average Loss: 0.0007
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0004
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on SUN09: 38.4615
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.6168
+Epoch 2, Average Loss: 1.5091
+Epoch 3, Average Loss: 1.4093
+Epoch 4, Average Loss: 1.3125
+Epoch 5, Average Loss: 1.2202
+Epoch 6, Average Loss: 1.1324
+Epoch 7, Average Loss: 1.0475
+Epoch 8, Average Loss: 0.9663
+Epoch 9, Average Loss: 0.8911
+Epoch 10, Average Loss: 0.8184
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 2.2337
+Epoch 2, Average Loss: 2.0863
+Epoch 3, Average Loss: 1.9541
+Epoch 4, Average Loss: 1.8379
+Epoch 5, Average Loss: 1.7228
+Epoch 6, Average Loss: 1.6057
+Epoch 7, Average Loss: 1.4927
+Epoch 8, Average Loss: 1.3841
+Epoch 9, Average Loss: 1.2803
+Epoch 10, Average Loss: 1.1791
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 23.0769
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.8288
+Epoch 2, Average Loss: 1.6841
+Epoch 3, Average Loss: 1.5704
+Epoch 4, Average Loss: 1.4513
+Epoch 5, Average Loss: 1.3397
+Epoch 6, Average Loss: 1.2328
+Epoch 7, Average Loss: 1.1356
+Epoch 8, Average Loss: 1.0444
+Epoch 9, Average Loss: 0.9581
+Epoch 10, Average Loss: 0.8773
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 38.4615
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.2596
+Coefficient Epoch 2, Average Loss: 3.9080
+Coefficient Epoch 3, Average Loss: 3.5642
+Coefficient Epoch 4, Average Loss: 3.2300
+Coefficient Epoch 5, Average Loss: 2.9086
+Coefficient Epoch 6, Average Loss: 2.6041
+Coefficient Epoch 7, Average Loss: 2.3223
+Coefficient Epoch 8, Average Loss: 2.0716
+Coefficient Epoch 9, Average Loss: 1.8635
+Coefficient Epoch 10, Average Loss: 1.7108
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3327404856681824, 0.3331107497215271, 0.3341487646102905]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 23.0769
+
+Test Domain: SUN09, Run 1/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.8448
+Epoch 2, Average Loss: 0.2590
+Epoch 3, Average Loss: 0.0318
+Epoch 4, Average Loss: 0.0128
+Epoch 5, Average Loss: 0.0013
+Epoch 6, Average Loss: 0.0008
+Epoch 7, Average Loss: 0.0017
+Epoch 8, Average Loss: 0.0003
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Accuracy of naive model on SUN09: 23.0769
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.8824
+Epoch 2, Average Loss: 1.7617
+Epoch 3, Average Loss: 1.6481
+Epoch 4, Average Loss: 1.5387
+Epoch 5, Average Loss: 1.4319
+Epoch 6, Average Loss: 1.3300
+Epoch 7, Average Loss: 1.2322
+Epoch 8, Average Loss: 1.1366
+Epoch 9, Average Loss: 1.0519
+Epoch 10, Average Loss: 0.9686
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.7126
+Epoch 2, Average Loss: 1.5887
+Epoch 3, Average Loss: 1.4723
+Epoch 4, Average Loss: 1.3618
+Epoch 5, Average Loss: 1.2535
+Epoch 6, Average Loss: 1.1521
+Epoch 7, Average Loss: 1.0511
+Epoch 8, Average Loss: 0.9573
+Epoch 9, Average Loss: 0.8684
+Epoch 10, Average Loss: 0.7812
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 23.0769
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 2.1940
+Epoch 2, Average Loss: 2.0296
+Epoch 3, Average Loss: 1.8896
+Epoch 4, Average Loss: 1.7573
+Epoch 5, Average Loss: 1.6296
+Epoch 6, Average Loss: 1.5144
+Epoch 7, Average Loss: 1.3970
+Epoch 8, Average Loss: 1.2858
+Epoch 9, Average Loss: 1.1870
+Epoch 10, Average Loss: 1.0893
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 30.7692
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.1369
+Coefficient Epoch 2, Average Loss: 2.9058
+Coefficient Epoch 3, Average Loss: 2.6811
+Coefficient Epoch 4, Average Loss: 2.4650
+Coefficient Epoch 5, Average Loss: 2.2602
+Coefficient Epoch 6, Average Loss: 2.0710
+Coefficient Epoch 7, Average Loss: 1.9034
+Coefficient Epoch 8, Average Loss: 1.7657
+Coefficient Epoch 9, Average Loss: 1.6667
+Coefficient Epoch 10, Average Loss: 1.6123
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3317832946777344, 0.3353555500507355, 0.33286112546920776]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 30.7692
+
+Test Domain: SUN09, Run 2/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.7589
+Epoch 2, Average Loss: 0.0826
+Epoch 3, Average Loss: 0.0055
+Epoch 4, Average Loss: 0.0022
+Epoch 5, Average Loss: 0.0019
+Epoch 6, Average Loss: 0.0011
+Epoch 7, Average Loss: 0.0005
+Epoch 8, Average Loss: 0.0004
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on SUN09: 23.0769
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.7304
+Epoch 2, Average Loss: 1.6210
+Epoch 3, Average Loss: 1.5297
+Epoch 4, Average Loss: 1.4253
+Epoch 5, Average Loss: 1.3397
+Epoch 6, Average Loss: 1.2559
+Epoch 7, Average Loss: 1.1748
+Epoch 8, Average Loss: 1.1020
+Epoch 9, Average Loss: 1.0323
+Epoch 10, Average Loss: 0.9656
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 38.4615
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.6689
+Epoch 2, Average Loss: 1.5544
+Epoch 3, Average Loss: 1.4542
+Epoch 4, Average Loss: 1.3554
+Epoch 5, Average Loss: 1.2590
+Epoch 6, Average Loss: 1.1643
+Epoch 7, Average Loss: 1.0727
+Epoch 8, Average Loss: 0.9846
+Epoch 9, Average Loss: 0.8963
+Epoch 10, Average Loss: 0.8146
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 46.1538
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.9114
+Epoch 2, Average Loss: 1.7787
+Epoch 3, Average Loss: 1.6607
+Epoch 4, Average Loss: 1.5432
+Epoch 5, Average Loss: 1.4313
+Epoch 6, Average Loss: 1.3239
+Epoch 7, Average Loss: 1.2225
+Epoch 8, Average Loss: 1.1256
+Epoch 9, Average Loss: 1.0336
+Epoch 10, Average Loss: 0.9435
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 53.8462
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.6326
+Coefficient Epoch 2, Average Loss: 2.4615
+Coefficient Epoch 3, Average Loss: 2.2978
+Coefficient Epoch 4, Average Loss: 2.1436
+Coefficient Epoch 5, Average Loss: 2.0011
+Coefficient Epoch 6, Average Loss: 1.8736
+Coefficient Epoch 7, Average Loss: 1.7646
+Coefficient Epoch 8, Average Loss: 1.6787
+Coefficient Epoch 9, Average Loss: 1.6201
+Coefficient Epoch 10, Average Loss: 1.5918
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33262136578559875, 0.33282968401908875, 0.3345489203929901]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 46.1538
+
+Test Domain: SUN09, Run 3/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.7310
+Epoch 2, Average Loss: 0.2801
+Epoch 3, Average Loss: 0.0206
+Epoch 4, Average Loss: 0.0021
+Epoch 5, Average Loss: 0.0016
+Epoch 6, Average Loss: 0.0013
+Epoch 7, Average Loss: 0.0009
+Epoch 8, Average Loss: 0.0005
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on LabelMe: 30.7692
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 2.0435
+Epoch 2, Average Loss: 1.9079
+Epoch 3, Average Loss: 1.7825
+Epoch 4, Average Loss: 1.6649
+Epoch 5, Average Loss: 1.5537
+Epoch 6, Average Loss: 1.4466
+Epoch 7, Average Loss: 1.3426
+Epoch 8, Average Loss: 1.2424
+Epoch 9, Average Loss: 1.1445
+Epoch 10, Average Loss: 1.0529
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.9580
+Epoch 2, Average Loss: 1.8146
+Epoch 3, Average Loss: 1.6988
+Epoch 4, Average Loss: 1.5883
+Epoch 5, Average Loss: 1.4796
+Epoch 6, Average Loss: 1.3746
+Epoch 7, Average Loss: 1.2700
+Epoch 8, Average Loss: 1.1702
+Epoch 9, Average Loss: 1.0700
+Epoch 10, Average Loss: 0.9774
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 23.0769
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 2.3080
+Epoch 2, Average Loss: 2.1635
+Epoch 3, Average Loss: 2.0220
+Epoch 4, Average Loss: 1.8877
+Epoch 5, Average Loss: 1.7582
+Epoch 6, Average Loss: 1.6353
+Epoch 7, Average Loss: 1.5187
+Epoch 8, Average Loss: 1.4108
+Epoch 9, Average Loss: 1.3092
+Epoch 10, Average Loss: 1.2117
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 23.0769
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.2134
+Coefficient Epoch 2, Average Loss: 2.0887
+Coefficient Epoch 3, Average Loss: 1.9724
+Coefficient Epoch 4, Average Loss: 1.8666
+Coefficient Epoch 5, Average Loss: 1.7734
+Coefficient Epoch 6, Average Loss: 1.6952
+Coefficient Epoch 7, Average Loss: 1.6345
+Coefficient Epoch 8, Average Loss: 1.5931
+Coefficient Epoch 9, Average Loss: 1.5713
+Coefficient Epoch 10, Average Loss: 1.5673
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3263677954673767, 0.33461126685142517, 0.3390209376811981]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 23.0769
+
+Test Domain: SUN09, Run 4/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: VOC2007
+Training domains: ['LabelMe', 'SUN09', 'Caltech101']
+Test domain: VOC2007
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2180
+Epoch 2, Average Loss: 0.3276
+Epoch 3, Average Loss: 0.0320
+Epoch 4, Average Loss: 0.0255
+Epoch 5, Average Loss: 0.0011
+Epoch 6, Average Loss: 0.0006
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0006
+Epoch 9, Average Loss: 0.0007
+Epoch 10, Average Loss: 0.0006
+Accuracy of naive model on VOC2007: 30.7692
+Training domains: ['LabelMe', 'SUN09', 'Caltech101']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.9879
+Epoch 2, Average Loss: 1.8692
+Epoch 3, Average Loss: 1.7544
+Epoch 4, Average Loss: 1.6449
+Epoch 5, Average Loss: 1.5366
+Epoch 6, Average Loss: 1.4319
+Epoch 7, Average Loss: 1.3324
+Epoch 8, Average Loss: 1.2368
+Epoch 9, Average Loss: 1.1401
+Epoch 10, Average Loss: 1.0521
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 15.3846
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 2.0733
+Epoch 2, Average Loss: 1.9489
+Epoch 3, Average Loss: 1.8336
+Epoch 4, Average Loss: 1.7234
+Epoch 5, Average Loss: 1.6170
+Epoch 6, Average Loss: 1.5160
+Epoch 7, Average Loss: 1.4174
+Epoch 8, Average Loss: 1.3229
+Epoch 9, Average Loss: 1.2318
+Epoch 10, Average Loss: 1.1421
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 15.3846
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 2.2022
+Epoch 2, Average Loss: 2.0791
+Epoch 3, Average Loss: 1.9620
+Epoch 4, Average Loss: 1.8446
+Epoch 5, Average Loss: 1.7292
+Epoch 6, Average Loss: 1.6109
+Epoch 7, Average Loss: 1.4966
+Epoch 8, Average Loss: 1.3824
+Epoch 9, Average Loss: 1.2691
+Epoch 10, Average Loss: 1.1587
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 30.7692
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.0184
+Coefficient Epoch 2, Average Loss: 3.6885
+Coefficient Epoch 3, Average Loss: 3.3672
+Coefficient Epoch 4, Average Loss: 3.0572
+Coefficient Epoch 5, Average Loss: 2.7620
+Coefficient Epoch 6, Average Loss: 2.4866
+Coefficient Epoch 7, Average Loss: 2.2369
+Coefficient Epoch 8, Average Loss: 2.0199
+Coefficient Epoch 9, Average Loss: 1.8428
+Coefficient Epoch 10, Average Loss: 1.7112
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33294180035591125, 0.33249226212501526, 0.3345658779144287]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 23.0769
+
+Test Domain: SUN09, Run 5/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.2614
+Epoch 2, Average Loss: 0.2264
+Epoch 3, Average Loss: 0.0174
+Epoch 4, Average Loss: 0.0063
+Epoch 5, Average Loss: 0.0023
+Epoch 6, Average Loss: 0.0012
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0003
+Epoch 9, Average Loss: 0.0002
+Epoch 10, Average Loss: 0.0001
+Accuracy of naive model on SUN09: 30.7692
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.7951
+Epoch 2, Average Loss: 1.6861
+Epoch 3, Average Loss: 1.5878
+Epoch 4, Average Loss: 1.4919
+Epoch 5, Average Loss: 1.3995
+Epoch 6, Average Loss: 1.3111
+Epoch 7, Average Loss: 1.2262
+Epoch 8, Average Loss: 1.1443
+Epoch 9, Average Loss: 1.0644
+Epoch 10, Average Loss: 0.9891
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 0.0000
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.7227
+Epoch 2, Average Loss: 1.5978
+Epoch 3, Average Loss: 1.4841
+Epoch 4, Average Loss: 1.3750
+Epoch 5, Average Loss: 1.2676
+Epoch 6, Average Loss: 1.1663
+Epoch 7, Average Loss: 1.0656
+Epoch 8, Average Loss: 0.9703
+Epoch 9, Average Loss: 0.8816
+Epoch 10, Average Loss: 0.7945
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 0.0000
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 2.3031
+Epoch 2, Average Loss: 2.1376
+Epoch 3, Average Loss: 1.9924
+Epoch 4, Average Loss: 1.8712
+Epoch 5, Average Loss: 1.7529
+Epoch 6, Average Loss: 1.6479
+Epoch 7, Average Loss: 1.5339
+Epoch 8, Average Loss: 1.4283
+Epoch 9, Average Loss: 1.3287
+Epoch 10, Average Loss: 1.2334
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 7.6923
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.3027
+Coefficient Epoch 2, Average Loss: 3.9391
+Coefficient Epoch 3, Average Loss: 3.5837
+Coefficient Epoch 4, Average Loss: 3.2394
+Coefficient Epoch 5, Average Loss: 2.9100
+Coefficient Epoch 6, Average Loss: 2.6006
+Coefficient Epoch 7, Average Loss: 2.3184
+Coefficient Epoch 8, Average Loss: 2.0722
+Coefficient Epoch 9, Average Loss: 1.8715
+Coefficient Epoch 10, Average Loss: 1.7233
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3330475687980652, 0.33359450101852417, 0.33335790038108826]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 0.0000
+
+Test Domain: Caltech101, Run 1/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.0588
+Epoch 2, Average Loss: 0.6138
+Epoch 3, Average Loss: 0.1036
+Epoch 4, Average Loss: 0.0173
+Epoch 5, Average Loss: 0.0091
+Epoch 6, Average Loss: 0.0057
+Epoch 7, Average Loss: 0.0027
+Epoch 8, Average Loss: 0.0012
+Epoch 9, Average Loss: 0.0006
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on LabelMe: 23.0769
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.7833
+Epoch 2, Average Loss: 1.6610
+Epoch 3, Average Loss: 1.5529
+Epoch 4, Average Loss: 1.4458
+Epoch 5, Average Loss: 1.3484
+Epoch 6, Average Loss: 1.2518
+Epoch 7, Average Loss: 1.1595
+Epoch 8, Average Loss: 1.0680
+Epoch 9, Average Loss: 0.9794
+Epoch 10, Average Loss: 0.8977
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 38.4615
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.5759
+Epoch 2, Average Loss: 1.4638
+Epoch 3, Average Loss: 1.3624
+Epoch 4, Average Loss: 1.2609
+Epoch 5, Average Loss: 1.1595
+Epoch 6, Average Loss: 1.0677
+Epoch 7, Average Loss: 0.9771
+Epoch 8, Average Loss: 0.8898
+Epoch 9, Average Loss: 0.8103
+Epoch 10, Average Loss: 0.7352
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 46.1538
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.7174
+Epoch 2, Average Loss: 1.5882
+Epoch 3, Average Loss: 1.4655
+Epoch 4, Average Loss: 1.3481
+Epoch 5, Average Loss: 1.2350
+Epoch 6, Average Loss: 1.1307
+Epoch 7, Average Loss: 1.0270
+Epoch 8, Average Loss: 0.9327
+Epoch 9, Average Loss: 0.8445
+Epoch 10, Average Loss: 0.7616
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 38.4615
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.4552
+Coefficient Epoch 2, Average Loss: 3.1975
+Coefficient Epoch 3, Average Loss: 2.9475
+Coefficient Epoch 4, Average Loss: 2.7074
+Coefficient Epoch 5, Average Loss: 2.4800
+Coefficient Epoch 6, Average Loss: 2.2689
+Coefficient Epoch 7, Average Loss: 2.0783
+Coefficient Epoch 8, Average Loss: 1.9133
+Coefficient Epoch 9, Average Loss: 1.7788
+Coefficient Epoch 10, Average Loss: 1.6800
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3332037925720215, 0.33447593450546265, 0.33232027292251587]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 38.4615
+
+Test Domain: Caltech101, Run 2/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: Caltech101
+Training domains: ['LabelMe', 'SUN09', 'VOC2007']
+Test domain: Caltech101
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.9024
+Epoch 2, Average Loss: 0.0190
+Epoch 3, Average Loss: 0.0018
+Epoch 4, Average Loss: 0.0009
+Epoch 5, Average Loss: 0.0004
+Epoch 6, Average Loss: 0.0005
+Epoch 7, Average Loss: 0.0005
+Epoch 8, Average Loss: 0.0003
+Epoch 9, Average Loss: 0.0002
+Epoch 10, Average Loss: 0.0001
+Accuracy of naive model on Caltech101: 53.8462
+Training domains: ['LabelMe', 'SUN09', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.9578
+Epoch 2, Average Loss: 1.8485
+Epoch 3, Average Loss: 1.7431
+Epoch 4, Average Loss: 1.6424
+Epoch 5, Average Loss: 1.5439
+Epoch 6, Average Loss: 1.4477
+Epoch 7, Average Loss: 1.3559
+Epoch 8, Average Loss: 1.2656
+Epoch 9, Average Loss: 1.1796
+Epoch 10, Average Loss: 1.0979
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 30.7692
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.6780
+Epoch 2, Average Loss: 1.5573
+Epoch 3, Average Loss: 1.4409
+Epoch 4, Average Loss: 1.3294
+Epoch 5, Average Loss: 1.2235
+Epoch 6, Average Loss: 1.1195
+Epoch 7, Average Loss: 1.0227
+Epoch 8, Average Loss: 0.9305
+Epoch 9, Average Loss: 0.8482
+Epoch 10, Average Loss: 0.7713
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 23.0769
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.7268
+Epoch 2, Average Loss: 1.5986
+Epoch 3, Average Loss: 1.4781
+Epoch 4, Average Loss: 1.3768
+Epoch 5, Average Loss: 1.2716
+Epoch 6, Average Loss: 1.1747
+Epoch 7, Average Loss: 1.0830
+Epoch 8, Average Loss: 0.9979
+Epoch 9, Average Loss: 0.9129
+Epoch 10, Average Loss: 0.8336
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 30.7692
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.0546
+Coefficient Epoch 2, Average Loss: 2.8204
+Coefficient Epoch 3, Average Loss: 2.5944
+Coefficient Epoch 4, Average Loss: 2.3794
+Coefficient Epoch 5, Average Loss: 2.1788
+Coefficient Epoch 6, Average Loss: 1.9979
+Coefficient Epoch 7, Average Loss: 1.8429
+Coefficient Epoch 8, Average Loss: 1.7214
+Coefficient Epoch 9, Average Loss: 1.6394
+Coefficient Epoch 10, Average Loss: 1.5989
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33196306228637695, 0.3331313729286194, 0.3349054753780365]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 30.7692
+
+Test Domain: Caltech101, Run 3/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.1788
+Epoch 2, Average Loss: 0.5911
+Epoch 3, Average Loss: 0.0278
+Epoch 4, Average Loss: 0.0238
+Epoch 5, Average Loss: 0.0040
+Epoch 6, Average Loss: 0.0014
+Epoch 7, Average Loss: 0.0008
+Epoch 8, Average Loss: 0.0007
+Epoch 9, Average Loss: 0.0020
+Epoch 10, Average Loss: 0.0004
+Accuracy of naive model on LabelMe: 15.3846
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.6184
+Epoch 2, Average Loss: 1.5056
+Epoch 3, Average Loss: 1.4009
+Epoch 4, Average Loss: 1.3043
+Epoch 5, Average Loss: 1.2106
+Epoch 6, Average Loss: 1.1224
+Epoch 7, Average Loss: 1.0371
+Epoch 8, Average Loss: 0.9553
+Epoch 9, Average Loss: 0.8784
+Epoch 10, Average Loss: 0.8049
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.7190
+Epoch 2, Average Loss: 1.5885
+Epoch 3, Average Loss: 1.4841
+Epoch 4, Average Loss: 1.3808
+Epoch 5, Average Loss: 1.2793
+Epoch 6, Average Loss: 1.1785
+Epoch 7, Average Loss: 1.0828
+Epoch 8, Average Loss: 0.9914
+Epoch 9, Average Loss: 0.9052
+Epoch 10, Average Loss: 0.8233
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 30.7692
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.8328
+Epoch 2, Average Loss: 1.6945
+Epoch 3, Average Loss: 1.5663
+Epoch 4, Average Loss: 1.4475
+Epoch 5, Average Loss: 1.3320
+Epoch 6, Average Loss: 1.2198
+Epoch 7, Average Loss: 1.1284
+Epoch 8, Average Loss: 1.0393
+Epoch 9, Average Loss: 0.9559
+Epoch 10, Average Loss: 0.8778
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 30.7692
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 5.0070
+Coefficient Epoch 2, Average Loss: 4.5548
+Coefficient Epoch 3, Average Loss: 4.1088
+Coefficient Epoch 4, Average Loss: 3.6723
+Coefficient Epoch 5, Average Loss: 3.2500
+Coefficient Epoch 6, Average Loss: 2.8493
+Coefficient Epoch 7, Average Loss: 2.4810
+Coefficient Epoch 8, Average Loss: 2.1597
+Coefficient Epoch 9, Average Loss: 1.9022
+Coefficient Epoch 10, Average Loss: 1.7223
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33287984132766724, 0.3335416316986084, 0.3335784673690796]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 30.7692
+
+Test Domain: Caltech101, Run 4/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.9507
+Epoch 2, Average Loss: 0.4188
+Epoch 3, Average Loss: 0.0731
+Epoch 4, Average Loss: 0.0040
+Epoch 5, Average Loss: 0.0017
+Epoch 6, Average Loss: 0.0013
+Epoch 7, Average Loss: 0.0015
+Epoch 8, Average Loss: 0.0009
+Epoch 9, Average Loss: 0.0004
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on LabelMe: 38.4615
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.9025
+Epoch 2, Average Loss: 1.7767
+Epoch 3, Average Loss: 1.6564
+Epoch 4, Average Loss: 1.5435
+Epoch 5, Average Loss: 1.4362
+Epoch 6, Average Loss: 1.3327
+Epoch 7, Average Loss: 1.2355
+Epoch 8, Average Loss: 1.1406
+Epoch 9, Average Loss: 1.0531
+Epoch 10, Average Loss: 0.9687
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 15.3846
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.8262
+Epoch 2, Average Loss: 1.6939
+Epoch 3, Average Loss: 1.5757
+Epoch 4, Average Loss: 1.4614
+Epoch 5, Average Loss: 1.3500
+Epoch 6, Average Loss: 1.2420
+Epoch 7, Average Loss: 1.1381
+Epoch 8, Average Loss: 1.0355
+Epoch 9, Average Loss: 0.9398
+Epoch 10, Average Loss: 0.8468
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 7.6923
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 2.0817
+Epoch 2, Average Loss: 1.9386
+Epoch 3, Average Loss: 1.8013
+Epoch 4, Average Loss: 1.6684
+Epoch 5, Average Loss: 1.5408
+Epoch 6, Average Loss: 1.4180
+Epoch 7, Average Loss: 1.3008
+Epoch 8, Average Loss: 1.1912
+Epoch 9, Average Loss: 1.0877
+Epoch 10, Average Loss: 0.9911
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 7.6923
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.2986
+Coefficient Epoch 2, Average Loss: 3.0537
+Coefficient Epoch 3, Average Loss: 2.8143
+Coefficient Epoch 4, Average Loss: 2.5822
+Coefficient Epoch 5, Average Loss: 2.3600
+Coefficient Epoch 6, Average Loss: 2.1521
+Coefficient Epoch 7, Average Loss: 1.9646
+Coefficient Epoch 8, Average Loss: 1.8065
+Coefficient Epoch 9, Average Loss: 1.6887
+Coefficient Epoch 10, Average Loss: 1.6202
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33246907591819763, 0.33363544940948486, 0.3338955044746399]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 7.6923
+
+Test Domain: Caltech101, Run 5/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.6763
+Epoch 2, Average Loss: 0.7333
+Epoch 3, Average Loss: 0.2741
+Epoch 4, Average Loss: 0.0452
+Epoch 5, Average Loss: 0.0144
+Epoch 6, Average Loss: 0.0050
+Epoch 7, Average Loss: 0.0018
+Epoch 8, Average Loss: 0.0009
+Epoch 9, Average Loss: 0.0005
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on LabelMe: 23.0769
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 2.0258
+Epoch 2, Average Loss: 1.9051
+Epoch 3, Average Loss: 1.7906
+Epoch 4, Average Loss: 1.6776
+Epoch 5, Average Loss: 1.5692
+Epoch 6, Average Loss: 1.4652
+Epoch 7, Average Loss: 1.3633
+Epoch 8, Average Loss: 1.2689
+Epoch 9, Average Loss: 1.1796
+Epoch 10, Average Loss: 1.0976
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 7.6923
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.7530
+Epoch 2, Average Loss: 1.6352
+Epoch 3, Average Loss: 1.5307
+Epoch 4, Average Loss: 1.4271
+Epoch 5, Average Loss: 1.3259
+Epoch 6, Average Loss: 1.2291
+Epoch 7, Average Loss: 1.1359
+Epoch 8, Average Loss: 1.0437
+Epoch 9, Average Loss: 0.9578
+Epoch 10, Average Loss: 0.8745
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 15.3846
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.5052
+Epoch 2, Average Loss: 1.3759
+Epoch 3, Average Loss: 1.2636
+Epoch 4, Average Loss: 1.1697
+Epoch 5, Average Loss: 1.0766
+Epoch 6, Average Loss: 0.9872
+Epoch 7, Average Loss: 0.9050
+Epoch 8, Average Loss: 0.8303
+Epoch 9, Average Loss: 0.7574
+Epoch 10, Average Loss: 0.6911
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 23.0769
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.7873
+Coefficient Epoch 2, Average Loss: 2.5607
+Coefficient Epoch 3, Average Loss: 2.3405
+Coefficient Epoch 4, Average Loss: 2.1298
+Coefficient Epoch 5, Average Loss: 1.9330
+Coefficient Epoch 6, Average Loss: 1.7570
+Coefficient Epoch 7, Average Loss: 1.6117
+Coefficient Epoch 8, Average Loss: 1.5095
+Coefficient Epoch 9, Average Loss: 1.4615
+Coefficient Epoch 10, Average Loss: 1.4698
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3341076970100403, 0.3346812427043915, 0.33121106028556824]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 15.3846
+
+Test Domain: VOC2007, Run 1/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.8899
+Epoch 2, Average Loss: 0.4662
+Epoch 3, Average Loss: 0.0866
+Epoch 4, Average Loss: 0.0009
+Epoch 5, Average Loss: 0.0014
+Epoch 6, Average Loss: 0.0012
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on LabelMe: 23.0769
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 2.2537
+Epoch 2, Average Loss: 2.1203
+Epoch 3, Average Loss: 1.9887
+Epoch 4, Average Loss: 1.8611
+Epoch 5, Average Loss: 1.7394
+Epoch 6, Average Loss: 1.6207
+Epoch 7, Average Loss: 1.5067
+Epoch 8, Average Loss: 1.3967
+Epoch 9, Average Loss: 1.2938
+Epoch 10, Average Loss: 1.1940
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 7.6923
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 1.7979
+Epoch 2, Average Loss: 1.6888
+Epoch 3, Average Loss: 1.5822
+Epoch 4, Average Loss: 1.4780
+Epoch 5, Average Loss: 1.3751
+Epoch 6, Average Loss: 1.2753
+Epoch 7, Average Loss: 1.1787
+Epoch 8, Average Loss: 1.0851
+Epoch 9, Average Loss: 0.9968
+Epoch 10, Average Loss: 0.9117
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 15.3846
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.7758
+Epoch 2, Average Loss: 1.6507
+Epoch 3, Average Loss: 1.5315
+Epoch 4, Average Loss: 1.4163
+Epoch 5, Average Loss: 1.3068
+Epoch 6, Average Loss: 1.2009
+Epoch 7, Average Loss: 1.1020
+Epoch 8, Average Loss: 1.0055
+Epoch 9, Average Loss: 0.9088
+Epoch 10, Average Loss: 0.8275
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 23.0769
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.7159
+Coefficient Epoch 2, Average Loss: 2.5505
+Coefficient Epoch 3, Average Loss: 2.3917
+Coefficient Epoch 4, Average Loss: 2.2410
+Coefficient Epoch 5, Average Loss: 2.1005
+Coefficient Epoch 6, Average Loss: 1.9724
+Coefficient Epoch 7, Average Loss: 1.8594
+Coefficient Epoch 8, Average Loss: 1.7645
+Coefficient Epoch 9, Average Loss: 1.6907
+Coefficient Epoch 10, Average Loss: 1.6402
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33316105604171753, 0.3351326584815979, 0.33170628547668457]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 7.6923
+
+Test Domain: VOC2007, Run 2/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.9983
+Epoch 2, Average Loss: 0.3341
+Epoch 3, Average Loss: 0.0106
+Epoch 4, Average Loss: 0.0035
+Epoch 5, Average Loss: 0.0016
+Epoch 6, Average Loss: 0.0009
+Epoch 7, Average Loss: 0.0005
+Epoch 8, Average Loss: 0.0004
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0002
+Accuracy of naive model on SUN09: 23.0769
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.6019
+Epoch 2, Average Loss: 1.5031
+Epoch 3, Average Loss: 1.4125
+Epoch 4, Average Loss: 1.3249
+Epoch 5, Average Loss: 1.2386
+Epoch 6, Average Loss: 1.1572
+Epoch 7, Average Loss: 1.0749
+Epoch 8, Average Loss: 0.9980
+Epoch 9, Average Loss: 0.9242
+Epoch 10, Average Loss: 0.8552
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 30.7692
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 2.2899
+Epoch 2, Average Loss: 2.1602
+Epoch 3, Average Loss: 2.0376
+Epoch 4, Average Loss: 1.9198
+Epoch 5, Average Loss: 1.8033
+Epoch 6, Average Loss: 1.6919
+Epoch 7, Average Loss: 1.5794
+Epoch 8, Average Loss: 1.4714
+Epoch 9, Average Loss: 1.3666
+Epoch 10, Average Loss: 1.2605
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 30.7692
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.8947
+Epoch 2, Average Loss: 1.7617
+Epoch 3, Average Loss: 1.6442
+Epoch 4, Average Loss: 1.5330
+Epoch 5, Average Loss: 1.4289
+Epoch 6, Average Loss: 1.3270
+Epoch 7, Average Loss: 1.2287
+Epoch 8, Average Loss: 1.1341
+Epoch 9, Average Loss: 1.0426
+Epoch 10, Average Loss: 0.9570
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 38.4615
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.7858
+Coefficient Epoch 2, Average Loss: 2.6221
+Coefficient Epoch 3, Average Loss: 2.4645
+Coefficient Epoch 4, Average Loss: 2.3142
+Coefficient Epoch 5, Average Loss: 2.1726
+Coefficient Epoch 6, Average Loss: 2.0417
+Coefficient Epoch 7, Average Loss: 1.9236
+Coefficient Epoch 8, Average Loss: 1.8204
+Coefficient Epoch 9, Average Loss: 1.7346
+Coefficient Epoch 10, Average Loss: 1.6678
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3331558108329773, 0.3347342312335968, 0.3321099579334259]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 30.7692
+
+Test Domain: VOC2007, Run 3/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+Test domain: SUN09
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.7488
+Epoch 2, Average Loss: 0.3081
+Epoch 3, Average Loss: 0.0117
+Epoch 4, Average Loss: 0.0073
+Epoch 5, Average Loss: 0.0076
+Epoch 6, Average Loss: 0.0007
+Epoch 7, Average Loss: 0.0002
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Accuracy of naive model on SUN09: 30.7692
+Training domains: ['LabelMe', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 1.7279
+Epoch 2, Average Loss: 1.6241
+Epoch 3, Average Loss: 1.5249
+Epoch 4, Average Loss: 1.4263
+Epoch 5, Average Loss: 1.3298
+Epoch 6, Average Loss: 1.2348
+Epoch 7, Average Loss: 1.1454
+Epoch 8, Average Loss: 1.0576
+Epoch 9, Average Loss: 0.9748
+Epoch 10, Average Loss: 0.8976
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 23.0769
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 2.0077
+Epoch 2, Average Loss: 1.8843
+Epoch 3, Average Loss: 1.7677
+Epoch 4, Average Loss: 1.6525
+Epoch 5, Average Loss: 1.5411
+Epoch 6, Average Loss: 1.4302
+Epoch 7, Average Loss: 1.3241
+Epoch 8, Average Loss: 1.2205
+Epoch 9, Average Loss: 1.1207
+Epoch 10, Average Loss: 1.0273
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 23.0769
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.7476
+Epoch 2, Average Loss: 1.6200
+Epoch 3, Average Loss: 1.4977
+Epoch 4, Average Loss: 1.3873
+Epoch 5, Average Loss: 1.2745
+Epoch 6, Average Loss: 1.1692
+Epoch 7, Average Loss: 1.0734
+Epoch 8, Average Loss: 0.9800
+Epoch 9, Average Loss: 0.8899
+Epoch 10, Average Loss: 0.8038
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 23.0769
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.4394
+Coefficient Epoch 2, Average Loss: 2.2971
+Coefficient Epoch 3, Average Loss: 2.1626
+Coefficient Epoch 4, Average Loss: 2.0372
+Coefficient Epoch 5, Average Loss: 1.9230
+Coefficient Epoch 6, Average Loss: 1.8219
+Coefficient Epoch 7, Average Loss: 1.7366
+Coefficient Epoch 8, Average Loss: 1.6694
+Coefficient Epoch 9, Average Loss: 1.6230
+Coefficient Epoch 10, Average Loss: 1.5988
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.33496806025505066, 0.3360787630081177, 0.3289531469345093]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 23.0769
+
+Test Domain: VOC2007, Run 4/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+Test domain: LabelMe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 2.1342
+Epoch 2, Average Loss: 0.6308
+Epoch 3, Average Loss: 0.0623
+Epoch 4, Average Loss: 0.0119
+Epoch 5, Average Loss: 0.0027
+Epoch 6, Average Loss: 0.0011
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0004
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0003
+Accuracy of naive model on LabelMe: 15.3846
+Training domains: ['SUN09', 'Caltech101', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.9339
+Epoch 2, Average Loss: 1.8108
+Epoch 3, Average Loss: 1.6889
+Epoch 4, Average Loss: 1.5727
+Epoch 5, Average Loss: 1.4603
+Epoch 6, Average Loss: 1.3514
+Epoch 7, Average Loss: 1.2481
+Epoch 8, Average Loss: 1.1504
+Epoch 9, Average Loss: 1.0584
+Epoch 10, Average Loss: 0.9728
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 7.6923
+
+Training model for domain: Caltech101
+Training model for domain: Caltech101
+Epoch 1, Average Loss: 2.0240
+Epoch 2, Average Loss: 1.8835
+Epoch 3, Average Loss: 1.7576
+Epoch 4, Average Loss: 1.6407
+Epoch 5, Average Loss: 1.5258
+Epoch 6, Average Loss: 1.4100
+Epoch 7, Average Loss: 1.2994
+Epoch 8, Average Loss: 1.1900
+Epoch 9, Average Loss: 1.0877
+Epoch 10, Average Loss: 0.9868
+Merged model device: cuda:0
+Accuracy of Caltech101 model on test domain: 0.0000
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.9855
+Epoch 2, Average Loss: 1.8361
+Epoch 3, Average Loss: 1.6969
+Epoch 4, Average Loss: 1.5734
+Epoch 5, Average Loss: 1.4452
+Epoch 6, Average Loss: 1.3408
+Epoch 7, Average Loss: 1.2352
+Epoch 8, Average Loss: 1.1329
+Epoch 9, Average Loss: 1.0369
+Epoch 10, Average Loss: 0.9434
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 0.0000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain Caltech101 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.8829
+Coefficient Epoch 2, Average Loss: 3.5596
+Coefficient Epoch 3, Average Loss: 3.2446
+Coefficient Epoch 4, Average Loss: 2.9408
+Coefficient Epoch 5, Average Loss: 2.6519
+Coefficient Epoch 6, Average Loss: 2.3834
+Coefficient Epoch 7, Average Loss: 2.1425
+Coefficient Epoch 8, Average Loss: 1.9385
+Coefficient Epoch 9, Average Loss: 1.7810
+Coefficient Epoch 10, Average Loss: 1.6755
+Final device check:
+Expert model SUN09 device: cuda:0
+Expert model Caltech101 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.3330302834510803, 0.33363693952560425, 0.3333328366279602]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 7.6923
+
+Test Domain: VOC2007, Run 5/5
+Preparing data...
+Domains: ['LabelMe', 'SUN09', 'Caltech101', 'VOC2007']
+Test domain: Caltech101
+Training domains: ['LabelMe', 'SUN09', 'VOC2007']
+Test domain: Caltech101
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.8474
+Epoch 2, Average Loss: 0.1500
+Epoch 3, Average Loss: 0.0045
+Epoch 4, Average Loss: 0.0015
+Epoch 5, Average Loss: 0.0005
+Epoch 6, Average Loss: 0.0003
+Epoch 7, Average Loss: 0.0002
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Accuracy of naive model on Caltech101: 84.6154
+Training domains: ['LabelMe', 'SUN09', 'VOC2007']
+
+Training expert models...
+
+Training model for domain: LabelMe
+Training model for domain: LabelMe
+Epoch 1, Average Loss: 2.1662
+Epoch 2, Average Loss: 2.0508
+Epoch 3, Average Loss: 1.9401
+Epoch 4, Average Loss: 1.8330
+Epoch 5, Average Loss: 1.7261
+Epoch 6, Average Loss: 1.6236
+Epoch 7, Average Loss: 1.5237
+Epoch 8, Average Loss: 1.4238
+Epoch 9, Average Loss: 1.3307
+Epoch 10, Average Loss: 1.2452
+Merged model device: cuda:0
+Accuracy of LabelMe model on test domain: 7.6923
+
+Training model for domain: SUN09
+Training model for domain: SUN09
+Epoch 1, Average Loss: 1.9315
+Epoch 2, Average Loss: 1.8067
+Epoch 3, Average Loss: 1.6910
+Epoch 4, Average Loss: 1.5831
+Epoch 5, Average Loss: 1.4764
+Epoch 6, Average Loss: 1.3772
+Epoch 7, Average Loss: 1.2821
+Epoch 8, Average Loss: 1.1894
+Epoch 9, Average Loss: 1.1054
+Epoch 10, Average Loss: 1.0223
+Merged model device: cuda:0
+Accuracy of SUN09 model on test domain: 7.6923
+
+Training model for domain: VOC2007
+Training model for domain: VOC2007
+Epoch 1, Average Loss: 1.7722
+Epoch 2, Average Loss: 1.6313
+Epoch 3, Average Loss: 1.4945
+Epoch 4, Average Loss: 1.3886
+Epoch 5, Average Loss: 1.2815
+Epoch 6, Average Loss: 1.1794
+Epoch 7, Average Loss: 1.0836
+Epoch 8, Average Loss: 0.9947
+Epoch 9, Average Loss: 0.9096
+Epoch 10, Average Loss: 0.8320
+Merged model device: cuda:0
+Accuracy of VOC2007 model on test domain: 7.6923
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Domain LabelMe - Input device: cuda:0, Model device: cuda:0
+Domain SUN09 - Input device: cuda:0, Model device: cuda:0
+Domain VOC2007 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 2.3763
+Coefficient Epoch 2, Average Loss: 2.2443
+Coefficient Epoch 3, Average Loss: 2.1204
+Coefficient Epoch 4, Average Loss: 2.0060
+Coefficient Epoch 5, Average Loss: 1.9028
+Coefficient Epoch 6, Average Loss: 1.8129
+Coefficient Epoch 7, Average Loss: 1.7378
+Coefficient Epoch 8, Average Loss: 1.6793
+Coefficient Epoch 9, Average Loss: 1.6381
+Coefficient Epoch 10, Average Loss: 1.6141
+Final device check:
+Expert model LabelMe device: cuda:0
+Expert model SUN09 device: cuda:0
+Expert model VOC2007 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.32982128858566284, 0.3340166509151459, 0.3361620008945465]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Final model accuracy on test domain: 7.6923
+
+Summary for VLCS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 15.384615384615385, 'Caltech101': 15.384615384615385, 'VOC2007': 15.384615384615385}, 'final_accuracy': 15.384615384615385, 'coefficients': [0.3336365222930908, 0.3329794108867645, 0.33338403701782227]}, {'test_domain': 'VOC2007', 'domain_accuracies': {'LabelMe': 7.6923076923076925, 'SUN09': 15.384615384615385, 'Caltech101': 15.384615384615385}, 'final_accuracy': 15.384615384615385, 'coefficients': [0.3302057087421417, 0.33559978008270264, 0.334194540977478]}, {'test_domain': 'VOC2007', 'domain_accuracies': {'LabelMe': 38.46153846153847, 'SUN09': 23.076923076923077, 'Caltech101': 38.46153846153847}, 'final_accuracy': 38.46153846153847, 'coefficients': [0.3282618224620819, 0.33514711260795593, 0.33659103512763977]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 23.076923076923077, 'Caltech101': 38.46153846153847, 'VOC2007': 30.76923076923077}, 'final_accuracy': 30.76923076923077, 'coefficients': [0.33266377449035645, 0.3339810073375702, 0.3333551585674286]}, {'test_domain': 'SUN09', 'domain_accuracies': {'LabelMe': 23.076923076923077, 'Caltech101': 23.076923076923077, 'VOC2007': 38.46153846153847}, 'final_accuracy': 23.076923076923077, 'coefficients': [0.3327404856681824, 0.3331107497215271, 0.3341487646102905]}, {'test_domain': 'SUN09', 'domain_accuracies': {'LabelMe': 23.076923076923077, 'Caltech101': 23.076923076923077, 'VOC2007': 30.76923076923077}, 'final_accuracy': 30.76923076923077, 'coefficients': [0.3317832946777344, 0.3353555500507355, 0.33286112546920776]}, {'test_domain': 'SUN09', 'domain_accuracies': {'LabelMe': 38.46153846153847, 'Caltech101': 46.15384615384615, 'VOC2007': 53.84615384615385}, 'final_accuracy': 46.15384615384615, 'coefficients': [0.33262136578559875, 0.33282968401908875, 0.3345489203929901]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 23.076923076923077, 'Caltech101': 23.076923076923077, 'VOC2007': 23.076923076923077}, 'final_accuracy': 23.076923076923077, 'coefficients': [0.3263677954673767, 0.33461126685142517, 0.3390209376811981]}, {'test_domain': 'VOC2007', 'domain_accuracies': {'LabelMe': 15.384615384615385, 'SUN09': 15.384615384615385, 'Caltech101': 30.76923076923077}, 'final_accuracy': 23.076923076923077, 'coefficients': [0.33294180035591125, 0.33249226212501526, 0.3345658779144287]}, {'test_domain': 'SUN09', 'domain_accuracies': {'LabelMe': 0.0, 'Caltech101': 0.0, 'VOC2007': 7.6923076923076925}, 'final_accuracy': 0.0, 'coefficients': [0.3330475687980652, 0.33359450101852417, 0.33335790038108826]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 38.46153846153847, 'Caltech101': 46.15384615384615, 'VOC2007': 38.46153846153847}, 'final_accuracy': 38.46153846153847, 'coefficients': [0.3332037925720215, 0.33447593450546265, 0.33232027292251587]}, {'test_domain': 'Caltech101', 'domain_accuracies': {'LabelMe': 30.76923076923077, 'SUN09': 23.076923076923077, 'VOC2007': 30.76923076923077}, 'final_accuracy': 30.76923076923077, 'coefficients': [0.33196306228637695, 0.3331313729286194, 0.3349054753780365]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 23.076923076923077, 'Caltech101': 30.76923076923077, 'VOC2007': 30.76923076923077}, 'final_accuracy': 30.76923076923077, 'coefficients': [0.33287984132766724, 0.3335416316986084, 0.3335784673690796]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 15.384615384615385, 'Caltech101': 7.6923076923076925, 'VOC2007': 7.6923076923076925}, 'final_accuracy': 7.6923076923076925, 'coefficients': [0.33246907591819763, 0.33363544940948486, 0.3338955044746399]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 7.6923076923076925, 'Caltech101': 15.384615384615385, 'VOC2007': 23.076923076923077}, 'final_accuracy': 15.384615384615385, 'coefficients': [0.3341076970100403, 0.3346812427043915, 0.33121106028556824]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 7.6923076923076925, 'Caltech101': 15.384615384615385, 'VOC2007': 23.076923076923077}, 'final_accuracy': 7.6923076923076925, 'coefficients': [0.33316105604171753, 0.3351326584815979, 0.33170628547668457]}, {'test_domain': 'SUN09', 'domain_accuracies': {'LabelMe': 30.76923076923077, 'Caltech101': 30.76923076923077, 'VOC2007': 38.46153846153847}, 'final_accuracy': 30.76923076923077, 'coefficients': [0.3331558108329773, 0.3347342312335968, 0.3321099579334259]}, {'test_domain': 'SUN09', 'domain_accuracies': {'LabelMe': 23.076923076923077, 'Caltech101': 23.076923076923077, 'VOC2007': 23.076923076923077}, 'final_accuracy': 23.076923076923077, 'coefficients': [0.33496806025505066, 0.3360787630081177, 0.3289531469345093]}, {'test_domain': 'LabelMe', 'domain_accuracies': {'SUN09': 7.6923076923076925, 'Caltech101': 0.0, 'VOC2007': 0.0}, 'final_accuracy': 7.6923076923076925, 'coefficients': [0.3330302834510803, 0.33363693952560425, 0.3333328366279602]}, {'test_domain': 'Caltech101', 'domain_accuracies': {'LabelMe': 7.6923076923076925, 'SUN09': 7.6923076923076925, 'VOC2007': 7.6923076923076925}, 'final_accuracy': 7.6923076923076925, 'coefficients': [0.32982128858566284, 0.3340166509151459, 0.3361620008945465]}]
+Final Model Accuracy: 22.3077 ± 12.1383
+Domain-specific Accuracies:
+  SUN09: 17.5824 ± 8.4408
+  Caltech101: 23.5043 ± 13.4395
+  VOC2007: 24.8869 ± 13.5897
+  LabelMe: 21.6783 ± 12.1927
+Average Coefficients:
+  Coefficient 1: 0.3322 ± 0.0020
+  Coefficient 2: 0.3341 ± 0.0010
+  Coefficient 3: 0.3337 ± 0.0021
+
+==================================================
+Running experiments for dataset: OfficeHome
+==================================================

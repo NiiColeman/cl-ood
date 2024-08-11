@@ -1,0 +1,4 @@
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/weight_pruning.py", line 273
+    'max_samples_per_class': 20
+                             ^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?

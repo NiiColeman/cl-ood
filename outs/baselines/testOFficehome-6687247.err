@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 435, in <module>
+    all_results = run_experiments_multiple_datasets(datasets_config, num_runs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 342, in run_experiments_multiple_datasets
+    dataset_results = run_multiple_experiments(dataset_config, num_runs)
+  File "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/experiments/run.py", line 362, in run_multiple_experiments
+    results = experiment.run_experiment()
+AttributeError: 'Baseline4Experiment' object has no attribute 'run_experiment'

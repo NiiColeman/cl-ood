@@ -1,0 +1,476 @@
+
+--- Run 1/3 ---
+
+Running LoRA with TIES experiment
+Test domain: cartoon
+Train domains: ['photo', 'sketch', 'art_painting']
+Baseline Epoch 1/10, Train Loss: 1.7281, Train Accuracy: 0.00%
+Val Loss: 2.4061, Val Accuracy: 6.25%
+Baseline Epoch 2/10, Train Loss: 0.5999, Train Accuracy: 100.00%
+Val Loss: 2.4052, Val Accuracy: 9.38%
+Baseline Epoch 3/10, Train Loss: 0.2717, Train Accuracy: 100.00%
+Val Loss: 2.4629, Val Accuracy: 6.25%
+Baseline Epoch 4/10, Train Loss: 0.0877, Train Accuracy: 100.00%
+Val Loss: 2.5540, Val Accuracy: 9.38%
+Baseline Epoch 5/10, Train Loss: 0.0339, Train Accuracy: 100.00%
+Val Loss: 2.6591, Val Accuracy: 9.38%
+Baseline Epoch 6/10, Train Loss: 0.0176, Train Accuracy: 100.00%
+Val Loss: 2.7712, Val Accuracy: 12.50%
+Baseline Epoch 7/10, Train Loss: 0.0098, Train Accuracy: 100.00%
+Val Loss: 2.8836, Val Accuracy: 12.50%
+Baseline Epoch 8/10, Train Loss: 0.0056, Train Accuracy: 100.00%
+Val Loss: 2.9933, Val Accuracy: 15.62%
+Baseline Epoch 9/10, Train Loss: 0.0033, Train Accuracy: 100.00%
+Val Loss: 3.0985, Val Accuracy: 18.75%
+Baseline Epoch 10/10, Train Loss: 0.0020, Train Accuracy: 100.00%
+Val Loss: 3.1982, Val Accuracy: 18.75%
+Baseline Model - Final Test Accuracy: 18.75%
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.9158, Train Accuracy: 28.57%
+Val Loss: 2.6368, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 1.8702, Train Accuracy: 28.57%
+Val Loss: 2.6163, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 1.8225, Train Accuracy: 32.14%
+Val Loss: 2.5949, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 1.7711, Train Accuracy: 35.71%
+Val Loss: 2.5734, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 1.7235, Train Accuracy: 39.29%
+Val Loss: 2.5544, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 1.6727, Train Accuracy: 39.29%
+Val Loss: 2.5356, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 1.6239, Train Accuracy: 42.86%
+Val Loss: 2.5160, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 1.5734, Train Accuracy: 42.86%
+Val Loss: 2.4959, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.5223, Train Accuracy: 42.86%
+Val Loss: 2.4758, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.4712, Train Accuracy: 46.43%
+Val Loss: 2.4555, Val Accuracy: 0.00%
+Warning: No best state found for domain photo. Using the final state.
+Best validation accuracy for photo: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+photo adapter trained. Validation Accuracy: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%
+Val Loss: 2.1127, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1691, Train Accuracy: 21.43%
+Val Loss: 2.0638, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0770, Train Accuracy: 21.43%
+Val Loss: 2.0271, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9861, Train Accuracy: 21.43%
+Val Loss: 2.0018, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.8992, Train Accuracy: 21.43%
+Val Loss: 1.9886, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8213, Train Accuracy: 21.43%
+Val Loss: 1.9822, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7511, Train Accuracy: 25.00%
+Val Loss: 1.9831, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6792, Train Accuracy: 39.29%
+Val Loss: 1.9913, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6130, Train Accuracy: 46.43%
+Val Loss: 2.0075, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5515, Train Accuracy: 50.00%
+Val Loss: 2.0316, Val Accuracy: 28.57%
+Best validation accuracy for sketch: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+sketch adapter trained. Validation Accuracy: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.3176, Train Accuracy: 14.29%
+Val Loss: 2.0843, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.2144, Train Accuracy: 17.86%
+Val Loss: 2.0851, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.1329, Train Accuracy: 17.86%
+Val Loss: 2.0854, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 2.0513, Train Accuracy: 17.86%
+Val Loss: 2.0865, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9688, Train Accuracy: 17.86%
+Val Loss: 2.0884, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8856, Train Accuracy: 25.00%
+Val Loss: 2.0911, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.8013, Train Accuracy: 28.57%
+Val Loss: 2.0947, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.7186, Train Accuracy: 32.14%
+Val Loss: 2.0991, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6339, Train Accuracy: 32.14%
+Val Loss: 2.1045, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5524, Train Accuracy: 39.29%
+Val Loss: 2.1104, Val Accuracy: 14.29%
+Best validation accuracy for art_painting: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+art_painting adapter trained. Validation Accuracy: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Number of trained LoRA adapters: 3
+
+Training coefficients for adapter merging
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 1, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 2, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 3, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 4, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 5, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 6, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 7, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 8, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 9, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 10, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Best coefficient accuracy: 33.33%
+Final best coefficients: [0.33333334 0.33333334 0.33333334]
+
+Merged model with TIES - Test Loss: 2.0687, Test Accuracy: 12.50%
+
+--- Run 2/3 ---
+
+Running LoRA with TIES experiment
+Test domain: cartoon
+Train domains: ['photo', 'sketch', 'art_painting']
+Baseline Epoch 1/10, Train Loss: 1.7281, Train Accuracy: 0.00%
+Val Loss: 2.4061, Val Accuracy: 6.25%
+Baseline Epoch 2/10, Train Loss: 0.5999, Train Accuracy: 100.00%
+Val Loss: 2.4052, Val Accuracy: 9.38%
+Baseline Epoch 3/10, Train Loss: 0.2717, Train Accuracy: 100.00%
+Val Loss: 2.4629, Val Accuracy: 6.25%
+Baseline Epoch 4/10, Train Loss: 0.0877, Train Accuracy: 100.00%
+Val Loss: 2.5540, Val Accuracy: 9.38%
+Baseline Epoch 5/10, Train Loss: 0.0339, Train Accuracy: 100.00%
+Val Loss: 2.6591, Val Accuracy: 9.38%
+Baseline Epoch 6/10, Train Loss: 0.0176, Train Accuracy: 100.00%
+Val Loss: 2.7712, Val Accuracy: 12.50%
+Baseline Epoch 7/10, Train Loss: 0.0098, Train Accuracy: 100.00%
+Val Loss: 2.8836, Val Accuracy: 12.50%
+Baseline Epoch 8/10, Train Loss: 0.0056, Train Accuracy: 100.00%
+Val Loss: 2.9933, Val Accuracy: 15.62%
+Baseline Epoch 9/10, Train Loss: 0.0033, Train Accuracy: 100.00%
+Val Loss: 3.0985, Val Accuracy: 18.75%
+Baseline Epoch 10/10, Train Loss: 0.0020, Train Accuracy: 100.00%
+Val Loss: 3.1982, Val Accuracy: 18.75%
+Baseline Model - Final Test Accuracy: 18.75%
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.9158, Train Accuracy: 28.57%
+Val Loss: 2.6368, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 1.8702, Train Accuracy: 28.57%
+Val Loss: 2.6163, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 1.8225, Train Accuracy: 32.14%
+Val Loss: 2.5949, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 1.7711, Train Accuracy: 35.71%
+Val Loss: 2.5734, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 1.7235, Train Accuracy: 39.29%
+Val Loss: 2.5544, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 1.6727, Train Accuracy: 39.29%
+Val Loss: 2.5356, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 1.6239, Train Accuracy: 42.86%
+Val Loss: 2.5160, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 1.5734, Train Accuracy: 42.86%
+Val Loss: 2.4959, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.5223, Train Accuracy: 42.86%
+Val Loss: 2.4758, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.4712, Train Accuracy: 46.43%
+Val Loss: 2.4555, Val Accuracy: 0.00%
+Warning: No best state found for domain photo. Using the final state.
+Best validation accuracy for photo: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+photo adapter trained. Validation Accuracy: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%
+Val Loss: 2.1127, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1691, Train Accuracy: 21.43%
+Val Loss: 2.0638, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0770, Train Accuracy: 21.43%
+Val Loss: 2.0271, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9861, Train Accuracy: 21.43%
+Val Loss: 2.0018, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.8992, Train Accuracy: 21.43%
+Val Loss: 1.9886, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8213, Train Accuracy: 21.43%
+Val Loss: 1.9822, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7511, Train Accuracy: 25.00%
+Val Loss: 1.9831, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6792, Train Accuracy: 39.29%
+Val Loss: 1.9913, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6130, Train Accuracy: 46.43%
+Val Loss: 2.0075, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5515, Train Accuracy: 50.00%
+Val Loss: 2.0316, Val Accuracy: 28.57%
+Best validation accuracy for sketch: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+sketch adapter trained. Validation Accuracy: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.3176, Train Accuracy: 14.29%
+Val Loss: 2.0843, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.2144, Train Accuracy: 17.86%
+Val Loss: 2.0851, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.1329, Train Accuracy: 17.86%
+Val Loss: 2.0854, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 2.0513, Train Accuracy: 17.86%
+Val Loss: 2.0865, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9688, Train Accuracy: 17.86%
+Val Loss: 2.0884, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8856, Train Accuracy: 25.00%
+Val Loss: 2.0911, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.8013, Train Accuracy: 28.57%
+Val Loss: 2.0947, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.7186, Train Accuracy: 32.14%
+Val Loss: 2.0991, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6339, Train Accuracy: 32.14%
+Val Loss: 2.1045, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5524, Train Accuracy: 39.29%
+Val Loss: 2.1104, Val Accuracy: 14.29%
+Best validation accuracy for art_painting: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+art_painting adapter trained. Validation Accuracy: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Number of trained LoRA adapters: 3
+
+Training coefficients for adapter merging
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 1, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 2, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([-1.7950e-10, -1.7950e-10, -1.7950e-10], device='cuda:0')
+Epoch 3, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 4, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 5, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 6, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 7, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 8, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 9, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 10, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Best coefficient accuracy: 33.33%
+Final best coefficients: [0.33333334 0.33333334 0.33333334]
+
+Merged model with TIES - Test Loss: 2.0687, Test Accuracy: 12.50%
+
+--- Run 3/3 ---
+
+Running LoRA with TIES experiment
+Test domain: cartoon
+Train domains: ['photo', 'sketch', 'art_painting']
+Baseline Epoch 1/10, Train Loss: 1.7281, Train Accuracy: 0.00%
+Val Loss: 2.4061, Val Accuracy: 6.25%
+Baseline Epoch 2/10, Train Loss: 0.5999, Train Accuracy: 100.00%
+Val Loss: 2.4052, Val Accuracy: 9.38%
+Baseline Epoch 3/10, Train Loss: 0.2717, Train Accuracy: 100.00%
+Val Loss: 2.4629, Val Accuracy: 6.25%
+Baseline Epoch 4/10, Train Loss: 0.0877, Train Accuracy: 100.00%
+Val Loss: 2.5540, Val Accuracy: 9.38%
+Baseline Epoch 5/10, Train Loss: 0.0339, Train Accuracy: 100.00%
+Val Loss: 2.6591, Val Accuracy: 9.38%
+Baseline Epoch 6/10, Train Loss: 0.0176, Train Accuracy: 100.00%
+Val Loss: 2.7712, Val Accuracy: 12.50%
+Baseline Epoch 7/10, Train Loss: 0.0098, Train Accuracy: 100.00%
+Val Loss: 2.8836, Val Accuracy: 12.50%
+Baseline Epoch 8/10, Train Loss: 0.0056, Train Accuracy: 100.00%
+Val Loss: 2.9933, Val Accuracy: 15.62%
+Baseline Epoch 9/10, Train Loss: 0.0033, Train Accuracy: 100.00%
+Val Loss: 3.0985, Val Accuracy: 18.75%
+Baseline Epoch 10/10, Train Loss: 0.0020, Train Accuracy: 100.00%
+Val Loss: 3.1982, Val Accuracy: 18.75%
+Baseline Model - Final Test Accuracy: 18.75%
+
+Training LoRA adapter for domain: photo
+
+Training LoRA adapter for domain: photo
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 1.9158, Train Accuracy: 28.57%
+Val Loss: 2.6368, Val Accuracy: 0.00%
+Epoch 2/10, Train Loss: 1.8702, Train Accuracy: 28.57%
+Val Loss: 2.6163, Val Accuracy: 0.00%
+Epoch 3/10, Train Loss: 1.8225, Train Accuracy: 32.14%
+Val Loss: 2.5949, Val Accuracy: 0.00%
+Epoch 4/10, Train Loss: 1.7711, Train Accuracy: 35.71%
+Val Loss: 2.5734, Val Accuracy: 0.00%
+Epoch 5/10, Train Loss: 1.7235, Train Accuracy: 39.29%
+Val Loss: 2.5544, Val Accuracy: 0.00%
+Epoch 6/10, Train Loss: 1.6727, Train Accuracy: 39.29%
+Val Loss: 2.5356, Val Accuracy: 0.00%
+Epoch 7/10, Train Loss: 1.6239, Train Accuracy: 42.86%
+Val Loss: 2.5160, Val Accuracy: 0.00%
+Epoch 8/10, Train Loss: 1.5734, Train Accuracy: 42.86%
+Val Loss: 2.4959, Val Accuracy: 0.00%
+Epoch 9/10, Train Loss: 1.5223, Train Accuracy: 42.86%
+Val Loss: 2.4758, Val Accuracy: 0.00%
+Epoch 10/10, Train Loss: 1.4712, Train Accuracy: 46.43%
+Val Loss: 2.4555, Val Accuracy: 0.00%
+Warning: No best state found for domain photo. Using the final state.
+Best validation accuracy for photo: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+photo adapter trained. Validation Accuracy: 0.00%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: sketch
+
+Training LoRA adapter for domain: sketch
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.2668, Train Accuracy: 25.00%
+Val Loss: 2.1127, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.1691, Train Accuracy: 21.43%
+Val Loss: 2.0638, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.0770, Train Accuracy: 21.43%
+Val Loss: 2.0271, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 1.9861, Train Accuracy: 21.43%
+Val Loss: 2.0018, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.8992, Train Accuracy: 21.43%
+Val Loss: 1.9886, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8213, Train Accuracy: 21.43%
+Val Loss: 1.9822, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.7511, Train Accuracy: 25.00%
+Val Loss: 1.9831, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.6792, Train Accuracy: 39.29%
+Val Loss: 1.9913, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6130, Train Accuracy: 46.43%
+Val Loss: 2.0075, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5515, Train Accuracy: 50.00%
+Val Loss: 2.0316, Val Accuracy: 28.57%
+Best validation accuracy for sketch: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+sketch adapter trained. Validation Accuracy: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Training LoRA adapter for domain: art_painting
+
+Training LoRA adapter for domain: art_painting
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Epoch 1/10, Train Loss: 2.3176, Train Accuracy: 14.29%
+Val Loss: 2.0843, Val Accuracy: 28.57%
+Epoch 2/10, Train Loss: 2.2144, Train Accuracy: 17.86%
+Val Loss: 2.0851, Val Accuracy: 28.57%
+Epoch 3/10, Train Loss: 2.1329, Train Accuracy: 17.86%
+Val Loss: 2.0854, Val Accuracy: 28.57%
+Epoch 4/10, Train Loss: 2.0513, Train Accuracy: 17.86%
+Val Loss: 2.0865, Val Accuracy: 28.57%
+Epoch 5/10, Train Loss: 1.9688, Train Accuracy: 17.86%
+Val Loss: 2.0884, Val Accuracy: 28.57%
+Epoch 6/10, Train Loss: 1.8856, Train Accuracy: 25.00%
+Val Loss: 2.0911, Val Accuracy: 28.57%
+Epoch 7/10, Train Loss: 1.8013, Train Accuracy: 28.57%
+Val Loss: 2.0947, Val Accuracy: 28.57%
+Epoch 8/10, Train Loss: 1.7186, Train Accuracy: 32.14%
+Val Loss: 2.0991, Val Accuracy: 28.57%
+Epoch 9/10, Train Loss: 1.6339, Train Accuracy: 32.14%
+Val Loss: 2.1045, Val Accuracy: 28.57%
+Epoch 10/10, Train Loss: 1.5524, Train Accuracy: 39.29%
+Val Loss: 2.1104, Val Accuracy: 14.29%
+Best validation accuracy for art_painting: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+art_painting adapter trained. Validation Accuracy: 28.57%
+LoRA state keys: dict_keys(['base_model.model.blocks.0.attn.qkv.lora_A.weight', 'base_model.model.blocks.0.attn.qkv.lora_B.weight', 'base_model.model.blocks.1.attn.qkv.lora_A.weight', 'base_model.model.blocks.1.attn.qkv.lora_B.weight', 'base_model.model.blocks.2.attn.qkv.lora_A.weight', 'base_model.model.blocks.2.attn.qkv.lora_B.weight', 'base_model.model.blocks.3.attn.qkv.lora_A.weight', 'base_model.model.blocks.3.attn.qkv.lora_B.weight', 'base_model.model.blocks.4.attn.qkv.lora_A.weight', 'base_model.model.blocks.4.attn.qkv.lora_B.weight', 'base_model.model.blocks.5.attn.qkv.lora_A.weight', 'base_model.model.blocks.5.attn.qkv.lora_B.weight', 'base_model.model.blocks.6.attn.qkv.lora_A.weight', 'base_model.model.blocks.6.attn.qkv.lora_B.weight', 'base_model.model.blocks.7.attn.qkv.lora_A.weight', 'base_model.model.blocks.7.attn.qkv.lora_B.weight', 'base_model.model.blocks.8.attn.qkv.lora_A.weight', 'base_model.model.blocks.8.attn.qkv.lora_B.weight', 'base_model.model.blocks.9.attn.qkv.lora_A.weight', 'base_model.model.blocks.9.attn.qkv.lora_B.weight', 'base_model.model.blocks.10.attn.qkv.lora_A.weight', 'base_model.model.blocks.10.attn.qkv.lora_B.weight', 'base_model.model.blocks.11.attn.qkv.lora_A.weight', 'base_model.model.blocks.11.attn.qkv.lora_B.weight'])
+
+Number of trained LoRA adapters: 3
+
+Training coefficients for adapter merging
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Created LoRA model: <class 'peft.peft_model.PeftModel'>
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 1, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 2, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 3, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([-1.7947e-10, -1.7947e-10, -1.7947e-10], device='cuda:0')
+Epoch 4, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 5, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([-1.7947e-10, -1.7947e-10, -1.7947e-10], device='cuda:0')
+Epoch 6, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 7, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 8, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([1.0623e-09, 1.0623e-09, 1.0623e-09], device='cuda:0')
+Epoch 9, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Coefficient gradients: tensor([-1.7947e-10, -1.7947e-10, -1.7947e-10], device='cuda:0')
+Epoch 10, Loss: 1.5301, Accuracy: 33.33%
+Coefficients: [0.33333334 0.33333334 0.33333334]
+Best coefficient accuracy: 33.33%
+Final best coefficients: [0.33333334 0.33333334 0.33333334]
+
+Merged model with TIES - Test Loss: 2.0687, Test Accuracy: 12.50%
+
+Summary of All Runs:
+Baseline Model Accuracy: 18.75% ± 0.00%
+Merged Model Accuracy: 12.50% ± 0.00%
+Average Coefficients:
+  photo: 0.3333 ± 0.0000
+  sketch: 0.3333 ± 0.0000
+  art_painting: 0.3333 ± 0.0000

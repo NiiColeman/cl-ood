@@ -1,0 +1,380 @@
+
+==================================================
+Run 1/5
+==================================================
+Test domain: cartoon
+Training domains: ['art_painting', 'photo', 'sketch']
+Training LoRA adapter for domain: art_painting
+Epoch 1, Average Loss: 0.9229
+Epoch 2, Average Loss: 0.0943
+Epoch 3, Average Loss: 0.0153
+Epoch 4, Average Loss: 0.0255
+Epoch 5, Average Loss: 0.0181
+Epoch 6, Average Loss: 0.0511
+Epoch 7, Average Loss: 0.0366
+Epoch 8, Average Loss: 0.0357
+Epoch 9, Average Loss: 0.0374
+Epoch 10, Average Loss: 0.1256
+Training LoRA adapter for domain: photo
+Epoch 1, Average Loss: 0.5574
+Epoch 2, Average Loss: 0.0230
+Epoch 3, Average Loss: 0.0270
+Epoch 4, Average Loss: 0.0269
+Epoch 5, Average Loss: 0.0046
+Epoch 6, Average Loss: 0.0009
+Epoch 7, Average Loss: 0.0009
+Epoch 8, Average Loss: 0.0135
+Epoch 9, Average Loss: 0.0260
+Epoch 10, Average Loss: 0.0908
+Training LoRA adapter for domain: sketch
+Epoch 1, Average Loss: 1.2096
+Epoch 2, Average Loss: 0.5273
+Epoch 3, Average Loss: 0.3111
+Epoch 4, Average Loss: 0.1359
+Epoch 5, Average Loss: 0.0943
+Epoch 6, Average Loss: 0.0825
+Epoch 7, Average Loss: 0.0479
+Epoch 8, Average Loss: 0.2246
+Epoch 9, Average Loss: 0.1194
+Epoch 10, Average Loss: 0.0429
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  art_painting: 0.3333
+  photo: 0.3333
+  sketch: 0.3333
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 5.1102
+Coefficient Epoch 2, Average Loss: 3.8989
+Coefficient Epoch 3, Average Loss: 2.7155
+Coefficient Epoch 4, Average Loss: 2.0138
+Coefficient Epoch 5, Average Loss: 1.8651
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Final coefficients (after training and normalization):
+  art_painting: 0.3333
+  photo: 0.3333
+  sketch: 0.3333
+
+==================================================
+Run 2/5
+==================================================
+Test domain: sketch
+Training domains: ['art_painting', 'cartoon', 'photo']
+Training LoRA adapter for domain: art_painting
+Epoch 1, Average Loss: 0.7781
+Epoch 2, Average Loss: 0.1224
+Epoch 3, Average Loss: 0.0480
+Epoch 4, Average Loss: 0.0353
+Epoch 5, Average Loss: 0.0262
+Epoch 6, Average Loss: 0.0099
+Epoch 7, Average Loss: 0.0031
+Epoch 8, Average Loss: 0.0007
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Training LoRA adapter for domain: cartoon
+Epoch 1, Average Loss: 0.8536
+Epoch 2, Average Loss: 0.1384
+Epoch 3, Average Loss: 0.0439
+Epoch 4, Average Loss: 0.0099
+Epoch 5, Average Loss: 0.0019
+Epoch 6, Average Loss: 0.0007
+Epoch 7, Average Loss: 0.0021
+Epoch 8, Average Loss: 0.0011
+Epoch 9, Average Loss: 0.0002
+Epoch 10, Average Loss: 0.0001
+Training LoRA adapter for domain: photo
+Epoch 1, Average Loss: 0.5122
+Epoch 2, Average Loss: 0.0070
+Epoch 3, Average Loss: 0.0005
+Epoch 4, Average Loss: 0.0115
+Epoch 5, Average Loss: 0.0290
+Epoch 6, Average Loss: 0.0541
+Epoch 7, Average Loss: 0.0478
+Epoch 8, Average Loss: 0.0062
+Epoch 9, Average Loss: 0.0655
+Epoch 10, Average Loss: 0.0734
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  art_painting: 0.3333
+  cartoon: 0.3333
+  photo: 0.3333
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.3801
+Coefficient Epoch 2, Average Loss: 3.0600
+Coefficient Epoch 3, Average Loss: 2.1967
+Coefficient Epoch 4, Average Loss: 1.9637
+Coefficient Epoch 5, Average Loss: 2.0375
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Final coefficients (after training and normalization):
+  art_painting: 0.3333
+  cartoon: 0.3333
+  photo: 0.3333
+
+==================================================
+Run 3/5
+==================================================
+Test domain: art_painting
+Training domains: ['cartoon', 'photo', 'sketch']
+Training LoRA adapter for domain: cartoon
+Epoch 1, Average Loss: 1.0028
+Epoch 2, Average Loss: 0.1379
+Epoch 3, Average Loss: 0.0461
+Epoch 4, Average Loss: 0.0228
+Epoch 5, Average Loss: 0.0192
+Epoch 6, Average Loss: 0.0187
+Epoch 7, Average Loss: 0.0192
+Epoch 8, Average Loss: 0.0057
+Epoch 9, Average Loss: 0.0603
+Epoch 10, Average Loss: 0.1657
+Training LoRA adapter for domain: photo
+Epoch 1, Average Loss: 0.4948
+Epoch 2, Average Loss: 0.0096
+Epoch 3, Average Loss: 0.0088
+Epoch 4, Average Loss: 0.0255
+Epoch 5, Average Loss: 0.0337
+Epoch 6, Average Loss: 0.1578
+Epoch 7, Average Loss: 0.0354
+Epoch 8, Average Loss: 0.0007
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Training LoRA adapter for domain: sketch
+Epoch 1, Average Loss: 1.1928
+Epoch 2, Average Loss: 0.4553
+Epoch 3, Average Loss: 0.2101
+Epoch 4, Average Loss: 0.0856
+Epoch 5, Average Loss: 0.1091
+Epoch 6, Average Loss: 0.0393
+Epoch 7, Average Loss: 0.0049
+Epoch 8, Average Loss: 0.0035
+Epoch 9, Average Loss: 0.0160
+Epoch 10, Average Loss: 0.0359
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  cartoon: 0.3333
+  photo: 0.3333
+  sketch: 0.3333
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.6432
+Coefficient Epoch 2, Average Loss: 3.5372
+Coefficient Epoch 3, Average Loss: 2.5528
+Coefficient Epoch 4, Average Loss: 1.9827
+Coefficient Epoch 5, Average Loss: 1.9826
+Final device check:
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Expert model sketch device: cuda:0
+Final coefficients (after training and normalization):
+  cartoon: 0.3333
+  photo: 0.3333
+  sketch: 0.3333
+
+==================================================
+Run 4/5
+==================================================
+Test domain: photo
+Training domains: ['art_painting', 'cartoon', 'sketch']
+Training LoRA adapter for domain: art_painting
+Epoch 1, Average Loss: 0.8461
+Epoch 2, Average Loss: 0.0774
+Epoch 3, Average Loss: 0.0277
+Epoch 4, Average Loss: 0.0143
+Epoch 5, Average Loss: 0.0336
+Epoch 6, Average Loss: 0.0106
+Epoch 7, Average Loss: 0.0034
+Epoch 8, Average Loss: 0.0291
+Epoch 9, Average Loss: 0.0796
+Epoch 10, Average Loss: 0.0624
+Training LoRA adapter for domain: cartoon
+Epoch 1, Average Loss: 0.9531
+Epoch 2, Average Loss: 0.1364
+Epoch 3, Average Loss: 0.0335
+Epoch 4, Average Loss: 0.0183
+Epoch 5, Average Loss: 0.0414
+Epoch 6, Average Loss: 0.0341
+Epoch 7, Average Loss: 0.0360
+Epoch 8, Average Loss: 0.0338
+Epoch 9, Average Loss: 0.1693
+Epoch 10, Average Loss: 0.1141
+Training LoRA adapter for domain: sketch
+Epoch 1, Average Loss: 1.0694
+Epoch 2, Average Loss: 0.4937
+Epoch 3, Average Loss: 0.2758
+Epoch 4, Average Loss: 0.2092
+Epoch 5, Average Loss: 0.0665
+Epoch 6, Average Loss: 0.0242
+Epoch 7, Average Loss: 0.0032
+Epoch 8, Average Loss: 0.0010
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0002
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  art_painting: 0.3333
+  cartoon: 0.3333
+  sketch: 0.3333
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain sketch - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 3.2684
+Coefficient Epoch 2, Average Loss: 2.3604
+Coefficient Epoch 3, Average Loss: 1.9184
+Coefficient Epoch 4, Average Loss: 1.8614
+Coefficient Epoch 5, Average Loss: 2.0342
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model sketch device: cuda:0
+Final coefficients (after training and normalization):
+  art_painting: 0.3333
+  cartoon: 0.3333
+  sketch: 0.3333
+
+==================================================
+Run 5/5
+==================================================
+Test domain: sketch
+Training domains: ['art_painting', 'cartoon', 'photo']
+Training LoRA adapter for domain: art_painting
+Epoch 1, Average Loss: 0.7420
+Epoch 2, Average Loss: 0.0789
+Epoch 3, Average Loss: 0.0756
+Epoch 4, Average Loss: 0.0560
+Epoch 5, Average Loss: 0.0083
+Epoch 6, Average Loss: 0.0014
+Epoch 7, Average Loss: 0.0018
+Epoch 8, Average Loss: 0.0042
+Epoch 9, Average Loss: 0.0003
+Epoch 10, Average Loss: 0.0001
+Training LoRA adapter for domain: cartoon
+Epoch 1, Average Loss: 0.8559
+Epoch 2, Average Loss: 0.1490
+Epoch 3, Average Loss: 0.0542
+Epoch 4, Average Loss: 0.0234
+Epoch 5, Average Loss: 0.0051
+Epoch 6, Average Loss: 0.0005
+Epoch 7, Average Loss: 0.0002
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Training LoRA adapter for domain: photo
+Epoch 1, Average Loss: 0.3890
+Epoch 2, Average Loss: 0.0235
+Epoch 3, Average Loss: 0.0071
+Epoch 4, Average Loss: 0.0271
+Epoch 5, Average Loss: 0.0218
+Epoch 6, Average Loss: 0.0078
+Epoch 7, Average Loss: 0.0023
+Epoch 8, Average Loss: 0.0433
+Epoch 9, Average Loss: 0.0660
+Epoch 10, Average Loss: 0.0259
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  art_painting: 0.3333
+  cartoon: 0.3333
+  photo: 0.3333
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Domain art_painting - Input device: cuda:0, Model device: cuda:0
+Domain cartoon - Input device: cuda:0, Model device: cuda:0
+Domain photo - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 4.8591
+Coefficient Epoch 2, Average Loss: 3.3565
+Coefficient Epoch 3, Average Loss: 2.2166
+Coefficient Epoch 4, Average Loss: 1.9944
+Coefficient Epoch 5, Average Loss: 1.9942
+Final device check:
+Expert model art_painting device: cuda:0
+Expert model cartoon device: cuda:0
+Expert model photo device: cuda:0
+Final coefficients (after training and normalization):
+  art_painting: 0.3333
+  cartoon: 0.3333
+  photo: 0.3333
+
+Run 1 Summary:
+Test Domain: cartoon
+Final Coefficients:
+  art_painting: 0.3333
+  photo: 0.3333
+  sketch: 0.3333
+LoRA Adapters:
+  art_painting: 72 parameters
+  photo: 72 parameters
+  sketch: 72 parameters
+
+Run 2 Summary:
+Test Domain: sketch
+Final Coefficients:
+  art_painting: 0.3333
+  cartoon: 0.3333
+  photo: 0.3333
+LoRA Adapters:
+  art_painting: 72 parameters
+  cartoon: 72 parameters
+  photo: 72 parameters
+
+Run 3 Summary:
+Test Domain: art_painting
+Final Coefficients:
+  cartoon: 0.3333
+  photo: 0.3333
+  sketch: 0.3333
+LoRA Adapters:
+  cartoon: 72 parameters
+  photo: 72 parameters
+  sketch: 72 parameters
+
+Run 4 Summary:
+Test Domain: photo
+Final Coefficients:
+  art_painting: 0.3333
+  cartoon: 0.3333
+  sketch: 0.3333
+LoRA Adapters:
+  art_painting: 72 parameters
+  cartoon: 72 parameters
+  sketch: 72 parameters
+
+Run 5 Summary:
+Test Domain: sketch
+Final Coefficients:
+  art_painting: 0.3333
+  cartoon: 0.3333
+  photo: 0.3333
+LoRA Adapters:
+  art_painting: 72 parameters
+  cartoon: 72 parameters
+  photo: 72 parameters
