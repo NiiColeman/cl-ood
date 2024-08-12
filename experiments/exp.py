@@ -27,7 +27,8 @@ class TIESLoRAExperiment:
     def load_dataset(self):
         return CLBenchmarkGenerator(
             self.config['dataset_path'],
-            max_samples_per_class=self.config.get('max_samples_per_class')
+            max_samples_per_class=self.config.get('max_samples_per_class'),
+            augmentation='random_crop random_flip color_jitter rotation grayscale gaussian_blur'
         )
 
     def create_base_model(self):
@@ -171,7 +172,7 @@ class TIESLoRAExperiment:
         for key in self.domain_adapters[self.train_domains[0]].keys():
             task_tensors = [self.domain_adapters[domain][key].to(self.device) for domain in self.train_domains]
             weights = coefficients.to(self.device)
-            merged_param = ties_merge(task_tensors, weights, density=0.5)
+            merged_param = ties_merge(task_tensors, weights, density=0.2)
             merged_adapter[key] = merged_param
 
         # Load the merged adapter weights into the model

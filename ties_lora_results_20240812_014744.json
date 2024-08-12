@@ -1,0 +1,74 @@
+{
+  "PACS": [
+    {
+      "test_domain": "art_painting",
+      "domain_accuracies": {
+        "cartoon": 73.0477223427332,
+        "photo": 60.19522776572668,
+        "sketch": 58.35140997830802
+      },
+      "final_accuracy": 17.733188720173533,
+      "coefficients": [
+        0.22381596267223358,
+        0.4924250841140747,
+        0.2837589979171753
+      ]
+    },
+    {
+      "test_domain": "art_painting",
+      "domain_accuracies": {
+        "cartoon": 62.364425162689805,
+        "photo": 58.13449023861171,
+        "sketch": 50.43383947939263
+      },
+      "final_accuracy": 6.832971800433839,
+      "coefficients": [
+        0.32653331756591797,
+        0.3359066843986511,
+        0.3375599980354309
+      ]
+    },
+    {
+      "test_domain": "art_painting",
+      "domain_accuracies": {
+        "cartoon": 74.24078091106291,
+        "photo": 64.20824295010846,
+        "sketch": 52.7114967462039
+      },
+      "final_accuracy": 12.852494577006507,
+      "coefficients": [
+        0.4633640944957733,
+        0.2979801595211029,
+        0.2386557012796402
+      ]
+    },
+    {
+      "test_domain": "art_painting",
+      "domain_accuracies": {
+        "cartoon": 60.520607375271155,
+        "photo": 59.815618221258134,
+        "sketch": 58.94793926247288
+      },
+      "final_accuracy": 20.77006507592191,
+      "coefficients": [
+        0.27191948890686035,
+        0.2767418622970581,
+        0.45133864879608154
+      ]
+    },
+    {
+      "test_domain": "art_painting",
+      "domain_accuracies": {
+        "cartoon": 69.63123644251627,
+        "photo": 51.89804772234273,
+        "sketch": 57.53796095444685
+      },
+      "final_accuracy": 11.767895878524946,
+      "coefficients": [
+        0.4006982445716858,
+        0.280488520860672,
+        0.3188132047653198
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+50 OfficeHome
+
+==================================================
+Running experiments for dataset: PACS
+==================================================
+Dataset config for PACS:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+Type of dataset_config: <class 'dict'>
+Contents of dataset_config:
+{'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS', 'max_samples_per_class': None, 'base_model': 'vit_base_patch16_224', 'batch_size': 32, 'num_epochs': 10, 'learning_rate': 0.001, 'lora_r': 8, 'lora_alpha': 32, 'lora_dropout': 0.1, 'coefficient_learning_rate': 0.1, 'coefficient_epochs': 10, 'seed': 42}
+
+Run 1/10
+Error in run 1: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 2/10
+Error in run 2: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 3/10
+Error in run 3: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 4/10
+Error in run 4: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 5/10
+Error in run 5: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 6/10
+Error in run 6: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 7/10
+Error in run 7: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 8/10
+Error in run 8: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 9/10
+Error in run 9: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Run 10/10
+Error in run 10: CLBenchmarkGenerator.__init__() got an unexpected keyword argument 'augmentation'
+
+Summary for PACS:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: []
+No valid results to summarize.
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'PACS': []}
+No valid results to summarize.

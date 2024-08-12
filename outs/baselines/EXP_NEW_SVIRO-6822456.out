@@ -1562,3 +1562,1768 @@ Accuracy of tucson model on test domain: 97.8667
 Training model for domain: x5
 Training model for domain: x5
 Epoch 1, Average Loss: 0.3051
+Epoch 2, Average Loss: 0.0078
+Epoch 3, Average Loss: 0.0014
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 81.5000
+Accuracy of x5 model on test domain: 81.5000
+
+Training model for domain: zoe
+Training model for domain: zoe
+Epoch 1, Average Loss: 0.3950
+Epoch 2, Average Loss: 0.0146
+Epoch 3, Average Loss: 0.0019
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 49.3000
+Accuracy of zoe model on test domain: 49.3000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  aclass: 0.1111
+  escape: 0.1111
+  hilux: 0.1111
+  i3: 0.1111
+  tesla: 0.1111
+  tiguan: 0.1111
+  tucson: 0.1111
+  x5: 0.1111
+  zoe: 0.1111
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Domain aclass - Input device: cuda:0, Model device: cuda:0
+Domain escape - Input device: cuda:0, Model device: cuda:0
+Domain hilux - Input device: cuda:0, Model device: cuda:0
+Domain i3 - Input device: cuda:0, Model device: cuda:0
+Domain tesla - Input device: cuda:0, Model device: cuda:0
+Domain tiguan - Input device: cuda:0, Model device: cuda:0
+Domain tucson - Input device: cuda:0, Model device: cuda:0
+Domain x5 - Input device: cuda:0, Model device: cuda:0
+Domain zoe - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.1427
+Coefficient Epoch 2, Average Loss: 0.0412
+Coefficient Epoch 3, Average Loss: 0.0294
+Coefficient Epoch 4, Average Loss: 0.0198
+Coefficient Epoch 5, Average Loss: 0.0333
+Coefficient Epoch 6, Average Loss: 0.0271
+Coefficient Epoch 7, Average Loss: 0.0358
+Coefficient Epoch 8, Average Loss: 0.0423
+Coefficient Epoch 9, Average Loss: 0.0262
+Coefficient Epoch 10, Average Loss: 0.0256
+Final device check:
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.04207443445920944, 0.07137557864189148, 0.08285745233297348, 0.03452913090586662, 0.2976326644420624, 0.11070539802312851, 0.26898524165153503, 0.06329219788312912, 0.02854781411588192]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 96.3333
+Final model accuracy on test domain: 96.3333
+
+Run 6/10
+Preparing data...
+Domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5', 'zoe']
+Selected test domain: tesla
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tiguan', 'tucson', 'x5', 'zoe']
+
+Domain: escape
+  Class 0: 2079 samples
+  Class 4: 742 samples
+  Class 2: 581 samples
+  Class 3: 940 samples
+  Class 5: 443 samples
+  Class 1: 489 samples
+  Class 6: 726 samples
+  Total samples: 6000
+
+Domain: tiguan
+  Class 0: 2196 samples
+  Class 4: 650 samples
+  Class 2: 645 samples
+  Class 3: 944 samples
+  Class 5: 461 samples
+  Class 1: 458 samples
+  Class 6: 646 samples
+  Total samples: 6000
+
+Domain: tucson
+  Class 0: 2202 samples
+  Class 4: 658 samples
+  Class 2: 608 samples
+  Class 3: 900 samples
+  Class 5: 481 samples
+  Class 1: 458 samples
+  Class 6: 693 samples
+  Total samples: 6000
+
+Domain: hilux
+  Class 0: 2218 samples
+  Class 4: 769 samples
+  Class 2: 560 samples
+  Class 3: 847 samples
+  Class 5: 510 samples
+  Class 1: 457 samples
+  Class 6: 639 samples
+  Total samples: 6000
+
+Domain: tesla
+  Class 0: 2507 samples
+  Class 4: 565 samples
+  Class 2: 537 samples
+  Class 3: 909 samples
+  Class 5: 439 samples
+  Class 1: 449 samples
+  Class 6: 594 samples
+  Total samples: 6000
+
+Domain: zoe
+  Class 0: 909 samples
+  Class 4: 438 samples
+  Class 2: 518 samples
+  Class 3: 816 samples
+  Class 5: 392 samples
+  Class 1: 380 samples
+  Class 6: 547 samples
+  Total samples: 4000
+
+Domain: x5
+  Class 0: 2400 samples
+  Class 4: 767 samples
+  Class 2: 569 samples
+  Class 3: 892 samples
+  Class 5: 418 samples
+  Class 1: 371 samples
+  Class 6: 583 samples
+  Total samples: 6000
+
+Domain: aclass
+  Class 0: 2134 samples
+  Class 4: 755 samples
+  Class 2: 611 samples
+  Class 3: 884 samples
+  Class 5: 486 samples
+  Class 1: 457 samples
+  Class 6: 673 samples
+  Total samples: 6000
+
+Domain: i3
+  Class 0: 884 samples
+  Class 4: 442 samples
+  Class 2: 496 samples
+  Class 3: 919 samples
+  Class 5: 363 samples
+  Class 1: 372 samples
+  Class 6: 524 samples
+  Total samples: 4000
+
+Domain: lexus
+  Class 0: 2127 samples
+  Class 4: 791 samples
+  Class 2: 579 samples
+  Class 3: 907 samples
+  Class 5: 468 samples
+  Class 1: 465 samples
+  Class 6: 663 samples
+  Total samples: 6000
+Test domain: tesla
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.4210
+Epoch 2, Average Loss: 0.0291
+Epoch 3, Average Loss: 0.0367
+Epoch 4, Average Loss: 0.0563
+Epoch 5, Average Loss: 0.0343
+Epoch 6, Average Loss: 0.0147
+Epoch 7, Average Loss: 0.0189
+Epoch 8, Average Loss: 0.0035
+Epoch 9, Average Loss: 0.0014
+Epoch 10, Average Loss: 0.0604
+Accuracy: 96.7333
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tiguan', 'tucson', 'x5', 'zoe']
+
+Training expert models...
+
+Training model for domain: aclass
+Training model for domain: aclass
+Epoch 1, Average Loss: 0.2651
+Epoch 2, Average Loss: 0.0068
+Epoch 3, Average Loss: 0.0037
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 86.0000
+Accuracy of aclass model on test domain: 86.0000
+
+Training model for domain: escape
+Training model for domain: escape
+Epoch 1, Average Loss: 0.3360
+Epoch 2, Average Loss: 0.0086
+Epoch 3, Average Loss: 0.0013
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 90.6333
+Accuracy of escape model on test domain: 90.6333
+
+Training model for domain: hilux
+Training model for domain: hilux
+Epoch 1, Average Loss: 0.3877
+Epoch 2, Average Loss: 0.0542
+Epoch 3, Average Loss: 0.0034
+Epoch 4, Average Loss: 0.0009
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 50.9667
+Accuracy of hilux model on test domain: 50.9667
+
+Training model for domain: i3
+Training model for domain: i3
+Epoch 1, Average Loss: 0.3098
+Epoch 2, Average Loss: 0.0066
+Epoch 3, Average Loss: 0.0015
+Epoch 4, Average Loss: 0.0006
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 55.4333
+Accuracy of i3 model on test domain: 55.4333
+
+Training model for domain: lexus
+Training model for domain: lexus
+Epoch 1, Average Loss: 0.2844
+Epoch 2, Average Loss: 0.0103
+Epoch 3, Average Loss: 0.0013
+Epoch 4, Average Loss: 0.0005
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 73.9333
+Accuracy of lexus model on test domain: 73.9333
+
+Training model for domain: tiguan
+Training model for domain: tiguan
+Epoch 1, Average Loss: 0.2746
+Epoch 2, Average Loss: 0.0141
+Epoch 3, Average Loss: 0.0016
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 79.5000
+Accuracy of tiguan model on test domain: 79.5000
+
+Training model for domain: tucson
+Training model for domain: tucson
+Epoch 1, Average Loss: 0.3394
+Epoch 2, Average Loss: 0.0084
+Epoch 3, Average Loss: 0.0026
+Epoch 4, Average Loss: 0.0005
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 85.4667
+Accuracy of tucson model on test domain: 85.4667
+
+Training model for domain: x5
+Training model for domain: x5
+Epoch 1, Average Loss: 0.2766
+Epoch 2, Average Loss: 0.0085
+Epoch 3, Average Loss: 0.0022
+Epoch 4, Average Loss: 0.0005
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 88.6333
+Accuracy of x5 model on test domain: 88.6333
+
+Training model for domain: zoe
+Training model for domain: zoe
+Epoch 1, Average Loss: 0.3180
+Epoch 2, Average Loss: 0.0074
+Epoch 3, Average Loss: 0.0010
+Epoch 4, Average Loss: 0.0005
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 48.8333
+Accuracy of zoe model on test domain: 48.8333
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  aclass: 0.1111
+  escape: 0.1111
+  hilux: 0.1111
+  i3: 0.1111
+  lexus: 0.1111
+  tiguan: 0.1111
+  tucson: 0.1111
+  x5: 0.1111
+  zoe: 0.1111
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Domain aclass - Input device: cuda:0, Model device: cuda:0
+Domain escape - Input device: cuda:0, Model device: cuda:0
+Domain hilux - Input device: cuda:0, Model device: cuda:0
+Domain i3 - Input device: cuda:0, Model device: cuda:0
+Domain lexus - Input device: cuda:0, Model device: cuda:0
+Domain tiguan - Input device: cuda:0, Model device: cuda:0
+Domain tucson - Input device: cuda:0, Model device: cuda:0
+Domain x5 - Input device: cuda:0, Model device: cuda:0
+Domain zoe - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.4539
+Coefficient Epoch 2, Average Loss: 0.1197
+Coefficient Epoch 3, Average Loss: 0.1404
+Coefficient Epoch 4, Average Loss: 0.1607
+Coefficient Epoch 5, Average Loss: 0.1464
+Coefficient Epoch 6, Average Loss: 0.1309
+Coefficient Epoch 7, Average Loss: 0.1336
+Coefficient Epoch 8, Average Loss: 0.1335
+Coefficient Epoch 9, Average Loss: 0.1478
+Coefficient Epoch 10, Average Loss: 0.1385
+Final device check:
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.14061570167541504, 0.11408451944589615, 0.10126592218875885, 0.06282759457826614, 0.07606183737516403, 0.08646982908248901, 0.17627137899398804, 0.1940941959619522, 0.048309121280908585]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 85.3333
+Final model accuracy on test domain: 85.3333
+
+Run 7/10
+Preparing data...
+Domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5', 'zoe']
+Selected test domain: tiguan
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tucson', 'x5', 'zoe']
+
+Domain: escape
+  Class 0: 2079 samples
+  Class 4: 742 samples
+  Class 2: 581 samples
+  Class 3: 940 samples
+  Class 5: 443 samples
+  Class 1: 489 samples
+  Class 6: 726 samples
+  Total samples: 6000
+
+Domain: tiguan
+  Class 0: 2196 samples
+  Class 4: 650 samples
+  Class 2: 645 samples
+  Class 3: 944 samples
+  Class 5: 461 samples
+  Class 1: 458 samples
+  Class 6: 646 samples
+  Total samples: 6000
+
+Domain: tucson
+  Class 0: 2202 samples
+  Class 4: 658 samples
+  Class 2: 608 samples
+  Class 3: 900 samples
+  Class 5: 481 samples
+  Class 1: 458 samples
+  Class 6: 693 samples
+  Total samples: 6000
+
+Domain: hilux
+  Class 0: 2218 samples
+  Class 4: 769 samples
+  Class 2: 560 samples
+  Class 3: 847 samples
+  Class 5: 510 samples
+  Class 1: 457 samples
+  Class 6: 639 samples
+  Total samples: 6000
+
+Domain: tesla
+  Class 0: 2507 samples
+  Class 4: 565 samples
+  Class 2: 537 samples
+  Class 3: 909 samples
+  Class 5: 439 samples
+  Class 1: 449 samples
+  Class 6: 594 samples
+  Total samples: 6000
+
+Domain: zoe
+  Class 0: 909 samples
+  Class 4: 438 samples
+  Class 2: 518 samples
+  Class 3: 816 samples
+  Class 5: 392 samples
+  Class 1: 380 samples
+  Class 6: 547 samples
+  Total samples: 4000
+
+Domain: x5
+  Class 0: 2400 samples
+  Class 4: 767 samples
+  Class 2: 569 samples
+  Class 3: 892 samples
+  Class 5: 418 samples
+  Class 1: 371 samples
+  Class 6: 583 samples
+  Total samples: 6000
+
+Domain: aclass
+  Class 0: 2134 samples
+  Class 4: 755 samples
+  Class 2: 611 samples
+  Class 3: 884 samples
+  Class 5: 486 samples
+  Class 1: 457 samples
+  Class 6: 673 samples
+  Total samples: 6000
+
+Domain: i3
+  Class 0: 884 samples
+  Class 4: 442 samples
+  Class 2: 496 samples
+  Class 3: 919 samples
+  Class 5: 363 samples
+  Class 1: 372 samples
+  Class 6: 524 samples
+  Total samples: 4000
+
+Domain: lexus
+  Class 0: 2127 samples
+  Class 4: 791 samples
+  Class 2: 579 samples
+  Class 3: 907 samples
+  Class 5: 468 samples
+  Class 1: 465 samples
+  Class 6: 663 samples
+  Total samples: 6000
+Test domain: tiguan
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.4777
+Epoch 2, Average Loss: 0.0445
+Epoch 3, Average Loss: 0.0114
+Epoch 4, Average Loss: 0.0275
+Epoch 5, Average Loss: 0.0837
+Epoch 6, Average Loss: 0.0266
+Epoch 7, Average Loss: 0.0042
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Accuracy: 99.7667
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tucson', 'x5', 'zoe']
+
+Training expert models...
+
+Training model for domain: aclass
+Training model for domain: aclass
+Epoch 1, Average Loss: 0.3170
+Epoch 2, Average Loss: 0.0092
+Epoch 3, Average Loss: 0.0007
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 76.5667
+Accuracy of aclass model on test domain: 76.5667
+
+Training model for domain: escape
+Training model for domain: escape
+Epoch 1, Average Loss: 0.2790
+Epoch 2, Average Loss: 0.0080
+Epoch 3, Average Loss: 0.0029
+Epoch 4, Average Loss: 0.0005
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 92.0000
+Accuracy of escape model on test domain: 92.0000
+
+Training model for domain: hilux
+Training model for domain: hilux
+Epoch 1, Average Loss: 0.3508
+Epoch 2, Average Loss: 0.0296
+Epoch 3, Average Loss: 0.0028
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 63.0333
+Accuracy of hilux model on test domain: 63.0333
+
+Training model for domain: i3
+Training model for domain: i3
+Epoch 1, Average Loss: 0.3100
+Epoch 2, Average Loss: 0.0091
+Epoch 3, Average Loss: 0.0008
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 59.9000
+Accuracy of i3 model on test domain: 59.9000
+
+Training model for domain: lexus
+Training model for domain: lexus
+Epoch 1, Average Loss: 0.3159
+Epoch 2, Average Loss: 0.0108
+Epoch 3, Average Loss: 0.0017
+Epoch 4, Average Loss: 0.0011
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 62.8667
+Accuracy of lexus model on test domain: 62.8667
+
+Training model for domain: tesla
+Training model for domain: tesla
+Epoch 1, Average Loss: 0.3939
+Epoch 2, Average Loss: 0.0108
+Epoch 3, Average Loss: 0.0052
+Epoch 4, Average Loss: 0.0021
+Epoch 5, Average Loss: 0.0024
+Epoch 6, Average Loss: 0.0014
+Epoch 7, Average Loss: 0.0006
+Epoch 8, Average Loss: 0.0015
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 71.9667
+Accuracy of tesla model on test domain: 71.9667
+
+Training model for domain: tucson
+Training model for domain: tucson
+Epoch 1, Average Loss: 0.3116
+Epoch 2, Average Loss: 0.0051
+Epoch 3, Average Loss: 0.0016
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 64.5000
+Accuracy of tucson model on test domain: 64.5000
+
+Training model for domain: x5
+Training model for domain: x5
+Epoch 1, Average Loss: 0.2652
+Epoch 2, Average Loss: 0.0087
+Epoch 3, Average Loss: 0.0070
+Epoch 4, Average Loss: 0.0019
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 65.3667
+Accuracy of x5 model on test domain: 65.3667
+
+Training model for domain: zoe
+Training model for domain: zoe
+Epoch 1, Average Loss: 0.3462
+Epoch 2, Average Loss: 0.0103
+Epoch 3, Average Loss: 0.0010
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 51.5000
+Accuracy of zoe model on test domain: 51.5000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  aclass: 0.1111
+  escape: 0.1111
+  hilux: 0.1111
+  i3: 0.1111
+  lexus: 0.1111
+  tesla: 0.1111
+  tucson: 0.1111
+  x5: 0.1111
+  zoe: 0.1111
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Domain aclass - Input device: cuda:0, Model device: cuda:0
+Domain escape - Input device: cuda:0, Model device: cuda:0
+Domain hilux - Input device: cuda:0, Model device: cuda:0
+Domain i3 - Input device: cuda:0, Model device: cuda:0
+Domain lexus - Input device: cuda:0, Model device: cuda:0
+Domain tesla - Input device: cuda:0, Model device: cuda:0
+Domain tucson - Input device: cuda:0, Model device: cuda:0
+Domain x5 - Input device: cuda:0, Model device: cuda:0
+Domain zoe - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.6571
+Coefficient Epoch 2, Average Loss: 0.1255
+Coefficient Epoch 3, Average Loss: 0.1309
+Coefficient Epoch 4, Average Loss: 0.1231
+Coefficient Epoch 5, Average Loss: 0.1567
+Coefficient Epoch 6, Average Loss: 0.1242
+Coefficient Epoch 7, Average Loss: 0.1242
+Coefficient Epoch 8, Average Loss: 0.1199
+Coefficient Epoch 9, Average Loss: 0.1825
+Coefficient Epoch 10, Average Loss: 0.1416
+Final device check:
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.0949462354183197, 0.19518524408340454, 0.10216538608074188, 0.027424748986959457, 0.07109188288450241, 0.0854371041059494, 0.19315524399280548, 0.129738911986351, 0.1008552685379982]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 68.0000
+Final model accuracy on test domain: 68.0000
+
+Run 8/10
+Preparing data...
+Domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5', 'zoe']
+Selected test domain: tucson
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'x5', 'zoe']
+
+Domain: escape
+  Class 0: 2079 samples
+  Class 4: 742 samples
+  Class 2: 581 samples
+  Class 3: 940 samples
+  Class 5: 443 samples
+  Class 1: 489 samples
+  Class 6: 726 samples
+  Total samples: 6000
+
+Domain: tiguan
+  Class 0: 2196 samples
+  Class 4: 650 samples
+  Class 2: 645 samples
+  Class 3: 944 samples
+  Class 5: 461 samples
+  Class 1: 458 samples
+  Class 6: 646 samples
+  Total samples: 6000
+
+Domain: tucson
+  Class 0: 2202 samples
+  Class 4: 658 samples
+  Class 2: 608 samples
+  Class 3: 900 samples
+  Class 5: 481 samples
+  Class 1: 458 samples
+  Class 6: 693 samples
+  Total samples: 6000
+
+Domain: hilux
+  Class 0: 2218 samples
+  Class 4: 769 samples
+  Class 2: 560 samples
+  Class 3: 847 samples
+  Class 5: 510 samples
+  Class 1: 457 samples
+  Class 6: 639 samples
+  Total samples: 6000
+
+Domain: tesla
+  Class 0: 2507 samples
+  Class 4: 565 samples
+  Class 2: 537 samples
+  Class 3: 909 samples
+  Class 5: 439 samples
+  Class 1: 449 samples
+  Class 6: 594 samples
+  Total samples: 6000
+
+Domain: zoe
+  Class 0: 909 samples
+  Class 4: 438 samples
+  Class 2: 518 samples
+  Class 3: 816 samples
+  Class 5: 392 samples
+  Class 1: 380 samples
+  Class 6: 547 samples
+  Total samples: 4000
+
+Domain: x5
+  Class 0: 2400 samples
+  Class 4: 767 samples
+  Class 2: 569 samples
+  Class 3: 892 samples
+  Class 5: 418 samples
+  Class 1: 371 samples
+  Class 6: 583 samples
+  Total samples: 6000
+
+Domain: aclass
+  Class 0: 2134 samples
+  Class 4: 755 samples
+  Class 2: 611 samples
+  Class 3: 884 samples
+  Class 5: 486 samples
+  Class 1: 457 samples
+  Class 6: 673 samples
+  Total samples: 6000
+
+Domain: i3
+  Class 0: 884 samples
+  Class 4: 442 samples
+  Class 2: 496 samples
+  Class 3: 919 samples
+  Class 5: 363 samples
+  Class 1: 372 samples
+  Class 6: 524 samples
+  Total samples: 4000
+
+Domain: lexus
+  Class 0: 2127 samples
+  Class 4: 791 samples
+  Class 2: 579 samples
+  Class 3: 907 samples
+  Class 5: 468 samples
+  Class 1: 465 samples
+  Class 6: 663 samples
+  Total samples: 6000
+Test domain: tucson
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.0752
+Epoch 2, Average Loss: 0.1414
+Epoch 3, Average Loss: 0.0248
+Epoch 4, Average Loss: 0.0122
+Epoch 5, Average Loss: 0.0039
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0000
+Epoch 8, Average Loss: 0.0000
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Accuracy: 99.7000
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'x5', 'zoe']
+
+Training expert models...
+
+Training model for domain: aclass
+Training model for domain: aclass
+Epoch 1, Average Loss: 0.2995
+Epoch 2, Average Loss: 0.0079
+Epoch 3, Average Loss: 0.0018
+Epoch 4, Average Loss: 0.0006
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 79.3000
+Accuracy of aclass model on test domain: 79.3000
+
+Training model for domain: escape
+Training model for domain: escape
+Epoch 1, Average Loss: 0.2746
+Epoch 2, Average Loss: 0.0064
+Epoch 3, Average Loss: 0.0007
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 97.6000
+Accuracy of escape model on test domain: 97.6000
+
+Training model for domain: hilux
+Training model for domain: hilux
+Epoch 1, Average Loss: 0.3515
+Epoch 2, Average Loss: 0.0311
+Epoch 3, Average Loss: 0.0038
+Epoch 4, Average Loss: 0.0010
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 62.6000
+Accuracy of hilux model on test domain: 62.6000
+
+Training model for domain: i3
+Training model for domain: i3
+Epoch 1, Average Loss: 0.2835
+Epoch 2, Average Loss: 0.0053
+Epoch 3, Average Loss: 0.0010
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 55.1667
+Accuracy of i3 model on test domain: 55.1667
+
+Training model for domain: lexus
+Training model for domain: lexus
+Epoch 1, Average Loss: 0.2491
+Epoch 2, Average Loss: 0.0107
+Epoch 3, Average Loss: 0.0038
+Epoch 4, Average Loss: 0.0009
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 96.8667
+Accuracy of lexus model on test domain: 96.8667
+
+Training model for domain: tesla
+Training model for domain: tesla
+Epoch 1, Average Loss: 0.2827
+Epoch 2, Average Loss: 0.0103
+Epoch 3, Average Loss: 0.0030
+Epoch 4, Average Loss: 0.0010
+Epoch 5, Average Loss: 0.0010
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 80.7333
+Accuracy of tesla model on test domain: 80.7333
+
+Training model for domain: tiguan
+Training model for domain: tiguan
+Epoch 1, Average Loss: 0.3528
+Epoch 2, Average Loss: 0.0085
+Epoch 3, Average Loss: 0.0053
+Epoch 4, Average Loss: 0.0009
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 78.4000
+Accuracy of tiguan model on test domain: 78.4000
+
+Training model for domain: x5
+Training model for domain: x5
+Epoch 1, Average Loss: 0.3135
+Epoch 2, Average Loss: 0.0093
+Epoch 3, Average Loss: 0.0014
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 62.7667
+Accuracy of x5 model on test domain: 62.7667
+
+Training model for domain: zoe
+Training model for domain: zoe
+Epoch 1, Average Loss: 0.4049
+Epoch 2, Average Loss: 0.0120
+Epoch 3, Average Loss: 0.0012
+Epoch 4, Average Loss: 0.0005
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 56.1000
+Accuracy of zoe model on test domain: 56.1000
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  aclass: 0.1111
+  escape: 0.1111
+  hilux: 0.1111
+  i3: 0.1111
+  lexus: 0.1111
+  tesla: 0.1111
+  tiguan: 0.1111
+  x5: 0.1111
+  zoe: 0.1111
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Domain aclass - Input device: cuda:0, Model device: cuda:0
+Domain escape - Input device: cuda:0, Model device: cuda:0
+Domain hilux - Input device: cuda:0, Model device: cuda:0
+Domain i3 - Input device: cuda:0, Model device: cuda:0
+Domain lexus - Input device: cuda:0, Model device: cuda:0
+Domain tesla - Input device: cuda:0, Model device: cuda:0
+Domain tiguan - Input device: cuda:0, Model device: cuda:0
+Domain x5 - Input device: cuda:0, Model device: cuda:0
+Domain zoe - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.2850
+Coefficient Epoch 2, Average Loss: 0.0428
+Coefficient Epoch 3, Average Loss: 0.0300
+Coefficient Epoch 4, Average Loss: 0.0329
+Coefficient Epoch 5, Average Loss: 0.0303
+Coefficient Epoch 6, Average Loss: 0.0288
+Coefficient Epoch 7, Average Loss: 0.0313
+Coefficient Epoch 8, Average Loss: 0.0292
+Coefficient Epoch 9, Average Loss: 0.0279
+Coefficient Epoch 10, Average Loss: 0.0334
+Final device check:
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model x5 device: cuda:0
+Expert model zoe device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.1682216078042984, 0.294760137796402, 0.07991435378789902, 0.03149943798780441, 0.14186915755271912, 0.11257939785718918, 0.02601378597319126, 0.04912606254220009, 0.09601610898971558]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 84.6667
+Final model accuracy on test domain: 84.6667
+
+Run 9/10
+Preparing data...
+Domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5', 'zoe']
+Selected test domain: x5
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'zoe']
+
+Domain: escape
+  Class 0: 2079 samples
+  Class 4: 742 samples
+  Class 2: 581 samples
+  Class 3: 940 samples
+  Class 5: 443 samples
+  Class 1: 489 samples
+  Class 6: 726 samples
+  Total samples: 6000
+
+Domain: tiguan
+  Class 0: 2196 samples
+  Class 4: 650 samples
+  Class 2: 645 samples
+  Class 3: 944 samples
+  Class 5: 461 samples
+  Class 1: 458 samples
+  Class 6: 646 samples
+  Total samples: 6000
+
+Domain: tucson
+  Class 0: 2202 samples
+  Class 4: 658 samples
+  Class 2: 608 samples
+  Class 3: 900 samples
+  Class 5: 481 samples
+  Class 1: 458 samples
+  Class 6: 693 samples
+  Total samples: 6000
+
+Domain: hilux
+  Class 0: 2218 samples
+  Class 4: 769 samples
+  Class 2: 560 samples
+  Class 3: 847 samples
+  Class 5: 510 samples
+  Class 1: 457 samples
+  Class 6: 639 samples
+  Total samples: 6000
+
+Domain: tesla
+  Class 0: 2507 samples
+  Class 4: 565 samples
+  Class 2: 537 samples
+  Class 3: 909 samples
+  Class 5: 439 samples
+  Class 1: 449 samples
+  Class 6: 594 samples
+  Total samples: 6000
+
+Domain: zoe
+  Class 0: 909 samples
+  Class 4: 438 samples
+  Class 2: 518 samples
+  Class 3: 816 samples
+  Class 5: 392 samples
+  Class 1: 380 samples
+  Class 6: 547 samples
+  Total samples: 4000
+
+Domain: x5
+  Class 0: 2400 samples
+  Class 4: 767 samples
+  Class 2: 569 samples
+  Class 3: 892 samples
+  Class 5: 418 samples
+  Class 1: 371 samples
+  Class 6: 583 samples
+  Total samples: 6000
+
+Domain: aclass
+  Class 0: 2134 samples
+  Class 4: 755 samples
+  Class 2: 611 samples
+  Class 3: 884 samples
+  Class 5: 486 samples
+  Class 1: 457 samples
+  Class 6: 673 samples
+  Total samples: 6000
+
+Domain: i3
+  Class 0: 884 samples
+  Class 4: 442 samples
+  Class 2: 496 samples
+  Class 3: 919 samples
+  Class 5: 363 samples
+  Class 1: 372 samples
+  Class 6: 524 samples
+  Total samples: 4000
+
+Domain: lexus
+  Class 0: 2127 samples
+  Class 4: 791 samples
+  Class 2: 579 samples
+  Class 3: 907 samples
+  Class 5: 468 samples
+  Class 1: 465 samples
+  Class 6: 663 samples
+  Total samples: 6000
+Test domain: x5
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 0.2829
+Epoch 2, Average Loss: 0.0413
+Epoch 3, Average Loss: 0.0346
+Epoch 4, Average Loss: 0.0274
+Epoch 5, Average Loss: 0.0242
+Epoch 6, Average Loss: 0.0004
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0350
+Epoch 9, Average Loss: 0.0422
+Epoch 10, Average Loss: 0.0090
+Accuracy: 98.8000
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'zoe']
+
+Training expert models...
+
+Training model for domain: aclass
+Training model for domain: aclass
+Epoch 1, Average Loss: 0.2907
+Epoch 2, Average Loss: 0.0057
+Epoch 3, Average Loss: 0.0014
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 66.9000
+Accuracy of aclass model on test domain: 66.9000
+
+Training model for domain: escape
+Training model for domain: escape
+Epoch 1, Average Loss: 0.2829
+Epoch 2, Average Loss: 0.0079
+Epoch 3, Average Loss: 0.0008
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 79.4333
+Accuracy of escape model on test domain: 79.4333
+
+Training model for domain: hilux
+Training model for domain: hilux
+Epoch 1, Average Loss: 0.3808
+Epoch 2, Average Loss: 0.0729
+Epoch 3, Average Loss: 0.0062
+Epoch 4, Average Loss: 0.0055
+Epoch 5, Average Loss: 0.0014
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 60.3333
+Accuracy of hilux model on test domain: 60.3333
+
+Training model for domain: i3
+Training model for domain: i3
+Epoch 1, Average Loss: 0.3087
+Epoch 2, Average Loss: 0.0060
+Epoch 3, Average Loss: 0.0018
+Epoch 4, Average Loss: 0.0005
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 52.6000
+Accuracy of i3 model on test domain: 52.6000
+
+Training model for domain: lexus
+Training model for domain: lexus
+Epoch 1, Average Loss: 0.3059
+Epoch 2, Average Loss: 0.0116
+Epoch 3, Average Loss: 0.0040
+Epoch 4, Average Loss: 0.0015
+Epoch 5, Average Loss: 0.0006
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 60.9000
+Accuracy of lexus model on test domain: 60.9000
+
+Training model for domain: tesla
+Training model for domain: tesla
+Epoch 1, Average Loss: 0.2590
+Epoch 2, Average Loss: 0.0123
+Epoch 3, Average Loss: 0.0034
+Epoch 4, Average Loss: 0.0014
+Epoch 5, Average Loss: 0.0022
+Epoch 6, Average Loss: 0.0006
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 78.6667
+Accuracy of tesla model on test domain: 78.6667
+
+Training model for domain: tiguan
+Training model for domain: tiguan
+Epoch 1, Average Loss: 0.2982
+Epoch 2, Average Loss: 0.0120
+Epoch 3, Average Loss: 0.0041
+Epoch 4, Average Loss: 0.0012
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 73.9333
+Accuracy of tiguan model on test domain: 73.9333
+
+Training model for domain: tucson
+Training model for domain: tucson
+Epoch 1, Average Loss: 0.2807
+Epoch 2, Average Loss: 0.0064
+Epoch 3, Average Loss: 0.0018
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 85.0667
+Accuracy of tucson model on test domain: 85.0667
+
+Training model for domain: zoe
+Training model for domain: zoe
+Epoch 1, Average Loss: 0.3901
+Epoch 2, Average Loss: 0.0160
+Epoch 3, Average Loss: 0.0015
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 44.2667
+Accuracy of zoe model on test domain: 44.2667
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  aclass: 0.1111
+  escape: 0.1111
+  hilux: 0.1111
+  i3: 0.1111
+  lexus: 0.1111
+  tesla: 0.1111
+  tiguan: 0.1111
+  tucson: 0.1111
+  zoe: 0.1111
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model zoe device: cuda:0
+Domain aclass - Input device: cuda:0, Model device: cuda:0
+Domain escape - Input device: cuda:0, Model device: cuda:0
+Domain hilux - Input device: cuda:0, Model device: cuda:0
+Domain i3 - Input device: cuda:0, Model device: cuda:0
+Domain lexus - Input device: cuda:0, Model device: cuda:0
+Domain tesla - Input device: cuda:0, Model device: cuda:0
+Domain tiguan - Input device: cuda:0, Model device: cuda:0
+Domain tucson - Input device: cuda:0, Model device: cuda:0
+Domain zoe - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.7433
+Coefficient Epoch 2, Average Loss: 0.0748
+Coefficient Epoch 3, Average Loss: 0.0588
+Coefficient Epoch 4, Average Loss: 0.0460
+Coefficient Epoch 5, Average Loss: 0.0467
+Coefficient Epoch 6, Average Loss: 0.0496
+Coefficient Epoch 7, Average Loss: 0.0448
+Coefficient Epoch 8, Average Loss: 0.0457
+Coefficient Epoch 9, Average Loss: 0.0521
+Coefficient Epoch 10, Average Loss: 0.0543
+Final device check:
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model zoe device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.08014128357172012, 0.18116974830627441, 0.039257001131772995, 0.06051506847143173, 0.07228495925664902, 0.1364995390176773, 0.16782249510288239, 0.23436668515205383, 0.02794319950044155]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 64.3000
+Final model accuracy on test domain: 64.3000
+
+Run 10/10
+Preparing data...
+Domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5', 'zoe']
+Selected test domain: zoe
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5']
+
+Domain: escape
+  Class 0: 2079 samples
+  Class 4: 742 samples
+  Class 2: 581 samples
+  Class 3: 940 samples
+  Class 5: 443 samples
+  Class 1: 489 samples
+  Class 6: 726 samples
+  Total samples: 6000
+
+Domain: tiguan
+  Class 0: 2196 samples
+  Class 4: 650 samples
+  Class 2: 645 samples
+  Class 3: 944 samples
+  Class 5: 461 samples
+  Class 1: 458 samples
+  Class 6: 646 samples
+  Total samples: 6000
+
+Domain: tucson
+  Class 0: 2202 samples
+  Class 4: 658 samples
+  Class 2: 608 samples
+  Class 3: 900 samples
+  Class 5: 481 samples
+  Class 1: 458 samples
+  Class 6: 693 samples
+  Total samples: 6000
+
+Domain: hilux
+  Class 0: 2218 samples
+  Class 4: 769 samples
+  Class 2: 560 samples
+  Class 3: 847 samples
+  Class 5: 510 samples
+  Class 1: 457 samples
+  Class 6: 639 samples
+  Total samples: 6000
+
+Domain: tesla
+  Class 0: 2507 samples
+  Class 4: 565 samples
+  Class 2: 537 samples
+  Class 3: 909 samples
+  Class 5: 439 samples
+  Class 1: 449 samples
+  Class 6: 594 samples
+  Total samples: 6000
+
+Domain: zoe
+  Class 0: 909 samples
+  Class 4: 438 samples
+  Class 2: 518 samples
+  Class 3: 816 samples
+  Class 5: 392 samples
+  Class 1: 380 samples
+  Class 6: 547 samples
+  Total samples: 4000
+
+Domain: x5
+  Class 0: 2400 samples
+  Class 4: 767 samples
+  Class 2: 569 samples
+  Class 3: 892 samples
+  Class 5: 418 samples
+  Class 1: 371 samples
+  Class 6: 583 samples
+  Total samples: 6000
+
+Domain: aclass
+  Class 0: 2134 samples
+  Class 4: 755 samples
+  Class 2: 611 samples
+  Class 3: 884 samples
+  Class 5: 486 samples
+  Class 1: 457 samples
+  Class 6: 673 samples
+  Total samples: 6000
+
+Domain: i3
+  Class 0: 884 samples
+  Class 4: 442 samples
+  Class 2: 496 samples
+  Class 3: 919 samples
+  Class 5: 363 samples
+  Class 1: 372 samples
+  Class 6: 524 samples
+  Total samples: 4000
+
+Domain: lexus
+  Class 0: 2127 samples
+  Class 4: 791 samples
+  Class 2: 579 samples
+  Class 3: 907 samples
+  Class 5: 468 samples
+  Class 1: 465 samples
+  Class 6: 663 samples
+  Total samples: 6000
+Test domain: zoe
+Performing naive fine-tuning on test domain
+Epoch 1, Average Loss: 1.6704
+Epoch 2, Average Loss: 0.2918
+Epoch 3, Average Loss: 0.0655
+Epoch 4, Average Loss: 0.0766
+Epoch 5, Average Loss: 0.0256
+Epoch 6, Average Loss: 0.0103
+Epoch 7, Average Loss: 0.0290
+Epoch 8, Average Loss: 0.0244
+Epoch 9, Average Loss: 0.0474
+Epoch 10, Average Loss: 0.2353
+Accuracy: 96.9500
+Training domains: ['aclass', 'escape', 'hilux', 'i3', 'lexus', 'tesla', 'tiguan', 'tucson', 'x5']
+
+Training expert models...
+
+Training model for domain: aclass
+Training model for domain: aclass
+Epoch 1, Average Loss: 0.2988
+Epoch 2, Average Loss: 0.0118
+Epoch 3, Average Loss: 0.0014
+Epoch 4, Average Loss: 0.0034
+Epoch 5, Average Loss: 0.0030
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 72.8000
+Accuracy of aclass model on test domain: 72.8000
+
+Training model for domain: escape
+Training model for domain: escape
+Epoch 1, Average Loss: 0.3071
+Epoch 2, Average Loss: 0.0050
+Epoch 3, Average Loss: 0.0034
+Epoch 4, Average Loss: 0.0006
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0000
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 72.5000
+Accuracy of escape model on test domain: 72.5000
+
+Training model for domain: hilux
+Training model for domain: hilux
+Epoch 1, Average Loss: 0.4164
+Epoch 2, Average Loss: 0.0296
+Epoch 3, Average Loss: 0.0035
+Epoch 4, Average Loss: 0.0044
+Epoch 5, Average Loss: 0.0023
+Epoch 6, Average Loss: 0.0026
+Epoch 7, Average Loss: 0.0018
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 90.3000
+Accuracy of hilux model on test domain: 90.3000
+
+Training model for domain: i3
+Training model for domain: i3
+Epoch 1, Average Loss: 0.3455
+Epoch 2, Average Loss: 0.0080
+Epoch 3, Average Loss: 0.0009
+Epoch 4, Average Loss: 0.0004
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0001
+Merged model device: cuda:0
+Accuracy: 67.5000
+Accuracy of i3 model on test domain: 67.5000
+
+Training model for domain: lexus
+Training model for domain: lexus
+Epoch 1, Average Loss: 0.3209
+Epoch 2, Average Loss: 0.0142
+Epoch 3, Average Loss: 0.0026
+Epoch 4, Average Loss: 0.0031
+Epoch 5, Average Loss: 0.0003
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 75.0500
+Accuracy of lexus model on test domain: 75.0500
+
+Training model for domain: tesla
+Training model for domain: tesla
+Epoch 1, Average Loss: 0.3361
+Epoch 2, Average Loss: 0.0112
+Epoch 3, Average Loss: 0.0035
+Epoch 4, Average Loss: 0.0020
+Epoch 5, Average Loss: 0.0004
+Epoch 6, Average Loss: 0.0003
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 74.0000
+Accuracy of tesla model on test domain: 74.0000
+
+Training model for domain: tiguan
+Training model for domain: tiguan
+Epoch 1, Average Loss: 0.2901
+Epoch 2, Average Loss: 0.0096
+Epoch 3, Average Loss: 0.0021
+Epoch 4, Average Loss: 0.0008
+Epoch 5, Average Loss: 0.0032
+Epoch 6, Average Loss: 0.0002
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 73.6000
+Accuracy of tiguan model on test domain: 73.6000
+
+Training model for domain: tucson
+Training model for domain: tucson
+Epoch 1, Average Loss: 0.2467
+Epoch 2, Average Loss: 0.0071
+Epoch 3, Average Loss: 0.0014
+Epoch 4, Average Loss: 0.0003
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 76.8500
+Accuracy of tucson model on test domain: 76.8500
+
+Training model for domain: x5
+Training model for domain: x5
+Epoch 1, Average Loss: 0.2724
+Epoch 2, Average Loss: 0.0094
+Epoch 3, Average Loss: 0.0014
+Epoch 4, Average Loss: 0.0011
+Epoch 5, Average Loss: 0.0002
+Epoch 6, Average Loss: 0.0001
+Epoch 7, Average Loss: 0.0001
+Epoch 8, Average Loss: 0.0001
+Epoch 9, Average Loss: 0.0001
+Epoch 10, Average Loss: 0.0000
+Merged model device: cuda:0
+Accuracy: 75.8500
+Accuracy of x5 model on test domain: 75.8500
+
+Training coefficients...
+Training coefficients for weight averaging
+Device: cuda
+Coefficients device: cuda:0
+Initial coefficients (after normalization):
+  aclass: 0.1111
+  escape: 0.1111
+  hilux: 0.1111
+  i3: 0.1111
+  lexus: 0.1111
+  tesla: 0.1111
+  tiguan: 0.1111
+  tucson: 0.1111
+  x5: 0.1111
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Domain aclass - Input device: cuda:0, Model device: cuda:0
+Domain escape - Input device: cuda:0, Model device: cuda:0
+Domain hilux - Input device: cuda:0, Model device: cuda:0
+Domain i3 - Input device: cuda:0, Model device: cuda:0
+Domain lexus - Input device: cuda:0, Model device: cuda:0
+Domain tesla - Input device: cuda:0, Model device: cuda:0
+Domain tiguan - Input device: cuda:0, Model device: cuda:0
+Domain tucson - Input device: cuda:0, Model device: cuda:0
+Domain x5 - Input device: cuda:0, Model device: cuda:0
+Coefficient Epoch 1, Average Loss: 0.9807
+Coefficient Epoch 2, Average Loss: 0.0676
+Coefficient Epoch 3, Average Loss: 0.0548
+Coefficient Epoch 4, Average Loss: 0.0475
+Coefficient Epoch 5, Average Loss: 0.0612
+Coefficient Epoch 6, Average Loss: 0.0529
+Coefficient Epoch 7, Average Loss: 0.0622
+Coefficient Epoch 8, Average Loss: 0.0556
+Coefficient Epoch 9, Average Loss: 0.0541
+Coefficient Epoch 10, Average Loss: 0.0424
+Final device check:
+Expert model aclass device: cuda:0
+Expert model escape device: cuda:0
+Expert model hilux device: cuda:0
+Expert model i3 device: cuda:0
+Expert model lexus device: cuda:0
+Expert model tesla device: cuda:0
+Expert model tiguan device: cuda:0
+Expert model tucson device: cuda:0
+Expert model x5 device: cuda:0
+Coefficient training complete.
+Learned coefficients: [0.049440331757068634, 0.08101557940244675, 0.41049760580062866, 0.06368782371282578, 0.07581835240125656, 0.02796247974038124, 0.1052590161561966, 0.15842925012111664, 0.027889566496014595]
+
+Creating weight-averaged model...
+Creating weight-averaged model
+Weight-averaged model created.
+
+Evaluating final model...
+Accuracy: 82.3000
+Final model accuracy on test domain: 82.3000
+
+Summary for SVIRO:
+Debug: Type of results: <class 'list'>
+Debug: Content of results: [{'test_domain': 'aclass', 'domain_accuracies': {'escape': 82.13333333333334, 'hilux': 63.4, 'i3': 56.3, 'lexus': 79.83333333333333, 'tesla': 82.93333333333334, 'tiguan': 75.96666666666667, 'tucson': 84.16666666666667, 'x5': 78.8, 'zoe': 42.3}, 'final_accuracy': 87.1, 'coefficients': [0.1606019139289856, 0.08642002940177917, 0.03949268162250519, 0.0730554610490799, 0.16941438615322113, 0.0529719740152359, 0.16980445384979248, 0.14922624826431274, 0.0990128368139267]}, {'test_domain': 'escape', 'domain_accuracies': {'aclass': 78.8, 'hilux': 61.633333333333326, 'i3': 54.2, 'lexus': 63.76666666666667, 'tesla': 93.2, 'tiguan': 64.8, 'tucson': 69.0, 'x5': 95.89999999999999, 'zoe': 50.63333333333333}, 'final_accuracy': 55.833333333333336, 'coefficients': [0.11513715982437134, 0.15373599529266357, 0.049370020627975464, 0.03933781012892723, 0.15900787711143494, 0.08355773985385895, 0.1116245910525322, 0.19171510636806488, 0.0965137779712677]}, {'test_domain': 'hilux', 'domain_accuracies': {'aclass': 65.60000000000001, 'escape': 70.56666666666666, 'i3': 48.43333333333334, 'lexus': 69.19999999999999, 'tesla': 84.76666666666667, 'tiguan': 71.46666666666667, 'tucson': 76.76666666666667, 'x5': 73.73333333333333, 'zoe': 53.0}, 'final_accuracy': 75.13333333333333, 'coefficients': [0.06700409948825836, 0.15885989367961884, 0.05451582372188568, 0.10779586434364319, 0.1870008260011673, 0.06808751076459885, 0.17954903841018677, 0.12654773890972137, 0.05063922703266144]}, {'test_domain': 'i3', 'domain_accuracies': {'aclass': 98.15, 'escape': 76.55, 'hilux': 93.30000000000001, 'lexus': 89.9, 'tesla': 97.3, 'tiguan': 89.64999999999999, 'tucson': 92.60000000000001, 'x5': 78.05, 'zoe': 63.65}, 'final_accuracy': 91.2, 'coefficients': [0.1420866847038269, 0.014075851999223232, 0.15461324155330658, 0.05621244013309479, 0.3827688694000244, 0.03409098461270332, 0.12743651866912842, 0.07307972013950348, 0.01563563384115696]}, {'test_domain': 'lexus', 'domain_accuracies': {'aclass': 81.66666666666667, 'escape': 94.89999999999999, 'hilux': 67.7, 'i3': 58.06666666666666, 'tesla': 95.63333333333334, 'tiguan': 79.63333333333334, 'tucson': 97.86666666666667, 'x5': 81.5, 'zoe': 49.3}, 'final_accuracy': 96.33333333333334, 'coefficients': [0.04207443445920944, 0.07137557864189148, 0.08285745233297348, 0.03452913090586662, 0.2976326644420624, 0.11070539802312851, 0.26898524165153503, 0.06329219788312912, 0.02854781411588192]}, {'test_domain': 'tesla', 'domain_accuracies': {'aclass': 86.0, 'escape': 90.63333333333333, 'hilux': 50.96666666666667, 'i3': 55.43333333333334, 'lexus': 73.93333333333332, 'tiguan': 79.5, 'tucson': 85.46666666666667, 'x5': 88.63333333333333, 'zoe': 48.833333333333336}, 'final_accuracy': 85.33333333333334, 'coefficients': [0.14061570167541504, 0.11408451944589615, 0.10126592218875885, 0.06282759457826614, 0.07606183737516403, 0.08646982908248901, 0.17627137899398804, 0.1940941959619522, 0.048309121280908585]}, {'test_domain': 'tiguan', 'domain_accuracies': {'aclass': 76.56666666666668, 'escape': 92.0, 'hilux': 63.03333333333333, 'i3': 59.9, 'lexus': 62.866666666666674, 'tesla': 71.96666666666667, 'tucson': 64.5, 'x5': 65.36666666666666, 'zoe': 51.5}, 'final_accuracy': 68.0, 'coefficients': [0.0949462354183197, 0.19518524408340454, 0.10216538608074188, 0.027424748986959457, 0.07109188288450241, 0.0854371041059494, 0.19315524399280548, 0.129738911986351, 0.1008552685379982]}, {'test_domain': 'tucson', 'domain_accuracies': {'aclass': 79.3, 'escape': 97.6, 'hilux': 62.6, 'i3': 55.166666666666664, 'lexus': 96.86666666666667, 'tesla': 80.73333333333333, 'tiguan': 78.4, 'x5': 62.76666666666667, 'zoe': 56.10000000000001}, 'final_accuracy': 84.66666666666667, 'coefficients': [0.1682216078042984, 0.294760137796402, 0.07991435378789902, 0.03149943798780441, 0.14186915755271912, 0.11257939785718918, 0.02601378597319126, 0.04912606254220009, 0.09601610898971558]}, {'test_domain': 'x5', 'domain_accuracies': {'aclass': 66.9, 'escape': 79.43333333333334, 'hilux': 60.333333333333336, 'i3': 52.6, 'lexus': 60.9, 'tesla': 78.66666666666666, 'tiguan': 73.93333333333332, 'tucson': 85.06666666666666, 'zoe': 44.266666666666666}, 'final_accuracy': 64.3, 'coefficients': [0.08014128357172012, 0.18116974830627441, 0.039257001131772995, 0.06051506847143173, 0.07228495925664902, 0.1364995390176773, 0.16782249510288239, 0.23436668515205383, 0.02794319950044155]}, {'test_domain': 'zoe', 'domain_accuracies': {'aclass': 72.8, 'escape': 72.5, 'hilux': 90.3, 'i3': 67.5, 'lexus': 75.05, 'tesla': 74.0, 'tiguan': 73.6, 'tucson': 76.85, 'x5': 75.85}, 'final_accuracy': 82.3, 'coefficients': [0.049440331757068634, 0.08101557940244675, 0.41049760580062866, 0.06368782371282578, 0.07581835240125656, 0.02796247974038124, 0.1052590161561966, 0.15842925012111664, 0.027889566496014595]}]
+Final Model Accuracy: 79.0200 ± 12.1932
+Domain-specific Accuracies:
+  escape: 84.0352 ± 9.4534
+  hilux: 68.1407 ± 13.3405
+  i3: 56.4000 ± 4.9828
+  lexus: 74.7019 ± 11.6891
+  tesla: 84.3556 ± 8.7010
+  tiguan: 76.3278 ± 6.4342
+  tucson: 81.3648 ± 10.0872
+  x5: 77.8444 ± 9.7789
+  zoe: 51.0648 ± 5.9534
+  aclass: 78.4204 ± 9.3706
+Average Coefficients:
+  Coefficient 1: 0.1060 ± 0.0436
+  Coefficient 2: 0.1351 ± 0.0752
+  Coefficient 3: 0.1114 ± 0.1053
+  Coefficient 4: 0.0557 ± 0.0229
+  Coefficient 5: 0.1633 ± 0.0997
+  Coefficient 6: 0.0798 ± 0.0331
+  Coefficient 7: 0.1526 ± 0.0613
+  Coefficient 8: 0.1370 ± 0.0581
+  Coefficient 9: 0.0591 ± 0.0332
+Debug: Type of results: <class 'dict'>
+Debug: Content of results: {'SVIRO': [{'test_domain': 'aclass', 'domain_accuracies': {'escape': 82.13333333333334, 'hilux': 63.4, 'i3': 56.3, 'lexus': 79.83333333333333, 'tesla': 82.93333333333334, 'tiguan': 75.96666666666667, 'tucson': 84.16666666666667, 'x5': 78.8, 'zoe': 42.3}, 'final_accuracy': 87.1, 'coefficients': [0.1606019139289856, 0.08642002940177917, 0.03949268162250519, 0.0730554610490799, 0.16941438615322113, 0.0529719740152359, 0.16980445384979248, 0.14922624826431274, 0.0990128368139267]}, {'test_domain': 'escape', 'domain_accuracies': {'aclass': 78.8, 'hilux': 61.633333333333326, 'i3': 54.2, 'lexus': 63.76666666666667, 'tesla': 93.2, 'tiguan': 64.8, 'tucson': 69.0, 'x5': 95.89999999999999, 'zoe': 50.63333333333333}, 'final_accuracy': 55.833333333333336, 'coefficients': [0.11513715982437134, 0.15373599529266357, 0.049370020627975464, 0.03933781012892723, 0.15900787711143494, 0.08355773985385895, 0.1116245910525322, 0.19171510636806488, 0.0965137779712677]}, {'test_domain': 'hilux', 'domain_accuracies': {'aclass': 65.60000000000001, 'escape': 70.56666666666666, 'i3': 48.43333333333334, 'lexus': 69.19999999999999, 'tesla': 84.76666666666667, 'tiguan': 71.46666666666667, 'tucson': 76.76666666666667, 'x5': 73.73333333333333, 'zoe': 53.0}, 'final_accuracy': 75.13333333333333, 'coefficients': [0.06700409948825836, 0.15885989367961884, 0.05451582372188568, 0.10779586434364319, 0.1870008260011673, 0.06808751076459885, 0.17954903841018677, 0.12654773890972137, 0.05063922703266144]}, {'test_domain': 'i3', 'domain_accuracies': {'aclass': 98.15, 'escape': 76.55, 'hilux': 93.30000000000001, 'lexus': 89.9, 'tesla': 97.3, 'tiguan': 89.64999999999999, 'tucson': 92.60000000000001, 'x5': 78.05, 'zoe': 63.65}, 'final_accuracy': 91.2, 'coefficients': [0.1420866847038269, 0.014075851999223232, 0.15461324155330658, 0.05621244013309479, 0.3827688694000244, 0.03409098461270332, 0.12743651866912842, 0.07307972013950348, 0.01563563384115696]}, {'test_domain': 'lexus', 'domain_accuracies': {'aclass': 81.66666666666667, 'escape': 94.89999999999999, 'hilux': 67.7, 'i3': 58.06666666666666, 'tesla': 95.63333333333334, 'tiguan': 79.63333333333334, 'tucson': 97.86666666666667, 'x5': 81.5, 'zoe': 49.3}, 'final_accuracy': 96.33333333333334, 'coefficients': [0.04207443445920944, 0.07137557864189148, 0.08285745233297348, 0.03452913090586662, 0.2976326644420624, 0.11070539802312851, 0.26898524165153503, 0.06329219788312912, 0.02854781411588192]}, {'test_domain': 'tesla', 'domain_accuracies': {'aclass': 86.0, 'escape': 90.63333333333333, 'hilux': 50.96666666666667, 'i3': 55.43333333333334, 'lexus': 73.93333333333332, 'tiguan': 79.5, 'tucson': 85.46666666666667, 'x5': 88.63333333333333, 'zoe': 48.833333333333336}, 'final_accuracy': 85.33333333333334, 'coefficients': [0.14061570167541504, 0.11408451944589615, 0.10126592218875885, 0.06282759457826614, 0.07606183737516403, 0.08646982908248901, 0.17627137899398804, 0.1940941959619522, 0.048309121280908585]}, {'test_domain': 'tiguan', 'domain_accuracies': {'aclass': 76.56666666666668, 'escape': 92.0, 'hilux': 63.03333333333333, 'i3': 59.9, 'lexus': 62.866666666666674, 'tesla': 71.96666666666667, 'tucson': 64.5, 'x5': 65.36666666666666, 'zoe': 51.5}, 'final_accuracy': 68.0, 'coefficients': [0.0949462354183197, 0.19518524408340454, 0.10216538608074188, 0.027424748986959457, 0.07109188288450241, 0.0854371041059494, 0.19315524399280548, 0.129738911986351, 0.1008552685379982]}, {'test_domain': 'tucson', 'domain_accuracies': {'aclass': 79.3, 'escape': 97.6, 'hilux': 62.6, 'i3': 55.166666666666664, 'lexus': 96.86666666666667, 'tesla': 80.73333333333333, 'tiguan': 78.4, 'x5': 62.76666666666667, 'zoe': 56.10000000000001}, 'final_accuracy': 84.66666666666667, 'coefficients': [0.1682216078042984, 0.294760137796402, 0.07991435378789902, 0.03149943798780441, 0.14186915755271912, 0.11257939785718918, 0.02601378597319126, 0.04912606254220009, 0.09601610898971558]}, {'test_domain': 'x5', 'domain_accuracies': {'aclass': 66.9, 'escape': 79.43333333333334, 'hilux': 60.333333333333336, 'i3': 52.6, 'lexus': 60.9, 'tesla': 78.66666666666666, 'tiguan': 73.93333333333332, 'tucson': 85.06666666666666, 'zoe': 44.266666666666666}, 'final_accuracy': 64.3, 'coefficients': [0.08014128357172012, 0.18116974830627441, 0.039257001131772995, 0.06051506847143173, 0.07228495925664902, 0.1364995390176773, 0.16782249510288239, 0.23436668515205383, 0.02794319950044155]}, {'test_domain': 'zoe', 'domain_accuracies': {'aclass': 72.8, 'escape': 72.5, 'hilux': 90.3, 'i3': 67.5, 'lexus': 75.05, 'tesla': 74.0, 'tiguan': 73.6, 'tucson': 76.85, 'x5': 75.85}, 'final_accuracy': 82.3, 'coefficients': [0.049440331757068634, 0.08101557940244675, 0.41049760580062866, 0.06368782371282578, 0.07581835240125656, 0.02796247974038124, 0.1052590161561966, 0.15842925012111664, 0.027889566496014595]}]}
+No valid results to summarize.

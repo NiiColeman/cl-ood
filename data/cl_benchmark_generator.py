@@ -1,5 +1,3 @@
-# src/data/cl_benchmark_generator.py
-
 import os
 import torch
 from torch.utils.data import Dataset, Subset, DataLoader
@@ -7,11 +5,25 @@ from torchvision import transforms
 from PIL import Image
 from typing import List, Tuple, Dict
 from collections import defaultdict
-# import logging
-# logging.basicConfig(level=print, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# src/data/cl_benchmark_generator.py
+
+
 
 class CLBenchmarkGenerator(Dataset):
-    def __init__(self, dataset_path: str, max_samples_per_class: int = None):
+    """
+    Custom dataset class for benchmarking continual learning models.
+    """
+
+    def __init__(self, dataset_path: str, max_samples_per_class: int = None, augmentation: str = None):
+        """
+        Initialize the CLBenchmarkGenerator dataset.
+
+        Args:
+            dataset_path (str): Path to the dataset directory.
+            max_samples_per_class (int, optional): Maximum number of samples per class. Defaults to None.
+            augmentation (str, optional): Augmentation techniques to apply. Defaults to None.
+        """
         self.dataset_path = dataset_path
         self.max_samples_per_class = max_samples_per_class
         self.image_paths, self.targets, self.domains = self._load_data()
@@ -22,13 +34,50 @@ class CLBenchmarkGenerator(Dataset):
         self.class_to_idx = {cls: idx for idx, cls in enumerate(unique_classes)}
         self.num_classes = len(self.class_to_idx)
         self.domain_to_indices = self._create_domain_indices()
-        self.transform = transforms.Compose([
+        self.transform = self._get_transform(augmentation)
+
+    def _get_transform(self, augmentation: str = None):
+        """
+        Get the data transformation pipeline.
+
+        Args:
+            augmentation (str, optional): Augmentation techniques to apply. Defaults to None.
+
+        Returns:
+            torchvision.transforms.Compose: Composed transformation pipeline.
+        """
+        base_transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
             transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
         ])
 
+        if augmentation is None:
+            return base_transform
+
+        augmentation_transforms = []
+        if 'random_crop' in augmentation:
+            augmentation_transforms.append(transforms.RandomCrop(224, padding=4))
+        if 'random_flip' in augmentation:
+            augmentation_transforms.append(transforms.RandomHorizontalFlip())
+        if 'color_jitter' in augmentation:
+            augmentation_transforms.append(transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.1))
+        if 'rotation' in augmentation:
+            augmentation_transforms.append(transforms.RandomRotation(15))
+        if 'grayscale' in augmentation:
+            augmentation_transforms.append(transforms.RandomGrayscale(p=0.2))
+        if 'gaussian_blur' in augmentation:
+            augmentation_transforms.append(transforms.GaussianBlur(kernel_size=3, sigma=(0.1, 2.0)))
+
+        return transforms.Compose(augmentation_transforms + [base_transform])
+
     def _load_data(self):
+        """
+        Load the dataset from the given path.
+
+        Returns:
+            Tuple[List[str], List[str], List[str]]: Image paths, targets, and domains.
+        """
         image_paths, targets, domains = [], [], []
         corrupted_images = []
         for domain in os.listdir(self.dataset_path):
@@ -60,6 +109,15 @@ class CLBenchmarkGenerator(Dataset):
         return image_paths, targets, domains
 
     def __getitem__(self, idx):
+        """
+        Get the item at the given index.
+
+        Args:
+            idx (int): Index of the item.
+
+        Returns:
+            Tuple[torch.Tensor, torch.Tensor, str]: Image, target, and domain.
+        """
         image_path = self.image_paths[idx]
         try:
             image = Image.open(image_path).convert('RGB')
@@ -74,13 +132,34 @@ class CLBenchmarkGenerator(Dataset):
         return image, torch.tensor(target, dtype=torch.long), domain
 
     def __len__(self):
+        """
+        Get the length of the dataset.
+
+        Returns:
+            int: Length of the dataset.
+        """
         return self.num_samples
 
     def update_class_indices(self, global_class_to_idx):
+        """
+        Update the class indices.
+
+        Args:
+            global_class_to_idx (Dict[str, int]): Global class to index mapping.
+        """
         self.class_to_idx = global_class_to_idx
         self.num_classes = len(self.class_to_idx)
 
     def create_incremental_split(self, n_domains: int) -> List[Tuple[Subset, Subset]]:
+        """
+        Create incremental splits for the given number of domains.
+
+        Args:
+            n_domains (int): Number of domains.
+
+        Returns:
+            List[Tuple[Subset, Subset]]: List of train-test splits for each domain.
+        """
         tasks = []
         for domain_id in range(n_domains):
             train_indices = [i for i, d in enumerate(self.domains) if self.domain_to_id[d] == domain_id]
@@ -91,10 +170,29 @@ class CLBenchmarkGenerator(Dataset):
         return tasks
     
     def get_domain_data(self, domain_id):
+        """
+        Get the data for a specific domain.
+
+        Args:
+            domain_id (int): Domain ID.
+
+        Returns:
+            Subset: Subset of the dataset for the specified domain.
+        """
         domain_indices = [i for i, d in enumerate(self.domains) if d == domain_id]
         return Subset(self, domain_indices)
 
     def create_data_loaders(self, tasks: List[Tuple[Subset, Subset]], batch_size: int = 32) -> List[Tuple[DataLoader, DataLoader]]:
+        """
+        Create data loaders for the given train-test splits.
+
+        Args:
+            tasks (List[Tuple[Subset, Subset]]): List of train-test splits.
+            batch_size (int, optional): Batch size. Defaults to 32.
+
+        Returns:
+            List[Tuple[DataLoader, DataLoader]]: List of train-test data loaders.
+        """
         return [
             (DataLoader(train_subset, batch_size=batch_size, shuffle=True),
              DataLoader(test_subset, batch_size=batch_size, shuffle=False))
@@ -103,6 +201,9 @@ class CLBenchmarkGenerator(Dataset):
 
 
     def print_samples_per_class_per_domain(self):
+        """
+        Print the number of samples per class per domain.
+        """
         domain_class_counts = defaultdict(lambda: defaultdict(int))
         for domain, target in zip(self.domains, self.targets):
             domain_class_counts[domain][target] += 1
@@ -114,6 +215,12 @@ class CLBenchmarkGenerator(Dataset):
             print(f"  Total samples: {sum(class_counts.values())}")
 
     def _create_domain_indices(self):
+        """
+        Create a mapping of domain to indices.
+
+        Returns:
+            Dict[str, List[int]]: Mapping of domain to indices.
+        """
         domain_to_indices = {}
         for idx, domain in enumerate(self.domains):
             if domain not in domain_to_indices:
@@ -122,6 +229,15 @@ class CLBenchmarkGenerator(Dataset):
         return domain_to_indices
 
     def get_domain_data(self, domain):
+        """
+        Get the data for a specific domain.
+
+        Args:
+            domain (Union[int, str]): Domain ID or domain name.
+
+        Returns:
+            Subset: Subset of the dataset for the specified domain.
+        """
         if isinstance(domain, int):
             domain = list(self.domain_to_indices.keys())[domain]
         

@@ -33,7 +33,8 @@ class Baseline5Experiment:
     def load_dataset(self):
         return CLBenchmarkGenerator(
         self.config['dataset_path'],
-        max_samples_per_class=self.config.get('max_samples_per_class')
+        max_samples_per_class=self.config.get('max_samples_per_class'),
+        augmentation='random_crop random_flip color_jitter rotation grayscale gaussian_blur'
     )
 
     def create_base_model(self):
@@ -48,14 +49,6 @@ class Baseline5Experiment:
         
         return model
 
-    # def prepare_data(self):
-    #     self.domains = list(set(self.dataset.domains))
-    #     self.test_domain = random.choice(self.domains)
-    #     self.train_domains = [d for d in self.domains if d != self.test_domain]
-    #     self.domain_loaders = self._create_domain_loaders()
-    #     print(f"Domains: {self.domains}")
-    #     print(f"Selected test domain: {self.test_domain}")
-    #     print(f"Training domains: {self.train_domains}")
 
     def prepare_data(self):
         self.domains = sorted(list(set(self.dataset.domains)))  # Sort to ensure consistent ordering
@@ -80,7 +73,7 @@ class Baseline5Experiment:
         for domain in self.domains:
             domain_data = self.dataset.get_domain_data(domain)
             if domain == self.test_domain:
-                train_size = int(0.50 * len(domain_data))
+                train_size = int(0.10 * len(domain_data))
                 test_size = len(domain_data) - train_size
                 train_subset, test_subset = random_split(domain_data, [train_size, test_size])
                 domain_loaders[domain] = {
@@ -398,34 +391,34 @@ def summarize_results(results):
 
 if __name__ == "__main__":
     datasets_config ={ 
-    # 'PACS': {
-    #     'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS',
-    #     'max_samples_per_class': None,  # Adjust as needed
-    #     'base_model': 'vit_base_patch16_224',  # Specify your base model
-    #     'batch_size': 32,
-    #     'num_epochs': 10,
-    #     'learning_rate': 1e-3,
-    #     'lora_r': 8,
-    #     'lora_alpha': 32,
-    #     'lora_dropout': 0.1,
-    #     'coefficient_learning_rate': 1e-1,
-    #     'coefficient_epochs': 10,
-    #     'seed': 42
-    # },
-    # 'VLCS': {
-    #         'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS',
-    #         'max_samples_per_class': None,
-    #         'base_model': 'vit_base_patch16_224',
-    #         'batch_size': 32,
-    #         'num_epochs': 10,
-    #         'learning_rate': 1e-3,
-    #         'lora_r': 8,
-    #         'lora_alpha': 32,
-    #         'lora_dropout': 0.1,
-    #         'coefficient_learning_rate': 1e-1,
-    #         'coefficient_epochs': 10,
-    #         'seed': 42
-    #     },
+    'PACS': {
+        'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/PACS',
+        'max_samples_per_class': None,  # Adjust as needed
+        'base_model': 'vit_base_patch16_224',  # Specify your base model
+        'batch_size': 32,
+        'num_epochs': 10,
+        'learning_rate': 1e-3,
+        'lora_r': 8,
+        'lora_alpha': 32,
+        'lora_dropout': 0.1,
+        'coefficient_learning_rate': 1e-1,
+        'coefficient_epochs': 10,
+        'seed': 42
+    },
+    'VLCS': {
+            'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS',
+            'max_samples_per_class': None,
+            'base_model': 'vit_base_patch16_224',
+            'batch_size': 32,
+            'num_epochs': 10,
+            'learning_rate': 1e-3,
+            'lora_r': 8,
+            'lora_alpha': 32,
+            'lora_dropout': 0.1,
+            'coefficient_learning_rate': 1e-1,
+            'coefficient_epochs': 10,
+            'seed': 42
+        },
     # 'OfficeHome': {
     #         'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home',
     #         'max_samples_per_class': None,
@@ -440,34 +433,34 @@ if __name__ == "__main__":
     #         'coefficient_epochs': 10,
     #         'seed': 42
     #     }
-    #  'DomainNet': {
-    #         'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/domain_net',
-    #         'max_samples_per_class': 10,
-    #         'base_model': 'vit_base_patch16_224',
-    #         'batch_size': 32,
-    #         'num_epochs': 10,
-    #         'learning_rate': 1e-5,
-    #         'lora_r': 8,
-    #         'lora_alpha': 32,
-    #         'lora_dropout': 0.05,
-    #         'coefficient_learning_rate': 1,
-    #         'coefficient_epochs': 15,
-    #         'seed': 42
-    #     }
-     'SVIRO': {
-            'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/sviro',
-            'max_samples_per_class': None,
+     'DomainNet': {
+            'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/domain_net',
+            'max_samples_per_class': 10,
             'base_model': 'vit_base_patch16_224',
             'batch_size': 32,
             'num_epochs': 10,
-            'learning_rate': 1e-4,
+            'learning_rate': 1e-5,
             'lora_r': 8,
             'lora_alpha': 32,
-            'lora_dropout': 0.1,
-            'coefficient_learning_rate': 1e-1,
-            'coefficient_epochs': 10,
+            'lora_dropout': 0.05,
+            'coefficient_learning_rate': 1,
+            'coefficient_epochs': 15,
             'seed': 42
         }
+    #  'SVIRO': {
+    #         'dataset_path': '/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/sviro',
+    #         'max_samples_per_class': None,
+    #         'base_model': 'vit_base_patch16_224',
+    #         'batch_size': 32,
+    #         'num_epochs': 10,
+    #         'learning_rate': 1e-4,
+    #         'lora_r': 8,
+    #         'lora_alpha': 32,
+    #         'lora_dropout': 0.1,
+    #         'coefficient_learning_rate': 1e-1,
+    #         'coefficient_epochs': 10,
+    #         'seed': 42
+    #     }
     }
     
     num_runs = 10

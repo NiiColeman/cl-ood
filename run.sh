@@ -1,14 +1,14 @@
 #!/bin/bash 
 #SBATCH -A IscrC_FoundCL
-#SBATCH -p boost_usr_prod
+#SBATCH -p qos_lowprio
 #SBATCH --time=24:00:00   # format: HH:MM:SS
 #SBATCH -N 2                # 1 node
 #SBATCH --ntasks-per-node=4 # 4 tasks out of 32
 #SBATCH --gres=gpu:3      # 4 gpus per node out of 4
 #SBATCH --mem=64GB          # memory per node out of 494000MB 
 #SBATCH --job-name=ood_generalization
-#SBATCH --output=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/EXP_NEW_SVIRO-%j.out
-#SBATCH --error=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/EXP_NEW_SVIRO-%j.err
+#SBATCH --output=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/EXP_NEW_Augmented-%j.out
+#SBATCH --error=/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/outs/baselines/EXP_NEW_Augmented-%j.err
 
 # Load necessary modules
 export CUDA_HOME=/leonardo/prod/opt/compilers/cuda/12.1/none
