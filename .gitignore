@@ -6,3 +6,7 @@ exp_outs/
 logs/
 saved_models/
 *.csv
+data/__pycache__/
+experiments/__pycache__/
+lq_run.sh
+results/
