@@ -1,5 +1,3 @@
-# src/experiments/baseline_experiments.py
-
 import copy
 import torch
 import torch.nn as nn
@@ -333,51 +331,6 @@ def merging_loras_baseline(dataset_name, dataset_config, global_config, seed):
 
     return results, log_weights
 
-# debugging function
-# load a trained adapter and test it on its training set
-def _test_adapter(dataset_name, dataset_config, global_config):
-    print('\n\n\n################\nDEBUGGING\n##########\n\n\n')
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    print(f'Using {device} device')
-
-    # Load the dataset
-    dataset = CLBenchmarkGenerator(dataset_config['path'], max_samples_per_class=global_config.get('max_samples_per_class'))
-    domains = list(set(dataset.domains))
-
-    for test_domain in domains:
-        print(f'Test domain: {test_domain}')
-        idxs = [i for i, d in enumerate(dataset.domains) if d == test_domain]
-        subset = Subset(dataset, idxs)
-        loader = DataLoader(subset, batch_size=global_config['batch_size'], shuffle=True)
-  
-        # Create model
-        model = timm.create_model(global_config['base_model'], pretrained=True, num_classes=dataset_config['num_classes'])
-        model = model.to(device)
-
-        # Load the adapter
-        print(dataset_name)
-        print(test_domain)
-        ada_path = global_config.get('saved_adapters', {}).get(dataset_name, {}).get(test_domain, None)
-        print(f'Path to the adapter: {ada_path}')
-        #lora_model = PeftModel.from_pretrained(model, ada_path) #adapter_name=f'{dataset_name}_{test_domain}_lora')
-        #lora_model.load_adapter(ada_path, adapter_name=f'{dataset_name}_{test_domain}_lora')
-        #lora_model.set_adapter(f'{dataset_name}_{test_domain}_lora')
-
-        lora_weights = load_peft_weights(ada_path)
-        set_peft_model_state_dict(model, lora_weights)
-
-        model.to(device)
-        print(f'Loaded model from {ada_path}')
-
-        test_loss, test_accuracy = evaluate(model, loader, nn.CrossEntropyLoss(), device)
-        print(f"Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.2f}%")
-        print('\n\n')
-
-def test_loading_ada(config):
-    for dataset_name, dataset_config in config['datasets'].items():
-        _test_adapter(dataset_name, dataset_config, config)
-
-
 def main(config):
     for dataset_name, dataset_config in config['datasets'].items():
         results = []
@@ -385,7 +338,6 @@ def main(config):
 
         for seed in [1, 10, 42, 101, 3333]:
             result, weight = merging_loras_baseline(dataset_name, dataset_config, config, seed)
-            #result = _test_adapter(dataset_name, dataset_config, config)
             results.append(result)
             weights.append(weight)
 
@@ -426,10 +378,9 @@ def main(config):
     print('Done!')
     
 if __name__ == "__main__":
-    with open('/leonardo_scratch/fast/IscrC_FoundCL/projects/cl-collab/ModelRatatouille/lquarant/cl-ood/configs/merging_loras.yaml', 'r') as file:
+    with open('./configs/merging_loras.yaml', 'r') as file:
         config = yaml.safe_load(file)
     main(config)
-    #test_loading_ada(config)
 
 
 
