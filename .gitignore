@@ -3,3 +3,6 @@ final_model.pth
 auxiliary_model.pth
 best_model.pth
 exp_outs/
+logs/
+saved_models/
+*.csv
