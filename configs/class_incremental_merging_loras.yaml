@@ -1,0 +1,46 @@
+# configs/baseline_config.yaml
+
+datasets:
+  PACS:
+    path: "/raid/l.quarantiello/datasets/PACS"
+    num_classes: 7
+    training_domains: ['photo']
+        #VLCS:
+        #path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/VLCS"
+        #num_classes: 5
+        #OfficeHome:
+        #path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/office_home"
+        #num_classes: 65
+        #SVIRO:
+        #path: "/leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/ratatouille/ood/datasets/sviro"
+        #num_classes: 7
+  # DomainNet:
+  #   path: "/path/to/DomainNet"
+  #   num_classes: 345
+
+    #saved_adapters:
+    #PACS:
+    #cartoon: "/leonardo_scratch/fast/IscrC_FoundCL/projects/cl-collab/ModelRatatouille/lquarant/cl-ood/saved_models/PACS_cartoon_lora/"
+    #photo: "/leonardo_scratch/fast/IscrC_FoundCL/projects/cl-collab/ModelRatatouille/lquarant/cl-ood/saved_models/PACS_photo_lora/"
+    #sketch: "/leonardo_scratch/fast/IscrC_FoundCL/projects/cl-collab/ModelRatatouille/lquarant/cl-ood/saved_models/PACS_sketch_lora/"
+    #art_painting: "/leonardo_scratch/fast/IscrC_FoundCL/projects/cl-collab/ModelRatatouille/lquarant/cl-ood/saved_models/PACS_art_painting_lora/"
+
+base_model: "vit_base_patch16_224"  # or any other model from timm
+max_samples_per_class: 1  # Set to null or remove this line to use all samples
+
+# Training parameters
+batch_size: 32
+num_epochs: 1
+learning_rate: 1e-4
+
+# LoRA parameters
+lora_r: 8
+lora_alpha: 32
+lora_dropout: 0.05
+
+# class-incremental parameters
+num_classes_per_timestep: 2
+merging_strategy: "all"
+
+device: "cuda"
+savedir: "./logs/"
