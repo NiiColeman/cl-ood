@@ -2,8 +2,8 @@
 
 import argparse
 import yaml
-from experiments.train import main as train_main
-from experiments.evaluate import main as evaluate_main
+from experiments.utils.train import main as train_main
+from experiments.utils.evaluate import main as evaluate_main
 from tqdm import tqdm
 
 

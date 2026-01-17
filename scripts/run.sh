@@ -20,16 +20,16 @@ source /leonardo_scratch/fast/IscrC_FoundCL/cl/lora-CL/l2/bin/activate
 
 # Run the main script
 # python main.py --config configs/custom_config.yaml
-# python experiments/hyperparamsearch.py
-# python experiments/lora_hyperparameter_search.py
-# python experiments/baseline_experiments.py
-# python experiments/exp.py
-python experiments/baseline5.py
-# python experiments/run.py
-# python experiments/ties.py
-# python experiments/test.py 
-# python experiments/weighted_avg.py
+# python experiments/utils/hyperparamsearch.py
+# python experiments/utils/lora_hyperparameter_search.py
+# python experiments/baselines/baseline_experiments.py
+# python experiments/merging/exp.py
+python experiments/baselines/baseline5.py
+# python experiments/baselines/run_baseline.py
+# python experiments/merging/ties.py
+# python experiments/baselines/baseline_4_test.py
+# python experiments/merging/weighted_avg.py
 # Deactivate the virtual environment
-# python experiments/weight_pruning.py
+# python experiments/merging/weight_pruning.py
 
 deactivate
